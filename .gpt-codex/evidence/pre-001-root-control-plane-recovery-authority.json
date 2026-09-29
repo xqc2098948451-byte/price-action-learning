@@ -1,0 +1,51 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "state_revision": 4,
+  "main_sha": "e8e3c4f9ce99dea03df8f418ead43c5e210c36a7",
+  "recovery_id": "price-action-learning-pre-001-root-control-plane-recovery-001",
+  "finding_id": "PRE-001-EXECUTION-SLOT-PAIRWISE-GATE",
+  "work_unit_id": "price-action-learning-pre-001-slot-gate-remediation-001",
+  "authorized_work_unit_locator": {
+    "repository": "xqc2098948451-byte/price-action-learning",
+    "commit_sha": "3d0168be47335fb1b244e129fa61830d3d781c85",
+    "path": ".gpt-codex/work-units/price-action-learning-pre-001-slot-gate-remediation-001.json",
+    "blob_sha": "3d084c72b9b4f9b3b4e4e5ac9d7730109c7a95ef"
+  },
+  "mutation_scope": [
+    ".gpt-codex/STATE.json",
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+    ".gpt-codex/evidence/results/RESULT-PRE-001-EXECUTION-SLOT-PAIRWISE-GATE.json",
+    ".gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-REMEDIATION-ADJUDICATION.json",
+    ".gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-AUTHORITY-BASIS.json"
+  ],
+  "one_time": true,
+  "reuse": "FORBIDDEN",
+  "observed_at": "2026-09-29",
+  "evidence_id": "EVIDENCE-PRE-001-ROOT-CONTROL-PLANE-RECOVERY-AUTHORITY",
+  "source": "SYSTEM_DERIVED",
+  "subject": "ROOT_CONTROL_PLANE_RECOVERY_AUTHORITY",
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "3d084c72b9b4f9b3b4e4e5ac9d7730109c7a95ef"
+  },
+  "result": "AUTHORIZED",
+  "classification": "ONE_TIME_ROOT_CONTROL_PLANE_RECOVERY_RECONCILIATION",
+  "reason": "NORMAL_MUTATION_GATE_SELF_LOCKED_BY_EMPTY_SLOT_LIST",
+  "root_cause": "EMPTY_EXECUTION_SLOT_LIST_ACTIVATES_PAIRWISE_GATE",
+  "normal_mutation_gate_satisfied": false,
+  "user_approval_required": true,
+  "user_approval_observed": true,
+  "user_approval_evidence_ref": ".gpt-codex/evidence/pre-001-root-control-plane-recovery-user-approval.json",
+  "general_recovery_mechanism_created": false,
+  "framework_source_change_authorized": false,
+  "business_implementation_authorized": false,
+  "exception_ends_after_exact_remote_verification": true,
+  "operation": "CONTROL_PLANE_RECOVERY_ONLY",
+  "executor_role": "USER_LOCAL",
+  "notes": "Authority creation only. Later recovery execution is separately bounded by the exact five-path scope and immutable Work Unit; this evidence does not execute that recovery."
+}
