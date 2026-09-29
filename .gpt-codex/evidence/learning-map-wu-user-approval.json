@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-LEARNING-MAP-WU-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-s1-s3-spec-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 3,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "96474020e40e5aca157cf07bad05e697fdd68c9f"
+  },
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json@a54bfb6e03659c11d4f92f151b29429b8bb8843c"
+  ],
+  "observed_at": "2026-09-29",
+  "notes": "User approves the existing published Work Unit with blob 96474020e40e5aca157cf07bad05e697fdd68c9f as the active governed unit. The approved future business scope is limited to creating spec/learning_map/LEARNING_MAP_SPEC.md and removing spec/learning_map/.gitkeep after the real spec exists. This approval does not authorize business mutation or bypass LEARNING_MAP_S1_S3_SPEC_PRE_EXECUTION."
+}
