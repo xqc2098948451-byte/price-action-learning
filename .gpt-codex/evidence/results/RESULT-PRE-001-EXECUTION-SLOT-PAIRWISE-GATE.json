@@ -1,0 +1,98 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-s1-s3-spec-001",
+  "extension": {
+    "kind": "SKILL",
+    "id": "verification",
+    "version": "1.0.0"
+  },
+  "status": "BLOCKED",
+  "return_to_gpt_required": true,
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "framework_version": "2.7.4",
+  "result_message_type": "REVIEW_FINDING",
+  "result_id": "RESULT-PRE-001-EXECUTION-SLOT-PAIRWISE-GATE",
+  "response_to_instruction_id": "4f39f2d1-5af7-4ea8-b8c8-8b681f26d0df",
+  "responder_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "review_target_revision": "e8e3c4f9ce99dea03df8f418ead43c5e210c36a7",
+  "finding_ids": [
+    "PRE-001-EXECUTION-SLOT-PAIRWISE-GATE"
+  ],
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "current_remote_ref": "refs/heads/main",
+  "local_head_sha": "e8e3c4f9ce99dea03df8f418ead43c5e210c36a7",
+  "remote_head_sha": "e8e3c4f9ce99dea03df8f418ead43c5e210c36a7",
+  "remote_verification": "NOT_ATTEMPTED",
+  "push_status": "NOT_ATTEMPTED",
+  "state_revision": 4,
+  "evidence_refs": [
+    ".gpt-codex/evidence/instructions/4f39f2d1-5af7-4ea8-b8c8-8b681f26d0df.json@e0c822535ffffb22ae0b16362f4d9d26d24d1f6f",
+    ".gpt-codex/evidence/instructions/a649ef54-ac95-4ab6-b739-787a6e1d4a2f.json@c033643fc1986d027cad5fdbf1a1c3095719243f",
+    ".gpt-codex/STATE.json@e8e3c4f9ce99dea03df8f418ead43c5e210c36a7",
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json@e8e3c4f9ce99dea03df8f418ead43c5e210c36a7"
+  ],
+  "execution": "READ_TEST_VALIDATE_REPORT_ONLY",
+  "changed": "NONE",
+  "verify": {
+    "project_identity": "MATCH",
+    "repository_identity": "MATCH",
+    "work_unit_authority": "AUTHORIZED@revision-4",
+    "scope_validation": "PASS",
+    "domain_boundary_validation": "PASS",
+    "artifact_ref_validation": "PASS",
+    "continuity_resume": "LATEST_SYNCED_REMOTE_STATE",
+    "execution_sync_preflight": "CLEAN_SYNCED",
+    "active_execution_slots_observed": [],
+    "pairwise_execution_gate": "BLOCKED",
+    "native_mutation_entry_errors": [
+      "RECONCILIATION_REQUIRED"
+    ]
+  },
+  "deviations": [
+    "resolve_plugin_instruction tool was unavailable; immutable instruction locators were verified with Git commit/path/blob identity and Framework v2.7.4 Instruction schema."
+  ],
+  "blockers": [
+    "PRE-001-EXECUTION-SLOT-PAIRWISE-GATE: STATE.active_execution_slots=[]; native pairwise validation requires one correlated CODEX_IMPLEMENTER slot and one correlated CODEX_REVIEWER slot; mutation entry returns RECONCILIATION_REQUIRED."
+  ],
+  "git": {
+    "base_sha": "e8e3c4f9ce99dea03df8f418ead43c5e210c36a7",
+    "implementation_sha": null
+  },
+  "completion_evidence": {
+    "execution_state": "BLOCKED",
+    "process_completed": true,
+    "exit_code": 0,
+    "intended_scope": [],
+    "executed_scope": [],
+    "test_files_expected": 0,
+    "test_files_executed": 0,
+    "test_count": 0,
+    "failure_count": 0,
+    "error_count": 0,
+    "validators_expected": [
+      "project_validation",
+      "immutable_instruction_resolution",
+      "artifact_refs",
+      "continuity_resume",
+      "execution_sync_preflight",
+      "pairwise_execution_gate"
+    ],
+    "validators_completed": [
+      "project_validation",
+      "immutable_instruction_resolution",
+      "artifact_refs",
+      "continuity_resume",
+      "execution_sync_preflight",
+      "pairwise_execution_gate"
+    ],
+    "blocker_evidence_refs": [
+      ".gpt-codex/STATE.json@e8e3c4f9ce99dea03df8f418ead43c5e210c36a7"
+    ]
+  },
+  "completion_gate": "GPT_DECISION"
+}

@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-REMEDIATION-ADJUDICATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source": "SYSTEM_DERIVED",
+  "subject": "REMEDIATION_ADJUDICATION",
+  "state_revision": 5,
+  "result": "ACCEPTED",
+  "finding_ids": [
+    "PRE-001-EXECUTION-SLOT-PAIRWISE-GATE"
+  ],
+  "decision": "ACCEPT",
+  "basis_type": "ACCEPTED_AUTHORITY_BASIS",
+  "basis_refs": [
+    "PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-AUTHORITY-BASIS"
+  ],
+  "adjudicated_at_revision": 5,
+  "review_finding_result_ref": ".gpt-codex/evidence/results/RESULT-PRE-001-EXECUTION-SLOT-PAIRWISE-GATE.json",
+  "review_finding_result_id": "RESULT-PRE-001-EXECUTION-SLOT-PAIRWISE-GATE",
+  "recovery_id": "price-action-learning-pre-001-root-control-plane-recovery-001"
+}
