@@ -1,0 +1,36 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-PRE-001-CONTINUITY-FINALIZATION-WU-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-pre-001-continuity-finalization-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 5,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "8861bccbe4927f571b899485b7a11aefbad4574f"
+  },
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "result": "APPROVE",
+  "approved_work_unit_locator": {
+    "repository": "xqc2098948451-byte/price-action-learning",
+    "commit_sha": "204393a00ac55f052e84dfe81a56f9e3a7254a31",
+    "path": ".gpt-codex/work-units/price-action-learning-pre-001-continuity-finalization-001.json",
+    "blob_sha": "8861bccbe4927f571b899485b7a11aefbad4574f"
+  },
+  "approval": "批准 PRE-001 Continuity Finalization Work Unit。",
+  "approval_scope": [
+    ".gpt-codex/STATE.json",
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+    ".gpt-codex/evidence/pre-001-recovery-publication-verification.json",
+    ".gpt-codex/evidence/results/pre-001-recovery-publication.json"
+  ],
+  "execution_transaction_approved": false,
+  "reconciliation_request_approved": false,
+  "business_implementation_authorized": false,
+  "observed_at": "2026-09-29",
+  "notes": "User approval binds only the exact proposed Work Unit blob and its frozen four-path future scope. It does not approve an exact RECONCILIATION_REQUEST, authorize control-plane mutation execution, or authorize Learning Map business implementation."
+}
