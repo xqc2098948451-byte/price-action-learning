@@ -1,0 +1,51 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-PRE-001-RECOVERY-PUBLICATION-VERIFICATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-pre-001-continuity-finalization-001",
+  "source": "TOOL_OBSERVED",
+  "subject": "PRE_001_RECOVERY_PUBLICATION_VERIFICATION",
+  "state_revision": 5,
+  "identity_binding": {
+    "type": "GIT_COMMIT",
+    "value": "901ef3d0d97fa685215f2f81439f874fb22dda0f"
+  },
+  "result": "PASS",
+  "artifact_refs": [
+    ".gpt-codex/STATE.json@901ef3d0d97fa685215f2f81439f874fb22dda0f",
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json@901ef3d0d97fa685215f2f81439f874fb22dda0f",
+    ".gpt-codex/evidence/results/RESULT-PRE-001-EXECUTION-SLOT-PAIRWISE-GATE.json@901ef3d0d97fa685215f2f81439f874fb22dda0f",
+    ".gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-REMEDIATION-ADJUDICATION.json@901ef3d0d97fa685215f2f81439f874fb22dda0f",
+    ".gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-AUTHORITY-BASIS.json@901ef3d0d97fa685215f2f81439f874fb22dda0f",
+    ".gpt-codex/evidence/results/RESULT-PRICE_ACTION_LEARNING_PRE_001_ROOT_CONTROL_PLANE_RECOVERY_REVIEW_001.json@2740bf92db590ae8f8b38693a3824d872140be0d"
+  ],
+  "publication_observation": {
+    "repository_id": "1394745962",
+    "repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "remote_ref": "refs/heads/main",
+    "remote_head": "901ef3d0d97fa685215f2f81439f874fb22dda0f",
+    "remote_state_revision": 5,
+    "remote_state": "AUTHORIZED",
+    "remote_continuity_sync_status": "SYNC_PENDING",
+    "active_execution_slots_key": "ABSENT",
+    "learning_map_work_unit_basis_state_revision": 5,
+    "recovery_blobs": {
+      ".gpt-codex/STATE.json": "f4afda7df5cef44f214e9107937e88efd0967c46",
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json": "a9a67e0c4de51d4d7d52e77031d2f623fe67245b",
+      ".gpt-codex/evidence/results/RESULT-PRE-001-EXECUTION-SLOT-PAIRWISE-GATE.json": "ad450ebaa783fdf271511efc8342c17f913da5b3",
+      ".gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-REMEDIATION-ADJUDICATION.json": "5240cecb2a3582517ef2690c172eff2a7112582d",
+      ".gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-AUTHORITY-BASIS.json": "66a61353c893b6bc8087d2eec64351867ba70974"
+    },
+    "pre_001_self_lock_present": false
+  },
+  "recovery_review_result": {
+    "repository": "xqc2098948451-byte/price-action-learning",
+    "commit_sha": "2740bf92db590ae8f8b38693a3824d872140be0d",
+    "path": ".gpt-codex/evidence/results/RESULT-PRICE_ACTION_LEARNING_PRE_001_ROOT_CONTROL_PLANE_RECOVERY_REVIEW_001.json",
+    "blob_sha": "c76f2a36acb43cbe2174b702dc269524e2d36dfb",
+    "status": "PASS",
+    "review_target_revision": "901ef3d0d97fa685215f2f81439f874fb22dda0f"
+  },
+  "observed_at": "2026-09-29"
+}

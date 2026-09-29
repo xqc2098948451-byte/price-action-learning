@@ -82,7 +82,7 @@
     ]
   },
   "state": "AUTHORIZED",
-  "basis_state_revision": 5,
+  "basis_state_revision": 6,
   "implementation_authorized": false,
   "implementation_start_allowed": false,
   "next_gate": "LEARNING_MAP_S1_S3_SPEC_PRE_EXECUTION",
