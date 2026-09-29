@@ -24,7 +24,7 @@ Learning Map 不保存完整技术分析教材。GPT 使用自身已有知识进
 
 ## Learning State
 
-保存 `current_stage`、`skill_states`、`error_states`、`current_focus`、`review_schedule`。
+保存 `current_stage`、`skills`、`errors`、`current_focus`、`reviews_due`。
 
 Skill 状态仅有 `NOT_STARTED`、`LEARNING`、`UNSTABLE`、`STABLE`。Error 状态仅有 `NEW`、`REPEATED`、`FOCUS`、`IMPROVING`、`RESOLVED`。
 
