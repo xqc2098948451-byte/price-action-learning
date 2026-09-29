@@ -1,0 +1,21 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-LEARNING-MAP-WU-AUTHORIZATION-WORK-VERIFICATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-s1-s3-spec-001",
+  "source": "TOOL_OBSERVED",
+  "subject": "LEARNING_MAP_WORK_UNIT_AUTHORIZATION_WORK_COMMIT_REMOTE_VERIFICATION",
+  "state_revision": 3,
+  "identity_binding": {
+    "type": "GIT_COMMIT",
+    "value": "d12f05f9b83ab8174b55205c39c81624840b195d"
+  },
+  "result": "PASS",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json@d12f05f9b83ab8174b55205c39c81624840b195d",
+    ".gpt-codex/evidence/learning-map-wu-user-approval.json@d12f05f9b83ab8174b55205c39c81624840b195d"
+  ],
+  "observed_at": "2026-09-29",
+  "notes": "After W push, git ls-remote origin refs/heads/main matched W. GitHub API confirmed repository ID 1394745962, approval Evidence blob 1523ffca80c2a10c3ff55dc6dc40ed1936043c79, and authorized Work Unit blob 118ebb804e70c735c029b2c162192bcfb7752cd3. W changed only governance files."
+}

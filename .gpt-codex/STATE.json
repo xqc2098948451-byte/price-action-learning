@@ -2,9 +2,9 @@
   "kernel_version": "2.0.0",
   "schema_version": 1,
   "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
-  "revision": 3,
+  "revision": 4,
   "state": "AUTHORIZED",
-  "active_work_unit": null,
+  "active_work_unit": "price-action-learning-learning-map-s1-s3-spec-001",
   "active_execution_slots": [],
   "blockers": [],
   "reconciliation": null,
@@ -13,14 +13,17 @@
     ".gpt-codex/evidence/bootstrap-finalization-work-verification.json",
     ".gpt-codex/evidence/results/bootstrap-finalization-publication.json",
     ".gpt-codex/evidence/learning-map-wu-work-verification.json",
-    ".gpt-codex/evidence/results/learning-map-wu-publication.json"
+    ".gpt-codex/evidence/results/learning-map-wu-publication.json",
+    ".gpt-codex/evidence/learning-map-wu-user-approval.json",
+    ".gpt-codex/evidence/learning-map-wu-authorization-work-verification.json",
+    ".gpt-codex/evidence/results/learning-map-wu-authorization-publication.json"
   ],
   "continuity": {
     "current_remote_ref": "refs/heads/main",
-    "latest_verified_remote_sha": "92f168054f7b93e4ce271848011ad38bdbf920f8",
-    "latest_synced_state_revision": 3,
-    "last_verified_result_ref": ".gpt-codex/evidence/results/learning-map-wu-publication.json",
+    "latest_verified_remote_sha": "d12f05f9b83ab8174b55205c39c81624840b195d",
+    "latest_synced_state_revision": 4,
+    "last_verified_result_ref": ".gpt-codex/evidence/results/learning-map-wu-authorization-publication.json",
     "sync_status": "SYNCED"
   },
-  "next_action": "Return Learning Map Work Unit authoring evidence to GPT; require LEARNING_MAP_S1_S3_SPEC_PRE_EXECUTION before business mutation"
+  "next_action": "Return Learning Map Work Unit authorization evidence to GPT; require LEARNING_MAP_S1_S3_SPEC_PRE_EXECUTION before business mutation"
 }
