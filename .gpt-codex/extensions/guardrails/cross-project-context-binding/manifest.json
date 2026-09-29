@@ -1,0 +1,22 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "id": "cross-project-context-binding",
+  "version": "1.0.0",
+  "kind": "GUARDRAIL",
+  "maturity": "BUILTIN",
+  "required_builtin": true,
+  "classification": "REQUIRED_SAFETY_GUARDRAIL",
+  "semantic_identity": "Require bidirectional project context identity binding before execution or return.",
+  "requires_capabilities": [],
+  "permissions": {
+    "filesystem": "READ_ONLY",
+    "network": "DENY",
+    "production": "DENY"
+  },
+  "failure_semantics": "deny_or_analysis_only",
+  "provenance": {
+    "source": "framework",
+    "source_framework_version": "2.1.0"
+  }
+}

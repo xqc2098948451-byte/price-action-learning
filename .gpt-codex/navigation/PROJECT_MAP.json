@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "authority": "DERIVED_NAVIGATION_INDEX",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "anchor_sha": "4cf7ffbb4a2a44648975d6a8d35da108c4dcf647",
+  "architecture_summary": "Documentation-only S1-S3 foundation with six approved domain areas; no business implementation or source directories yet.",
+  "modules": [
+    {
+      "id": "study_entry",
+      "purpose": "Study Entry, StudyContext assembly, and loading current study constraints",
+      "paths": [
+        "spec/study_entry/",
+        "src/price_action_learning/study_entry/",
+        "tests/study_entry/"
+      ],
+      "entry_points": [],
+      "keywords": [
+        "Study Entry",
+        "StudyContext"
+      ],
+      "module_map": ".gpt-codex/navigation/modules/MODULE_MAP.study_entry.json",
+      "verified_at_sha": "4cf7ffbb4a2a44648975d6a8d35da108c4dcf647",
+      "freshness": "UNKNOWN"
+    },
+    {
+      "id": "learning_map",
+      "purpose": "Stages, skills, concepts, error mappings, knowledge boundaries, confidence rules, and candidate concept proposals",
+      "paths": [
+        "spec/learning_map/",
+        "src/price_action_learning/learning_map/",
+        "tests/learning_map/"
+      ],
+      "entry_points": [],
+      "keywords": [
+        "Learning Map",
+        "Stage",
+        "Skill",
+        "Concept"
+      ],
+      "module_map": ".gpt-codex/navigation/modules/MODULE_MAP.learning_map.json",
+      "verified_at_sha": "4cf7ffbb4a2a44648975d6a8d35da108c4dcf647",
+      "freshness": "UNKNOWN"
+    },
+    {
+      "id": "training",
+      "purpose": "TrainingAttempt lifecycle, initial analysis, user confidence, one revision, and focused training mode",
+      "paths": [
+        "spec/training/",
+        "src/price_action_learning/training/",
+        "tests/training/"
+      ],
+      "entry_points": [],
+      "keywords": [
+        "Training",
+        "TrainingAttempt"
+      ],
+      "module_map": ".gpt-codex/navigation/modules/MODULE_MAP.training.json",
+      "verified_at_sha": "4cf7ffbb4a2a44648975d6a8d35da108c4dcf647",
+      "freshness": "UNKNOWN"
+    },
+    {
+      "id": "evaluation",
+      "purpose": "GPT evaluation contract, diagnostic feedback, primary error, contributors, confidence, and abstain",
+      "paths": [
+        "spec/evaluation/",
+        "src/price_action_learning/evaluation/",
+        "tests/evaluation/"
+      ],
+      "entry_points": [],
+      "keywords": [
+        "Evaluation",
+        "abstain"
+      ],
+      "module_map": ".gpt-codex/navigation/modules/MODULE_MAP.evaluation.json",
+      "verified_at_sha": "4cf7ffbb4a2a44648975d6a8d35da108c4dcf647",
+      "freshness": "UNKNOWN"
+    },
+    {
+      "id": "learning_state",
+      "purpose": "Current stage, skill states, error states, current focus, and due reviews",
+      "paths": [
+        "spec/learning_state/",
+        "src/price_action_learning/learning_state/",
+        "tests/learning_state/"
+      ],
+      "entry_points": [],
+      "keywords": [
+        "Learning State",
+        "LearningState"
+      ],
+      "module_map": ".gpt-codex/navigation/modules/MODULE_MAP.learning_state.json",
+      "verified_at_sha": "4cf7ffbb4a2a44648975d6a8d35da108c4dcf647",
+      "freshness": "UNKNOWN"
+    },
+    {
+      "id": "review",
+      "purpose": "Review scheduling, hidden-answer review, and review results",
+      "paths": [
+        "spec/review/",
+        "src/price_action_learning/review/",
+        "tests/review/"
+      ],
+      "entry_points": [],
+      "keywords": [
+        "Review",
+        "ReviewRecord"
+      ],
+      "module_map": ".gpt-codex/navigation/modules/MODULE_MAP.review.json",
+      "verified_at_sha": "4cf7ffbb4a2a44648975d6a8d35da108c4dcf647",
+      "freshness": "UNKNOWN"
+    }
+  ]
+}

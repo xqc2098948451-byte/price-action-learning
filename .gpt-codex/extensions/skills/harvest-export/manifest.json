@@ -1,0 +1,29 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "id": "harvest-export",
+  "version": "1.0.0",
+  "kind": "SKILL",
+  "maturity": "BUILTIN",
+  "required_builtin": true,
+  "semantic_identity": {
+    "intent": "Export a normalized project-local extension candidate into the current project Harvest namespace",
+    "trigger": "a project-local extension is created or materially changed",
+    "protects_or_produces": "HARVEST_CANDIDATE"
+  },
+  "requires_capabilities": [],
+  "permissions": {
+    "project_extension_read": "ALLOW",
+    "framework_harvest_own_write": "ALLOW",
+    "framework_kernel_write": "DENY",
+    "framework_builtin_write": "DENY",
+    "source_project_mutation_from_harvest": "DENY"
+  },
+  "failure_semantics": [
+    "BLOCKED"
+  ],
+  "provenance": {
+    "source": "framework",
+    "basis": "cross-project universal framework operation"
+  }
+}

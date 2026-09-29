@@ -1,0 +1,25 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "id": "verification",
+  "version": "1.0.0",
+  "kind": "SKILL",
+  "maturity": "BUILTIN",
+  "required_builtin": true,
+  "semantic_identity": {
+    "intent": "Normalize verification evidence from project-selected tools",
+    "trigger": "a Work Unit requires verification",
+    "protects_or_produces": "durable verification evidence"
+  },
+  "requires_capabilities": [],
+  "permissions": {
+    "project_read": "ALLOW"
+  },
+  "failure_semantics": [
+    "BLOCKED"
+  ],
+  "provenance": {
+    "source": "framework",
+    "basis": "cross-project universal framework operation"
+  }
+}

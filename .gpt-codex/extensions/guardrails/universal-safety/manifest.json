@@ -1,0 +1,24 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "id": "universal-safety",
+  "version": "1.0.0",
+  "kind": "GUARDRAIL",
+  "maturity": "BUILTIN",
+  "required_builtin": true,
+  "semantic_identity": {
+    "intent": "Prevent universal governance/safety violations",
+    "trigger": "any governed execution",
+    "protects_or_produces": "safety boundary"
+  },
+  "requires_capabilities": [],
+  "permissions": {},
+  "failure_semantics": [
+    "DENY",
+    "APPROVAL_REQUIRED"
+  ],
+  "provenance": {
+    "source": "framework",
+    "basis": "cross-project universal framework operation"
+  }
+}

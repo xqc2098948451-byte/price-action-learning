@@ -1,6 +1,6 @@
 # Directory Policy
 
-This repository follows the minimum closed loop, YAGNI, domain ownership, and no placeholder structure principles. Only `AGENTS.md`, `README.md`, `.gitignore`, `docs/`, `spec/`, `src/`, and `tests/` are approved top-level entries. Any other top-level directory requires explicit architecture approval.
+This repository follows the minimum closed loop, YAGNI, domain ownership, and no placeholder structure principles. Only `AGENTS.md`, `README.md`, `.gitignore`, `docs/`, `spec/`, `src/`, `tests/`, and `.gpt-codex/` are approved top-level entries. Any other top-level directory requires explicit architecture approval. `.gpt-codex/` is the Framework governance root only, not a business or domain module; its internal layout is governed by the Framework. This approval authorizes no other top-level path.
 
 ## Target structure
 
@@ -9,6 +9,7 @@ price-action-learning/
 ├── AGENTS.md
 ├── README.md
 ├── .gitignore
+├── .gpt-codex/  (Framework governance only)
 ├── docs/
 ├── spec/
 │   ├── study_entry/

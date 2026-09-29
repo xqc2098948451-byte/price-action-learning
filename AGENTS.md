@@ -1,7 +1,7 @@
 # Repository Governance
 
 1. Follow the minimum closed loop and YAGNI principles. Build only what the current approved work requires.
-2. Do not create a new top-level directory without explicit architecture approval. The approved top-level entries are `AGENTS.md`, `README.md`, `.gitignore`, `docs/`, `spec/`, `src/`, and `tests/`. `src/` and `tests/` may remain absent until implementation begins.
+2. Do not create a new top-level directory without explicit architecture approval. The approved top-level entries are `AGENTS.md`, `README.md`, `.gitignore`, `docs/`, `spec/`, `src/`, `tests/`, and `.gpt-codex/`. `src/` and `tests/` may remain absent until implementation begins.
 3. The approved domain module names are `study_entry`, `learning_map`, `training`, `evaluation`, `learning_state`, and `review`.
 4. When materialized, `spec/`, `src/price_action_learning/`, and `tests/` must use these exact domain module names.
 5. Do not create generic dumping-ground directories or modules such as `utils`, `helpers`, `common`, `misc`, `managers`, `services`, `engine`, or `lib`.
@@ -15,3 +15,4 @@
 13. Prefer one concept → one owning module → one spec location → one implementation location → one test location.
 
 The target layout and module ownership are defined in `docs/DIRECTORY_POLICY.md`.
+`.gpt-codex/` is the Framework governance root only, not a business or domain module. Its internal layout is governed by the Framework; this approval authorizes no other top-level path.

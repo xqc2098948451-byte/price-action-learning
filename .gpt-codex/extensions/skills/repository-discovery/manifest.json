@@ -1,0 +1,27 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "id": "repository-discovery",
+  "version": "1.1.0",
+  "kind": "SKILL",
+  "maturity": "BUILTIN",
+  "required_builtin": true,
+  "semantic_identity": {
+    "intent": "Read-only discovery of repository identity, structure, technology, existing tools and governance",
+    "trigger": "project bootstrap, MAP_MISS/MAP_PARTIAL scoped discovery, or material repository re-baseline",
+    "protects_or_produces": "repository evidence"
+  },
+  "requires_capabilities": [],
+  "permissions": {
+    "project_read": "ALLOW",
+    "project_write": "DENY",
+    "framework_write": "DENY"
+  },
+  "failure_semantics": [
+    "BLOCKED"
+  ],
+  "provenance": {
+    "source": "framework",
+    "basis": "cross-project universal framework operation"
+  }
+}

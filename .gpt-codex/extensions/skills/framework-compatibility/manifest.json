@@ -1,0 +1,28 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "id": "framework-compatibility",
+  "version": "1.0.0",
+  "kind": "SKILL",
+  "maturity": "BUILTIN",
+  "required_builtin": true,
+  "semantic_identity": {
+    "intent": "Read-only comparison of a project against a newer framework release",
+    "trigger": "available framework version exceeds last evaluated version",
+    "protects_or_produces": "compatibility result"
+  },
+  "requires_capabilities": [],
+  "permissions": {
+    "project_read": "ALLOW",
+    "project_write": "DENY",
+    "framework_read": "ALLOW",
+    "framework_write": "DENY"
+  },
+  "failure_semantics": [
+    "BLOCKED"
+  ],
+  "provenance": {
+    "source": "framework",
+    "basis": "cross-project universal framework operation"
+  }
+}

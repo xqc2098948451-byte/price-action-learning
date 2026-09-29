@@ -1,0 +1,15 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "id": "github-project-continuity",
+  "version": "1.0.0",
+  "kind": "SKILL",
+  "maturity": "BUILTIN",
+  "required_builtin": false,
+  "classification": "OPTIONAL_PROJECT_CONTINUITY_SKILL",
+  "semantic_identity": "Resume and publish one project’s GitHub-backed synced state with local degradation.",
+  "requires_capabilities": ["git"],
+  "permissions": {"filesystem": "PROJECT_SCOPED", "network": "OPTIONAL", "production": "SCOPED"},
+  "failure_semantics": "pending_or_reconciliation",
+  "provenance": {"source": "framework", "source_framework_version": "2.1.0"}
+}

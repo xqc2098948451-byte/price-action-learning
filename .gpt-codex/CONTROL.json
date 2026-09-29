@@ -1,0 +1,145 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "project_name": "Price Action Learning",
+  "github": {
+    "repository_id": "1394745962",
+    "repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "default_branch": "main"
+  },
+  "governance_profile": "STANDARD",
+  "framework": {
+    "adopted_version": "2.7.4",
+    "last_evaluated_version": "2.7.4",
+    "evaluation_result": "ADOPTED"
+  },
+  "roots": {
+    "project_role": "AUTHORITATIVE",
+    "framework_role": "ADVISORY",
+    "framework_kernel_access": "READ_ONLY",
+    "framework_builtins_access": "READ_ONLY",
+    "harvest_namespace": "PRJ-PRICE-ACTION-LEARNING-1394745962"
+  },
+  "extensions": {
+    "skills": [
+      {
+        "id": "repository-discovery",
+        "source": "builtin",
+        "enabled": true,
+        "version": "1.1.0",
+        "reason": "bounded repository discovery",
+        "adoption": "COPIED_SNAPSHOT",
+        "installed_path": ".gpt-codex/extensions/skills/repository-discovery",
+        "source_framework_version": "2.7.4",
+        "source_checksum": "sha256:76bc689aaae0d3f870f97b4acf58a7cfadd637d7162dc93ca25d70397e12b410"
+      },
+      {
+        "id": "verification",
+        "source": "builtin",
+        "enabled": true,
+        "version": "1.0.0",
+        "reason": "governance and result verification",
+        "adoption": "COPIED_SNAPSHOT",
+        "installed_path": ".gpt-codex/extensions/skills/verification",
+        "source_framework_version": "2.7.4",
+        "source_checksum": "sha256:645b13d48c58cd056137bdb614022d15aa7f8c9cab8145ec7440fe088ac813bb"
+      },
+      {
+        "id": "handoff",
+        "source": "builtin",
+        "enabled": true,
+        "version": "1.3.0",
+        "reason": "governed GPT-Codex handoff",
+        "adoption": "COPIED_SNAPSHOT",
+        "installed_path": ".gpt-codex/extensions/skills/handoff",
+        "source_framework_version": "2.7.4",
+        "source_checksum": "sha256:847db8dfba366e0b7e0953a0b988e8802a08d134ea58febc8a5af838207eb758"
+      },
+      {
+        "id": "framework-compatibility",
+        "source": "builtin",
+        "enabled": true,
+        "version": "1.0.0",
+        "reason": "future framework compatibility evaluation",
+        "adoption": "COPIED_SNAPSHOT",
+        "installed_path": ".gpt-codex/extensions/skills/framework-compatibility",
+        "source_framework_version": "2.7.4",
+        "source_checksum": "sha256:77a50d19f33b2daeb3a2e9884b6ada9716d6a7bd5bca1ff8c7fb2432fec284d2"
+      },
+      {
+        "id": "github-project-continuity",
+        "source": "builtin",
+        "enabled": true,
+        "version": "1.0.0",
+        "reason": "local and GitHub durable continuity",
+        "adoption": "COPIED_SNAPSHOT",
+        "installed_path": ".gpt-codex/extensions/skills/github-project-continuity",
+        "source_framework_version": "2.7.4",
+        "source_checksum": "sha256:9097b406efa1f777ea3f280ff1462c963f9d3b12eecb0eb308394f3e5f5d08c2"
+      },
+      {
+        "id": "harvest-export",
+        "source": "builtin",
+        "enabled": true,
+        "version": "1.0.0",
+        "reason": "required framework catalog capability; dormant without project-local extensions",
+        "adoption": "COPIED_SNAPSHOT",
+        "installed_path": ".gpt-codex/extensions/skills/harvest-export",
+        "source_framework_version": "2.7.4",
+        "source_checksum": "sha256:5f502f22d14d3f6a61bcc895aa78aad9000e94dd443c1acc954e7439760319a7"
+      }
+    ],
+    "guardrails": [
+      {
+        "id": "universal-safety",
+        "source": "builtin",
+        "enabled": true,
+        "version": "1.0.0",
+        "reason": "universal safety constraints",
+        "adoption": "COPIED_SNAPSHOT",
+        "installed_path": ".gpt-codex/extensions/guardrails/universal-safety",
+        "source_framework_version": "2.7.4",
+        "source_checksum": "sha256:37809515dd2b1200d9cf412d900cfe5c7882e1618d25c473b984f02022847430"
+      },
+      {
+        "id": "cross-project-context-binding",
+        "source": "builtin",
+        "enabled": true,
+        "version": "1.0.0",
+        "reason": "required project context binding",
+        "adoption": "COPIED_SNAPSHOT",
+        "installed_path": ".gpt-codex/extensions/guardrails/cross-project-context-binding",
+        "source_framework_version": "2.7.4",
+        "source_checksum": "sha256:f62686faf7d434a4325a536cf3e478cd3d9dfc526258f24e24e7944189ba6465"
+      },
+      {
+        "id": "github-repository-binding",
+        "source": "builtin",
+        "enabled": true,
+        "version": "1.0.0",
+        "reason": "selected GitHub continuity repository identity",
+        "adoption": "COPIED_SNAPSHOT",
+        "installed_path": ".gpt-codex/extensions/guardrails/github-repository-binding",
+        "source_framework_version": "2.7.4",
+        "source_checksum": "sha256:21a185c0097bad40e7bf504a2954e2db05c8855d3688b0df0c024f9e473baba2"
+      }
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "production_access": "DENY",
+    "destructive_operations": "APPROVAL_REQUIRED",
+    "framework_kernel_write": "DENY",
+    "framework_builtin_write": "DENY",
+    "harvest_own_namespace_write": "ALLOW",
+    "harvest_other_namespace_write": "DENY"
+  },
+  "complexity": {
+    "default_decision": "DO_NOT_ADD",
+    "reuse_before_extension": true,
+    "degrade_before_extend": true,
+    "generalize_after_repetition": true
+  }
+}

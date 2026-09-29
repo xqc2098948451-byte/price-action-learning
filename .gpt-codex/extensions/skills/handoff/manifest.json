@@ -1,0 +1,26 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "id": "handoff",
+  "version": "1.3.0",
+  "kind": "SKILL",
+  "maturity": "BUILTIN",
+  "required_builtin": true,
+  "semantic_identity": {
+    "intent": "Generate a compact derived handoff from authoritative project state",
+    "trigger": "GPT/user needs the next decision packet",
+    "protects_or_produces": "derived compact handoff"
+  },
+  "requires_capabilities": [],
+  "permissions": {
+    "project_read": "ALLOW",
+    "project_write": "DENY"
+  },
+  "failure_semantics": [
+    "BLOCKED"
+  ],
+  "provenance": {
+    "source": "framework",
+    "basis": "cross-project universal framework operation"
+  }
+}
