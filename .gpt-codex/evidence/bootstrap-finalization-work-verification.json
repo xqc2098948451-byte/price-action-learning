@@ -1,0 +1,20 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-BOOTSTRAP-FINALIZATION-WORK-VERIFICATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "source": "TOOL_OBSERVED",
+  "subject": "BOOTSTRAP_GOVERNANCE_WORK_COMMIT_REMOTE_VERIFICATION",
+  "state_revision": 1,
+  "identity_binding": {
+    "type": "GIT_COMMIT",
+    "value": "c450387427e957da1b6a146681a2ce7a2a866716"
+  },
+  "result": "PASS",
+  "artifact_refs": [
+    ".gpt-codex/STATE.json@c450387427e957da1b6a146681a2ce7a2a866716",
+    ".gpt-codex/evidence/bootstrap-finalization-approval.json@c450387427e957da1b6a146681a2ce7a2a866716"
+  ],
+  "observed_at": "2026-09-29",
+  "notes": "After pushing W, git ls-remote origin refs/heads/main matched W and GitHub API reported repository ID 1394745962, full name xqc2098948451-byte/price-action-learning, default branch main. W contains the AUTHORIZED revision-1 STATE and USER_ASSERTED approval evidence."
+}
