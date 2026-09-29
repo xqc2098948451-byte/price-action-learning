@@ -1,0 +1,20 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-BOOTSTRAP-FINALIZATION-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "source": "USER_ASSERTED",
+  "subject": "BOOTSTRAP_GOVERNANCE_APPROVAL",
+  "state_revision": 0,
+  "identity_binding": {
+    "type": "PROJECT_CONTEXT",
+    "value": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9"
+  },
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/CONTROL.json@2f2a4674976630fffffeac20af1f24c814c00ae4",
+    ".gpt-codex/PROJECT.md@2f2a4674976630fffffeac20af1f24c814c00ae4"
+  ],
+  "observed_at": "2026-09-29",
+  "notes": "User-approved Framework v2.7.4 bootstrap configuration and PROPOSED-to-AUTHORIZED project-governance transition only. Project PRJ-PRICE-ACTION-LEARNING-1394745962, context e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9, GitHub repository 1394745962 / xqc2098948451-byte/price-action-learning / main. Approval excludes business implementation, business Work Units, new business directories, project-local extensions, S4-S8, and a local workaround for the accepted module-map gap."
+}

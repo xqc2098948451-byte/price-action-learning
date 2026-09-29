@@ -2,13 +2,15 @@
   "kernel_version": "2.0.0",
   "schema_version": 1,
   "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
-  "revision": 0,
-  "state": "PROPOSED",
+  "revision": 1,
+  "state": "AUTHORIZED",
   "active_work_unit": null,
   "active_execution_slots": [],
   "blockers": [],
   "reconciliation": null,
-  "evidence_refs": [],
+  "evidence_refs": [
+    ".gpt-codex/evidence/bootstrap-finalization-approval.json"
+  ],
   "continuity": {
     "current_remote_ref": "refs/heads/main",
     "latest_verified_remote_sha": null,
@@ -16,5 +18,5 @@
     "last_verified_result_ref": null,
     "sync_status": "SYNC_PENDING"
   },
-  "next_action": "Run governance compile validation and obtain project authorization"
+  "next_action": "Verify remote bootstrap publication and synchronize continuity before new work"
 }
