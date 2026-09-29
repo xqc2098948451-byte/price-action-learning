@@ -2,7 +2,7 @@
   "kernel_version": "2.0.0",
   "schema_version": 1,
   "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
-  "revision": 2,
+  "revision": 3,
   "state": "AUTHORIZED",
   "active_work_unit": null,
   "active_execution_slots": [],
@@ -11,14 +11,16 @@
   "evidence_refs": [
     ".gpt-codex/evidence/bootstrap-finalization-approval.json",
     ".gpt-codex/evidence/bootstrap-finalization-work-verification.json",
-    ".gpt-codex/evidence/results/bootstrap-finalization-publication.json"
+    ".gpt-codex/evidence/results/bootstrap-finalization-publication.json",
+    ".gpt-codex/evidence/learning-map-wu-work-verification.json",
+    ".gpt-codex/evidence/results/learning-map-wu-publication.json"
   ],
   "continuity": {
     "current_remote_ref": "refs/heads/main",
-    "latest_verified_remote_sha": "c450387427e957da1b6a146681a2ce7a2a866716",
-    "latest_synced_state_revision": 2,
-    "last_verified_result_ref": ".gpt-codex/evidence/results/bootstrap-finalization-publication.json",
+    "latest_verified_remote_sha": "92f168054f7b93e4ce271848011ad38bdbf920f8",
+    "latest_synced_state_revision": 3,
+    "last_verified_result_ref": ".gpt-codex/evidence/results/learning-map-wu-publication.json",
     "sync_status": "SYNCED"
   },
-  "next_action": "Return bootstrap finalization evidence to GPT; start no business work"
+  "next_action": "Return Learning Map Work Unit authoring evidence to GPT; require LEARNING_MAP_S1_S3_SPEC_PRE_EXECUTION before business mutation"
 }

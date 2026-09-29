@@ -1,0 +1,19 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-LEARNING-MAP-WU-WORK-VERIFICATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "source": "TOOL_OBSERVED",
+  "subject": "LEARNING_MAP_WORK_UNIT_REMOTE_MATERIALIZATION",
+  "state_revision": 2,
+  "identity_binding": {
+    "type": "GIT_COMMIT",
+    "value": "92f168054f7b93e4ce271848011ad38bdbf920f8"
+  },
+  "result": "PASS",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json@92f168054f7b93e4ce271848011ad38bdbf920f8"
+  ],
+  "observed_at": "2026-09-29",
+  "notes": "After W push, git ls-remote origin refs/heads/main matched W. GitHub API confirmed repository ID 1394745962 and the remote Work Unit blob 96474020e40e5aca157cf07bad05e697fdd68c9f. W changed only the governance Work Unit; no business file changed or execution started."
+}
