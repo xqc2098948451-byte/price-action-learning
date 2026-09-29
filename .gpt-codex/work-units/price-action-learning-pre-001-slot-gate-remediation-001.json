@@ -56,11 +56,11 @@
       "SCOPE_EXPANSION"
     ]
   },
-  "state": "PROPOSED",
+  "state": "AUTHORIZED",
   "basis_state_revision": 4,
   "implementation_authorized": false,
   "implementation_start_allowed": false,
-  "next_gate": "PRE_001_SLOT_GATE_REMEDIATION_WU_AUTHORIZATION",
+  "next_gate": "PRE_001_CONTROL_PLANE_RECOVERY_AUTHORITY",
   "artifact_refs": {
     "design": {
       "path": "docs/DIRECTORY_POLICY.md",

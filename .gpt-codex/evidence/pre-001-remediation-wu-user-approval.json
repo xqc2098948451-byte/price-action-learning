@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-PRE-001-REMEDIATION-WU-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-pre-001-slot-gate-remediation-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 4,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "bf64ba20e4b8fff4bab2f82e1b775155f62de035"
+  },
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-pre-001-slot-gate-remediation-001.json@8a8a184d18d72256f04ea28c08344da330c22151"
+  ],
+  "observed_at": "2026-09-29",
+  "notes": "User approved only the exact five-path PRE-001 minimal governance remediation Work Unit with proposed blob bf64ba20e4b8fff4bab2f82e1b775155f62de035. This approval freezes the reviewed scope for a later one-time control-plane recovery route. It does not authorize implementation, normal mutation-gate execution, Learning Map business mutation, or any sixth path."
+}
