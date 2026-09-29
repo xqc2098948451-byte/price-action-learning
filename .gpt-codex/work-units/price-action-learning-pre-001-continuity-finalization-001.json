@@ -1,0 +1,72 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-pre-001-continuity-finalization-001",
+  "goal": "Record verified publication of PRE-001 recovery main 901ef3d0d97fa685215f2f81439f874fb22dda0f, advance the control-plane STATE through the normal publication/finalization contract, restore continuity to SYNCED, and rebind the existing Learning Map Work Unit to the resulting STATE revision without changing Learning Map business semantics.",
+  "scope": {
+    "owned_paths": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+      ".gpt-codex/evidence/pre-001-recovery-publication-verification.json",
+      ".gpt-codex/evidence/results/pre-001-recovery-publication.json"
+    ]
+  },
+  "acceptance": [
+    "Use only the four owned paths for future finalization; do not mutate this Work Unit, CONTROL, Framework source, any spec, src, tests, or Learning Map business file. Do not reintroduce active_execution_slots or reuse the expired one-time Root Control-Plane Recovery authority.",
+    "Before mutation, verify the selected repository is 1394745962 / xqc2098948451-byte/price-action-learning; remote refs/heads/main is exactly 901ef3d0d97fa685215f2f81439f874fb22dda0f; its STATE is AUTHORIZED at revision 5 with continuity.sync_status SYNC_PENDING and no active_execution_slots key; its active_work_unit is price-action-learning-learning-map-s1-s3-spec-001; and that Work Unit has basis_state_revision 5. Stop as STALE or BLOCKED on a mismatch.",
+    "Resolve the durable independent Recovery Review Result by exact immutable locator: repository xqc2098948451-byte/price-action-learning, commit 2740bf92db590ae8f8b38693a3824d872140be0d, path .gpt-codex/evidence/results/RESULT-PRICE_ACTION_LEARNING_PRE_001_ROOT_CONTROL_PLANE_RECOVERY_REVIEW_001.json, blob c76f2a36acb43cbe2174b702dc269524e2d36dfb. Require its PASS review of recovery candidate 901ef3d0d97fa685215f2f81439f874fb22dda0f.",
+    "Create .gpt-codex/evidence/pre-001-recovery-publication-verification.json as TOOL_OBSERVED Evidence. Establish the repository ID and full name, remotely observed refs/heads/main SHA 901ef3d0d97fa685215f2f81439f874fb22dda0f, remote STATE revision 5, absent active_execution_slots key, Learning Map Work Unit basis_state_revision 5, exact remote blob identity for the five reviewed recovery paths against the reviewed candidate, exact durable Recovery Review Result resolution, and absence of the PRE-001 self-lock. Observation grants no business execution authority.",
+    "The five recovery paths whose remote blobs must match the reviewed candidate are .gpt-codex/STATE.json, .gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json, .gpt-codex/evidence/results/RESULT-PRE-001-EXECUTION-SLOT-PAIRWISE-GATE.json, .gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-REMEDIATION-ADJUDICATION.json, and .gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-AUTHORITY-BASIS.json.",
+    "Create .gpt-codex/evidence/results/pre-001-recovery-publication.json under the native Framework v2.7.4 Result contract for formal verified publication of recovery work. Require status PASS, result_message_type IMPLEMENTATION_RESULT, responder_role CODEX_IMPLEMENTER, return_role GPT_ORCHESTRATOR, framework_version 2.7.4, current_remote_ref refs/heads/main, remote_head_sha and verified_baseline_sha both 901ef3d0d97fa685215f2f81439f874fb22dda0f, sync_status SYNCED, push_status SUCCEEDED, remote_verification VERIFIED, publication_authority CONFIRMED_PUBLICATION, and state_revision equal to the resulting STATE revision. Cite the publication-verification Evidence and bind the immutable Recovery Review Result.",
+    "Advance STATE revision from 5 to 6 through the native optimistic state transition. If native validation requires any other resulting revision, stop BLOCKED; do not improvise another transition.",
+    "At STATE revision 6 preserve state AUTHORIZED, active_work_unit price-action-learning-learning-map-s1-s3-spec-001, blockers [], reconciliation null, and the absence of the active_execution_slots key. Preserve all existing evidence_refs and append exactly .gpt-codex/evidence/pre-001-recovery-publication-verification.json and .gpt-codex/evidence/results/pre-001-recovery-publication.json.",
+    "Set STATE.continuity to current_remote_ref refs/heads/main, latest_verified_remote_sha 901ef3d0d97fa685215f2f81439f874fb22dda0f, latest_synced_state_revision 6, last_verified_result_ref .gpt-codex/evidence/results/pre-001-recovery-publication.json, and sync_status SYNCED. Keep next_action semantically requiring fresh Learning Map S1-S3 PRE_EXECUTION before business mutation.",
+    "In the existing Learning Map Work Unit, change only basis_state_revision from 5 to 6, preserving every other field byte-for-byte where formatting permits. Require state AUTHORIZED, implementation_authorized false, implementation_start_allowed false, and next_gate LEARNING_MAP_S1_S3_SPEC_PRE_EXECUTION. Grant no Learning Map business authority.",
+    "Do not delete recovery branches, tags, or evidence; issue a Learning Map Execution Instruction; run Learning Map PRE; authorize business implementation; or change Learning Map scope or acceptance. Finalization must return its Result to GPT."
+  ],
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ],
+    "forbidden_actions": [
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 5,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "PRE_001_CONTINUITY_FINALIZATION_WU_AUTHORIZATION",
+  "artifact_refs": {
+    "design": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "sha": "901ef3d0d97fa685215f2f81439f874fb22dda0f"
+    },
+    "plan": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "sha": "901ef3d0d97fa685215f2f81439f874fb22dda0f"
+    }
+  }
+}
