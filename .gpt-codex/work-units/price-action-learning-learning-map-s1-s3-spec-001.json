@@ -1,0 +1,104 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-s1-s3-spec-001",
+  "goal": "Freeze the minimum Learning Map v1 specification for S1-S3 so subsequent Training, Evaluation, and Learning State work can depend on one stable domain contract; specification only, without runtime behavior.",
+  "scope": {
+    "owned_paths": [
+      "spec/learning_map/LEARNING_MAP_SPEC.md",
+      "spec/learning_map/.gitkeep"
+    ],
+    "excluded_paths": [
+      "README.md",
+      "AGENTS.md",
+      "docs/CONTRACTS.md",
+      "docs/DOMAIN_CONSTITUTION.md",
+      "docs/PROJECT_SCOPE.md",
+      "docs/DIRECTORY_POLICY.md",
+      "spec/training/",
+      "spec/evaluation/",
+      "spec/learning_state/",
+      "spec/review/",
+      "spec/study_entry/",
+      "src/",
+      "tests/",
+      "data/",
+      "private/",
+      "screenshots/",
+      "training_records/",
+      "local_state/",
+      ".local/",
+      "user_data/",
+      ".env"
+    ]
+  },
+  "acceptance": [
+    "Create only spec/learning_map/LEARNING_MAP_SPEC.md and remove spec/learning_map/.gitkeep only after the real specification exists; create no business directory or implementation file.",
+    "Freeze the Learning Map responsibilities Stage Map, Skill Map, Concept Map, Error Map, Knowledge Boundary, and Knowledge Confidence for the MVP only.",
+    "Knowledge Confidence has exactly CORE, CONTEXTUAL, and CONTESTED. Only CORE knowledge currently allowed by the Stage may formally justify a user error; CONTEXTUAL may explain but not independently mark an error; CONTESTED does not enter core training by default. Evaluation confidence remains separate.",
+    "Express the S1-S3 learning sequence as State → Movement → Location. S4-S8 may be mentioned only as future out-of-scope direction, without implementation contracts.",
+    "S1 Market State asks what the market is doing before prediction. Its minimum allowed concepts are High, Low, Swing High, Swing Low, HH, HL, LH, LL, Uptrend, Downtrend, Range, Uncertain, and Fact vs Interpretation.",
+    "S1 core errors are OBS-001, OBS-002, OBS-004, STR-001, STR-002, STR-006, and STR-007. Training case categories are clear uptrend, clear downtrend, clear range, trend with noise, and genuinely ambiguous.",
+    "S1 habits require structure before prediction, observable facts before interpretation, and permission to state uncertainty when evidence is insufficient.",
+    "S2 Structure Movement distinguishes trend-internal contrary movement from real structural change. Its allowed new concepts are Impulse, Pullback, Structure Maintained, Structure Weakened, Structure Damaged, and Structure Changed.",
+    "S2 states that contrary movement is not necessarily trend reversal, and destruction of the original trend does not establish a new trend. It must also avoid training the opposite overcorrection of never accepting a real reversal.",
+    "S2 core errors are STR-003, STR-004, STR-005, REA-002, REA-003, and REA-005. Training case categories are clear trend pullback, deep pullback with intact structure, freshly damaged structure, structural damage followed by recovery, real structural change, and ambiguous boundary case.",
+    "S3 Market Location identifies price relative to genuinely relevant structure without proliferating arbitrary support and resistance lines. Initially train only significant previous high, significant previous low, range high, and range low.",
+    "S3 supporting concepts are Previous Significant High/Low, Major Swing High/Low, Range High/Low, Structural Area, Current Location, and Relevant vs Less Relevant.",
+    "S3 core errors are LOC-001 through LOC-006. Its principles are few but relevant locations and that an important location does not imply a guaranteed reversal.",
+    "Define only minimum Stage, Skill, Concept, and Error fields needed for the MVP, without a generalized graph, database schema, speculative fields, inheritance hierarchy, or plugin architecture.",
+    "Learning Map is not a technical-analysis textbook; GPT supplies minimal explanations and examples when needed. Future concept expansion should reuse existing concepts before adding a new one, without implementing its lifecycle here.",
+    "Do not add a full technical-analysis knowledge base, indicators, Elliott Wave, harmonic systems, ICT/SMC/FVG as core training, trading signals, market prediction, automatic trading, risk management, scoring, database, Web UI, external API, or plugin implementation.",
+    "Do not implement Candidate Concept Expansion, Review, Training, Evaluation, or Learning State. Do not change project-native governance, other domain modules, Framework source, or private/local data."
+  ],
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ],
+    "forbidden_actions": [
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 2,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "LEARNING_MAP_S1_S3_SPEC_PRE_EXECUTION",
+  "evidence_refs": [
+    "AGENTS.md@8b93e5c736c650414834a3d4a9007c4031459c5e",
+    "docs/CONTRACTS.md@8b93e5c736c650414834a3d4a9007c4031459c5e",
+    "docs/DOMAIN_CONSTITUTION.md@8b93e5c736c650414834a3d4a9007c4031459c5e"
+  ],
+  "artifact_refs": {
+    "design": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "sha": "8b93e5c736c650414834a3d4a9007c4031459c5e"
+    },
+    "plan": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "sha": "8b93e5c736c650414834a3d4a9007c4031459c5e"
+    }
+  }
+}
