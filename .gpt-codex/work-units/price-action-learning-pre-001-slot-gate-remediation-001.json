@@ -1,0 +1,74 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-pre-001-slot-gate-remediation-001",
+  "goal": "Remove the unintended serial-project activation of Framework pairwise execution-slot validation, durably record PRE-001 and its accepted adjudication basis, and rebind the existing Learning Map Work Unit to the resulting STATE revision without changing Learning Map business semantics.",
+  "scope": {
+    "owned_paths": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+      ".gpt-codex/evidence/results/RESULT-PRE-001-EXECUTION-SLOT-PAIRWISE-GATE.json",
+      ".gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-REMEDIATION-ADJUDICATION.json",
+      ".gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-AUTHORITY-BASIS.json"
+    ]
+  },
+  "acceptance": [
+    "Mutate only the five owned paths; do not mutate this remediation Work Unit or any business, Framework, CONTROL, Project Map, Module Map, schema, template, spec, src, or tests path.",
+    "Remove the optional active_execution_slots property entirely from STATE.json; do not replace it with null or [] and do not fabricate execution slots or enable parallel execution.",
+    "Advance STATE revision 4 using native optimistic revision control while preserving state AUTHORIZED, active_work_unit price-action-learning-learning-map-s1-s3-spec-001, blockers [], reconciliation null, all existing evidence refs, and unrelated STATE semantics.",
+    "In the Learning Map Work Unit, change only basis_state_revision to the resulting STATE revision; preserve its work_unit_id, goal, scope, acceptance, selected_extensions, permissions, artifact_refs, and all business boundaries.",
+    "Keep Learning Map implementation_authorized false and implementation_start_allowed false, with next_gate LEARNING_MAP_S1_S3_SPEC_PRE_EXECUTION; remediation does not authorize business execution.",
+    "Persist the already-produced native REVIEW_FINDING without upgrading it to PASS at .gpt-codex/evidence/results/RESULT-PRE-001-EXECUTION-SLOT-PAIRWISE-GATE.json, bound to Result ID RESULT-PRE-001-EXECUTION-SLOT-PAIRWISE-GATE, finding PRE-001-EXECUTION-SLOT-PAIRWISE-GATE, Review Request 4f39f2d1-5af7-4ea8-b8c8-8b681f26d0df, reviewed main e8e3c4f9ce99dea03df8f418ead43c5e210c36a7, and STATE revision 4 at finding.",
+    "Create the owned remediation adjudication with subject REMEDIATION_ADJUDICATION, finding_ids [PRE-001-EXECUTION-SLOT-PAIRWISE-GATE], decision ACCEPT, basis_type ACCEPTED_AUTHORITY_BASIS, source SYSTEM_DERIVED, and bindings to the durable REVIEW_FINDING Result and exact owned authority basis; set native revision fields to the resulting STATE revision.",
+    "Create the owned authority basis with basis_type ACCEPTED_AUTHORITY_BASIS, accepted true, source SYSTEM_DERIVED, finding_ids [PRE-001-EXECUTION-SLOT-PAIRWISE-GATE], and bindings to the durable Result, project PRJ-PRICE-ACTION-LEARNING-1394745962, context e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9, repository 1394745962 / xqc2098948451-byte/price-action-learning, original STATE revision 4 and main e8e3c4f9ce99dea03df8f418ead43c5e210c36a7, adopted Framework 2.7.4, explicit user approval for the minimal PRE-001 governance repair, and GPT's ACCEPTED finding adjudication; invent no unrelated authority.",
+    "Append exactly the three owned durable Result, adjudication, and authority-basis paths to STATE.evidence_refs without removing any existing refs.",
+    "Treat Execution Instruction a649ef54-ac95-4ab6-b739-787a6e1d4a2f and Review Request 4f39f2d1-5af7-4ea8-b8c8-8b681f26d0df as historical after the STATE revision; do not delete, rewrite, or execute them.",
+    "Require a fresh Execution Instruction and fresh PRE review against the new main and STATE revision before any Learning Map business mutation.",
+    "Do not patch Framework v2.7.4 validate_governed_mutation_entry(), its schema or template, or implement the informational defect candidate EMPTY_EXECUTION_SLOT_LIST_ACTIVATES_PAIRWISE_GATE in this project."
+  ],
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ],
+    "forbidden_actions": [
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 4,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "PRE_001_SLOT_GATE_REMEDIATION_WU_AUTHORIZATION",
+  "artifact_refs": {
+    "design": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "sha": "e8e3c4f9ce99dea03df8f418ead43c5e210c36a7"
+    },
+    "plan": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "sha": "e8e3c4f9ce99dea03df8f418ead43c5e210c36a7"
+    }
+  }
+}
