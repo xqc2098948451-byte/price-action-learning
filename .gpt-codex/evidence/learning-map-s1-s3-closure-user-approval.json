@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-LEARNING-MAP-S1-S3-CLOSURE-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-s1-s3-closure-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 7,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "e474d379342c635443b0007db01c5831ea7ec965"
+  },
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-closure-001.json@9a462180085151fbcc69aa760a4198266cf500d7"
+  ],
+  "observed_at": "2026-09-30",
+  "notes": "User approved the exact proposed closure Work Unit bound to blob e474d379342c635443b0007db01c5831ea7ec965, authorizing it to proceed through remaining Framework governance gates."
+}

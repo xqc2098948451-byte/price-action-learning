@@ -56,11 +56,11 @@
       "SCOPE_EXPANSION"
     ]
   },
-  "state": "PROPOSED",
+  "state": "AUTHORIZED",
   "basis_state_revision": 7,
   "implementation_authorized": false,
   "implementation_start_allowed": false,
-  "next_gate": "USER_WORK_UNIT_APPROVAL",
+  "next_gate": "LEARNING_MAP_S1_S3_CLOSURE_RECONCILIATION_REQUEST_AUTHORING",
   "artifact_refs": {
     "design": {
       "path": "docs/DIRECTORY_POLICY.md",
