@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-LEARNING-MAP-POST-001-REMEDIATION-REGISTRATION-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-post-001-remediation-registration-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 6,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "971dc8113d62bda645f7ac06a3af6236684494c8"
+  },
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-learning-map-post-001-remediation-registration-001.json@2787d3386220eb6ca100a34847a2666eaab28898"
+  ],
+  "observed_at": "2026-09-30",
+  "notes": "User explicitly approved the exact proposed remediation-registration Work Unit bound to blob 971dc8113d62bda645f7ac06a3af6236684494c8. Approval authorizes this Work Unit to proceed through its remaining governance gates only. It does not itself approve or execute a future RECONCILIATION_REQUEST, does not mutate refs/heads/main, and does not modify the frozen Learning Map business candidate."
+}
