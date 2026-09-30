@@ -1,0 +1,103 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-s1-s3-spec-001",
+  "extension": {
+    "kind": "SKILL",
+    "id": "verification",
+    "version": "1.0.0"
+  },
+  "status": "PASS",
+  "result_message_type": "REVIEW_RESULT",
+  "result_id": "36efef1a-8e86-4f6f-b044-07b6085a3d93",
+  "response_to_instruction_id": "2fb7d6ad-741b-4f88-8c2e-7a91b6df14fe",
+  "responder_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "return_to_gpt_required": true,
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "framework_version": "2.7.4",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "review_target_revision": "1762c6704387a0acc25b747f59e63642c75325a1",
+  "state_revision": 7,
+  "finding_ids": [],
+  "fix_round": 1,
+  "artifact_stage": "IMPLEMENTATION",
+  "current_remote_ref": "refs/heads/main",
+  "local_head_sha": "9453258324fb6719d08a79d26d45e709d0007a22",
+  "remote_head_sha": "002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+  "remote_verification": "VERIFIED",
+  "push_status": "NOT_ATTEMPTED",
+  "execution": "READ / TEST / VALIDATE / REPORT",
+  "changed": [],
+  "verify": {
+    "candidate_tree_sha": "1762c6704387a0acc25b747f59e63642c75325a1",
+    "learning_map_spec_blob_sha": "b0373a7090b33e8c1191ae8cb76ab8c39c5b85ed",
+    "gitkeep_absent": true,
+    "minimum_correction": "Judge each TrainingAttempt using its own Stage and the knowledge boundary available when its analysis was submitted; later-learned Stage or Concept knowledge cannot retroactively penalize it.",
+    "other_findings": []
+  },
+  "evidence_refs": [
+    ".gpt-codex/evidence/instructions/4f9dc0d2-4580-4c26-9708-0a815dbbb907.json@c012e81ab5fdc0c960bbc37f9f8befbcdad8f9a5#fc52db15fc72b9e751697e84f59649fb188a5efc",
+    ".gpt-codex/evidence/instructions/2fb7d6ad-741b-4f88-8c2e-7a91b6df14fe.json@024b6e5e7fa1066c554daf18d13e459522134485#115af7ce859d197c975cad8fd907fe8c461ea0e9",
+    ".gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+    ".gpt-codex/evidence/learning-map-post-001-remediation-basis.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+    ".gpt-codex/evidence/learning-map-post-001-remediation-adjudication.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+    "spec/learning_map/LEARNING_MAP_SPEC.md@1762c6704387a0acc25b747f59e63642c75325a1#b0373a7090b33e8c1191ae8cb76ab8c39c5b85ed"
+  ],
+  "deviations": [],
+  "blockers": [],
+  "completion_evidence": {
+    "execution_state": "COMPLETED",
+    "process_completed": true,
+    "exit_code": 0,
+    "intended_scope": [
+      "spec/learning_map/LEARNING_MAP_SPEC.md",
+      "spec/learning_map/.gitkeep"
+    ],
+    "executed_scope": [
+      "spec/learning_map/LEARNING_MAP_SPEC.md",
+      "spec/learning_map/.gitkeep"
+    ],
+    "test_files_expected": 0,
+    "test_files_executed": 0,
+    "test_count": 1,
+    "failure_count": 0,
+    "error_count": 0,
+    "validators_expected": [
+      "instruction_locator",
+      "fix_instruction_envelope",
+      "fix_instruction_authority",
+      "pre_request_envelope",
+      "pre_request_authority",
+      "fix_lifecycle",
+      "candidate_freshness",
+      "scope_and_semantic_review",
+      "result_envelope",
+      "review_result",
+      "result_authority",
+      "completion_evidence",
+      "pre_execution_review"
+    ],
+    "validators_completed": [
+      "instruction_locator",
+      "fix_instruction_envelope",
+      "fix_instruction_authority",
+      "pre_request_envelope",
+      "pre_request_authority",
+      "fix_lifecycle",
+      "candidate_freshness",
+      "scope_and_semantic_review",
+      "result_envelope",
+      "review_result",
+      "result_authority",
+      "completion_evidence",
+      "pre_execution_review"
+    ],
+    "blocker_evidence_refs": []
+  },
+  "completion_gate": "GPT_DECISION",
+  "next_gpt_action": "Decide whether to release the minimum FIX for execution after this PRE review is made durable."
+}
