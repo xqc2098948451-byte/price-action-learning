@@ -1,0 +1,42 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-s1-s3-spec-001",
+  "extension": {
+    "kind": "SKILL",
+    "id": "verification",
+    "version": "1.0.0"
+  },
+  "status": "FAIL",
+  "result_message_type": "REVIEW_FINDING",
+  "result_id": "7a0e0c02-2f97-4d17-9a61-3b73f80710f4",
+  "response_to_instruction_id": "d2b7537e-13bb-4dd2-9c72-3da1774c684f",
+  "responder_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "return_to_gpt_required": true,
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "framework_version": "2.7.4",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "review_target_revision": "1762c6704387a0acc25b747f59e63642c75325a1",
+  "state_revision": 6,
+  "finding_ids": [
+    "FINDING-LEARNING-MAP-POST-001"
+  ],
+  "fix_round": 0,
+  "current_remote_ref": "refs/heads/main",
+  "local_head_sha": "9453258324fb6719d08a79d26d45e709d0007a22",
+  "remote_head_sha": "9453258324fb6719d08a79d26d45e709d0007a22",
+  "remote_verification": "VERIFIED",
+  "push_status": "NOT_ATTEMPTED",
+  "evidence_refs": [
+    ".gpt-codex/evidence/instructions/d2b7537e-13bb-4dd2-9c72-3da1774c684f.json@80a1ecb51fc83ed98dc2fc9c4010f5f5040ecd30",
+    ".gpt-codex/evidence/results/RESULT-LEARNING-MAP-S1-S3-PRE-002.json@6186b23d767947626b21e355541a7ff28c090b26"
+  ],
+  "candidate_tree_sha": "1762c6704387a0acc25b747f59e63642c75325a1",
+  "learning_map_spec_blob_sha": "b0373a7090b33e8c1191ae8cb76ab8c39c5b85ed",
+  "finding_summary": "The Learning Map binds formal judgment to the current Stage and currently learned concepts but does not freeze the knowledge boundary at the time of the TrainingAttempt. After later Stage progression, newly learned concepts could therefore retroactively penalize an earlier attempt. The minimum correction is to state that each attempt is formally judged using that attempt's Stage and the knowledge available when its analysis was submitted; later-stage knowledge cannot retroactively penalize it. No new record field is required.",
+  "completion_gate": "GPT_DECISION"
+}
