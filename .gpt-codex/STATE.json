@@ -2,7 +2,7 @@
   "kernel_version": "2.0.0",
   "schema_version": 1,
   "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
-  "revision": 6,
+  "revision": 7,
   "state": "AUTHORIZED",
   "active_work_unit": "price-action-learning-learning-map-s1-s3-spec-001",
   "blockers": [],
@@ -20,14 +20,19 @@
     ".gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-REMEDIATION-ADJUDICATION.json",
     ".gpt-codex/evidence/PRE-001-EXECUTION-SLOT-PAIRWISE-GATE-AUTHORITY-BASIS.json",
     ".gpt-codex/evidence/pre-001-recovery-publication-verification.json",
-    ".gpt-codex/evidence/results/pre-001-recovery-publication.json"
+    ".gpt-codex/evidence/results/pre-001-recovery-publication.json",
+    ".gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json",
+    ".gpt-codex/evidence/learning-map-post-001-remediation-basis.json",
+    ".gpt-codex/evidence/learning-map-post-001-remediation-adjudication.json",
+    ".gpt-codex/evidence/learning-map-post-001-remediation-work-verification.json",
+    ".gpt-codex/evidence/results/learning-map-post-001-remediation-publication.json"
   ],
   "continuity": {
     "current_remote_ref": "refs/heads/main",
-    "latest_verified_remote_sha": "901ef3d0d97fa685215f2f81439f874fb22dda0f",
-    "latest_synced_state_revision": 6,
-    "last_verified_result_ref": ".gpt-codex/evidence/results/pre-001-recovery-publication.json",
+    "latest_verified_remote_sha": "e8c5adc08642d01bbfeef6ac074cf349f9623e49",
+    "latest_synced_state_revision": 7,
+    "last_verified_result_ref": ".gpt-codex/evidence/results/learning-map-post-001-remediation-publication.json",
     "sync_status": "SYNCED"
   },
-  "next_action": "PRE-001 recovery finalized; pause before Learning Map. When the user explicitly resumes, require fresh Learning Map S1-S3 PRE_EXECUTION before any business mutation."
+  "next_action": "Use the durable POST-001 finding, remediation basis, and adjudication to issue a governed FIX_INSTRUCTION for fix_round 1. Require fresh PRE_EXECUTION before applying only the minimum Learning Map knowledge-boundary correction. Do not start another business Work Unit."
 }
