@@ -1,0 +1,52 @@
+{
+  "instruction_id": "f3c3b00b-7f3a-4d49-b5d6-b341e8b2658e",
+  "instruction_type": "APPROVAL_REQUEST",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-learning-map-s1-s3-closure-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-closure-001.json",
+    "sha": "f4c2583d44e94b12cd4c6e3356db97a1a0e754e7"
+  },
+  "expected_state_revision": 7,
+  "expected_base_sha": "28c99f573799689c0a3b5b124768c688a1006ef3",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "28c99f573799689c0a3b5b124768c688a1006ef3",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "USER_APPROVER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "APPROVE",
+    "REJECT"
+  ],
+  "forbidden_actions": [],
+  "scope_paths": [
+    ".gpt-codex/STATE.json",
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+    ".gpt-codex/evidence/learning-map-s1-s3-publication-verification.json",
+    ".gpt-codex/evidence/results/learning-map-s1-s3-publication.json"
+  ],
+  "permission_scope": "LEARNING_MAP_S1_S3_CLOSURE_INSTRUCTION_APPROVAL_ONLY",
+  "in_response_to_instruction_id": "7e9e7d8e-2eb2-4c85-9d5e-9d0a1f14c2c7",
+  "completion_gate": "USER_APPROVAL",
+  "evidence_requirements": {
+    "files_read": [
+      "Immutable authorized closure Work Unit locator: repository=xqc2098948451-byte/price-action-learning; commit=f4c2583d44e94b12cd4c6e3356db97a1a0e754e7; path=.gpt-codex/work-units/price-action-learning-learning-map-s1-s3-closure-001.json; blob=c7c0ea7e121d961fc2e6574aa73a099668d53e93.",
+      "Verified main baseline: repository=xqc2098948451-byte/price-action-learning; ref=refs/heads/main; commit=28c99f573799689c0a3b5b124768c688a1006ef3; STATE revision=7; state=AUTHORIZED."
+    ],
+    "validation": [
+      "USER_APPROVER must decide APPROVE or REJECT for ONLY the exact approved_instruction core in the following requirement. No approval is inferred from the earlier Work Unit approval or from this request.",
+      "approved_instruction exact JSON: {\"instruction_id\":\"7e9e7d8e-2eb2-4c85-9d5e-9d0a1f14c2c7\",\"expected_state_revision\":7,\"expected_base_sha\":\"28c99f573799689c0a3b5b124768c688a1006ef3\",\"scope_paths\":[\".gpt-codex/STATE.json\",\".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json\",\".gpt-codex/evidence/learning-map-s1-s3-publication-verification.json\",\".gpt-codex/evidence/results/learning-map-s1-s3-publication.json\"],\"target_project_context_id\":\"e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9\",\"target_project_name\":\"Price Action Learning\",\"target_github_repository_id\":\"1394745962\",\"target_github_repository_full_name\":\"xqc2098948451-byte/price-action-learning\",\"target_work_unit_ref\":{\"path\":\".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-closure-001.json\",\"sha\":\"f4c2583d44e94b12cd4c6e3356db97a1a0e754e7\"},\"issuer_role\":\"GPT_ORCHESTRATOR\",\"executor_role\":\"CODEX_IMPLEMENTER\",\"authorized_actions\":[\"READ\",\"TEST\",\"VALIDATE\",\"REPORT\",\"MUTATE_APPROVED_SCOPE\"]}",
+      "Require exact target project/context, repository identity, STATE revision 7, base SHA 28c99f573799689c0a3b5b124768c688a1006ef3, four-path scope in order, and authorized closure Work Unit ref to match the frozen approved_instruction core.",
+      "If approved, a future RECONCILIATION_REQUEST may only finalize Learning Map closure, advance STATE 7 to 8, mark the Learning Map business Work Unit COMPLETE, clear active_work_unit, and create publication verification and result.",
+      "The future RECONCILIATION_REQUEST must not change any business file, start Training, expand scope, or modify Framework source.",
+      "Do not create an APPROVAL_RESULT or publish the reserved RECONCILIATION_REQUEST during this APPROVAL_REQUEST authoring transaction."
+    ],
+    "revision": true
+  }
+}
