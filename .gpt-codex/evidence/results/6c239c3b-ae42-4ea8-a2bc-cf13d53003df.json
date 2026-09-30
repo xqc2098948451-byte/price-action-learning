@@ -1,0 +1,83 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-post-001-remediation-registration-001",
+  "extension": {
+    "kind": "SKILL",
+    "id": "verification",
+    "version": "1.0.0"
+  },
+  "status": "PASS",
+  "result_message_type": "REVIEW_RESULT",
+  "result_id": "6c239c3b-ae42-4ea8-a2bc-cf13d53003df",
+  "response_to_instruction_id": "8d8b3137-3efa-4dd5-a8a6-7d0b8349ee0e",
+  "responder_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "return_to_gpt_required": true,
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "framework_version": "2.7.4",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "review_target_revision": "9453258324fb6719d08a79d26d45e709d0007a22",
+  "state_revision": 6,
+  "finding_ids": [],
+  "fix_round": 0,
+  "current_remote_ref": "refs/heads/main",
+  "remote_head_sha": "9453258324fb6719d08a79d26d45e709d0007a22",
+  "remote_verification": "VERIFIED",
+  "push_status": "NOT_ATTEMPTED",
+  "evidence_refs": [
+    ".gpt-codex/evidence/instructions/8d8b3137-3efa-4dd5-a8a6-7d0b8349ee0e.json@3b678e2eef0be836b0a6f12acbc14a05e302e40e",
+    ".gpt-codex/evidence/instructions/a3f1f0c8-5c0b-4f61-9c5a-7b29e6d5a1f3.json@a92f85ef55aeef53ccabc278cb881425218f59fc",
+    ".gpt-codex/evidence/results/RESULT-LEARNING-MAP-POST-001-REMEDIATION-REGISTRATION-APPROVAL-001.json@47e4a729e9f4a84fa28e3b0ea6f50c15eca15906",
+    ".gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json@72532c2104fe5ef01039550b21bd87d95714829c"
+  ],
+  "completion_evidence": {
+    "execution_state": "COMPLETED",
+    "process_completed": true,
+    "exit_code": 0,
+    "intended_scope": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+      ".gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-basis.json",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-adjudication.json",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-work-verification.json",
+      ".gpt-codex/evidence/results/learning-map-post-001-remediation-publication.json"
+    ],
+    "executed_scope": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+      ".gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-basis.json",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-adjudication.json",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-work-verification.json",
+      ".gpt-codex/evidence/results/learning-map-post-001-remediation-publication.json"
+    ],
+    "test_files_expected": 0,
+    "test_files_executed": 0,
+    "test_count": 0,
+    "failure_count": 0,
+    "error_count": 0,
+    "validators_expected": [
+      "instruction_envelope",
+      "instruction_authority",
+      "approval_evidence",
+      "approval_result",
+      "pre_execution_review",
+      "control_plane_admission"
+    ],
+    "validators_completed": [
+      "instruction_envelope",
+      "instruction_authority",
+      "approval_evidence",
+      "approval_result",
+      "pre_execution_review",
+      "control_plane_admission"
+    ],
+    "blocker_evidence_refs": []
+  },
+  "completion_gate": "GPT_DECISION"
+}
