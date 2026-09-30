@@ -1,0 +1,78 @@
+{
+  "instruction_id": "a91a6e88-b7dc-44f8-9607-21e8405be4a0",
+  "instruction_type": "REVIEW_REQUEST",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-learning-map-s1-s3-closure-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-closure-001.json",
+    "sha": "f4c2583d44e94b12cd4c6e3356db97a1a0e754e7"
+  },
+  "expected_state_revision": 7,
+  "expected_base_sha": "28c99f573799689c0a3b5b124768c688a1006ef3",
+  "review_target_revision": "28c99f573799689c0a3b5b124768c688a1006ef3",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "28c99f573799689c0a3b5b124768c688a1006ef3",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "scope_paths": [
+    ".gpt-codex/STATE.json",
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+    ".gpt-codex/evidence/learning-map-s1-s3-publication-verification.json",
+    ".gpt-codex/evidence/results/learning-map-s1-s3-publication.json"
+  ],
+  "permission_scope": "LEARNING_MAP_S1_S3_CLOSURE_PRE_EXECUTION_ONLY",
+  "in_response_to_instruction_id": "7e9e7d8e-2eb2-4c85-9d5e-9d0a1f14c2c7",
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Framework 2.7.4 immutable commit 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c; use its exact native authority and result/state validators.",
+      "Authorized closure Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=f4c2583d44e94b12cd4c6e3356db97a1a0e754e7; path=.gpt-codex/work-units/price-action-learning-learning-map-s1-s3-closure-001.json; blob=c7c0ea7e121d961fc2e6574aa73a099668d53e93.",
+      "RECONCILIATION_REQUEST: repository=xqc2098948451-byte/price-action-learning; commit=08a573d7549d855ff9ea8e02d59d1138c7678919; path=.gpt-codex/evidence/instructions/7e9e7d8e-2eb2-4c85-9d5e-9d0a1f14c2c7.json; blob=eda8623d59e4f98a32d353f1acc3ecc7132b22ef.",
+      "Approval Request: repository=xqc2098948451-byte/price-action-learning; commit=02f0aef5ddfba55cb5f496b08478ea5f74b295ee; path=.gpt-codex/evidence/instructions/f3c3b00b-7f3a-4d49-b5d6-b341e8b2658e.json; blob=8eb69a3d6a47217ecf7a74e161cd4e080783b4c7.",
+      "USER_APPROVER Approval Result: repository=xqc2098948451-byte/price-action-learning; commit=425fdb0607103facc4061693f19787838e3ccce9; path=.gpt-codex/evidence/results/RESULT-LEARNING-MAP-S1-S3-CLOSURE-RECONCILIATION-APPROVAL-001.json; blob=9bb6189690e6b48b8604d25ee410120e29b89fd2.",
+      "Published Learning Map Work Commit: repository=xqc2098948451-byte/price-action-learning; refs/heads/main=28c99f573799689c0a3b5b124768c688a1006ef3; parent=002df9fef1bd3717a0bde147a546ef9cf4150e5d; tree=ee1faa17f5bfe51973b3307aefeb95b056512718; spec/learning_map/LEARNING_MAP_SPEC.md blob=726b35db8409ea03cbec33c916db7374e6724e03; spec/learning_map/.gitkeep absent.",
+      "Durable POST PASS: repository=xqc2098948451-byte/price-action-learning; commit=6555706b6dd2627a511755ca5a374877df7f60d6; path=.gpt-codex/evidence/results/5e3cbac9-67a8-4ef6-9f43-2c177ee204db.json; blob=2671342123cfc02bcf8cba706f0333d96bbda182."
+    ],
+    "files_changed": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+      ".gpt-codex/evidence/learning-map-s1-s3-publication-verification.json",
+      ".gpt-codex/evidence/results/learning-map-s1-s3-publication.json"
+    ],
+    "validation": [
+      "1. Live-verify repository ID 1394745962/full name xqc2098948451-byte/price-action-learning, refs/heads/main exactly 28c99f573799689c0a3b5b124768c688a1006ef3, and main STATE revision 7/AUTHORIZED/SYNCED. Resolve the authorized closure Work Unit and exact four-path scope; require Framework 2.7.4 control-plane admission. Correlate Approval Request in_response_to_instruction_id with RECONCILIATION_REQUEST, USER_APPROVER Approval Result response_to_instruction_id with Approval Request, status PASS and decision APPROVE; require approved_instruction to equal exact _control_plane_approved_core(RECONCILIATION_REQUEST) and approval_evidence_ref to resolve the stated immutable Approval Result locator.",
+      "2. Verify the already-published Learning Map business Work Commit remains exactly 28c99f573799689c0a3b5b124768c688a1006ef3, with parent 002df9fef1bd3717a0bde147a546ef9cf4150e5d, tree ee1faa17f5bfe51973b3307aefeb95b056512718, spec blob 726b35db8409ea03cbec33c916db7374e6724e03, and spec/learning_map/.gitkeep absent.",
+      "3. Resolve the durable POST Result by the immutable locator in files_read; require result_id 5e3cbac9-67a8-4ef6-9f43-2c177ee204db, status PASS, finding_ids [], fix_round 1, review_target_revision and verify.candidate_tree_sha ee1faa17f5bfe51973b3307aefeb95b056512718, and verify.learning_map_spec_blob_sha 726b35db8409ea03cbec33c916db7374e6724e03.",
+      "4. Verify the future closure candidate may change only the four scope_paths in this Review Request, with parent 28c99f573799689c0a3b5b124768c688a1006ef3. Do not generate that candidate during this request authoring transaction.",
+      "5. Require the planned STATE transition to be exactly revision 7 to 8: preserve state AUTHORIZED, blockers [], reconciliation null, and absence of the active_execution_slots key; set active_work_unit to null. Preserve existing evidence_refs in order and append only the publication-verification Evidence and publication Result refs; apply the closure Work Unit's exact continuity and next_action requirements.",
+      "6. Require the existing Learning Map business Work Unit closure to change only basis_state_revision 7 to 8, state AUTHORIZED to COMPLETE, and next_gate to COMPLETE. Preserve business scope and acceptance, implementation_authorized false, and implementation_start_allowed false.",
+      "7. Require publication-verification Evidence to bind the already-published Work Commit 28c99f573799689c0a3b5b124768c688a1006ef3, tree ee1faa17f5bfe51973b3307aefeb95b056512718, spec blob 726b35db8409ea03cbec33c916db7374e6724e03, .gitkeep absence, remote STATE revision 7 before publication, and the durable POST PASS immutable locator.",
+      "8. Require the planned publication Result and resulting STATE to satisfy exact Framework 2.7.4 validate_result_envelope_contract, validate_result_authority, validate_completion_evidence, and validate_state_authority with no errors. Check the closure Work Unit's required Result fields and publication bindings.",
+      "9. Verify no business file changes in the future closure transaction, including spec/**, src/**, tests/**, README.md, AGENTS.md, and docs/**.",
+      "10. Verify Training does not start in the future closure transaction; no Training Work Unit or business implementation is created or authorized.",
+      "Report all currently detectable findings in one pass. Return a governed PRE_EXECUTION REVIEW_RESULT or REVIEW_FINDING to GPT_ORCHESTRATOR for GPT_DECISION. Reviewer actions are limited to READ, TEST, VALIDATE, and REPORT. Do not run the PRE review, create a PRE Result, or create a closure candidate while authoring this Review Request."
+    ],
+    "revision": true
+  }
+}
