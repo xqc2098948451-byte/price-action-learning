@@ -1,0 +1,72 @@
+{
+  "instruction_id": "7e9e7d8e-2eb2-4c85-9d5e-9d0a1f14c2c7",
+  "instruction_type": "RECONCILIATION_REQUEST",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-learning-map-s1-s3-closure-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-closure-001.json",
+    "sha": "f4c2583d44e94b12cd4c6e3356db97a1a0e754e7"
+  },
+  "expected_state_revision": 7,
+  "expected_base_sha": "28c99f573799689c0a3b5b124768c688a1006ef3",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "28c99f573799689c0a3b5b124768c688a1006ef3",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_IMPLEMENTER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT",
+    "MUTATE_APPROVED_SCOPE"
+  ],
+  "forbidden_actions": [
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "scope_paths": [
+    ".gpt-codex/STATE.json",
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+    ".gpt-codex/evidence/learning-map-s1-s3-publication-verification.json",
+    ".gpt-codex/evidence/results/learning-map-s1-s3-publication.json"
+  ],
+  "permission_scope": "LEARNING_MAP_S1_S3_CLOSURE_CONTROL_PLANE_ONLY",
+  "approval_evidence_ref": {
+    "remote_ref": "refs/heads/governance/price-action-learning-authority",
+    "evidence_commit_sha": "425fdb0607103facc4061693f19787838e3ccce9",
+    "path": ".gpt-codex/evidence/results/RESULT-LEARNING-MAP-S1-S3-CLOSURE-RECONCILIATION-APPROVAL-001.json",
+    "blob_sha": "9bb6189690e6b48b8604d25ee410120e29b89fd2"
+  },
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Authorized closure Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=f4c2583d44e94b12cd4c6e3356db97a1a0e754e7; path=.gpt-codex/work-units/price-action-learning-learning-map-s1-s3-closure-001.json; blob=c7c0ea7e121d961fc2e6574aa73a099668d53e93.",
+      "Approval Request: repository=xqc2098948451-byte/price-action-learning; commit=02f0aef5ddfba55cb5f496b08478ea5f74b295ee; path=.gpt-codex/evidence/instructions/f3c3b00b-7f3a-4d49-b5d6-b341e8b2658e.json; blob=8eb69a3d6a47217ecf7a74e161cd4e080783b4c7.",
+      "USER_APPROVER Approval Result: repository=xqc2098948451-byte/price-action-learning; commit=425fdb0607103facc4061693f19787838e3ccce9; path=.gpt-codex/evidence/results/RESULT-LEARNING-MAP-S1-S3-CLOSURE-RECONCILIATION-APPROVAL-001.json; blob=9bb6189690e6b48b8604d25ee410120e29b89fd2.",
+      "Live refs/heads/main=28c99f573799689c0a3b5b124768c688a1006ef3 with STATE revision 7, state AUTHORIZED, active_work_unit price-action-learning-learning-map-s1-s3-spec-001, and continuity.sync_status SYNCED."
+    ],
+    "files_changed": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+      ".gpt-codex/evidence/learning-map-s1-s3-publication-verification.json",
+      ".gpt-codex/evidence/results/learning-map-s1-s3-publication.json"
+    ],
+    "validation": [
+      "Require exact Approval Request in_response_to_instruction_id 7e9e7d8e-2eb2-4c85-9d5e-9d0a1f14c2c7, Approval Result status PASS, decision APPROVE, responder_role USER_APPROVER, and response_to_instruction_id f3c3b00b-7f3a-4d49-b5d6-b341e8b2658e. Require approved_instruction to equal Framework 2.7.4 _control_plane_approved_core of this RECONCILIATION_REQUEST and approval_evidence_ref to resolve exactly.",
+      "Require a fresh closure PRE_EXECUTION review before any closure mutation; PRE_EXECUTION_REVIEW_REQUIRED remains expected until that review passes. Apply the authorized closure Work Unit acceptance as the detailed execution contract.",
+      "The later closure may only advance STATE revision 7 to 8, clear active_work_unit, mark the Learning Map business Work Unit COMPLETE, and create publication-verification Evidence and publication Result within the four owned paths. Do not change any business file or Framework source, start Training, or expand scope.",
+      "The later publication Result and resulting STATE must pass exact Framework 2.7.4 result-envelope, result-authority, completion-evidence, and state-authority validation. Return evidence to GPT_ORCHESTRATOR for GPT_DECISION; CODEX_IMPLEMENTER may not commit, push, publish, or authorize."
+    ],
+    "revision": true
+  }
+}
