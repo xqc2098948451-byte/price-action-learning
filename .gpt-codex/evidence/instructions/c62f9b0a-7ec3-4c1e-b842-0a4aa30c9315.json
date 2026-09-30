@@ -1,0 +1,73 @@
+{
+  "instruction_id": "c62f9b0a-7ec3-4c1e-b842-0a4aa30c9315",
+  "instruction_type": "REVIEW_REQUEST",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-learning-map-s1-s3-spec-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+    "sha": "002df9fef1bd3717a0bde147a546ef9cf4150e5d"
+  },
+  "expected_state_revision": 7,
+  "expected_base_sha": "1762c6704387a0acc25b747f59e63642c75325a1",
+  "review_target_revision": "ee1faa17f5bfe51973b3307aefeb95b056512718",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "scope_paths": [
+    "spec/learning_map/LEARNING_MAP_SPEC.md",
+    "spec/learning_map/.gitkeep"
+  ],
+  "permission_scope": "LEARNING_MAP_POST_001_FIX_ROUND_1_POST_REVIEW_ONLY",
+  "in_response_to_instruction_id": "4f9dc0d2-4580-4c26-9708-0a815dbbb907",
+  "finding_ids": [
+    "FINDING-LEARNING-MAP-POST-001"
+  ],
+  "fix_round": 1,
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      ".gpt-codex/evidence/instructions/4f9dc0d2-4580-4c26-9708-0a815dbbb907.json@c012e81ab5fdc0c960bbc37f9f8befbcdad8f9a5#fc52db15fc72b9e751697e84f59649fb188a5efc",
+      ".gpt-codex/evidence/results/36efef1a-8e86-4f6f-b044-07b6085a3d93.json@49a575ae4cedadf4bc93a2242e6fbae5b5a707af#75d4cbdc27d2615c052f6d4f06954c1fceac6160",
+      ".gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      ".gpt-codex/evidence/instructions/d2b7537e-13bb-4dd2-9c72-3da1774c684f.json@80a1ecb51fc83ed98dc2fc9c4010f5f5040ecd30",
+      ".gpt-codex/evidence/results/RESULT-LEARNING-MAP-S1-S3-PRE-002.json@6186b23d767947626b21e355541a7ff28c090b26",
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      "Original candidate tree 1762c6704387a0acc25b747f59e63642c75325a1; spec/learning_map/LEARNING_MAP_SPEC.md blob b0373a7090b33e8c1191ae8cb76ab8c39c5b85ed; spec/learning_map/.gitkeep absent.",
+      "Corrected candidate at D:\\价格行为学习\\learning-map-fix-round-1: tree ee1faa17f5bfe51973b3307aefeb95b056512718; spec/learning_map/LEARNING_MAP_SPEC.md blob 726b35db8409ea03cbec33c916db7374e6724e03; spec/learning_map/.gitkeep absent."
+    ],
+    "validation": [
+      "Before review, live-verify origin refs/heads/main at 002df9fef1bd3717a0bde147a546ef9cf4150e5d, STATE revision 7/AUTHORIZED/SYNCED, project and repository identity, and the exact FIX Instruction and durable FIX PRE PASS locators. Stop as STALE on a mismatch.",
+      "Independently verify the corrected candidate identity: tree ee1faa17f5bfe51973b3307aefeb95b056512718, spec blob 726b35db8409ea03cbec33c916db7374e6724e03, and spec/learning_map/.gitkeep absent.",
+      "Compare original candidate tree 1762c6704387a0acc25b747f59e63642c75325a1 to corrected candidate tree ee1faa17f5bfe51973b3307aefeb95b056512718. Require the effective fix delta to be only the minimum semantic correction in spec/learning_map/LEARNING_MAP_SPEC.md.",
+      "Verify FINDING-LEARNING-MAP-POST-001 is closed: formal judgment of each TrainingAttempt uses that attempt's own Stage and the knowledge boundary available when its analysis was submitted. Later-learned Stage or Concept knowledge cannot retroactively penalize it.",
+      "Reject any new record field, TrainingAttempt schema change, snapshot engine, module, lifecycle, or unrelated Learning Map expansion.",
+      "Re-review the entire corrected specification against every acceptance item of the full authorized Learning Map Work Unit, not only the changed line. Check project guardrails and all currently detectable findings in one pass.",
+      "For the eventual re-review Result, retain the original finding evidence_refs, including .gpt-codex/evidence/instructions/d2b7537e-13bb-4dd2-9c72-3da1774c684f.json@80a1ecb51fc83ed98dc2fc9c4010f5f5040ecd30 and .gpt-codex/evidence/results/RESULT-LEARNING-MAP-S1-S3-PRE-002.json@6186b23d767947626b21e355541a7ff28c090b26. Additional FIX, PRE, and candidate evidence may be included.",
+      "Correlate the eventual re-review Result directly to the FIX: response_to_instruction_id 4f9dc0d2-4580-4c26-9708-0a815dbbb907, review_target_revision ee1faa17f5bfe51973b3307aefeb95b056512718, and fix_round 1.",
+      "Return a governed POST REVIEW_RESULT with PASS or REVIEW_FINDING to GPT_ORCHESTRATOR for GPT_DECISION. Review only: READ, TEST, VALIDATE, REPORT. Do not mutate, commit, push, publish, authorize, or expand scope."
+    ],
+    "revision": true
+  }
+}
