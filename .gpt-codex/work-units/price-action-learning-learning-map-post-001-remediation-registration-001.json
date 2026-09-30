@@ -1,0 +1,85 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-post-001-remediation-registration-001",
+  "goal": "Durably register the canonical Learning Map POST-001 finding, its accepted remediation authority basis and adjudication, and verified W/P publication; advance control-plane STATE from revision 6 to 7 and rebind the existing Learning Map Work Unit without changing the frozen business candidate or performing the future correction.",
+  "scope": {
+    "owned_paths": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+      ".gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-basis.json",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-adjudication.json",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-work-verification.json",
+      ".gpt-codex/evidence/results/learning-map-post-001-remediation-publication.json"
+    ]
+  },
+  "acceptance": [
+    "Before the future transaction, live-verify repository ID 1394745962 and full name xqc2098948451-byte/price-action-learning, and refs/heads/main at 9453258324fb6719d08a79d26d45e709d0007a22. Require Framework 2.7.4, project PRJ-PRICE-ACTION-LEARNING-1394745962, and context e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9. Stop as STALE on any mismatch.",
+    "Require live remote main STATE revision 6, state AUTHORIZED, active_work_unit price-action-learning-learning-map-s1-s3-spec-001, blockers [], reconciliation null, absent active_execution_slots key, and continuity.sync_status SYNCED. Stop as STALE on any mismatch.",
+    "Resolve the canonical REVIEW_FINDING by the exact immutable locator xqc2098948451-byte/price-action-learning@72532c2104fe5ef01039550b21bd87d95714829c:.gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json with blob 362e181ed131be81b1c6aad67a6105e250502955. Require result_id 7a0e0c02-2f97-4d17-9a61-3b73f80710f4, result_message_type REVIEW_FINDING, status FAIL, review_target_revision 1762c6704387a0acc25b747f59e63642c75325a1, finding_ids exactly [FINDING-LEARNING-MAP-POST-001], and fix_round 0.",
+    "Keep the business candidate at D:\\价格行为学习\\learning-map-s1-s3 frozen at tree 1762c6704387a0acc25b747f59e63642c75325a1 and spec blob b0373a7090b33e8c1191ae8cb76ab8c39c5b85ed. This Work Unit neither owns nor mutates spec/learning_map/LEARNING_MAP_SPEC.md or spec/learning_map/.gitkeep.",
+    "Future mutation scope is exactly the seven scope.owned_paths entries. This control-plane Work Unit is not part of its own mutation scope. Do not add an eighth path or modify spec/**, src/**, tests/**, README.md, AGENTS.md, docs/**, CONTROL.json, Framework source, private/user data, or the frozen candidate.",
+    "Future Work Commit W must have parent 9453258324fb6719d08a79d26d45e709d0007a22 and change exactly three paths: create the canonical finding Result at its owned results path with byte-identical blob 362e181ed131be81b1c6aad67a6105e250502955; create .gpt-codex/evidence/learning-map-post-001-remediation-basis.json; and create .gpt-codex/evidence/learning-map-post-001-remediation-adjudication.json.",
+    "W must not yet change STATE.json, the Learning Map Work Unit, work-verification Evidence, publication Result, or any business candidate file. Push W to refs/heads/main without force and live-verify it before preparing P.",
+    "The future basis Evidence at .gpt-codex/evidence/learning-map-post-001-remediation-basis.json must use kernel_version 2.0.0, schema_version 1, project_id PRJ-PRICE-ACTION-LEARNING-1394745962, evidence_id EVIDENCE-LEARNING-MAP-POST-001-REMEDIATION-BASIS, source SYSTEM_DERIVED, subject REMEDIATION_AUTHORITY_BASIS, state_revision 7, result ACCEPTED, basis_type ACCEPTED_AUTHORITY_BASIS, finding_ids exactly [FINDING-LEARNING-MAP-POST-001], accepted true, and failing false.",
+    "The basis must establish only that a TrainingAttempt is formally judged using its Stage and the knowledge boundary applicable when its analysis was submitted; knowledge learned only afterward cannot retroactively penalize that attempt. Cite or identify docs/DOMAIN_CONSTITUTION.md rules 3-5 and docs/PROJECT_SCOPE.md Learning Map/Evaluation at main 9453258324fb6719d08a79d26d45e709d0007a22 as existing authority for Stage boundaries, unavailable knowledge not penalizing the user, and avoiding hindsight bias. Introduce no new business field or engine.",
+    "The future decision Evidence at .gpt-codex/evidence/learning-map-post-001-remediation-adjudication.json must use kernel_version 2.0.0, schema_version 1, project_id PRJ-PRICE-ACTION-LEARNING-1394745962, evidence_id DECISION-LEARNING-MAP-POST-001-REMEDIATION, source SYSTEM_DERIVED, subject REMEDIATION_ADJUDICATION, state_revision 7, result ACCEPT, finding_ids exactly [FINDING-LEARNING-MAP-POST-001], decision ACCEPT, basis_type ACCEPTED_AUTHORITY_BASIS, basis_refs exactly [EVIDENCE-LEARNING-MAP-POST-001-REMEDIATION-BASIS], and adjudicated_at_revision 7. Accept only the finding and the future minimum correction.",
+    "The later business correction, outside this Work Unit, may only clarify the Learning Map knowledge-boundary invariant: formal judgment of an attempt uses that attempt's Stage and knowledge available when its analysis was submitted, and later-stage or later-learned knowledge cannot retroactively penalize it. Require no new record field, TrainingAttempt schema change, historical snapshot engine, module, or scope expansion.",
+    "After W is pushed and live-verified, future Publication Commit P must have parent W and change exactly four paths: modify .gpt-codex/STATE.json; modify .gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json; create .gpt-codex/evidence/learning-map-post-001-remediation-work-verification.json; and create .gpt-codex/evidence/results/learning-map-post-001-remediation-publication.json.",
+    "P must advance STATE revision 6 to 7 through native optimistic revision control while preserving state AUTHORIZED, active_work_unit price-action-learning-learning-map-s1-s3-spec-001, blockers [], reconciliation null, and the absence of active_execution_slots. Preserve every existing evidence_ref and append exactly the five owned finding Result, remediation basis, remediation adjudication, remediation work-verification, and remediation publication Result paths, without duplicate refs.",
+    "At revision 7 set STATE.continuity.current_remote_ref refs/heads/main, latest_verified_remote_sha to W_SHA, latest_synced_state_revision 7, last_verified_result_ref .gpt-codex/evidence/results/learning-map-post-001-remediation-publication.json, and sync_status SYNCED.",
+    "In the existing Learning Map Work Unit, P may change only basis_state_revision from 6 to 7; preserve every other semantic field, including its business scope and acceptance. Require state AUTHORIZED, implementation_authorized false, and implementation_start_allowed false.",
+    "The future work-verification Evidence must be TOOL_OBSERVED and verify the live remote repository ID/full name, refs/heads/main at W_SHA, the exact three W paths, the canonical finding Result blob, the exact remediation basis, and the exact remediation adjudication. It must not claim the business candidate was fixed.",
+    "The future publication Result must be a native Framework v2.7.4 Result at .gpt-codex/evidence/results/learning-map-post-001-remediation-publication.json with status PASS, result_message_type IMPLEMENTATION_RESULT, responder_role CODEX_IMPLEMENTER, return_role GPT_ORCHESTRATOR, framework_version 2.7.4, current_remote_ref refs/heads/main, remote_head_sha W_SHA, verified_baseline_sha W_SHA, sync_status SYNCED, push_status SUCCEEDED, remote_verification VERIFIED, publication_authority CONFIRMED_PUBLICATION, and state_revision 7. Its evidence_refs must include work-verification Evidence and the accepted remediation artifacts.",
+    "After P, STATE.next_action must require use of the durable finding, basis, and adjudication to issue a governed FIX_INSTRUCTION, run fresh PRE review for that FIX, and apply only the minimum Learning Map specification correction. Do not start another business Work Unit.",
+    "After P, exact Framework v2.7.4 must resolve from current HEAD the finding Result by result_id 7a0e0c02-2f97-4d17-9a61-3b73f80710f4, the decision by evidence_id DECISION-LEARNING-MAP-POST-001-REMEDIATION, and the basis by evidence_id EVIDENCE-LEARNING-MAP-POST-001-REMEDIATION-BASIS; validate_remediation_adjudication(decision, finding, resolved_basis) must return [].",
+    "The later FIX_INSTRUCTION must use in_response_to_result_id 7a0e0c02-2f97-4d17-9a61-3b73f80710f4, finding_ids exactly [FINDING-LEARNING-MAP-POST-001], remediation_decision_ref DECISION-LEARNING-MAP-POST-001-REMEDIATION, fix_round 1, and expected_base_sha 1762c6704387a0acc25b747f59e63642c75325a1; it must satisfy validate_review_lifecycle with fresh governed PRE review. Do not create that Instruction or run FIX PRE in this Work Unit authoring task.",
+    "Do not authorize this proposed Work Unit, ask or record user approval, create an approval Result or RECONCILIATION_REQUEST, create the remediation Evidence, copy the finding to main, modify STATE or the Learning Map Work Unit, mutate the business candidate, create a FIX_INSTRUCTION, or modify main during Work Unit authoring."
+  ],
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ],
+    "forbidden_actions": [
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 6,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "LEARNING_MAP_POST_001_REMEDIATION_REGISTRATION_USER_APPROVAL",
+  "artifact_refs": {
+    "design": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "sha": "9453258324fb6719d08a79d26d45e709d0007a22"
+    },
+    "plan": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "sha": "9453258324fb6719d08a79d26d45e709d0007a22"
+    }
+  }
+}
