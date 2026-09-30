@@ -1,0 +1,65 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-s1-s3-spec-001",
+  "extension": {
+    "kind": "SKILL",
+    "id": "verification",
+    "version": "1.0.0"
+  },
+  "status": "PASS",
+  "result_message_type": "REVIEW_RESULT",
+  "result_id": "RESULT-LEARNING-MAP-S1-S3-PRE-002",
+  "response_to_instruction_id": "4c7f9e1a-6d31-4b8f-a0e5-9fb4c3f72461",
+  "responder_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "return_to_gpt_required": true,
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "framework_version": "2.7.4",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "review_target_revision": "9453258324fb6719d08a79d26d45e709d0007a22",
+  "state_revision": 6,
+  "finding_ids": [],
+  "current_remote_ref": "refs/heads/main",
+  "local_head_sha": "9453258324fb6719d08a79d26d45e709d0007a22",
+  "remote_head_sha": "9453258324fb6719d08a79d26d45e709d0007a22",
+  "remote_verification": "VERIFIED",
+  "push_status": "NOT_ATTEMPTED",
+  "evidence_refs": [
+    ".gpt-codex/evidence/instructions/9fb0e770-1af3-429e-97d9-e169cacd076a.json@eb4f425a84beeae9ca14b34674fe0aff953f9eed",
+    ".gpt-codex/evidence/instructions/4c7f9e1a-6d31-4b8f-a0e5-9fb4c3f72461.json@551c78689cbd15aff28f54e4374ea1a573b6873d"
+  ],
+  "completion_evidence": {
+    "execution_state": "COMPLETED",
+    "process_completed": true,
+    "exit_code": 0,
+    "intended_scope": [],
+    "executed_scope": [],
+    "test_files_expected": 0,
+    "test_files_executed": 0,
+    "test_count": 0,
+    "failure_count": 0,
+    "error_count": 0,
+    "validators_expected": [
+      "result_schema",
+      "review_result",
+      "result_authority",
+      "pre_execution_review",
+      "governed_mutation_entry",
+      "remote_freshness"
+    ],
+    "validators_completed": [
+      "result_schema",
+      "review_result",
+      "result_authority",
+      "pre_execution_review",
+      "governed_mutation_entry",
+      "remote_freshness"
+    ],
+    "blocker_evidence_refs": []
+  },
+  "completion_gate": "GPT_DECISION"
+}
