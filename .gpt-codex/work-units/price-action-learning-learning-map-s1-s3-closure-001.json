@@ -1,0 +1,74 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-s1-s3-closure-001",
+  "goal": "Durably finalize the reviewed and published Learning Map S1-S3 business Work Commit, advance project continuity from STATE revision 7 to 8, mark the Learning Map business Work Unit COMPLETE, clear it as the active Work Unit, and record verified publication evidence without changing any business file.",
+  "scope": {
+    "owned_paths": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+      ".gpt-codex/evidence/learning-map-s1-s3-publication-verification.json",
+      ".gpt-codex/evidence/results/learning-map-s1-s3-publication.json"
+    ]
+  },
+  "acceptance": [
+    "Before any future mutation, use Framework 2.7.4 at 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c and live-verify repository ID 1394745962 and full name xqc2098948451-byte/price-action-learning, refs/heads/main exactly 28c99f573799689c0a3b5b124768c688a1006ef3, and its STATE at revision 7, state AUTHORIZED, active_work_unit price-action-learning-learning-map-s1-s3-spec-001, and continuity.sync_status SYNCED. Stop as STALE on any mismatch.",
+    "Resolve the durable independent POST PASS by exact immutable locator: repository xqc2098948451-byte/price-action-learning, commit 6555706b6dd2627a511755ca5a374877df7f60d6, path .gpt-codex/evidence/results/5e3cbac9-67a8-4ef6-9f43-2c177ee204db.json, blob 2671342123cfc02bcf8cba706f0333d96bbda182. Require status PASS, finding_ids [], fix_round 1, review_target_revision and verify.candidate_tree_sha ee1faa17f5bfe51973b3307aefeb95b056512718, and verify.learning_map_spec_blob_sha 726b35db8409ea03cbec33c916db7374e6724e03.",
+    "Treat 28c99f573799689c0a3b5b124768c688a1006ef3 as the already-published and independently reviewed Learning Map business Work Commit. Require parent 002df9fef1bd3717a0bde147a546ef9cf4150e5d, tree ee1faa17f5bfe51973b3307aefeb95b056512718, spec/learning_map/LEARNING_MAP_SPEC.md blob 726b35db8409ea03cbec33c916db7374e6724e03, and spec/learning_map/.gitkeep absent. Do not recreate or modify that Work Commit.",
+    "The future closure Publication Commit P must have parent 28c99f573799689c0a3b5b124768c688a1006ef3 and change exactly the four scope.owned_paths entries. This closure Work Unit's own file is not in owned scope; do not mutate it in P or change any business file.",
+    "Advance STATE revision 7 to 8 through native optimistic revision control. Preserve state AUTHORIZED, blockers [], reconciliation null, and absence of the active_execution_slots key; set active_work_unit to null. Preserve every existing evidence_ref in order and append exactly .gpt-codex/evidence/learning-map-s1-s3-publication-verification.json and .gpt-codex/evidence/results/learning-map-s1-s3-publication.json without duplicates.",
+    "At STATE revision 8 set continuity.current_remote_ref to refs/heads/main, latest_verified_remote_sha to 28c99f573799689c0a3b5b124768c688a1006ef3, latest_synced_state_revision to 8, last_verified_result_ref to .gpt-codex/evidence/results/learning-map-s1-s3-publication.json, and sync_status to SYNCED.",
+    "Set STATE.next_action to require proposal and authorization of the next Training + Focused Training Work Unit through the project Fast Path. Do not reopen Learning Map unless new evidence creates a new finding, and do not create or authorize Training in this closure Work Unit.",
+    "In the existing Learning Map business Work Unit, change only closure fields necessary for durable completion: basis_state_revision from 7 to 8, state from AUTHORIZED to COMPLETE, and next_gate to COMPLETE. Preserve implementation_authorized false, implementation_start_allowed false, and all existing business scope and acceptance semantics. Append closure evidence references only if needed for durable completion; do not rewrite its business contract.",
+    "Create .gpt-codex/evidence/learning-map-s1-s3-publication-verification.json as TOOL_OBSERVED Evidence. Bind repository ID 1394745962, full name xqc2098948451-byte/price-action-learning, remote ref refs/heads/main, verified Work Commit 28c99f573799689c0a3b5b124768c688a1006ef3, Work tree ee1faa17f5bfe51973b3307aefeb95b056512718, spec blob 726b35db8409ea03cbec33c916db7374e6724e03, .gitkeep absence, remote STATE revision 7 before P, and the durable POST PASS immutable locator.",
+    "Create .gpt-codex/evidence/results/learning-map-s1-s3-publication.json as a Framework 2.7.4 Result with work_unit_id price-action-learning-learning-map-s1-s3-closure-001, status PASS, result_message_type IMPLEMENTATION_RESULT, responder_role CODEX_IMPLEMENTER, return_role GPT_ORCHESTRATOR, framework_version 2.7.4, current_remote_ref refs/heads/main, remote_head_sha and verified_baseline_sha both 28c99f573799689c0a3b5b124768c688a1006ef3, sync_status SYNCED, push_status SUCCEEDED, remote_verification VERIFIED, publication_authority CONFIRMED_PUBLICATION, state_revision 8, and completion_gate NONE. Its evidence_refs must include the local publication-verification Evidence and the immutable durable POST PASS.",
+    "At the resulting P candidate, require validate_result_envelope_contract(publication_result) = [], validate_result_authority(publication_result) = [], validate_completion_evidence(publication_result) = [], and validate_state_authority(resulting_state, durable_results) = []. Stop as BLOCKED if any check fails.",
+    "Publish P to refs/heads/main only by normal fast-forward after verifying its exact parent and four-path delta, then live-verify remote head P and durable publication facts. A push attempt alone does not establish publication.",
+    "No spec/**, src/**, tests/**, README.md, AGENTS.md, docs/**, Framework source, private/user data, or other business file may change in the closure transaction. Do not expand scope, create an approval artifact, or start the next Work Unit as part of closure."
+  ],
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ],
+    "forbidden_actions": [
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 7,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "USER_WORK_UNIT_APPROVAL",
+  "artifact_refs": {
+    "design": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "sha": "28c99f573799689c0a3b5b124768c688a1006ef3"
+    },
+    "plan": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "sha": "28c99f573799689c0a3b5b124768c688a1006ef3"
+    }
+  }
+}
