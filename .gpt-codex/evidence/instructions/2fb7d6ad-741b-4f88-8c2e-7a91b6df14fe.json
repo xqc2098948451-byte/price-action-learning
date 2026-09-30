@@ -1,0 +1,72 @@
+{
+  "instruction_id": "2fb7d6ad-741b-4f88-8c2e-7a91b6df14fe",
+  "instruction_type": "REVIEW_REQUEST",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "expected_state_revision": 7,
+  "framework_version": "2.7.4",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "target_work_unit": "price-action-learning-learning-map-s1-s3-spec-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+    "sha": "002df9fef1bd3717a0bde147a546ef9cf4150e5d"
+  },
+  "scope_paths": [
+    "spec/learning_map/LEARNING_MAP_SPEC.md",
+    "spec/learning_map/.gitkeep"
+  ],
+  "remediation_decision_ref": "DECISION-LEARNING-MAP-POST-001-REMEDIATION",
+  "expected_base_sha": "1762c6704387a0acc25b747f59e63642c75325a1",
+  "permission_scope": "LEARNING_MAP_POST_001_FIX_PRE_EXECUTION_ONLY",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+  "expected_remote_name": "origin",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "evidence_requirements": {
+    "files_read": [
+      "FIX Instruction immutable locator: repository=xqc2098948451-byte/price-action-learning; commit=c012e81ab5fdc0c960bbc37f9f8befbcdad8f9a5; path=.gpt-codex/evidence/instructions/4f9dc0d2-4580-4c26-9708-0a815dbbb907.json; blob=fc52db15fc72b9e751697e84f59649fb188a5efc.",
+      ".gpt-codex/CONTROL.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      ".gpt-codex/STATE.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      ".gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-basis.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-adjudication.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      "Frozen candidate tree 1762c6704387a0acc25b747f59e63642c75325a1; spec/learning_map/LEARNING_MAP_SPEC.md blob b0373a7090b33e8c1191ae8cb76ab8c39c5b85ed; spec/learning_map/.gitkeep absent."
+    ],
+    "validation": [
+      "Live-verify origin refs/heads/main at 002df9fef1bd3717a0bde147a546ef9cf4150e5d, governance authority at the published Review Request commit, repository ID 1394745962/full name xqc2098948451-byte/price-action-learning, and STATE revision 7/AUTHORIZED/SYNCED. Stop as STALE on mismatch.",
+      "Resolve the FIX Instruction at its exact immutable repository/commit/path/blob locator. Require FIX_INSTRUCTION, IMPLEMENTATION, fix_round 1, finding result 7a0e0c02-2f97-4d17-9a61-3b73f80710f4, finding ID FINDING-LEARNING-MAP-POST-001, remediation decision DECISION-LEARNING-MAP-POST-001-REMEDIATION, and exact project, repository, Work Unit, revision, base, scope, role, and action bindings. Require this Review Request in_response_to_instruction_id to equal the FIX instruction_id.",
+      "Independently verify the durable REVIEW_FINDING, accepted remediation basis, and ACCEPT adjudication on current main; the decision must bind the same finding at STATE revision 7.",
+      "Verify the frozen candidate is still exactly tree 1762c6704387a0acc25b747f59e63642c75325a1 with spec blob b0373a7090b33e8c1191ae8cb76ab8c39c5b85ed and spec/learning_map/.gitkeep deleted.",
+      "Determine pre-execution authority for only the minimum correction: formal judgment of a TrainingAttempt uses that attempt's own Stage and the knowledge boundary available when its analysis was submitted; later-learned Stage or Concept knowledge cannot retroactively penalize it.",
+      "Reject any new record field, TrainingAttempt schema change, historical snapshot engine, module, or unrelated Learning Map expansion. The later correction must preserve deletion of spec/learning_map/.gitkeep and stay within the two scope paths.",
+      "Review all currently detectable issues in one pass. Return a governed PRE_EXECUTION REVIEW_RESULT with PASS or a REVIEW_FINDING to GPT_ORCHESTRATOR for GPT_DECISION. This request does not execute the PRE review or the FIX; the reviewer may only READ, TEST, VALIDATE, and REPORT."
+    ],
+    "revision": true
+  },
+  "completion_gate": "GPT_DECISION",
+  "in_response_to_instruction_id": "4f9dc0d2-4580-4c26-9708-0a815dbbb907",
+  "review_target_revision": "1762c6704387a0acc25b747f59e63642c75325a1",
+  "finding_ids": [
+    "FINDING-LEARNING-MAP-POST-001"
+  ],
+  "fix_round": 1,
+  "artifact_stage": "IMPLEMENTATION"
+}
