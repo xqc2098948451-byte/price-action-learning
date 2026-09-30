@@ -1,0 +1,73 @@
+{
+  "instruction_id": "4f9dc0d2-4580-4c26-9708-0a815dbbb907",
+  "instruction_type": "FIX_INSTRUCTION",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-learning-map-s1-s3-spec-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+    "sha": "002df9fef1bd3717a0bde147a546ef9cf4150e5d"
+  },
+  "expected_state_revision": 7,
+  "expected_base_sha": "1762c6704387a0acc25b747f59e63642c75325a1",
+  "review_target_revision": "1762c6704387a0acc25b747f59e63642c75325a1",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_IMPLEMENTER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT",
+    "MUTATE_APPROVED_SCOPE"
+  ],
+  "forbidden_actions": [
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "scope_paths": [
+    "spec/learning_map/LEARNING_MAP_SPEC.md",
+    "spec/learning_map/.gitkeep"
+  ],
+  "permission_scope": "LEARNING_MAP_POST_001_MINIMUM_FIX_ONLY",
+  "in_response_to_result_id": "7a0e0c02-2f97-4d17-9a61-3b73f80710f4",
+  "finding_ids": [
+    "FINDING-LEARNING-MAP-POST-001"
+  ],
+  "remediation_decision_ref": "DECISION-LEARNING-MAP-POST-001-REMEDIATION",
+  "fix_round": 1,
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      ".gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-basis.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      ".gpt-codex/evidence/learning-map-post-001-remediation-adjudication.json@002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+      "Frozen candidate tree 1762c6704387a0acc25b747f59e63642c75325a1, including spec/learning_map/LEARNING_MAP_SPEC.md and the deletion of spec/learning_map/.gitkeep."
+    ],
+    "files_changed": [
+      "spec/learning_map/LEARNING_MAP_SPEC.md",
+      "spec/learning_map/.gitkeep"
+    ],
+    "validation": [
+      "Before execution, require a fresh, durable FIX PRE_EXECUTION review against this exact instruction and the frozen candidate tree. PRE_EXECUTION_REVIEW_REQUIRED remains a stop condition until that review exists and passes.",
+      "Make only the minimum semantic correction to the Learning Map specification: formal judgment of each TrainingAttempt uses that attempt's own Stage and the knowledge boundary available when its analysis was submitted.",
+      "Knowledge learned after that submission, including later Stage or Concept knowledge, must not retroactively penalize the attempt.",
+      "Do not add a record field, change the TrainingAttempt schema, build a historical snapshot engine, create a module, or expand any other Learning Map behavior.",
+      "Preserve the frozen candidate's deletion of spec/learning_map/.gitkeep; do not restore it. Limit the effective candidate change to the minimum correction in spec/learning_map/LEARNING_MAP_SPEC.md.",
+      "Validate against the authorized Work Unit acceptance and project guardrails, confirm no out-of-scope file change, and run git diff --check.",
+      "Return bounded change and validation evidence to GPT_ORCHESTRATOR for GPT_DECISION; the implementer must not commit, push, publish, authorize, or expand scope."
+    ],
+    "revision": true
+  }
+}
