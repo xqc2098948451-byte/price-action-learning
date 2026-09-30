@@ -1,0 +1,76 @@
+{
+  "artifact_stage": "IMPLEMENTATION",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Immutable locator: repository=xqc2098948451-byte/price-action-learning; commit=2ab477eea559589155066e3270666208e35bacf9; path=.gpt-codex/work-units/price-action-learning-learning-map-post-001-remediation-registration-001.json; blob=f38f5cfefdf5cabd84947bb702a078abcc852d6f.",
+      "Immutable locator: repository=xqc2098948451-byte/price-action-learning; commit=a92f85ef55aeef53ccabc278cb881425218f59fc; path=.gpt-codex/evidence/instructions/a3f1f0c8-5c0b-4f61-9c5a-7b29e6d5a1f3.json; blob=e103e31e6a2245122a7611b294f189a292100b8b.",
+      "Immutable locator: repository=xqc2098948451-byte/price-action-learning; commit=393425f270701620c1e1b65d755752984fb80897; path=.gpt-codex/evidence/instructions/f62be3f4-86e1-4d53-a4b8-6bff1f64b6dd.json; blob=83de4d0b29300c8bad2a62923dfe0a6e7f1f472a.",
+      "Immutable locator: repository=xqc2098948451-byte/price-action-learning; commit=47e4a729e9f4a84fa28e3b0ea6f50c15eca15906; path=.gpt-codex/evidence/results/RESULT-LEARNING-MAP-POST-001-REMEDIATION-REGISTRATION-APPROVAL-001.json; blob=6603448482b5e651a1b5abb2b132493ae5fbb5b1.",
+      "Immutable locator: repository=xqc2098948451-byte/price-action-learning; commit=72532c2104fe5ef01039550b21bd87d95714829c; path=.gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json; blob=362e181ed131be81b1c6aad67a6105e250502955.",
+      ".gpt-codex/CONTROL.json@9453258324fb6719d08a79d26d45e709d0007a22",
+      ".gpt-codex/STATE.json@9453258324fb6719d08a79d26d45e709d0007a22",
+      "D:\\价格行为学习\\learning-map-s1-s3: HEAD=9453258324fb6719d08a79d26d45e709d0007a22; candidate tree=1762c6704387a0acc25b747f59e63642c75325a1; spec blob=b0373a7090b33e8c1191ae8cb76ab8c39c5b85ed."
+    ],
+    "validation": [
+      "A. Live-verify GitHub repository ID 1394745962/full name xqc2098948451-byte/price-action-learning and refs/heads/main exactly at 9453258324fb6719d08a79d26d45e709d0007a22. Require main STATE revision 6, state AUTHORIZED, continuity.sync_status SYNCED, active_work_unit price-action-learning-learning-map-s1-s3-spec-001, and absent active_execution_slots key. Stop as STALE on mismatch.",
+      "B. Resolve the authorized control-plane Work Unit, Approval Request, USER_APPROVER Approval Result, RECONCILIATION_REQUEST, and canonical POST REVIEW_FINDING at the exact immutable commit/path/blob locators in files_read. Require the Work Unit state AUTHORIZED and basis_state_revision 6; mutation Instruction type RECONCILIATION_REQUEST, stage IMPLEMENTATION, executor CODEX_IMPLEMENTER, revision/base/remote bindings, and authorized_actions exactly [READ, TEST, VALIDATE, REPORT, MUTATE_APPROVED_SCOPE]. Require the finding status FAIL, finding_ids exactly [FINDING-LEARNING-MAP-POST-001], and review_target_revision 1762c6704387a0acc25b747f59e63642c75325a1.",
+      "C. Require Approval Request in_response_to_instruction_id = RECONCILIATION_REQUEST instruction_id; Approval Result result_message_type APPROVAL_RESULT, responder_role USER_APPROVER, status PASS, decision APPROVE, and response_to_instruction_id = Approval Request instruction_id. Require Approval Result approved_instruction to equal exact Framework 2.7.4 _control_plane_approved_core(RECONCILIATION_REQUEST), and Reconciliation approval_evidence_ref to resolve the exact immutable Approval Result locator.",
+      "D. Independently evaluate exact Framework v2.7.4 _validate_control_plane_admission for the RECONCILIATION_REQUEST. Require an AUTHORIZED Work Unit with basis_state_revision 6, exactly seven owned paths equal to mutation Instruction scope_paths, no self-authorization by the Work Unit, every path a valid control-plane path, and the valid approval chain.",
+      "E. Verify planned Phase W has parent 9453258324fb6719d08a79d26d45e709d0007a22 and may only CREATE the byte-identical canonical finding Result, CREATE remediation basis Evidence, and CREATE remediation adjudication Evidence. Phase W must not change STATE or the existing Learning Map Work Unit.",
+      "F. Require future basis at .gpt-codex/evidence/learning-map-post-001-remediation-basis.json with evidence_id EVIDENCE-LEARNING-MAP-POST-001-REMEDIATION-BASIS, basis_type ACCEPTED_AUTHORITY_BASIS, finding_ids exactly [FINDING-LEARNING-MAP-POST-001], state_revision 7, and accepted true. It establishes only that each TrainingAttempt is formally judged using its Stage and knowledge boundary applicable when its analysis was submitted; later knowledge cannot retroactively penalize that attempt.",
+      "G. Require future adjudication at .gpt-codex/evidence/learning-map-post-001-remediation-adjudication.json with evidence_id DECISION-LEARNING-MAP-POST-001-REMEDIATION, subject REMEDIATION_ADJUDICATION, decision ACCEPT, basis_type ACCEPTED_AUTHORITY_BASIS, basis_refs exactly [EVIDENCE-LEARNING-MAP-POST-001-REMEDIATION-BASIS], finding_ids exactly [FINDING-LEARNING-MAP-POST-001], and adjudicated_at_revision 7.",
+      "H. Verify no business correction: no change to spec/learning_map/LEARNING_MAP_SPEC.md or any business file; no new business field, TrainingAttempt schema change, historical snapshot engine, or FIX_INSTRUCTION.",
+      "I. Phase P is not executed by this PRE review. Verify only that the Work Unit later constrains P, after separately published and live-verified W, to advance STATE revision 6 to 7, change only the Learning Map Work Unit basis_state_revision from 6 to 7, and create remediation work-verification Evidence and publication Result. Preserve all other Work Unit semantics and STATE boundaries.",
+      "J. Verify frozen business candidate D:\\价格行为学习\\learning-map-s1-s3 remains at HEAD/base 9453258324fb6719d08a79d26d45e709d0007a22, tree 1762c6704387a0acc25b747f59e63642c75325a1, and spec blob b0373a7090b33e8c1191ae8cb76ab8c39c5b85ed before and after control-plane registration.",
+      "Return only a governed PRE_EXECUTION REVIEW_RESULT or REVIEW_FINDING to GPT_ORCHESTRATOR. Do not execute the PRE review while authoring this request; the later reviewer may READ, TEST, VALIDATE, and REPORT only."
+    ],
+    "revision": true
+  },
+  "executor_role": "CODEX_REVIEWER",
+  "expected_base_sha": "9453258324fb6719d08a79d26d45e709d0007a22",
+  "expected_remote_head_sha": "9453258324fb6719d08a79d26d45e709d0007a22",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_state_revision": 6,
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "framework_version": "2.7.4",
+  "in_response_to_instruction_id": "a3f1f0c8-5c0b-4f61-9c5a-7b29e6d5a1f3",
+  "instruction_id": "8d8b3137-3efa-4dd5-a8a6-7d0b8349ee0e",
+  "instruction_type": "REVIEW_REQUEST",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "permission_scope": "LEARNING_MAP_POST_001_REMEDIATION_REGISTRATION_PRE_EXECUTION_ONLY",
+  "return_role": "GPT_ORCHESTRATOR",
+  "review_target_revision": "9453258324fb6719d08a79d26d45e709d0007a22",
+  "scope_paths": [
+    ".gpt-codex/STATE.json",
+    ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+    ".gpt-codex/evidence/results/7a0e0c02-2f97-4d17-9a61-3b73f80710f4.json",
+    ".gpt-codex/evidence/learning-map-post-001-remediation-basis.json",
+    ".gpt-codex/evidence/learning-map-post-001-remediation-adjudication.json",
+    ".gpt-codex/evidence/learning-map-post-001-remediation-work-verification.json",
+    ".gpt-codex/evidence/results/learning-map-post-001-remediation-publication.json"
+  ],
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_github_repository_id": "1394745962",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_work_unit": "price-action-learning-learning-map-post-001-remediation-registration-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-learning-map-post-001-remediation-registration-001.json",
+    "sha": "2ab477eea559589155066e3270666208e35bacf9"
+  }
+}
