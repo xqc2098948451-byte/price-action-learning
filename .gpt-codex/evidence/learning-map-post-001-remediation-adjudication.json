@@ -1,0 +1,19 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "DECISION-LEARNING-MAP-POST-001-REMEDIATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "source": "SYSTEM_DERIVED",
+  "subject": "REMEDIATION_ADJUDICATION",
+  "state_revision": 7,
+  "result": "ACCEPT",
+  "decision": "ACCEPT",
+  "basis_type": "ACCEPTED_AUTHORITY_BASIS",
+  "basis_refs": [
+    "EVIDENCE-LEARNING-MAP-POST-001-REMEDIATION-BASIS"
+  ],
+  "finding_ids": [
+    "FINDING-LEARNING-MAP-POST-001"
+  ],
+  "adjudicated_at_revision": 7
+}

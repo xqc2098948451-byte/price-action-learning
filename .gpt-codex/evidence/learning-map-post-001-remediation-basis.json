@@ -1,0 +1,21 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-LEARNING-MAP-POST-001-REMEDIATION-BASIS",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "source": "SYSTEM_DERIVED",
+  "subject": "REMEDIATION_AUTHORITY_BASIS",
+  "state_revision": 7,
+  "result": "ACCEPTED",
+  "basis_type": "ACCEPTED_AUTHORITY_BASIS",
+  "finding_ids": [
+    "FINDING-LEARNING-MAP-POST-001"
+  ],
+  "accepted": true,
+  "failing": false,
+  "basis_statement": "A TrainingAttempt is formally judged using its own Stage and the knowledge boundary available when its analysis was submitted. Knowledge learned only afterward cannot retroactively penalize that attempt.",
+  "authority_refs": [
+    "docs/DOMAIN_CONSTITUTION.md@9453258324fb6719d08a79d26d45e709d0007a22#rules-3-5",
+    "docs/PROJECT_SCOPE.md@9453258324fb6719d08a79d26d45e709d0007a22#Learning-Map-and-Evaluation"
+  ]
+}
