@@ -1,0 +1,74 @@
+{
+  "instruction_id": "a7d44378-2a8a-4a67-9d93-d71f425ea31e",
+  "instruction_type": "REVIEW_REQUEST",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-training-core-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    "sha": "5850696254bfd2f36ca52185cc215a970a37a47a"
+  },
+  "expected_state_revision": 8,
+  "expected_base_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "review_target_revision": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "permission_scope": "TRAINING_CORE_PRE_EXECUTION_ONLY",
+  "scope_paths": [
+    "spec/training/TRAINING_SPEC.md",
+    "spec/training/.gitkeep",
+    "src/price_action_learning/training/__init__.py",
+    "src/price_action_learning/training/core.py",
+    "tests/training/test_training.py"
+  ],
+  "in_response_to_instruction_id": "7a8d7d0e-44b6-4fd1-9d36-2b24d5d8d735",
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Correlated Execution Instruction: repository=xqc2098948451-byte/price-action-learning; path=.gpt-codex/evidence/instructions/7a8d7d0e-44b6-4fd1-9d36-2b24d5d8d735.json; blob=ce6f2f33d45492282ac3efa65a9a76109f669e2b; instruction_id=7a8d7d0e-44b6-4fd1-9d36-2b24d5d8d735. Resolve its published immutable commit locator before executing this review.",
+      "Authorized Training Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=5850696254bfd2f36ca52185cc215a970a37a47a; path=.gpt-codex/work-units/price-action-learning-training-core-001.json; blob=5aadff0aafbdc1f1747e381d76fb0f0ee4468fdf; state=AUTHORIZED; basis_state_revision=8; next_gate=TRAINING_CORE_PRE_EXECUTION.",
+      "Training Work Unit user approval: repository=xqc2098948451-byte/price-action-learning; commit=5850696254bfd2f36ca52185cc215a970a37a47a; path=.gpt-codex/evidence/training-core-wu-user-approval.json; blob=b52ad7dcaac74bd05c04a1add30426ee1691bc2b.",
+      "Immutable Learning Map authority: repository=xqc2098948451-byte/price-action-learning; commit=65cd6969e8ccf890d6e51b07fd7436564bf70421; path=spec/learning_map/LEARNING_MAP_SPEC.md; blob=726b35db8409ea03cbec33c916db7374e6724e03. Read docs/CONTRACTS.md and project governance at that same main commit."
+    ],
+    "tests": [
+      "Run Framework 2.7.4 read-only envelope, authority, and PRE-correlation validation for this Review Request and its correlated Execution Instruction. Do not execute Training or create or persist a PRE Result during this request-authoring step."
+    ],
+    "validation": [
+      "Perform one independent PRE review of the correlated Execution Instruction. Report every detectable finding with exact evidence and a decision to GPT_ORCHESTRATOR; do not implement or authorize execution.",
+      "Verify in_response_to_instruction_id is exactly 7a8d7d0e-44b6-4fd1-9d36-2b24d5d8d735, review_target_revision equals that Instruction's expected_base_sha 65cd6969e8ccf890d6e51b07fd7436564bf70421, and the five scope_paths match exactly in content and order.",
+      "Verify project/context and repository identity, live origin refs/heads/main at 65cd6969e8ccf890d6e51b07fd7436564bf70421, STATE revision 8, the authorized Work Unit and user approval, and each scope path being covered by an owned selector and no excluded selector.",
+      "Verify the completed Learning Map dependency and its exact immutable commit/path/blob reference; confirm the runtime compatibility table contains only Stage to Concept ID membership, with no duplicated definitions, prerequisites, error mappings, training cases, or Learning Map business logic.",
+      "Verify FINDING-TRAINING-CORE-PRE-002-001 is corrected: supported Stages are exactly S1, S2, S3; Stage-allowed concepts are internally derived from the canonical table; callers cannot override or forge allowed concepts; learned_concept_ids is a subset of the canonical Stage boundary; S4, unknown Stage, unknown Concept ID, and future-stage learned concepts are rejected.",
+      "Verify exact cumulative canonical boundaries: S1 has the 13 listed S1 Concept IDs; S2 adds exactly the 6 listed S2 IDs; S3 adds exactly the 9 listed S3 IDs. All approved concepts have CORE Knowledge Confidence; no caller-defined additions or S4+ behavior are allowed.",
+      "Verify FINDING-TRAINING-CORE-PRE-002-002 is corrected: TrainingContext requires and stores exactly one target_concept_id that binds both observation_task and the one primary_objective; unknown and future-stage targets are rejected, while a Stage-allowed target need not yet be learned.",
+      "Verify each attempt freezes exact Stage, canonical allowed and actually learned Concept IDs, applicable CORE confidence, target_concept_id, and the immutable Learning Map reference. Test caller-source mutation and later learning against the saved historical context, including scenario, observation task, objective, and initial user_analysis.",
+      "Verify docs/CONTRACTS.md compatibility: TrainingAttempt shared fields are id, created_at, stage, image_reference, user_analysis, user_confidence, revision, status; image_reference is null, initial revision is null/empty, and initial user_analysis cannot be overwritten.",
+      "Verify Formal and Focused share one Training runtime and creation path; Focused requires focus_error_id; Training returns only TrainingAttempt and does not evaluate the analysis or change Learning State.",
+      "Verify one non-empty primary objective, required scenario and observation task, and user-first submission before diagnosis. Verify YAGNI and all exclusions: no Evaluation, Learning State mutation, Review, Study Entry, Candidate Concept Expansion, scoring, grading, prediction, signals, risk management, screenshots, private persistence, database, UI, external API, TradingView API, plugin, helpers, utils, common, services, engine, or new shared abstraction.",
+      "Decide whether the corrected Execution Instruction is safe and sufficiently precise for later implementation. Report ambiguities and missing requirements as PRE findings; do not mutate approved scope, persist a PRE Result on behalf of this request's author, commit, push, publish, authorize, or expand scope."
+    ],
+    "revision": true
+  }
+}

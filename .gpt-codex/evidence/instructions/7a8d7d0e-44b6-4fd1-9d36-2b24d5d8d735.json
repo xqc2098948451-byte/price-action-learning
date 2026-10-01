@@ -1,0 +1,87 @@
+{
+  "instruction_id": "7a8d7d0e-44b6-4fd1-9d36-2b24d5d8d735",
+  "instruction_type": "EXECUTION_INSTRUCTION",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-training-core-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    "sha": "5850696254bfd2f36ca52185cc215a970a37a47a"
+  },
+  "expected_state_revision": 8,
+  "expected_base_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_IMPLEMENTER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT",
+    "MUTATE_APPROVED_SCOPE"
+  ],
+  "forbidden_actions": [
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "permission_scope": "TRAINING_CORE_MVP_ONLY",
+  "scope_paths": [
+    "spec/training/TRAINING_SPEC.md",
+    "spec/training/.gitkeep",
+    "src/price_action_learning/training/__init__.py",
+    "src/price_action_learning/training/core.py",
+    "tests/training/test_training.py"
+  ],
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Authorized Training Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=5850696254bfd2f36ca52185cc215a970a37a47a; path=.gpt-codex/work-units/price-action-learning-training-core-001.json; blob=5aadff0aafbdc1f1747e381d76fb0f0ee4468fdf; state=AUTHORIZED; basis_state_revision=8.",
+      "Immutable Learning Map authority: repository=xqc2098948451-byte/price-action-learning; commit=65cd6969e8ccf890d6e51b07fd7436564bf70421; path=spec/learning_map/LEARNING_MAP_SPEC.md; blob=726b35db8409ea03cbec33c916db7374e6724e03. Also read docs/CONTRACTS.md at that commit.",
+      "Project governance at main commit 65cd6969e8ccf890d6e51b07fd7436564bf70421: AGENTS.md, docs/DIRECTORY_POLICY.md, .gpt-codex/CONTROL.json, and .gpt-codex/STATE.json."
+    ],
+    "files_changed": [
+      "spec/training/TRAINING_SPEC.md",
+      "spec/training/.gitkeep",
+      "src/price_action_learning/training/__init__.py",
+      "src/price_action_learning/training/core.py",
+      "tests/training/test_training.py"
+    ],
+    "tests": [
+      "Run tests/training/test_training.py using the standard library or an already-approved repository test dependency. Cover Formal and Focused creation through the same function/path, all eight shared TrainingAttempt fields, null image_reference, null/empty initial revision, immutable initial user_analysis, one objective, required Focused Error ID, and Training returning only TrainingAttempt.",
+      "Explicitly accept S1, S2, and S3; reject S4 and unknown Stage values. Reject unknown Concept IDs, S1 attempts with S2/S3 learned Concept IDs, and S2 attempts with S3 learned Concept IDs.",
+      "Verify the internally derived canonical Stage-allowed Concept ID sets match the immutable Learning Map and that a caller cannot override or forge Stage-allowed Concept IDs.",
+      "Verify target_concept_id is required and stored in TrainingContext; reject unknown targets, S1 targets from S2/S3, and S2 targets from S3. Permit a Stage-allowed target that is not yet in learned_concept_ids.",
+      "Mutate caller-owned inputs after creation and verify the saved Stage, allowed and learned Concept IDs, CORE confidence, immutable Learning Map reference, target_concept_id, scenario, observation task, objective, and initial user_analysis remain unchanged."
+    ],
+    "validation": [
+      "Satisfy the authorized Training Work Unit without changing another module. Every scope_paths entry must be covered by one of its three owned directory selectors and by no excluded selector.",
+      "Freeze in spec/training/TRAINING_SPEC.md a non-screenshot Training MVP: user submits analysis before GPT diagnosis or evaluation; Training itself does no evaluation; Formal and Focused are modes of one module; one non-empty primary objective per attempt; image_reference is null; initial user_analysis is immutable; revision starts null/empty and no revision workflow is implemented.",
+      "Use the immutable Learning Map at commit 65cd6969e8ccf890d6e51b07fd7436564bf70421, spec/learning_map/LEARNING_MAP_SPEC.md, blob 726b35db8409ea03cbec33c916db7374e6724e03 as authority. Supported Stage values are exactly S1, S2, S3; reject S4 and every other unknown Stage.",
+      "The only permitted private runtime compatibility table maps Stage to Concept ID membership needed for validation. It may duplicate no concept definitions, prerequisites, error mappings, training cases, or Learning Map business logic. The immutable Learning Map reference remains authoritative.",
+      "Canonical S1 additions are exactly CON-S1-HIGH, CON-S1-LOW, CON-S1-SWING-HIGH, CON-S1-SWING-LOW, CON-S1-HH, CON-S1-HL, CON-S1-LH, CON-S1-LL, CON-S1-UPTREND, CON-S1-DOWNTREND, CON-S1-RANGE, CON-S1-UNCERTAIN, CON-S1-FACT-VS-INTERPRETATION.",
+      "Canonical S2 additions are exactly CON-S2-IMPULSE, CON-S2-PULLBACK, CON-S2-STRUCTURE-MAINTAINED, CON-S2-STRUCTURE-WEAKENED, CON-S2-STRUCTURE-DAMAGED, CON-S2-STRUCTURE-CHANGED.",
+      "Canonical S3 additions are exactly CON-S3-PREVIOUS-SIGNIFICANT-HIGH, CON-S3-PREVIOUS-SIGNIFICANT-LOW, CON-S3-MAJOR-SWING-HIGH, CON-S3-MAJOR-SWING-LOW, CON-S3-RANGE-HIGH, CON-S3-RANGE-LOW, CON-S3-STRUCTURAL-AREA, CON-S3-CURRENT-LOCATION, CON-S3-RELEVANT-VS-LESS-RELEVANT.",
+      "Canonical allowed boundary: S1=S1 additions; S2=S1+S2 additions; S3=S1+S2+S3 additions. All approved concepts in this frozen S1-S3 specification have Knowledge Confidence CORE. Do not allow caller-defined additions, unknown Concept IDs, or future-stage learned Concept IDs.",
+      "FINDING-TRAINING-CORE-PRE-002-001 correction: derive Stage-allowed Concept IDs internally from the canonical table, never from a caller-supplied allowed-concept set. Require learned_concept_ids to be a subset of the canonical allowed set for the exact attempt Stage.",
+      "Each TrainingAttempt knowledge boundary records the exact Stage, canonical Stage-allowed Concept IDs, supplied actually learned Concept IDs, applicable CORE Knowledge Confidence, and exact immutable Learning Map commit/path/blob reference. Defensively freeze or copy every stored collection and nested value so later caller mutation or learning cannot alter historical meaning.",
+      "FINDING-TRAINING-CORE-PRE-002-002 correction: TrainingContext has exactly one required target_concept_id. Both the observation task and the one primary objective bind to that same explicit Concept ID. Require the target to be within the attempt Stage's internally derived canonical allowed set; reject unknown and future-stage targets. Do not require the target to be in learned_concept_ids because training may precede learning.",
+      "TrainingContext is one immutable module-owned value containing market_scenario, observation_task, primary_objective, target_concept_id, training_mode, optional focus_error_id, and knowledge_boundary. Validate non-empty scenario, observation task, objective, Stage, and submitted user_analysis as required by the Work Unit; Focused requires focus_error_id while Formal does not.",
+      "TrainingAttempt retains exactly the shared fields id, created_at, stage, image_reference, user_analysis, user_confidence, revision, and status, plus only the minimum immutable Training context authorized by the Work Unit. Keep docs/CONTRACTS.md unchanged.",
+      "Place Training runtime behavior only in src/price_action_learning/training/core.py and use __init__.py for minimal public exports. Formal and Focused use one creation function/path and return only TrainingAttempt.",
+      "Delete spec/training/.gitkeep only after spec/training/TRAINING_SPEC.md exists. Create no placeholder. Confirm no path outside the five concrete scope_paths changed and run git diff --check.",
+      "Do not implement Evaluation, Learning State mutation, Review, Study Entry, Candidate Concept Expansion, plugin, scoring, grading, prediction, signals, risk management, screenshots, private persistence, database, UI, external API, TradingView API, helpers, utils, common, services, engine, or a new shared abstraction.",
+      "Return bounded implementation and verification evidence to GPT_ORCHESTRATOR for GPT_DECISION. The implementer must not commit, push, publish, authorize, or expand scope."
+    ],
+    "revision": true
+  }
+}
