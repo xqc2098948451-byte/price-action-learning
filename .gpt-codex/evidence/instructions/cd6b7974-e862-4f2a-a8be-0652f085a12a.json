@@ -1,0 +1,63 @@
+{
+  "instruction_id": "cd6b7974-e862-4f2a-a8be-0652f085a12a",
+  "instruction_type": "REVIEW_REQUEST",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "expected_state_revision": 8,
+  "framework_version": "2.7.4",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "target_work_unit": "price-action-learning-training-core-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    "sha": "5850696254bfd2f36ca52185cc215a970a37a47a"
+  },
+  "scope_paths": [
+    "spec/training/",
+    "src/price_action_learning/training/",
+    "tests/training/"
+  ],
+  "expected_base_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "permission_scope": "TRAINING_CORE_PRE_EXECUTION_ONLY",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "expected_remote_name": "origin",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "evidence_requirements": {
+    "files_read": [
+      "Authorized Training Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=5850696254bfd2f36ca52185cc215a970a37a47a; path=.gpt-codex/work-units/price-action-learning-training-core-001.json; blob=5aadff0aafbdc1f1747e381d76fb0f0ee4468fdf; state=AUTHORIZED; basis_state_revision=8; next_gate=TRAINING_CORE_PRE_EXECUTION.",
+      "Training Work Unit user approval: repository=xqc2098948451-byte/price-action-learning; commit=5850696254bfd2f36ca52185cc215a970a37a47a; path=.gpt-codex/evidence/training-core-wu-user-approval.json; blob=b52ad7dcaac74bd05c04a1add30426ee1691bc2b.",
+      "Completed Learning Map dependency: repository=xqc2098948451-byte/price-action-learning; commit=65cd6969e8ccf890d6e51b07fd7436564bf70421; path=.gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json; state=COMPLETE; basis_state_revision=8.",
+      "Live main: repository=xqc2098948451-byte/price-action-learning; ref=refs/heads/main; commit=65cd6969e8ccf890d6e51b07fd7436564bf70421; STATE revision=8."
+    ],
+    "validation": [
+      "Verify the Training Work Unit authority chain and the existence and exact binding of its user approval; the Work Unit remains at the TRAINING_CORE_PRE_EXECUTION gate.",
+      "Verify scope is exactly spec/training/, src/price_action_learning/training/, and tests/training/; reject unrelated module expansion.",
+      "Verify Training allows task generation, TrainingAttempt creation, Stage binding, knowledge-boundary binding, and storage of submitted user analysis only.",
+      "Verify Training excludes Evaluation scoring, LearningState mutation, Review decisions, trading signals, automatic prediction, UI, database, API, and plugin.",
+      "Verify Focused Training is a mode within Training and uses the same TrainingAttempt path, not a separate module.",
+      "Verify each TrainingAttempt preserves the Stage and available knowledge boundary at submission; concepts learned later cannot rewrite historical attempt meaning.",
+      "Verify the Learning Map Work Unit is COMPLETE at STATE revision 8 before Training execution.",
+      "Report PRE review findings and decision only. Do not implement Training, authorize execution, mutate business files, commit, push, or publish."
+    ],
+    "revision": true
+  },
+  "completion_gate": "GPT_DECISION",
+  "artifact_stage": "IMPLEMENTATION"
+}
