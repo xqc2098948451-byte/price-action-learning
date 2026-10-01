@@ -1,0 +1,108 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-training-core-001",
+  "goal": "Implement the first runtime Training module from the completed Learning Map contract. Present one observation task, receive the user's analysis, and create a historically stable TrainingAttempt for later Evaluation without scoring or changing learning state.",
+  "scope": {
+    "owned_paths": [
+      "spec/training/",
+      "src/price_action_learning/training/",
+      "tests/training/"
+    ],
+    "excluded_paths": [
+      ".gpt-codex/",
+      "AGENTS.md",
+      "README.md",
+      "docs/",
+      "spec/learning_map/",
+      "spec/evaluation/",
+      "spec/learning_state/",
+      "spec/review/",
+      "spec/study_entry/",
+      "src/price_action_learning/learning_map/",
+      "src/price_action_learning/evaluation/",
+      "src/price_action_learning/learning_state/",
+      "src/price_action_learning/review/",
+      "src/price_action_learning/study_entry/",
+      "tests/learning_map/",
+      "tests/evaluation/",
+      "tests/learning_state/",
+      "tests/review/",
+      "tests/study_entry/"
+    ]
+  },
+  "dependencies": {
+    "framework": {
+      "version": "2.7.4",
+      "commit_sha": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c"
+    },
+    "learning_map_closure": {
+      "repository_id": "1394745962",
+      "repository_full_name": "xqc2098948451-byte/price-action-learning",
+      "main_commit_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+      "work_unit": {
+        "path": ".gpt-codex/work-units/price-action-learning-learning-map-s1-s3-spec-001.json",
+        "blob_sha": "733b7e727ddc3d1e4d03a9bd9e9fb455a5040001",
+        "state": "COMPLETE"
+      },
+      "learning_map_spec": {
+        "path": "spec/learning_map/LEARNING_MAP_SPEC.md",
+        "blob_sha": "726b35db8409ea03cbec33c916db7374e6724e03"
+      },
+      "project_state": {
+        "path": ".gpt-codex/STATE.json",
+        "blob_sha": "ef9ff00f26b1bd705a7ebd454fda9e20c648ff71",
+        "revision": 8,
+        "active_work_unit": null
+      }
+    }
+  },
+  "acceptance": [
+    "Consume the completed Learning Map S1-S3 contract at the immutable dependency commit; do not modify Learning Map or introduce S4-S8 behavior.",
+    "Training accepts a market scenario, one required observation task, and the user's response. Each task has one primary training objective and targets only concepts permitted by the attempt's Stage and available knowledge boundary.",
+    "Focused Training is a mode within the Training module, using the same TrainingAttempt creation path and record; do not create a separate module.",
+    "Create a structured TrainingAttempt with a unique ID, submission timestamp, Stage, training mode, immutable market-scenario and observation-task context, submitted user analysis, user confidence when supplied, and initial revision/status fields. Preserve initial analysis after submission and do not implement a revision workflow in this MVP.",
+    "Bind each attempt to a submission-time snapshot or immutable reference of the available knowledge boundary: Stage-allowed and actually learned Concept IDs, their applicable Knowledge Confidence, and the Learning Map version used. Later learning must not change that historical meaning.",
+    "A future Evaluation must be able to use only knowledge available when that attempt was submitted. Training records the boundary but performs no evaluation, grading, error judgment, score, or learning-state transition.",
+    "The initial runtime returns only a TrainingAttempt record. It creates no Evaluation or LearningState record and makes no Review decision.",
+    "The training specification must retain compatibility with the existing TrainingAttempt shared fields without modifying docs/CONTRACTS.md. For this non-screenshot mode, image_reference is null; the structured scenario and observation task supply immutable context.",
+    "Keep implementation and tests within the owned paths and the existing domain package layout. Do not create a new top-level directory, a separate focused-training module, or placeholders.",
+    "Verify attempt creation, Stage and knowledge-boundary binding, preservation of submitted analysis and context, focused mode reuse, and historical stability when later knowledge changes.",
+    "Do not implement scoring, ranking, rewards, automatic grading, trading signals, indicators, screenshots, TradingView integration, plugin, UI, database, external API, trading execution, or automatic market prediction."
+  ],
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT"
+    ],
+    "forbidden_actions": [
+      "MUTATE_APPROVED_SCOPE",
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 8,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "USER_WORK_UNIT_APPROVAL"
+}
