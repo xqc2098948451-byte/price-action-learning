@@ -1,0 +1,59 @@
+{
+  "instruction_id": "a919fbb0-27b8-47e5-b37e-88b6944d9b66",
+  "instruction_type": "APPROVAL_REQUEST",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-training-core-post-001-remediation-registration-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-post-001-remediation-registration-001.json",
+    "sha": "e3bb448578c281332bf91dc825d3aebb723868ee"
+  },
+  "expected_state_revision": 8,
+  "expected_base_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "USER_APPROVER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "APPROVE",
+    "REJECT"
+  ],
+  "forbidden_actions": [],
+  "scope_paths": [
+    ".gpt-codex/STATE.json",
+    ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    ".gpt-codex/evidence/results/e610701b-e802-405f-9a59-b92bcec33371.json",
+    ".gpt-codex/evidence/training-core-post-001-remediation-basis.json",
+    ".gpt-codex/evidence/training-core-post-001-remediation-adjudication.json",
+    ".gpt-codex/evidence/training-core-post-001-remediation-work-verification.json",
+    ".gpt-codex/evidence/results/training-core-post-001-remediation-publication.json"
+  ],
+  "permission_scope": "TRAINING_POST_001_REMEDIATION_REGISTRATION_RECONCILIATION_APPROVAL_ONLY",
+  "in_response_to_instruction_id": "3a34f809-9847-4ab5-9e7c-62d16ba44131",
+  "completion_gate": "USER_APPROVAL",
+  "evidence_requirements": {
+    "files_read": [
+      "Framework 2.7.4: commit 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c.",
+      "Authorized remediation-registration Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=e3bb448578c281332bf91dc825d3aebb723868ee; path=.gpt-codex/work-units/price-action-learning-training-core-post-001-remediation-registration-001.json; blob=3632b1b0419f2554ab1c7765eb7eb8530ec0030e; state=AUTHORIZED; basis_state_revision=8.",
+      "Live main: repository=xqc2098948451-byte/price-action-learning; ref=refs/heads/main; commit=65cd6969e8ccf890d6e51b07fd7436564bf70421; STATE revision=8."
+    ],
+    "validation": [
+      "USER_APPROVER decides APPROVE or REJECT for ONLY the exact approved_instruction core in the following requirement; this request does not record a decision.",
+      "approved_instruction exact JSON: {\"instruction_id\":\"3a34f809-9847-4ab5-9e7c-62d16ba44131\",\"expected_state_revision\":8,\"expected_base_sha\":\"65cd6969e8ccf890d6e51b07fd7436564bf70421\",\"scope_paths\":[\".gpt-codex/STATE.json\",\".gpt-codex/work-units/price-action-learning-training-core-001.json\",\".gpt-codex/evidence/results/e610701b-e802-405f-9a59-b92bcec33371.json\",\".gpt-codex/evidence/training-core-post-001-remediation-basis.json\",\".gpt-codex/evidence/training-core-post-001-remediation-adjudication.json\",\".gpt-codex/evidence/training-core-post-001-remediation-work-verification.json\",\".gpt-codex/evidence/results/training-core-post-001-remediation-publication.json\"],\"target_project_context_id\":\"e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9\",\"target_project_name\":\"Price Action Learning\",\"target_github_repository_id\":\"1394745962\",\"target_github_repository_full_name\":\"xqc2098948451-byte/price-action-learning\",\"target_work_unit_ref\":{\"path\":\".gpt-codex/work-units/price-action-learning-training-core-post-001-remediation-registration-001.json\",\"sha\":\"e3bb448578c281332bf91dc825d3aebb723868ee\"},\"issuer_role\":\"GPT_ORCHESTRATOR\",\"executor_role\":\"CODEX_IMPLEMENTER\",\"authorized_actions\":[\"READ\",\"TEST\",\"VALIDATE\",\"REPORT\",\"MUTATE_APPROVED_SCOPE\"]}",
+      "Require exact core key set and values, seven scope paths in order, Work Unit commit and blob, project/context and repository identity, STATE revision 8, and main base SHA before accepting an Approval Result.",
+      "If approved, a future RECONCILIATION_REQUEST may only register the two durable Training POST findings on main; create accepted remediation basis and adjudication; advance STATE 8 to 9; materialize and rebind the Training Work Unit on main at basis revision 9; and create work-verification and publication evidence.",
+      "Approval must not modify the Training candidate, fix Training code, alter spec/src/tests, expand scope, start Evaluation, or modify Framework source. Earlier Work Unit approval does not substitute for this Instruction approval.",
+      "This authoring transaction must not create APPROVAL_RESULT, publish RECONCILIATION_REQUEST, or modify main, STATE, the Training candidate, or Framework source."
+    ],
+    "result_references": [
+      "e610701b-e802-405f-9a59-b92bcec33371"
+    ],
+    "revision": true
+  }
+}
