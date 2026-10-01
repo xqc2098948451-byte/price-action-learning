@@ -1,0 +1,24 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-TRAINING-CORE-POST-001-REMEDIATION-BASIS",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "source": "SYSTEM_DERIVED",
+  "subject": "REMEDIATION_AUTHORITY_BASIS",
+  "state_revision": 9,
+  "result": "ACCEPTED",
+  "basis_type": "ACCEPTED_AUTHORITY_BASIS",
+  "finding_ids": [
+    "FINDING-TRAINING-CORE-POST-001-001",
+    "FINDING-TRAINING-CORE-POST-001-002"
+  ],
+  "accepted": true,
+  "failing": false,
+  "basis_statement": "F001: Public TrainingContext construction must preserve submission-time historical immutability. It must not retain a caller-owned mutable knowledge_boundary alias; it must store an independent canonical immutable KnowledgeBoundary value, reject malformed or noncanonical boundary input, and have direct-constructor regression coverage. F002: Public TrainingAttempt construction must enforce TrainingAttempt.stage == context.knowledge_boundary.stage, reject inconsistent direct construction, and have direct-constructor regression coverage. Scope limits: no new field; no new module; no generalized validator engine; no business-scope expansion; no revision workflow expansion; no Evaluation behavior.",
+  "authority_refs": [
+    "repository=xqc2098948451-byte/price-action-learning;commit=5850696254bfd2f36ca52185cc215a970a37a47a;path=.gpt-codex/work-units/price-action-learning-training-core-001.json;blob=5aadff0aafbdc1f1747e381d76fb0f0ee4468fdf",
+    "repository=xqc2098948451-byte/price-action-learning;commit=0d4f9af302fca3c6e7755160fcee3499fbdb2d09;path=.gpt-codex/evidence/instructions/7a8d7d0e-44b6-4fd1-9d36-2b24d5d8d735.json;blob=ce6f2f33d45492282ac3efa65a9a76109f669e2b",
+    "repository=xqc2098948451-byte/price-action-learning;commit=65cd6969e8ccf890d6e51b07fd7436564bf70421;path=spec/learning_map/LEARNING_MAP_SPEC.md;blob=726b35db8409ea03cbec33c916db7374e6724e03",
+    "repository=xqc2098948451-byte/price-action-learning;commit=f87aee490828a431b3a084e9238aa404fea9cfd3;path=.gpt-codex/evidence/results/e610701b-e802-405f-9a59-b92bcec33371.json;blob=e5812b1900db99597b61b4bba19906cd90a84e71"
+  ]
+}

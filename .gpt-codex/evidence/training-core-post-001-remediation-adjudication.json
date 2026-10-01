@@ -1,0 +1,20 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "DECISION-TRAINING-CORE-POST-001-REMEDIATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "source": "SYSTEM_DERIVED",
+  "subject": "REMEDIATION_ADJUDICATION",
+  "state_revision": 9,
+  "result": "ACCEPT",
+  "decision": "ACCEPT",
+  "basis_type": "ACCEPTED_AUTHORITY_BASIS",
+  "basis_refs": [
+    "EVIDENCE-TRAINING-CORE-POST-001-REMEDIATION-BASIS"
+  ],
+  "finding_ids": [
+    "FINDING-TRAINING-CORE-POST-001-001",
+    "FINDING-TRAINING-CORE-POST-001-002"
+  ],
+  "adjudicated_at_revision": 9
+}
