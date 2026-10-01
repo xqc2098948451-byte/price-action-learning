@@ -1,0 +1,76 @@
+{
+  "instruction_id": "ea908839-69de-4b91-9b43-f8530104dc5a",
+  "instruction_type": "FIX_INSTRUCTION",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-training-core-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    "sha": "924674ca7c983a6ccdf7e7167e58634d9b8fc35c"
+  },
+  "expected_state_revision": 9,
+  "expected_base_sha": "60596fcc93b924273fbbc2a63bd84b1c82c2e37e",
+  "review_target_revision": "60596fcc93b924273fbbc2a63bd84b1c82c2e37e",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "924674ca7c983a6ccdf7e7167e58634d9b8fc35c",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_IMPLEMENTER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT",
+    "MUTATE_APPROVED_SCOPE"
+  ],
+  "forbidden_actions": [
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "scope_paths": [
+    "src/price_action_learning/training/core.py",
+    "tests/training/test_training.py"
+  ],
+  "permission_scope": "TRAINING_CORE_POST_001_FIX_ROUND_1_ONLY",
+  "in_response_to_result_id": "e610701b-e802-405f-9a59-b92bcec33371",
+  "finding_ids": [
+    "FINDING-TRAINING-CORE-POST-001-001",
+    "FINDING-TRAINING-CORE-POST-001-002"
+  ],
+  "fix_round": 1,
+  "remediation_decision_ref": "DECISION-TRAINING-CORE-POST-001-REMEDIATION",
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Authorized Training Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=924674ca7c983a6ccdf7e7167e58634d9b8fc35c; path=.gpt-codex/work-units/price-action-learning-training-core-001.json; blob=3b30a86ff746c9bd97ec855c1587ab68e3250c74; state=AUTHORIZED; basis_state_revision=9.",
+      "Canonical Training POST finding: repository=xqc2098948451-byte/price-action-learning; commit=924674ca7c983a6ccdf7e7167e58634d9b8fc35c; path=.gpt-codex/evidence/results/e610701b-e802-405f-9a59-b92bcec33371.json; blob=e5812b1900db99597b61b4bba19906cd90a84e71.",
+      "Accepted remediation basis: repository=xqc2098948451-byte/price-action-learning; commit=924674ca7c983a6ccdf7e7167e58634d9b8fc35c; path=.gpt-codex/evidence/training-core-post-001-remediation-basis.json; blob=be52f234912da19e416cb725de4b223509b99616.",
+      "Accepted remediation adjudication: repository=xqc2098948451-byte/price-action-learning; commit=924674ca7c983a6ccdf7e7167e58634d9b8fc35c; path=.gpt-codex/evidence/training-core-post-001-remediation-adjudication.json; blob=00fec869baf2121ea472640e5dfb53d89dfb2126.",
+      "The existing Training candidate/worktree must resolve to reviewed tree 60596fcc93b924273fbbc2a63bd84b1c82c2e37e before any fix. At that tree, core.py blob=43aa7637e9027e411fb26dec8de3f611f7a13fcb and test_training.py blob=c1feb0fae370e3609cbeb7f824401740fec25e6b. Preserve TRAINING_SPEC.md blob=9c2ed5e2c275f71073f68a93de1178a565ae9a79 and training/__init__.py blob=66af9fd135c08942aa3973144b2a1fa763f13e3a; spec/training/.gitkeep remains absent. Do not reconstruct a different candidate from current main."
+    ],
+    "files_changed": [
+      "src/price_action_learning/training/core.py",
+      "tests/training/test_training.py"
+    ],
+    "tests": [
+      "Run all existing 24 Training tests plus direct-constructor regression coverage for both accepted POST findings. Prove that mutating the caller-owned boundary source after public TrainingContext construction cannot change its stored boundary. Prove that public TrainingAttempt construction rejects a stage mismatch with context.knowledge_boundary.stage."
+    ],
+    "validation": [
+      "Before execution, require a fresh durable FIX PRE_EXECUTION review bound to this exact instruction and reviewed candidate tree. PRE_EXECUTION_REVIEW_REQUIRED remains a stop condition until the review exists and passes. This instruction alone does not authorize mutation.",
+      "FINDING-TRAINING-CORE-POST-001-001 only: public TrainingContext construction must not retain a mutable caller-owned knowledge_boundary alias. Store an independent canonical immutable KnowledgeBoundary value; reject malformed or noncanonical boundary input. Add direct-constructor regression coverage for post-construction caller mutation.",
+      "FINDING-TRAINING-CORE-POST-001-002 only: public TrainingAttempt construction must enforce TrainingAttempt.stage == context.knowledge_boundary.stage. Reject inconsistent direct construction and add direct-constructor regression coverage.",
+      "Preserve existing factory behavior, Formal and Focused shared creation path, user-first behavior, S1/S2/S3 canonical Stage boundaries, target_concept_id binding, submission-time historical meaning, and standard-library-only implementation.",
+      "Modify only src/price_action_learning/training/core.py and tests/training/test_training.py. Do not change TRAINING_SPEC.md or training/__init__.py, add .gitkeep, a field, module, generalized validator framework, revision workflow, Evaluation behavior, scoring, grading, Learning Map changes, or other business scope. Do not modify the .gpt-codex control plane during the candidate fix.",
+      "Confirm the effective candidate diff touches only the two authorized paths, preserves the other candidate blobs and .gitkeep absence, and passes git diff --check. Return bounded evidence for a full Training POST re-review afterward; implementer must not commit, push, publish, authorize, or expand scope."
+    ],
+    "revision": true
+  }
+}
