@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-TRAINING-CORE-POST-001-REMEDIATION-REGISTRATION-002-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-training-core-post-001-remediation-registration-002",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 8,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "4cbb900fd03fc48c9ce06de7c0abffb894c4a72d"
+  },
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-training-core-post-001-remediation-registration-002.json@747597f64a67abc5d5b93310ef6d40a6e8f29258"
+  ],
+  "observed_at": "2026-10-01",
+  "notes": "User approved the exact replacement Work Unit bound to blob 4cbb900fd03fc48c9ce06de7c0abffb894c4a72d. Approval permits the remaining governance gates. Approval does not execute reconciliation, mutate or fix the Training candidate, or start Evaluation."
+}
