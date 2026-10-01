@@ -1,0 +1,35 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-LEARNING-MAP-S1-S3-PUBLICATION-VERIFICATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-map-s1-s3-closure-001",
+  "source": "TOOL_OBSERVED",
+  "subject": "LEARNING_MAP_S1_S3_WORK_COMMIT_REMOTE_VERIFICATION",
+  "state_revision": 7,
+  "identity_binding": {
+    "type": "GIT_COMMIT",
+    "value": "28c99f573799689c0a3b5b124768c688a1006ef3"
+  },
+  "result": "PASS",
+  "publication_observation": {
+    "repository_id": "1394745962",
+    "repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "remote_ref": "refs/heads/main",
+    "remote_head": "28c99f573799689c0a3b5b124768c688a1006ef3",
+    "remote_state_revision": 7,
+    "work_commit_parent": "002df9fef1bd3717a0bde147a546ef9cf4150e5d",
+    "work_tree": "ee1faa17f5bfe51973b3307aefeb95b056512718",
+    "spec_path": "spec/learning_map/LEARNING_MAP_SPEC.md",
+    "spec_blob": "726b35db8409ea03cbec33c916db7374e6724e03",
+    "gitkeep_path": "spec/learning_map/.gitkeep",
+    "gitkeep_status": "ABSENT"
+  },
+  "durable_post_pass": {
+    "repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "commit_sha": "6555706b6dd2627a511755ca5a374877df7f60d6",
+    "path": ".gpt-codex/evidence/results/5e3cbac9-67a8-4ef6-9f43-2c177ee204db.json",
+    "blob_sha": "2671342123cfc02bcf8cba706f0333d96bbda182"
+  },
+  "observed_at": "2026-10-01"
+}

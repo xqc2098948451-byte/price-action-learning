@@ -81,11 +81,11 @@
       "SCOPE_EXPANSION"
     ]
   },
-  "state": "AUTHORIZED",
-  "basis_state_revision": 7,
+  "state": "COMPLETE",
+  "basis_state_revision": 8,
   "implementation_authorized": false,
   "implementation_start_allowed": false,
-  "next_gate": "LEARNING_MAP_S1_S3_SPEC_PRE_EXECUTION",
+  "next_gate": "COMPLETE",
   "evidence_refs": [
     "AGENTS.md@8b93e5c736c650414834a3d4a9007c4031459c5e",
     "docs/CONTRACTS.md@8b93e5c736c650414834a3d4a9007c4031459c5e",
