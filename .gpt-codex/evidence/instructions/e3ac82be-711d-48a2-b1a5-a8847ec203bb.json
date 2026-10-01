@@ -1,0 +1,77 @@
+{
+  "instruction_id": "e3ac82be-711d-48a2-b1a5-a8847ec203bb",
+  "instruction_type": "EXECUTION_INSTRUCTION",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-training-core-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    "sha": "5850696254bfd2f36ca52185cc215a970a37a47a"
+  },
+  "expected_state_revision": 8,
+  "expected_base_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_IMPLEMENTER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT",
+    "MUTATE_APPROVED_SCOPE"
+  ],
+  "forbidden_actions": [
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "permission_scope": "TRAINING_CORE_MVP_ONLY",
+  "scope_paths": [
+    "spec/training/TRAINING_SPEC.md",
+    "spec/training/.gitkeep",
+    "src/price_action_learning/training/__init__.py",
+    "src/price_action_learning/training/core.py",
+    "tests/training/test_training.py"
+  ],
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Authorized Training Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=5850696254bfd2f36ca52185cc215a970a37a47a; path=.gpt-codex/work-units/price-action-learning-training-core-001.json; blob=5aadff0aafbdc1f1747e381d76fb0f0ee4468fdf; state=AUTHORIZED; basis_state_revision=8.",
+      "Completed Learning Map and shared TrainingAttempt contract at main commit 65cd6969e8ccf890d6e51b07fd7436564bf70421: spec/learning_map/LEARNING_MAP_SPEC.md and docs/CONTRACTS.md.",
+      "Project governance at main commit 65cd6969e8ccf890d6e51b07fd7436564bf70421: AGENTS.md, docs/DIRECTORY_POLICY.md, .gpt-codex/CONTROL.json, and .gpt-codex/STATE.json."
+    ],
+    "files_changed": [
+      "spec/training/TRAINING_SPEC.md",
+      "spec/training/.gitkeep",
+      "src/price_action_learning/training/__init__.py",
+      "src/price_action_learning/training/core.py",
+      "tests/training/test_training.py"
+    ],
+    "tests": [
+      "Run tests/training/test_training.py using the standard library or an already-approved repository test dependency. Cover Formal creation, Focused creation through the same API, all eight shared TrainingAttempt fields, null image_reference, initial revision, immutable initial user_analysis, objective cardinality, focused Error ID, allowed/learned boundary validation, defensive copying, later source mutation and learning, and absence of Evaluation/LearningState output."
+    ],
+    "validation": [
+      "Satisfy the exact authorized Training Work Unit acceptance without changing another module; confirm every concrete scope_paths entry is covered by one of the Work Unit's three owned directory selectors and none by an excluded selector.",
+      "In spec/training/TRAINING_SPEC.md freeze the non-screenshot Training MVP: one primary objective per attempt; user submits initial analysis before GPT diagnostic/evaluation; Training itself does no evaluation; Formal and Focused are modes of one Training module; image_reference is null; initial user_analysis cannot be overwritten; revision starts empty/null; do not implement the revision workflow.",
+      "Place all Training runtime behavior in src/price_action_learning/training/core.py and use src/price_action_learning/training/__init__.py only for minimal public exports. Add no helpers, utils, common, services, engine, separate Focused Training module, generalized snapshot engine, or database.",
+      "Use one immutable module-owned Training context value containing market scenario, observation task, exactly one primary objective, training mode, optional focused Error ID, and the submission-time knowledge boundary.",
+      "The submission-time boundary preserves Stage, Stage-allowed Concept IDs, actually learned Concept IDs, applicable Knowledge Confidence, and Learning Map version/reference. Freeze or defensively copy caller-owned collections so later mutation and later learning cannot change an existing attempt's historical meaning.",
+      "TrainingAttempt retains id, created_at, stage, image_reference, user_analysis, user_confidence, revision, and status. Attach only the minimum immutable Training context required by the Work Unit; do not modify docs/CONTRACTS.md or move Evaluation behavior into Training.",
+      "Use one attempt-creation path for Formal and Focused and return only the TrainingAttempt. At creation validate non-empty Stage, scenario, observation task, and exactly one non-empty primary objective; learned Concept IDs must be a subset of the Stage-allowed boundary; Focused requires a focus Error ID while Formal does not.",
+      "Tests must demonstrate unchanged submitted user_analysis, scenario, task, objective, and knowledge boundary after caller-owned source data changes or later knowledge is added, and demonstrate the same creation path for Formal and Focused.",
+      "Delete spec/training/.gitkeep only after spec/training/TRAINING_SPEC.md exists. Create no placeholder. Confirm no repository path outside the five concrete scope_paths changed and run git diff --check.",
+      "Do not implement Evaluation, Learning State, Review, Candidate Concept Expansion, Study Entry, plugin, scoring, grading, prediction, signals, risk management, screenshots, private training records, database, UI, external API, or TradingView API.",
+      "Return bounded implementation and verification evidence to GPT_ORCHESTRATOR for GPT_DECISION. The implementer must not commit, push, publish, authorize, or expand scope."
+    ],
+    "revision": true
+  }
+}
