@@ -1,0 +1,33 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-TRAINING-CORE-POST-001-REMEDIATION-WORK-VERIFICATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-training-core-post-001-remediation-registration-002",
+  "source": "TOOL_OBSERVED",
+  "subject": "TRAINING_CORE_POST_001_REMEDIATION_WORK_COMMIT_REMOTE_VERIFICATION",
+  "state_revision": 8,
+  "identity_binding": {
+    "type": "GIT_COMMIT",
+    "value": "e3e76c7e86f72dc9eecb5ec5cbf49ac2fb7fe80d"
+  },
+  "result": "PASS",
+  "artifact_refs": [
+    ".gpt-codex/evidence/results/e610701b-e802-405f-9a59-b92bcec33371.json@e3e76c7e86f72dc9eecb5ec5cbf49ac2fb7fe80d",
+    ".gpt-codex/evidence/training-core-post-001-remediation-basis.json@e3e76c7e86f72dc9eecb5ec5cbf49ac2fb7fe80d",
+    ".gpt-codex/evidence/training-core-post-001-remediation-adjudication.json@e3e76c7e86f72dc9eecb5ec5cbf49ac2fb7fe80d"
+  ],
+  "publication_observation": {
+    "repository_id": "1394745962",
+    "repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "remote_ref": "refs/heads/main",
+    "remote_head": "e3e76c7e86f72dc9eecb5ec5cbf49ac2fb7fe80d",
+    "remote_state_revision": 8,
+    "work_blobs": {
+      ".gpt-codex/evidence/results/e610701b-e802-405f-9a59-b92bcec33371.json": "e5812b1900db99597b61b4bba19906cd90a84e71",
+      ".gpt-codex/evidence/training-core-post-001-remediation-basis.json": "be52f234912da19e416cb725de4b223509b99616",
+      ".gpt-codex/evidence/training-core-post-001-remediation-adjudication.json": "00fec869baf2121ea472640e5dfb53d89dfb2126"
+    }
+  },
+  "observed_at": "2026-10-01"
+}
