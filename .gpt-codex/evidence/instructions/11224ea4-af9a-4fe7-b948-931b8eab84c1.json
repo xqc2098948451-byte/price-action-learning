@@ -1,0 +1,48 @@
+{
+  "instruction_id": "11224ea4-af9a-4fe7-b948-931b8eab84c1",
+  "instruction_type": "APPROVAL_REQUEST",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "expected_state_revision": 8,
+  "framework_version": "2.7.4",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "USER_APPROVER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "target_work_unit": "price-action-learning-training-core-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    "sha": "a06c2a5ce89ab5b2396f73b5b4562050ba53c33d"
+  },
+  "expected_base_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "permission_scope": "TRAINING_CORE_WORK_UNIT_APPROVAL_ONLY",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "expected_remote_name": "origin",
+  "authorized_actions": [
+    "APPROVE",
+    "REJECT"
+  ],
+  "forbidden_actions": [],
+  "evidence_requirements": {
+    "files_read": [
+      "Immutable Training Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=a06c2a5ce89ab5b2396f73b5b4562050ba53c33d; path=.gpt-codex/work-units/price-action-learning-training-core-001.json; blob=7344567f9f70b74f7b474fce24cba43699304001; state=PROPOSED; basis_state_revision=8.",
+      "Live main: repository=xqc2098948451-byte/price-action-learning; ref=refs/heads/main; commit=65cd6969e8ccf890d6e51b07fd7436564bf70421; STATE revision=8."
+    ],
+    "validation": [
+      "USER_APPROVER decides APPROVE or REJECT for only the exact Work Unit authorization target below. This request is not an approval or implementation authorization.",
+      "Work Unit authorization target exact JSON: {\"work_unit_id\":\"price-action-learning-training-core-001\",\"expected_state_revision\":8,\"expected_base_sha\":\"65cd6969e8ccf890d6e51b07fd7436564bf70421\",\"target_project_context_id\":\"e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9\",\"target_project_name\":\"Price Action Learning\",\"target_github_repository_id\":\"1394745962\",\"target_github_repository_full_name\":\"xqc2098948451-byte/price-action-learning\",\"target_work_unit_ref\":{\"path\":\".gpt-codex/work-units/price-action-learning-training-core-001.json\",\"sha\":\"a06c2a5ce89ab5b2396f73b5b4562050ba53c33d\"},\"scope_paths\":[\"spec/training/\",\"src/price_action_learning/training/\",\"tests/training/\"]}",
+      "Require exact immutable Work Unit commit and blob, project context, repository identity, STATE revision, main base SHA, and the three scope paths in order before accepting a future approval decision.",
+      "Do not create an Approval Result, Authorized Work Unit, implementation instruction, Training implementation, or main mutation in this request-authoring transaction."
+    ],
+    "revision": true
+  },
+  "completion_gate": "USER_APPROVAL",
+  "artifact_stage": "IMPLEMENTATION",
+  "scope_paths": [
+    "spec/training/",
+    "src/price_action_learning/training/",
+    "tests/training/"
+  ]
+}
