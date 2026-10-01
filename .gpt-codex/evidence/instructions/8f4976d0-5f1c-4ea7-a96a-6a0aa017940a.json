@@ -1,0 +1,79 @@
+{
+  "instruction_id": "8f4976d0-5f1c-4ea7-a96a-6a0aa017940a",
+  "instruction_type": "REVIEW_REQUEST",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-training-core-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    "sha": "5850696254bfd2f36ca52185cc215a970a37a47a"
+  },
+  "expected_state_revision": 8,
+  "expected_base_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "review_target_revision": "60596fcc93b924273fbbc2a63bd84b1c82c2e37e",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "permission_scope": "TRAINING_CORE_POST_EXECUTION_ONLY",
+  "scope_paths": [
+    "spec/training/TRAINING_SPEC.md",
+    "spec/training/.gitkeep",
+    "src/price_action_learning/training/__init__.py",
+    "src/price_action_learning/training/core.py",
+    "tests/training/test_training.py"
+  ],
+  "in_response_to_instruction_id": "7a8d7d0e-44b6-4fd1-9d36-2b24d5d8d735",
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Correlated Execution Instruction: repository=xqc2098948451-byte/price-action-learning; commit=0d4f9af302fca3c6e7755160fcee3499fbdb2d09; path=.gpt-codex/evidence/instructions/7a8d7d0e-44b6-4fd1-9d36-2b24d5d8d735.json; blob=ce6f2f33d45492282ac3efa65a9a76109f669e2b.",
+      "Authorized Training Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=5850696254bfd2f36ca52185cc215a970a37a47a; path=.gpt-codex/work-units/price-action-learning-training-core-001.json; blob=5aadff0aafbdc1f1747e381d76fb0f0ee4468fdf; state=AUTHORIZED; basis_state_revision=8.",
+      "Durable PRE PASS: repository=xqc2098948451-byte/price-action-learning; commit=da8807868d0a9f5248d481b19ceffcff4c762728; path=.gpt-codex/evidence/results/d0c97c2e-5366-4ca8-b7bc-d4617f5d6788.json; blob=b13353a2aa7eed070996015f1f0b3c7fea1ac939.",
+      "Immutable Learning Map: repository=xqc2098948451-byte/price-action-learning; commit=65cd6969e8ccf890d6e51b07fd7436564bf70421; path=spec/learning_map/LEARNING_MAP_SPEC.md; blob=726b35db8409ea03cbec33c916db7374e6724e03. Read docs/CONTRACTS.md at the same commit.",
+      "Candidate in D:/价格行为学习/training-core-001: base HEAD=65cd6969e8ccf890d6e51b07fd7436564bf70421; staged tree=60596fcc93b924273fbbc2a63bd84b1c82c2e37e. Inspect TRAINING_SPEC.md and core.py directly, as well as __init__.py and tests."
+    ],
+    "tests": [
+      "Confirm candidate HEAD is 65cd6969e8ccf890d6e51b07fd7436564bf70421 and git write-tree is 60596fcc93b924273fbbc2a63bd84b1c82c2e37e before review. Verify the exact base-to-candidate delta contains only deletion of spec/training/.gitkeep and creation of the other four scope_paths. Reject changed or extra paths.",
+      "Verify candidate blobs: spec/training/TRAINING_SPEC.md=9c2ed5e2c275f71073f68a93de1178a565ae9a79; src/price_action_learning/training/__init__.py=66af9fd135c08942aa3973144b2a1fa763f13e3a; src/price_action_learning/training/core.py=43aa7637e9027e411fb26dec8de3f611f7a13fcb; tests/training/test_training.py=c1feb0fae370e3609cbeb7f824401740fec25e6b; spec/training/.gitkeep is absent.",
+      "Re-run git diff --check and, with PYTHONPATH=src, python -m unittest discover -s tests/training -p \"test_*.py\" -v. Prior report was 24 tests, 0 failures, 0 errors; report the actual new execution facts.",
+      "Review test quality: exercise behavior, rejection paths, immutability of nested caller-owned inputs, Stage boundary enforcement, Formal and Focused modes, and shared creation path rather than only asserting constants."
+    ],
+    "validation": [
+      "Independently review the entire authorized Training Work Unit in one pass and report all detectable findings with concrete evidence to GPT_ORCHESTRATOR. Return POST PASS only if the candidate is safe to publish as the Training Core MVP; this request itself does not authorize publication or a fix.",
+      "Confirm project/context and GitHub repository identity, live origin refs/heads/main=65cd6969e8ccf890d6e51b07fd7436564bf70421, STATE revision 8, exact Work Unit reference, correlated Execution Instruction, and durable PRE PASS.",
+      "Inspect actual production code and specification, not tests alone. Compare TRAINING_SPEC.md with core.py and reject any contract/runtime drift.",
+      "Verify TrainingAttempt preserves shared fields id, created_at, stage, image_reference, user_analysis, user_confidence, revision, and status; image_reference is None and initial revision is None or empty.",
+      "Verify submitted initial user_analysis is frozen and Training context is immutable, including nested collections; caller-owned mutable inputs and later learning cannot alter historical attempt meaning.",
+      "Verify exactly one runtime creation path serves FORMAL and FOCUSED. FOCUSED requires focus_error_id, and no separate Focused module exists.",
+      "Verify F001 in runtime: supported Stage exactly S1/S2/S3; cumulative canonical allowed Concept counts S1=13, S2=19, S3=28; boundary derived internally; caller cannot forge allowed concepts; unknown, S4, and future-stage learned Concept IDs rejected.",
+      "Verify F002 in runtime: one required target_concept_id is stored in immutable Training context, binds both observation_task and the single primary_objective, and is Stage-allowed. Unknown or future-stage targets are rejected; a Stage-allowed but not-yet-learned target is accepted.",
+      "Verify any private compatibility table duplicates only Stage-to-Concept membership, not definitions, prerequisites, error mappings, training cases, or other Learning Map logic. Preserve the exact immutable Learning Map commit/path/blob authority.",
+      "Verify Training performs no Evaluation or Learning State mutation. No GPT diagnosis or evaluation is produced before submitted initial user_analysis; each attempt has exactly one primary objective.",
+      "Reject scope leakage or YAGNI violations: no Evaluation, Learning State, Review, Study Entry, Candidate Concept Expansion, plugin, scoring/grading, signals/prediction, risk management, screenshot/private persistence, DB/UI/API/TradingView API, helpers/utils/common/services/engine, or new shared abstraction.",
+      "Verify no private or user data is committed. Investigate mutable defaults, shallow-copy leaks, caller-supplied boundary authority, inconsistent Stage/context values, nondeterministic or collision-prone attempt IDs, naive/local timestamps where stable semantics are required, frozen-value overwrite paths, public exports inconsistent with the spec, and test-only logic in production code.",
+      "Report findings and a POST decision only. Do not mutate candidate or approved scope, create a fix, commit, push, publish, authorize, expand scope, or make a GPT completion decision."
+    ],
+    "revision": true
+  }
+}
