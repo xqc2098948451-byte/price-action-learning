@@ -1,0 +1,79 @@
+{
+  "instruction_id": "6c5dfb4d-b3c2-47b3-8f87-4e28aad4e1c3",
+  "instruction_type": "REVIEW_REQUEST",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-training-core-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    "sha": "5850696254bfd2f36ca52185cc215a970a37a47a"
+  },
+  "expected_state_revision": 8,
+  "expected_base_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "review_target_revision": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "permission_scope": "TRAINING_CORE_PRE_EXECUTION_ONLY",
+  "scope_paths": [
+    "spec/training/TRAINING_SPEC.md",
+    "spec/training/.gitkeep",
+    "src/price_action_learning/training/__init__.py",
+    "src/price_action_learning/training/core.py",
+    "tests/training/test_training.py"
+  ],
+  "in_response_to_instruction_id": "e3ac82be-711d-48a2-b1a5-a8847ec203bb",
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Execution Instruction: repository=xqc2098948451-byte/price-action-learning; commit=42c04f6397566ca0ce6c28b95cc3d3af92620cd7; path=.gpt-codex/evidence/instructions/e3ac82be-711d-48a2-b1a5-a8847ec203bb.json; blob=f63da08d38389168c27d36ed54fae3fe1cf2a639.",
+      "Authorized Training Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=5850696254bfd2f36ca52185cc215a970a37a47a; path=.gpt-codex/work-units/price-action-learning-training-core-001.json; blob=5aadff0aafbdc1f1747e381d76fb0f0ee4468fdf; state=AUTHORIZED; basis_state_revision=8; next_gate=TRAINING_CORE_PRE_EXECUTION.",
+      "Training Work Unit user approval: repository=xqc2098948451-byte/price-action-learning; commit=5850696254bfd2f36ca52185cc215a970a37a47a; path=.gpt-codex/evidence/training-core-wu-user-approval.json; blob=b52ad7dcaac74bd05c04a1add30426ee1691bc2b.",
+      "At main commit 65cd6969e8ccf890d6e51b07fd7436564bf70421 read .gpt-codex/CONTROL.json, .gpt-codex/STATE.json, AGENTS.md, docs/DIRECTORY_POLICY.md, docs/CONTRACTS.md, spec/learning_map/LEARNING_MAP_SPEC.md, and the completed Learning Map Work Unit."
+    ],
+    "tests": [
+      "Run repository-native read-only envelope, authority, and PRE-correlation validation for this Review Request. Do not execute the Training implementation or create a PRE Result during this instruction-sufficiency review."
+    ],
+    "validation": [
+      "Perform one independent PRE review of the Execution Instruction and report every detectable finding in one pass, with exact evidence and a decision for GPT_ORCHESTRATOR. Do not implement or authorize execution.",
+      "Verify this Review Request's in_response_to_instruction_id exactly equals the Execution Instruction ID e3ac82be-711d-48a2-b1a5-a8847ec203bb, and its review_target_revision exactly equals that Instruction's expected_base_sha 65cd6969e8ccf890d6e51b07fd7436564bf70421.",
+      "Verify the Review Request scope_paths equal the Execution Instruction scope_paths exactly: spec/training/TRAINING_SPEC.md, spec/training/.gitkeep, src/price_action_learning/training/__init__.py, src/price_action_learning/training/core.py, tests/training/test_training.py. Reject directory selectors, extra paths, omissions, or changed ordering.",
+      "Verify each of the five concrete paths is covered by one of the Work Unit's three owned directory selectors and by no excluded selector; reject scope expansion or edits outside those five paths.",
+      "Verify CONTROL project/context and GitHub repository identity, live origin refs/heads/main head 65cd6969e8ccf890d6e51b07fd7436564bf70421, and STATE revision 8 before accepting freshness.",
+      "Verify the Learning Map dependency remains COMPLETE at the immutable main revision and that the Training contract uses the Stage and Concept boundaries in spec/learning_map/LEARNING_MAP_SPEC.md without adding S4-S8 behavior.",
+      "Verify compatibility with docs/CONTRACTS.md TrainingAttempt fields id, created_at, stage, image_reference, user_analysis, user_confidence, revision, status. For this non-screenshot MVP image_reference is null.",
+      "Verify the Execution Instruction requires initial user_analysis to remain immutable after submission. revision starts null or empty and no revision workflow is implemented in this MVP.",
+      "Verify Formal and Focused Training share one Training runtime and TrainingAttempt creation path. Focused mode requires a focus Error ID and is not a separate module.",
+      "Verify each attempt preserves at submission its Stage, Stage-allowed Concept IDs, actually learned Concept IDs, applicable Knowledge Confidence, and Learning Map version/reference, so later learning cannot change historical meaning.",
+      "Verify caller-owned collections are defensively frozen or copied, including nested knowledge-boundary data, so later source mutation cannot alter an existing attempt's analysis, scenario, task, objective, or knowledge boundary.",
+      "Verify exactly one non-empty primary objective per attempt, with a non-empty market scenario, observation task, and Stage; learned Concept IDs must be within that Stage's allowed boundary.",
+      "Verify the Training boundary enforces user-first submission: no GPT diagnostic or evaluation before initial user analysis is submitted, and Training itself does not judge that analysis.",
+      "Verify the initial runtime returns only TrainingAttempt and does not implement Evaluation, Learning State, Review, Candidate Concept Expansion, Study Entry, plugin, scoring, grading, prediction, signals, risk management, screenshot persistence, private data persistence, database, UI, external API, or TradingView API.",
+      "Verify YAGNI: no helpers, utils, common, services, engine, new shared abstraction, separate Focused module, placeholder beyond the authorized deletion of spec/training/.gitkeep, or path outside the five concrete paths.",
+      "Determine explicitly whether the Execution Instruction is safe and sufficiently precise for implementation, including its acceptance tests and exclusion boundaries. Report any ambiguity or missing requirement as a finding before a GPT decision.",
+      "Return PRE review findings and decision only. Do not modify approved scope, commit, push, publish, authorize implementation, expand scope, or persist a PRE Result on behalf of this request's author."
+    ],
+    "revision": true
+  }
+}
