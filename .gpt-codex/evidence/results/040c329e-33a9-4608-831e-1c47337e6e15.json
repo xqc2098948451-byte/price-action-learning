@@ -1,0 +1,1800 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-evaluation-core-001",
+  "extension": null,
+  "result_id": "040c329e-33a9-4608-831e-1c47337e6e15",
+  "result_message_type": "REVIEW_FINDING",
+  "status": "FAIL",
+  "POST_STATUS": "FAIL",
+  "PUBLICATION_READINESS": "NOT_READY",
+  "return_to_gpt_required": true,
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "framework_version": "2.7.4",
+  "responder_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "response_to_instruction_id": "b35e0a61-9f78-4fc8-9c96-0d65ac8bd56e",
+  "state_revision": 11,
+  "review_target_revision": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+  "current_remote_ref": "refs/heads/main",
+  "local_head_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+  "remote_head_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+  "push_status": "NOT_ATTEMPTED",
+  "remote_verification": "VERIFIED",
+  "publication_authority": null,
+  "sync_status": null,
+  "artifact_stage": "IMPLEMENTATION",
+  "artifact_path": null,
+  "finding_ids": [
+    "EVAL-POST-001"
+  ],
+  "fix_round": 0,
+  "execution": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "changed": [],
+  "verify": {
+    "STATUS": "FAIL",
+    "POST_STATUS": "FAIL",
+    "PUBLICATION_READINESS": "NOT_READY",
+    "REVIEW_COMPLETENESS": "COMPLETE: all durable files_read/tests/validation/findings entries; fresh independent context; every PRE planned case 01-35 executed; no early stop",
+    "REPOSITORY_FRESHNESS": "PASS: git fetch origin exit 0; gh api repository_id=1394745962; live main=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; governance=a7c6e45bcb3bb2371be1b884d13de4fb14f07e37",
+    "STATE_INVARIANTS": "PASS: revision=11, state=AUTHORIZED, active_work_unit=null, blockers=[], reconciliation=null, active_execution_slots=ABSENT, continuity.sync_status=SYNCED; native resume=LATEST_SYNCED_REMOTE_STATE",
+    "POST_REQUEST_ID": "b35e0a61-9f78-4fc8-9c96-0d65ac8bd56e",
+    "POST_REQUEST_AUTHORITY": "PASS: exact immutable locator, 21 native artifact resolutions ALLOW, builder roundtrip exact; project/context/repository/WU/ref/execution/PRE/base/tree/ordered scope/roles/actions/permission/remote all matched",
+    "POST_REQUEST_LOCATOR": "repository=xqc2098948451-byte/price-action-learning;commit=a7c6e45bcb3bb2371be1b884d13de4fb14f07e37;path=.gpt-codex/evidence/instructions/b35e0a61-9f78-4fc8-9c96-0d65ac8bd56e.json;blob=cfa413bd3991cbbeec9b4df0569f9f62ea90cd06",
+    "FRAMEWORK_COMMIT": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c (2.7.4, READ_ONLY)",
+    "CANDIDATE_IDENTITY": "PASS: candidate HEAD=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; full tree and four blobs independently match; normal index unchanged",
+    "CANDIDATE_TREE_SHA": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+    "CANDIDATE_BLOBS": "spec/evaluation/EVALUATION_SPEC.md=31b91d998f48cfb1d0a382336c47cdd4e40d1119; src/price_action_learning/evaluation/__init__.py=657d7b1ba94ed543b63e64b681ab64e678d3aac4; src/price_action_learning/evaluation/core.py=08b45f601d0aab04eaf407c173afb1fe27c45f99; tests/evaluation/test_evaluation.py=6b5b44c681605d94401739a586d7ba16d4c79861",
+    "EXACT_BUSINESS_DELTA": "A spec/evaluation/EVALUATION_SPEC.md; D spec/evaluation/.gitkeep; A src/price_action_learning/evaluation/__init__.py; A src/price_action_learning/evaluation/core.py; A tests/evaluation/test_evaluation.py; no other path",
+    "CONSTRUCTOR_HARDENING": "FAIL EVAL-POST-001: public direct/zero/nine-positional/nine-keyword/malformed/token/replace routes reject, nine slots and no __dict__; generated __setstate__ rewrites existing records; pickle protocols 0/1 reconstruct new invalid exact Evaluation records without factory/Training validation",
+    "CANONICAL_TRAINING_VALIDATION": "PASS: exact 4 record types, forged invalid invariants, UUID4/UTC/status/revision, Stage/context/reference, canonical collections, text/equality spoofs rejected or safely normalized; originals untouched",
+    "CANONICAL_RECONSTRUCTION": "PASS: input attempt/context/boundary/initial user_analysis retain values and identities on success and rejection",
+    "HISTORICAL_BOUNDARY": "Factory PASS; record invariant FAIL via EVAL-POST-001 (__setstate__/pickle 0-1); all Stage ceilings, earlier-stage eligibility, unlearned/empty support and later learning/map/source collection contamination covered",
+    "ALL_19_ERROR_MAPPING_VERIFICATION": "PASS: all 19 exact IDs/Stages/Skills/Concept tuples equal immutable Learning Map; all 3 Stage skills match; independent matrix=2394 (234 accepted,2160 correctly rejected), both primary/contributor channels; no sampling",
+    "ERROR_CARDINALITY": "Factory PASS; record invariant FAIL via EVAL-POST-001 (__setstate__/pickle 0-1); 0/1 primary, 0/1/2 contributors, >2/duplicate/primary duplicate/unknown/order checked",
+    "ERROR_ID_PROSE_PROTECTION": "Factory PASS; record invariant FAIL via EVAL-POST-001 (__setstate__/pickle 0-1); all 19 IDs, punctuation, combinations, subclasses, correct/no-error/abstain routes tested",
+    "STRICT_ABSTAIN_TYPE": "Factory PASS; record invariant FAIL via EVAL-POST-001 (__setstate__/pickle 0-1); exact bool only, 0/1/string/truthy/equality spoofs rejected at factory",
+    "ABSTAIN_CONFIDENCE": "Factory PASS; record invariant FAIL via EVAL-POST-001 (__setstate__/pickle 0-1); LOW=>abstain; abstain=>no errors; HIGH/MEDIUM abstention and nonabstaining correct analysis covered",
+    "SKILL_SIGNAL_DERIVATION": "Factory PASS; record invariant FAIL via EVAL-POST-001 (__setstate__/pickle 0-1); primary > first contributor > Stage fallback; contributor order and override rejection covered",
+    "IMMUTABLE_ALIAS_DEFENSE": "FAIL EVAL-POST-001: factory copies strings/containers and rejects malformed nested members; generated __setstate__ accepts caller lists and preserves aliases",
+    "SPEC_RUNTIME_CONSISTENCY": "FAIL EVAL-POST-001: nine fields and factory rules match; spec immutable/no-caller-alias guarantee contradicted by generated restoration hook",
+    "TEST_QUALITY": "FAIL EVAL-POST-001: all 35 PRE cases implemented/executed, behavioral all-19 mapping tests; test_33 at tests/evaluation/test_evaluation.py:445-472 omits generated __setstate__ and unchecked pickle protocols 0/1 construction",
+    "PROCESS_NOT_OUTCOME": "PASS: signature rejects future candle/price/P&L/trade/prediction/outcome inputs; production imports only dataclasses and published Training; no outcome dependency or generated signal",
+    "YAGNI_SCOPE": "PASS: exact approved five-path delta; standard library only; no Training/Map/STATE/WU or excluded domain changes",
+    "EVALUATION_TEST_RESULT": "46/46 PASS; failures=0 errors=0 skips=0 exit=0; python -B -m unittest discover -s tests/evaluation -p test_evaluation.py -v",
+    "TRAINING_TEST_RESULT": "39/39 PASS; failures=0 errors=0 skips=0 exit=0; python -B -m unittest discover -s tests/training -p test_training.py -v",
+    "FULL_PROJECT_TEST_RESULT": "85/85 PASS; failures=0 errors=0 skips=0 exit=0; inventory tests/evaluation/test_evaluation.py=46, tests/training/test_training.py=39; python -B C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\run_full_project.py",
+    "TEST_ENVIRONMENT": "candidate cwd D:/价格行为学习/evaluation-core-candidate; PYTHONDONTWRITEBYTECODE=1; PYTHONPATH=src; python -B",
+    "FULL_PROJECT_METHOD": "Enumerate tests/**/test_*.py, importlib.util.spec_from_file_location distinct module name, sys.modules insertion, exec_module, loadTestsFromModule, combined TestSuite, TextTestRunner(verbosity=2)",
+    "GIT_DIFF_CHECK": "PASS, git diff --check exit=0; full isolated-index git diff --cached --check HEAD exit=0; untracked additions included",
+    "COMPLETE_CANDIDATE_DELTA_CHECK": "PASS; temp GIT_INDEX_FILE, read-tree HEAD, add -A -- ., write-tree, diff --cached --name-status HEAD; final full tree exact; no normal-index staging",
+    "FINDINGS": "EVAL-POST-001 [P1] src/price_action_learning/evaluation/core.py:64-65: generated __setstate__ overwrites validated immutable fields and retains mutable aliases. Runtime reproduction uses factory-created S1 record and ordinary e.__setstate__(nine_values), no caller object.__new__/object.__setattr__. Future-stage LOC-001, >2/unknown contributors, prose Error IDs, caller S8 skill, LOW and int abstain persisted; later list append changed Evaluation. Also pickle.loads(pickle.dumps(valid,protocol=p).replace(b\"OBS-001\",b\"LOC-001\")), p=0/1, creates a new exact Evaluation with LOC-001 on the S1 attempt and an unchanged S1 Skill; original unaffected. Related spec: EVALUATION_SPEC.md:62-89; test blind spot: test_evaluation.py:445-472.",
+    "FINDING_IDS": "[EVAL-POST-001]",
+    "BLOCKERS": "[]",
+    "DEVIATIONS": "[]",
+    "CANDIDATE_MUTATED": "NO",
+    "MAIN_MUTATED": "NO",
+    "STATE_MUTATED": "NO",
+    "WORK_UNIT_MUTATED": "NO",
+    "COMMIT": "NOT_PERFORMED",
+    "PUSH": "NOT_PERFORMED",
+    "PUBLISH": "NOT_PERFORMED",
+    "FIX": "NOT_PERFORMED",
+    "AUTHORIZE": "NOT_PERFORMED",
+    "SCOPE_EXPANSION": "NOT_PERFORMED",
+    "POST_RESULT_PERSISTED": "NO (temporary non-project Result only; no durable .gpt-codex Result)",
+    "HARD_STOP": "YES",
+    "POST_REQUEST_SCHEMA_VALIDATION": "[]",
+    "POST_REQUEST_AUTHORITY_VALIDATION": "[]",
+    "RESULT_SCHEMA_VALIDATION": "[]",
+    "REVIEW_RESULT_VALIDATION": "[]",
+    "RESULT_AUTHORITY_VALIDATION": "[]",
+    "COMPLETION_EVIDENCE_VALIDATION": "[]"
+  },
+  "findings": [
+    {
+      "finding_id": "EVAL-POST-001",
+      "priority": "P1",
+      "file": "src/price_action_learning/evaluation/core.py",
+      "line": 64,
+      "end_line": 65,
+      "title": "Generated serialization hooks permit unchecked mutation and construction",
+      "evidence": {
+        "call": "factory_record.__setstate__(nine_values)",
+        "setstate_owner": "dataclasses._dataclass_setstate",
+        "setstate_source": "def _dataclass_setstate(self, state):\n    for field, value in zip(fields(self), state):\n        # use setattr because dataclass may be frozen\n        object.__setattr__(self, field.name, value)\n",
+        "caller_low_level_allocation_or_setattr": false,
+        "result_values": {
+          "attempt_id": "wrong-attempt-id",
+          "what_was_correct": [
+            "Original positive",
+            "Caller changed after __setstate__"
+          ],
+          "primary_issue": "LOC-006; OBS-002",
+          "primary_error": "LOC-001",
+          "contributors": [
+            "LOC-001",
+            "LOC-002",
+            "LOC-003",
+            "UNKNOWN"
+          ],
+          "hint": "Forecast LOC-002",
+          "skill_signal": "SKL-S8-CALLER-OVERRIDE",
+          "evaluation_confidence": "LOW",
+          "abstain": 1
+        },
+        "positive_alias_retained": true,
+        "contributor_alias_retained": true,
+        "abstain_type": "int",
+        "factory_would_reject_equivalent": "ValueError"
+      },
+      "violated_requirements": [
+        "one immutable Evaluation with no mutable caller alias",
+        "every public constructor/factory/object-mutation route must preserve validation",
+        "historical Error Stage/CORE/learned boundary",
+        "at most one primary and at most two immutable contributors",
+        "strict bool abstain and LOW requires abstention without errors",
+        "internally derived existing Skill",
+        "Error-ID prose protection"
+      ],
+      "impact": "A caller holding an ordinary factory-created Evaluation can call its generated instance __setstate__ method to replace any field, inject future-stage/unlearned/unknown formal errors, arbitrary Skill and invalid abstention/confidence, and retain mutable lists. Subsequent list changes alter the supposedly frozen Evaluation. Standard pickle.loads for protocols 0 and 1 also constructs a distinct exact Evaluation from edited in-memory state without factory/Training validation, bypassing blocked __new__. No caller low-level allocation/reflection is needed.",
+      "additional_reconstruction_evidence": [
+        {
+          "protocol": 0,
+          "caller_code": "pickle.loads(pickle.dumps(valid, protocol=protocol).replace(b'OBS-001', b'LOC-001'))",
+          "new_instance": true,
+          "exact_Evaluation_type": true,
+          "original_primary": "OBS-001",
+          "forged_primary": "LOC-001",
+          "forged_skill": "SKL-S1-MARKET-STATE",
+          "source_stage": "S1",
+          "learned": [
+            "CON-S1-HIGH"
+          ],
+          "caller_low_level_allocation_or_setattr": false
+        },
+        {
+          "protocol": 1,
+          "caller_code": "pickle.loads(pickle.dumps(valid, protocol=protocol).replace(b'OBS-001', b'LOC-001'))",
+          "new_instance": true,
+          "exact_Evaluation_type": true,
+          "original_primary": "OBS-001",
+          "forged_primary": "LOC-001",
+          "forged_skill": "SKL-S1-MARKET-STATE",
+          "source_stage": "S1",
+          "learned": [
+            "CON-S1-HIGH"
+          ],
+          "caller_low_level_allocation_or_setattr": false
+        }
+      ],
+      "spec_locations": [
+        {
+          "file": "spec/evaluation/EVALUATION_SPEC.md",
+          "line": 62
+        },
+        {
+          "file": "spec/evaluation/EVALUATION_SPEC.md",
+          "line": 88
+        },
+        {
+          "file": "spec/evaluation/EVALUATION_SPEC.md",
+          "line": 156
+        },
+        {
+          "file": "spec/evaluation/EVALUATION_SPEC.md",
+          "line": 162
+        }
+      ],
+      "related_test_location": {
+        "file": "tests/evaluation/test_evaluation.py",
+        "line": 445,
+        "end_line": 472,
+        "blind_spot": "Constructor/replace/setattr/delattr tests omit generated serialization state restoration hook."
+      },
+      "absolute_file": "D:\\价格行为学习\\evaluation-core-candidate\\src\\price_action_learning\\evaluation\\core.py",
+      "reproduction": "Create a valid S1 attempt (learned CON-S1-HIGH) and factory Evaluation; call e.__setstate__([e.attempt_id, mutable_positive_list, \"LOC-006; OBS-002\", \"LOC-001\", mutable_contributor_list, \"LOC-002\", \"SKL-S8-CALLER-OVERRIDE\", \"LOW\", 1]). The method returns normally. Injected future-stage/unknown/over-cardinality errors, Error-ID prose, caller Skill, LOW/non-bool abstain persist; later list append changes the record. No caller low-level allocation/setattr is used."
+    }
+  ],
+  "blockers": [],
+  "deviations": [],
+  "git": {
+    "base_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "implementation_sha": null
+  },
+  "evidence_refs": [
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\authority-validation.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\authority-manifest.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\identity.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\candidate.diff",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\all19-primary-verification.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\independent_hostile_runtime_report.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\setstate-independent-reproduction.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\pickle-independent-reproduction.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\tests.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\evaluation-suite.log",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\training-suite.log",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\full-project-suite.log",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\preservation.json"
+  ],
+  "completion_gate": "GPT_DECISION",
+  "completion_evidence": {
+    "execution_state": "COMPLETED",
+    "process_completed": true,
+    "exit_code": 0,
+    "intended_scope": [
+      "spec/evaluation/EVALUATION_SPEC.md",
+      "spec/evaluation/.gitkeep",
+      "src/price_action_learning/evaluation/__init__.py",
+      "src/price_action_learning/evaluation/core.py",
+      "tests/evaluation/test_evaluation.py"
+    ],
+    "executed_scope": [
+      "spec/evaluation/EVALUATION_SPEC.md",
+      "spec/evaluation/.gitkeep",
+      "src/price_action_learning/evaluation/__init__.py",
+      "src/price_action_learning/evaluation/core.py",
+      "tests/evaluation/test_evaluation.py"
+    ],
+    "test_files_expected": 2,
+    "test_files_executed": 2,
+    "test_count": 85,
+    "failure_count": 0,
+    "error_count": 0,
+    "validators_expected": [
+      "POST_REQUEST_SCHEMA_VALIDATION",
+      "POST_REQUEST_AUTHORITY_VALIDATION",
+      "RESULT_SCHEMA_VALIDATION",
+      "REVIEW_RESULT_VALIDATION",
+      "RESULT_AUTHORITY_VALIDATION",
+      "COMPLETION_EVIDENCE_VALIDATION"
+    ],
+    "validators_completed": [
+      "POST_REQUEST_SCHEMA_VALIDATION",
+      "POST_REQUEST_AUTHORITY_VALIDATION",
+      "RESULT_SCHEMA_VALIDATION",
+      "REVIEW_RESULT_VALIDATION",
+      "RESULT_AUTHORITY_VALIDATION",
+      "COMPLETION_EVIDENCE_VALIDATION"
+    ],
+    "blocker_evidence_refs": []
+  },
+  "role_observation": {
+    "role": "CODEX_REVIEWER",
+    "instruction_id": "b35e0a61-9f78-4fc8-9c96-0d65ac8bd56e",
+    "work_unit": "price-action-learning-evaluation-core-001",
+    "reviewed_revision": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+    "executed_revision": null,
+    "files_read": [
+      "Framework-native instruction schema, builder, validators and immutable-artifact resolver: repository=xqc2098948451-byte/gpt-codex-framework;commit=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c;version=2.7.4. Framework access=READ_ONLY. Do not substitute a later Framework version or mutate Framework sources.",
+      "Correlated Execution Instruction: repository=xqc2098948451-byte/price-action-learning;commit=541f32c0d99305a1f35dfbdd04d62565e5f82c87;path=.gpt-codex/evidence/instructions/c8a62193-6e38-4f74-8eb1-a715bc7d6a54.json;blob=96f58b5fa2c9830a368da88c4b731c56b618f09b. Independently resolve and read the exact immutable object.",
+      "Authorized Evaluation Work Unit: repository=xqc2098948451-byte/price-action-learning;commit=2431807f3b8e648942ee348f4526d5695115ef03;path=.gpt-codex/work-units/price-action-learning-evaluation-core-001.json;blob=7302bea75189d6418b31ebf68ea056d3d509fcab. Independently resolve and read the exact immutable object.",
+      "Durable PRE PASS: repository=xqc2098948451-byte/price-action-learning;commit=d418f157e152e5bce86114e942e6bf10563950ba;path=.gpt-codex/evidence/results/3f2c6e8d-4e1a-4d35-9a72-6d4a1f37c9b2.json;blob=58af8cd004050934489b22ef5b9526d48f8e6777. Independently resolve and read the exact immutable object.",
+      "PRE Request: repository=xqc2098948451-byte/price-action-learning;commit=7546ec0d0069f0a2a51ae8625292e99ab20d7bb1;path=.gpt-codex/evidence/instructions/a61c9c4d-5147-4472-85cc-d020966af863.json;blob=6f3e792285a3273e4b14bb3a0d113e027cb9c012. Independently resolve and read the exact immutable object.",
+      "Current STATE: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/STATE.json;blob=a9c3767465e70e085f06a29dfbfb8c971d087443. Read this main-baseline object, not a historical governance-branch copy.",
+      "Current CONTROL: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/CONTROL.json;blob=e9c6d1b59003d4cafe93772ad3686ff2b033631e. Read this main-baseline object, not a historical governance-branch copy.",
+      "Current AGENTS: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=AGENTS.md;blob=53df21aa8b22e04c8f84f8d5d0afa75097357821. Read this main-baseline object, not a historical governance-branch copy.",
+      "Completed Training Work Unit: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/work-units/price-action-learning-training-core-001.json;blob=846a12902e8c726886603a22408f8d05ebb624e6. Read this main-baseline object, not a historical governance-branch copy.",
+      "Published Training specification: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=spec/training/TRAINING_SPEC.md;blob=9c2ed5e2c275f71073f68a93de1178a565ae9a79. Read this main-baseline object, not a historical governance-branch copy.",
+      "Published Training runtime: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=src/price_action_learning/training/core.py;blob=751fd8b84f332143616fbf018a7b4ef0c4b206d1. Read this main-baseline object, not a historical governance-branch copy.",
+      "Published Training public exports: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=src/price_action_learning/training/__init__.py;blob=66af9fd135c08942aa3973144b2a1fa763f13e3a. Read this main-baseline object, not a historical governance-branch copy.",
+      "Published Training tests: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=tests/training/test_training.py;blob=0102e37f34f30058941d173a43cf3364c1832d6b. Read this main-baseline object, not a historical governance-branch copy.",
+      "Training publication Result: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/evidence/results/training-core-publication.json;blob=082f385cf72391bc70bda32c29c7f16d49b34a36. Read this main-baseline object, not a historical governance-branch copy.",
+      "Shared contracts: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=docs/CONTRACTS.md;blob=aea93c1b8fdecb3098cada74e3d58068d80826ff. Read this main-baseline object, not a historical governance-branch copy.",
+      "Project scope: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=docs/PROJECT_SCOPE.md;blob=bf6ef572ccca3c6cd041658fa86d22a65f626f11. Read this main-baseline object, not a historical governance-branch copy.",
+      "Directory policy: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=docs/DIRECTORY_POLICY.md;blob=46f2da38b5189cb98f1c54e241e8eaa5ad01eb02. Read this main-baseline object, not a historical governance-branch copy.",
+      "Selected universal safety Guardrail: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/extensions/guardrails/universal-safety/GUARDRAIL.md;blob=fc4302ce3a3e28bbc0331e09e65645b78399fd09. Read this main-baseline object, not a historical governance-branch copy.",
+      "Selected context-binding Guardrail: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/extensions/guardrails/cross-project-context-binding/GUARDRAIL.md;blob=586039099e45a7749fcf2516dadea82711f3b250. Read this main-baseline object, not a historical governance-branch copy.",
+      "Selected repository-binding Guardrail: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/extensions/guardrails/github-repository-binding/GUARDRAIL.md;blob=6b2181241c12e2e5722defdacc73f94dc88eb14d. Read this main-baseline object, not a historical governance-branch copy.",
+      "Immutable Learning Map: repository=xqc2098948451-byte/price-action-learning;commit=65cd6969e8ccf890d6e51b07fd7436564bf70421;path=spec/learning_map/LEARNING_MAP_SPEC.md;blob=726b35db8409ea03cbec33c916db7374e6724e03. Independently extract all 19 canonical Error IDs, exact Stages, related Skills and related Concept IDs from this object.",
+      "Actual candidate workspace: D:\\价格行为学习\\evaluation-core-candidate; candidate HEAD=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; complete candidate tree=95a5e5eddaf4fbe9071275e2cccf0e0943665c4d. Read all actual candidate files, the exact base-to-candidate diff and relevant Training contracts. The tree is an uncommitted candidate identity, not an implementation commit.",
+      "Actual candidate file: path=spec/evaluation/EVALUATION_SPEC.md;blob=31b91d998f48cfb1d0a382336c47cdd4e40d1119. Recompute from the actual workspace; inspect specification, runtime, public exports and tests directly. Do not replace expected identity with changed content.",
+      "Actual candidate file: path=src/price_action_learning/evaluation/__init__.py;blob=657d7b1ba94ed543b63e64b681ab64e678d3aac4. Recompute from the actual workspace; inspect specification, runtime, public exports and tests directly. Do not replace expected identity with changed content.",
+      "Actual candidate file: path=src/price_action_learning/evaluation/core.py;blob=08b45f601d0aab04eaf407c173afb1fe27c45f99. Recompute from the actual workspace; inspect specification, runtime, public exports and tests directly. Do not replace expected identity with changed content.",
+      "Actual candidate file: path=tests/evaluation/test_evaluation.py;blob=6b5b44c681605d94401739a586d7ba16d4c79861. Recompute from the actual workspace; inspect specification, runtime, public exports and tests directly. Do not replace expected identity with changed content.",
+      "Deleted baseline file: path=spec/evaluation/.gitkeep;original_blob=e69de29bb2d1d6434b8b29ae775ad8c2e48c5391;expected_status=D. Confirm absence in the candidate and original identity at immutable main.",
+      ".gpt-codex/schemas/instruction-envelope.schema.json",
+      ".gpt-codex/schemas/result-envelope.schema.json",
+      ".gpt-codex/scripts/instruction_envelope.py",
+      ".gpt-codex/scripts/validate_project.py",
+      ".gpt-codex/scripts/publication_contract.py",
+      ".gpt-codex/scripts/continuity_resume.py",
+      ".gpt-codex/scripts/role_communication.py",
+      ".gpt-codex/scripts/result_return.py"
+    ],
+    "files_changed": [],
+    "tests_run": [
+      {
+        "command": "python -B -m unittest discover -s tests/evaluation -p test_evaluation.py -v",
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONPATH": "src"
+        },
+        "working_directory": "D:\\价格行为学习\\evaluation-core-candidate",
+        "test_count": 46,
+        "passes": 46,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "exit_code": 0,
+        "summary": "----------------------------------------------------------------------\nRan 46 tests in 0.134s\n\nOK"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests/training -p test_training.py -v",
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONPATH": "src"
+        },
+        "working_directory": "D:\\价格行为学习\\evaluation-core-candidate",
+        "test_count": 39,
+        "passes": 39,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "exit_code": 0,
+        "summary": "----------------------------------------------------------------------\nRan 39 tests in 0.005s\n\nOK"
+      },
+      {
+        "inventory": [
+          "tests/evaluation/test_evaluation.py",
+          "tests/training/test_training.py"
+        ],
+        "per_file_counts": {
+          "tests/evaluation/test_evaluation.py": 46,
+          "tests/training/test_training.py": 39
+        },
+        "test_count": 85,
+        "passes": 85,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "exit_code": 0,
+        "command": "python -B C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\run_full_project.py",
+        "method": "Enumerate tests/**/test_*.py, importlib.util.spec_from_file_location distinct module name, sys.modules insertion, exec_module, loadTestsFromModule, combined TestSuite, TextTestRunner(verbosity=2)",
+        "process_exit_code": 0
+      },
+      "Full independent hostile probe: 2984 checks; findings collected; zero unexpected probe failures"
+    ],
+    "findings": [
+      "EVAL-POST-001"
+    ],
+    "fix_round": 0,
+    "agent_spawns": 1,
+    "result": "REVIEW_FINDING"
+  },
+  "review_context": {
+    "fresh_reviewer_context": true,
+    "fork_turns": "none",
+    "implementer_private_context_used": false,
+    "input_sources": [
+      "DURABLE_PROJECT_AUTHORITY",
+      "GOVERNED_ARTIFACT",
+      "GOVERNED_INSTRUCTION",
+      "REPOSITORY_CONTENT",
+      "VERIFICATION_EVIDENCE"
+    ]
+  },
+  "review_details": {
+    "authority": {
+      "repository_observation": {
+        "repository_id": "1394745962",
+        "repository_full_name": "xqc2098948451-byte/price-action-learning",
+        "method": "gh api repos/xqc2098948451-byte/price-action-learning",
+        "remote_refs": "a7c6e45bcb3bb2371be1b884d13de4fb14f07e37\trefs/heads/governance/price-action-learning-training-wu-001\n63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f\trefs/heads/main"
+      },
+      "validation": {
+        "POST_REQUEST_SCHEMA_VALIDATION": [],
+        "POST_REQUEST_AUTHORITY_VALIDATION": [],
+        "EXECUTION_INSTRUCTION_SCHEMA_VALIDATION": [],
+        "EXECUTION_INSTRUCTION_AUTHORITY_VALIDATION": [],
+        "PRE_REQUEST_SCHEMA_VALIDATION": [],
+        "PRE_REQUEST_AUTHORITY_VALIDATION": [],
+        "PRE_RESULT_SCHEMA_VALIDATION": [],
+        "PRE_REVIEW_RESULT_VALIDATION": [],
+        "PRE_RESULT_AUTHORITY_VALIDATION": [],
+        "PRE_COMPLETION_EVIDENCE_VALIDATION": [],
+        "PRE_EXECUTION_CORRELATION_VALIDATION": []
+      },
+      "post_request_locator": {
+        "repository": "xqc2098948451-byte/price-action-learning",
+        "commit_sha": "a7c6e45bcb3bb2371be1b884d13de4fb14f07e37",
+        "path": ".gpt-codex/evidence/instructions/b35e0a61-9f78-4fc8-9c96-0d65ac8bd56e.json",
+        "blob_sha": "cfa413bd3991cbbeec9b4df0569f9f62ea90cd06"
+      },
+      "native_resolution_count": 21,
+      "native_resolutions": [
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "a7c6e45bcb3bb2371be1b884d13de4fb14f07e37",
+            "path": ".gpt-codex/evidence/instructions/b35e0a61-9f78-4fc8-9c96-0d65ac8bd56e.json",
+            "blob_sha": "cfa413bd3991cbbeec9b4df0569f9f62ea90cd06"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "541f32c0d99305a1f35dfbdd04d62565e5f82c87",
+            "path": ".gpt-codex/evidence/instructions/c8a62193-6e38-4f74-8eb1-a715bc7d6a54.json",
+            "blob_sha": "96f58b5fa2c9830a368da88c4b731c56b618f09b"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "2431807f3b8e648942ee348f4526d5695115ef03",
+            "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+            "blob_sha": "7302bea75189d6418b31ebf68ea056d3d509fcab"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "d418f157e152e5bce86114e942e6bf10563950ba",
+            "path": ".gpt-codex/evidence/results/3f2c6e8d-4e1a-4d35-9a72-6d4a1f37c9b2.json",
+            "blob_sha": "58af8cd004050934489b22ef5b9526d48f8e6777"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "7546ec0d0069f0a2a51ae8625292e99ab20d7bb1",
+            "path": ".gpt-codex/evidence/instructions/a61c9c4d-5147-4472-85cc-d020966af863.json",
+            "blob_sha": "6f3e792285a3273e4b14bb3a0d113e027cb9c012"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": ".gpt-codex/STATE.json",
+            "blob_sha": "a9c3767465e70e085f06a29dfbfb8c971d087443"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": ".gpt-codex/CONTROL.json",
+            "blob_sha": "e9c6d1b59003d4cafe93772ad3686ff2b033631e"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": "AGENTS.md",
+            "blob_sha": "53df21aa8b22e04c8f84f8d5d0afa75097357821"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+            "blob_sha": "846a12902e8c726886603a22408f8d05ebb624e6"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": "spec/training/TRAINING_SPEC.md",
+            "blob_sha": "9c2ed5e2c275f71073f68a93de1178a565ae9a79"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": "src/price_action_learning/training/core.py",
+            "blob_sha": "751fd8b84f332143616fbf018a7b4ef0c4b206d1"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": "src/price_action_learning/training/__init__.py",
+            "blob_sha": "66af9fd135c08942aa3973144b2a1fa763f13e3a"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": "tests/training/test_training.py",
+            "blob_sha": "0102e37f34f30058941d173a43cf3364c1832d6b"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": ".gpt-codex/evidence/results/training-core-publication.json",
+            "blob_sha": "082f385cf72391bc70bda32c29c7f16d49b34a36"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": "docs/CONTRACTS.md",
+            "blob_sha": "aea93c1b8fdecb3098cada74e3d58068d80826ff"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": "docs/PROJECT_SCOPE.md",
+            "blob_sha": "bf6ef572ccca3c6cd041658fa86d22a65f626f11"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": "docs/DIRECTORY_POLICY.md",
+            "blob_sha": "46f2da38b5189cb98f1c54e241e8eaa5ad01eb02"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": ".gpt-codex/extensions/guardrails/universal-safety/GUARDRAIL.md",
+            "blob_sha": "fc4302ce3a3e28bbc0331e09e65645b78399fd09"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": ".gpt-codex/extensions/guardrails/cross-project-context-binding/GUARDRAIL.md",
+            "blob_sha": "586039099e45a7749fcf2516dadea82711f3b250"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+            "path": ".gpt-codex/extensions/guardrails/github-repository-binding/GUARDRAIL.md",
+            "blob_sha": "6b2181241c12e2e5722defdacc73f94dc88eb14d"
+          }
+        },
+        {
+          "status": "ALLOW",
+          "locator": {
+            "repository": "xqc2098948451-byte/price-action-learning",
+            "commit_sha": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+            "path": "spec/learning_map/LEARNING_MAP_SPEC.md",
+            "blob_sha": "726b35db8409ea03cbec33c916db7374e6724e03"
+          }
+        }
+      ],
+      "correlation_mismatches": [],
+      "native_instruction_builder_roundtrip": "EXACT",
+      "state_invariants": "PASS",
+      "resume": {
+        "status": "LATEST_SYNCED_REMOTE_STATE",
+        "state_revision": 11,
+        "active_work_unit": null
+      },
+      "explicit_handoff_bindings": {
+        "target_work_unit_id": "price-action-learning-evaluation-core-001",
+        "target_work_unit_ref": {
+          "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+          "sha": "2431807f3b8e648942ee348f4526d5695115ef03"
+        },
+        "instruction_locator": {
+          "repository": "xqc2098948451-byte/price-action-learning",
+          "commit_sha": "a7c6e45bcb3bb2371be1b884d13de4fb14f07e37",
+          "path": ".gpt-codex/evidence/instructions/b35e0a61-9f78-4fc8-9c96-0d65ac8bd56e.json",
+          "blob_sha": "cfa413bd3991cbbeec9b4df0569f9f62ea90cd06"
+        },
+        "expected_state_revision": 11
+      },
+      "native_capability_fallback": "Exact Framework 2.7.4 lacks later resolve_plugin_instruction/build_repository_handoff/build_plugin_result_handoff helpers; native resolve_immutable_artifact, load_continuity_resume, explicit four bindings, builder and validators are used directly. No later Framework is substituted.",
+      "framework_files": [
+        {
+          "path": ".gpt-codex/schemas/instruction-envelope.schema.json",
+          "blob": "8e9cf987eb04619da84a24359f02b7abfcbe4425"
+        },
+        {
+          "path": ".gpt-codex/schemas/result-envelope.schema.json",
+          "blob": "7c3fd115f33d346f573da549c7c7bf3c481ad672"
+        },
+        {
+          "path": ".gpt-codex/scripts/instruction_envelope.py",
+          "blob": "5ed3ed12a4adf65db4cb0365a0d2683007f30f0d"
+        },
+        {
+          "path": ".gpt-codex/scripts/validate_project.py",
+          "blob": "10dc93eeaea89f060f915aa82ec34beb50d12dcb"
+        },
+        {
+          "path": ".gpt-codex/scripts/publication_contract.py",
+          "blob": "0bcc411ebbf2346e2da128a674eef4915c3d17aa"
+        },
+        {
+          "path": ".gpt-codex/scripts/continuity_resume.py",
+          "blob": "068b1da4a2d164e4f78e094b4195d61bdde59bd3"
+        },
+        {
+          "path": ".gpt-codex/scripts/role_communication.py",
+          "blob": "9ca1021ad7768dfaaac2ec52dad479c8e87cfe75"
+        },
+        {
+          "path": ".gpt-codex/scripts/result_return.py",
+          "blob": "a47e86d9bf15b577e1c74e151a7209cee9cc2569"
+        }
+      ]
+    },
+    "candidate_identity": {
+      "tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+      "blobs": {
+        "spec/evaluation/EVALUATION_SPEC.md": "31b91d998f48cfb1d0a382336c47cdd4e40d1119",
+        "src/price_action_learning/evaluation/__init__.py": "657d7b1ba94ed543b63e64b681ab64e678d3aac4",
+        "src/price_action_learning/evaluation/core.py": "08b45f601d0aab04eaf407c173afb1fe27c45f99",
+        "tests/evaluation/test_evaluation.py": "6b5b44c681605d94401739a586d7ba16d4c79861"
+      },
+      "delta": "D\tspec/evaluation/.gitkeep\nA\tspec/evaluation/EVALUATION_SPEC.md\nA\tsrc/price_action_learning/evaluation/__init__.py\nA\tsrc/price_action_learning/evaluation/core.py\nA\ttests/evaluation/test_evaluation.py\n",
+      "complete_diff_check": {
+        "exit_code": 0,
+        "output": ""
+      },
+      "deleted_baseline_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "deleted_file_absent": true,
+      "framework_tag_commit": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c"
+    },
+    "test_results": {
+      "evaluation": {
+        "command": "python -B -m unittest discover -s tests/evaluation -p test_evaluation.py -v",
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONPATH": "src"
+        },
+        "working_directory": "D:\\价格行为学习\\evaluation-core-candidate",
+        "test_count": 46,
+        "passes": 46,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "exit_code": 0,
+        "summary": "----------------------------------------------------------------------\nRan 46 tests in 0.134s\n\nOK"
+      },
+      "training": {
+        "command": "python -B -m unittest discover -s tests/training -p test_training.py -v",
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONPATH": "src"
+        },
+        "working_directory": "D:\\价格行为学习\\evaluation-core-candidate",
+        "test_count": 39,
+        "passes": 39,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "exit_code": 0,
+        "summary": "----------------------------------------------------------------------\nRan 39 tests in 0.005s\n\nOK"
+      },
+      "full_project": {
+        "inventory": [
+          "tests/evaluation/test_evaluation.py",
+          "tests/training/test_training.py"
+        ],
+        "per_file_counts": {
+          "tests/evaluation/test_evaluation.py": 46,
+          "tests/training/test_training.py": 39
+        },
+        "test_count": 85,
+        "passes": 85,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "exit_code": 0,
+        "command": "python -B C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\run_full_project.py",
+        "method": "Enumerate tests/**/test_*.py, importlib.util.spec_from_file_location distinct module name, sys.modules insertion, exec_module, loadTestsFromModule, combined TestSuite, TextTestRunner(verbosity=2)",
+        "process_exit_code": 0
+      },
+      "git_diff_check": {
+        "command": "git diff --check",
+        "exit_code": 0,
+        "output": ""
+      }
+    },
+    "all_19_mappings": {
+      "immutable_learning_map": {
+        "commit": "65cd6969e8ccf890d6e51b07fd7436564bf70421",
+        "blob": "726b35db8409ea03cbec33c916db7374e6724e03"
+      },
+      "all_19_mapping_equality": "PASS",
+      "stage_skill_equality": "PASS",
+      "concept_stage_counts": {
+        "S1": 13,
+        "S2": 19,
+        "S3": 28
+      },
+      "runtime_matrix": {
+        "checks": 2394,
+        "accepted": 234,
+        "correctly_rejected": 2160,
+        "channels": [
+          "primary_error",
+          "contributors"
+        ],
+        "stages": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "learned_cases": "empty + each individually allowed Concept at each attempt Stage"
+      },
+      "rows": [
+        {
+          "error_id": "OBS-001",
+          "stage": "S1",
+          "skill": "SKL-S1-MARKET-STATE",
+          "concept_ids": [
+            "CON-S1-HIGH",
+            "CON-S1-LOW",
+            "CON-S1-SWING-HIGH",
+            "CON-S1-SWING-LOW"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 24,
+          "rejected": 102
+        },
+        {
+          "error_id": "OBS-002",
+          "stage": "S1",
+          "skill": "SKL-S1-MARKET-STATE",
+          "concept_ids": [
+            "CON-S1-FACT-VS-INTERPRETATION"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 6,
+          "rejected": 120
+        },
+        {
+          "error_id": "OBS-004",
+          "stage": "S1",
+          "skill": "SKL-S1-MARKET-STATE",
+          "concept_ids": [
+            "CON-S1-FACT-VS-INTERPRETATION",
+            "CON-S1-UNCERTAIN"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 12,
+          "rejected": 114
+        },
+        {
+          "error_id": "STR-001",
+          "stage": "S1",
+          "skill": "SKL-S1-MARKET-STATE",
+          "concept_ids": [
+            "CON-S1-SWING-HIGH",
+            "CON-S1-SWING-LOW",
+            "CON-S1-HH",
+            "CON-S1-HL",
+            "CON-S1-LH",
+            "CON-S1-LL"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 36,
+          "rejected": 90
+        },
+        {
+          "error_id": "STR-002",
+          "stage": "S1",
+          "skill": "SKL-S1-MARKET-STATE",
+          "concept_ids": [
+            "CON-S1-HH",
+            "CON-S1-HL",
+            "CON-S1-LH",
+            "CON-S1-LL",
+            "CON-S1-UPTREND",
+            "CON-S1-DOWNTREND",
+            "CON-S1-RANGE"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 42,
+          "rejected": 84
+        },
+        {
+          "error_id": "STR-006",
+          "stage": "S1",
+          "skill": "SKL-S1-MARKET-STATE",
+          "concept_ids": [
+            "CON-S1-UPTREND",
+            "CON-S1-DOWNTREND"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 12,
+          "rejected": 114
+        },
+        {
+          "error_id": "STR-007",
+          "stage": "S1",
+          "skill": "SKL-S1-MARKET-STATE",
+          "concept_ids": [
+            "CON-S1-RANGE",
+            "CON-S1-UNCERTAIN"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 12,
+          "rejected": 114
+        },
+        {
+          "error_id": "STR-003",
+          "stage": "S2",
+          "skill": "SKL-S2-STRUCTURE-MOVEMENT",
+          "concept_ids": [
+            "CON-S2-IMPULSE",
+            "CON-S2-PULLBACK"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 8,
+          "rejected": 118
+        },
+        {
+          "error_id": "STR-004",
+          "stage": "S2",
+          "skill": "SKL-S2-STRUCTURE-MOVEMENT",
+          "concept_ids": [
+            "CON-S2-PULLBACK",
+            "CON-S2-STRUCTURE-MAINTAINED",
+            "CON-S2-STRUCTURE-WEAKENED"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 12,
+          "rejected": 114
+        },
+        {
+          "error_id": "STR-005",
+          "stage": "S2",
+          "skill": "SKL-S2-STRUCTURE-MOVEMENT",
+          "concept_ids": [
+            "CON-S2-STRUCTURE-DAMAGED",
+            "CON-S2-STRUCTURE-CHANGED"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 8,
+          "rejected": 118
+        },
+        {
+          "error_id": "REA-002",
+          "stage": "S2",
+          "skill": "SKL-S2-STRUCTURE-MOVEMENT",
+          "concept_ids": [
+            "CON-S2-IMPULSE",
+            "CON-S2-PULLBACK"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 8,
+          "rejected": 118
+        },
+        {
+          "error_id": "REA-003",
+          "stage": "S2",
+          "skill": "SKL-S2-STRUCTURE-MOVEMENT",
+          "concept_ids": [
+            "CON-S2-STRUCTURE-MAINTAINED",
+            "CON-S2-STRUCTURE-WEAKENED",
+            "CON-S2-STRUCTURE-DAMAGED"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 12,
+          "rejected": 114
+        },
+        {
+          "error_id": "REA-005",
+          "stage": "S2",
+          "skill": "SKL-S2-STRUCTURE-MOVEMENT",
+          "concept_ids": [
+            "CON-S2-STRUCTURE-CHANGED"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 4,
+          "rejected": 122
+        },
+        {
+          "error_id": "LOC-001",
+          "stage": "S3",
+          "skill": "SKL-S3-MARKET-LOCATION",
+          "concept_ids": [
+            "CON-S3-PREVIOUS-SIGNIFICANT-HIGH",
+            "CON-S3-PREVIOUS-SIGNIFICANT-LOW",
+            "CON-S3-RANGE-HIGH",
+            "CON-S3-RANGE-LOW"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 8,
+          "rejected": 118
+        },
+        {
+          "error_id": "LOC-002",
+          "stage": "S3",
+          "skill": "SKL-S3-MARKET-LOCATION",
+          "concept_ids": [
+            "CON-S3-PREVIOUS-SIGNIFICANT-HIGH",
+            "CON-S3-PREVIOUS-SIGNIFICANT-LOW",
+            "CON-S3-MAJOR-SWING-HIGH",
+            "CON-S3-MAJOR-SWING-LOW",
+            "CON-S3-RELEVANT-VS-LESS-RELEVANT"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 10,
+          "rejected": 116
+        },
+        {
+          "error_id": "LOC-003",
+          "stage": "S3",
+          "skill": "SKL-S3-MARKET-LOCATION",
+          "concept_ids": [
+            "CON-S3-MAJOR-SWING-HIGH",
+            "CON-S3-MAJOR-SWING-LOW",
+            "CON-S3-STRUCTURAL-AREA"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 6,
+          "rejected": 120
+        },
+        {
+          "error_id": "LOC-004",
+          "stage": "S3",
+          "skill": "SKL-S3-MARKET-LOCATION",
+          "concept_ids": [
+            "CON-S3-RANGE-HIGH",
+            "CON-S3-RANGE-LOW",
+            "CON-S3-CURRENT-LOCATION"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 6,
+          "rejected": 120
+        },
+        {
+          "error_id": "LOC-005",
+          "stage": "S3",
+          "skill": "SKL-S3-MARKET-LOCATION",
+          "concept_ids": [
+            "CON-S3-STRUCTURAL-AREA",
+            "CON-S3-RELEVANT-VS-LESS-RELEVANT"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 4,
+          "rejected": 122
+        },
+        {
+          "error_id": "LOC-006",
+          "stage": "S3",
+          "skill": "SKL-S3-MARKET-LOCATION",
+          "concept_ids": [
+            "CON-S3-CURRENT-LOCATION",
+            "CON-S3-RELEVANT-VS-LESS-RELEVANT"
+          ],
+          "exact_mapping": "PASS",
+          "factory_historical_matrix": "PASS",
+          "accepted": 4,
+          "rejected": 122
+        }
+      ],
+      "boundary_note": "Factory-level checks pass. Exposed Evaluation.__setstate__ can subsequently bypass these properties; tracked separately as one root-cause finding."
+    },
+    "independent_area_checks": {
+      "ABSTAIN_CONFIDENCE": {
+        "checked": 33,
+        "passed": 33,
+        "unexpected_failures": 0,
+        "finding_ids": []
+      },
+      "ALL_19_ERROR_AUTHORITY": {
+        "checked": 237,
+        "passed": 237,
+        "unexpected_failures": 0,
+        "finding_ids": []
+      },
+      "CANONICAL_RECONSTRUCTION": {
+        "checked": 4,
+        "passed": 4,
+        "unexpected_failures": 0,
+        "finding_ids": []
+      },
+      "CANONICAL_TRAINING_INPUT": {
+        "checked": 85,
+        "passed": 85,
+        "unexpected_failures": 0,
+        "finding_ids": []
+      },
+      "ERROR_CARDINALITY": {
+        "checked": 15,
+        "passed": 15,
+        "unexpected_failures": 0,
+        "finding_ids": []
+      },
+      "ERROR_ID_PROSE_PROTECTION": {
+        "checked": 304,
+        "passed": 304,
+        "unexpected_failures": 0,
+        "finding_ids": []
+      },
+      "HISTORICAL_CONTAMINATION": {
+        "checked": 5,
+        "passed": 5,
+        "unexpected_failures": 0,
+        "finding_ids": []
+      },
+      "HISTORICAL_STAGE_HOSTILITY": {
+        "checked": 2160,
+        "passed": 2160,
+        "unexpected_failures": 0,
+        "finding_ids": []
+      },
+      "IMMUTABILITY_AND_ALIASES": {
+        "checked": 73,
+        "passed": 73,
+        "unexpected_failures": 0,
+        "finding_ids": [
+          "EVAL-POST-001"
+        ]
+      },
+      "PROCESS_NOT_OUTCOME": {
+        "checked": 10,
+        "passed": 10,
+        "unexpected_failures": 0,
+        "finding_ids": []
+      },
+      "PUBLIC_CONSTRUCTION": {
+        "checked": 19,
+        "passed": 19,
+        "unexpected_failures": 0,
+        "finding_ids": [
+          "EVAL-POST-001"
+        ]
+      },
+      "SKILL_SIGNAL_DERIVATION": {
+        "checked": 31,
+        "passed": 31,
+        "unexpected_failures": 0,
+        "finding_ids": []
+      },
+      "STRICT_ABSTAIN_TYPE": {
+        "checked": 8,
+        "passed": 8,
+        "unexpected_failures": 0,
+        "finding_ids": []
+      }
+    },
+    "pre_35_case_coverage": [
+      {
+        "pre_case": 1,
+        "requirement": "canonical TrainingAttempt accepted",
+        "executable_method": [
+          "test_01_canonical_published_attempt_is_accepted"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 2,
+        "requirement": "duck-typed TrainingAttempt rejected",
+        "executable_method": [
+          "test_02_duck_typed_or_subclass_attempt_is_rejected"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 3,
+        "requirement": "duck-typed TrainingContext rejected",
+        "executable_method": [
+          "test_03_duck_context_boundary_and_reference_are_rejected"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 4,
+        "requirement": "tampered TrainingAttempt rejected",
+        "executable_method": [
+          "test_04_constructor_invalid_tampering_is_rejected"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 5,
+        "requirement": "equality-spoofed Error ID rejected",
+        "executable_method": [
+          "test_05_equality_spoofed_error_ids_are_rejected"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 6,
+        "requirement": "equality-spoofed confidence rejected",
+        "executable_method": [
+          "test_06_equality_spoofed_confidence_is_rejected"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 7,
+        "requirement": "non-bool abstain rejected",
+        "executable_method": [
+          "test_07_abstain_requires_strict_bool"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 8,
+        "requirement": "mutable what_was_correct isolated",
+        "executable_method": [
+          "test_08_mutable_positive_feedback_is_copied"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 9,
+        "requirement": "mutable contributors isolated",
+        "executable_method": [
+          "test_09_mutable_contributors_are_copied"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 10,
+        "requirement": "str subclasses normalized to base str",
+        "executable_method": [
+          "test_10_all_stored_string_subclasses_become_base_strings"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 11,
+        "requirement": "source mutation after call cannot alter Evaluation",
+        "executable_method": [
+          "test_11_post_call_source_mutation_cannot_change_any_field"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 12,
+        "requirement": "S1 rejects S2/S3 errors",
+        "executable_method": [
+          "test_12_s1_rejects_every_s2_and_s3_formal_error"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 13,
+        "requirement": "S2 rejects S3 errors",
+        "executable_method": [
+          "test_13_s2_rejects_every_s3_formal_error"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 14,
+        "requirement": "historically learned eligible earlier-stage error accepted",
+        "executable_method": [
+          "test_14_learned_earlier_stage_error_is_eligible"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 15,
+        "requirement": "unlearned mapped concept rejected",
+        "executable_method": [
+          "test_15_unlearned_support_cannot_authorize_an_error"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 16,
+        "requirement": "later learning cannot expand authority",
+        "executable_method": [
+          "test_16_later_learning_cannot_expand_saved_authority"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 17,
+        "requirement": "more than two contributors rejected",
+        "executable_method": [
+          "test_17_more_than_two_eligible_contributors_are_rejected"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 18,
+        "requirement": "duplicate contributors rejected",
+        "executable_method": [
+          "test_18_duplicate_contributors_after_normalization_are_rejected"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 19,
+        "requirement": "primary duplicated in contributors rejected",
+        "executable_method": [
+          "test_19_primary_cannot_also_be_a_contributor"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 20,
+        "requirement": "abstain plus primary rejected",
+        "executable_method": [
+          "test_20_abstention_cannot_include_a_primary_error"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 21,
+        "requirement": "abstain plus contributors rejected",
+        "executable_method": [
+          "test_21_abstention_cannot_include_contributors"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 22,
+        "requirement": "LOW plus abstain false rejected",
+        "executable_method": [
+          "test_22_low_requires_abstention_and_all_confidences_may_abstain"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 23,
+        "requirement": "unknown Error ID rejected",
+        "executable_method": [
+          "test_23_unknown_or_malformed_formal_errors_are_rejected"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 24,
+        "requirement": "correct/no-error/non-abstain works",
+        "executable_method": [
+          "test_24_correct_no_error_does_not_automatically_abstain"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 25,
+        "requirement": "one-primary-error works",
+        "executable_method": [
+          "test_25_exactly_one_primary_error_is_supported"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 26,
+        "requirement": "zero contributors works",
+        "executable_method": [
+          "test_26_zero_contributors_on_primary_correct_and_abstain_paths"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 27,
+        "requirement": "one contributor works",
+        "executable_method": [
+          "test_27_one_contributor_with_or_without_primary"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 28,
+        "requirement": "two contributors works",
+        "executable_method": [
+          "test_28_two_contributors_preserve_order_with_or_without_primary"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 29,
+        "requirement": "skill_signal derived correctly",
+        "executable_method": [
+          "test_29_skill_derivation_primary_first_contributor_and_stage_fallback"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 30,
+        "requirement": "initial user analysis unchanged",
+        "executable_method": [
+          "test_30_initial_analysis_context_and_boundary_unchanged"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 31,
+        "requirement": "no future-market-outcome API dependency",
+        "executable_method": [
+          "test_31_no_future_market_outcome_argument_or_dependency"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 32,
+        "requirement": "Error-ID protocol cannot be smuggled into prose",
+        "executable_method": [
+          "test_32_approved_error_tokens_cannot_be_hidden_in_diagnostic_prose"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 33,
+        "requirement": "direct Evaluation construction cannot bypass validation",
+        "executable_method": [
+          "test_33_public_construction_and_replace_cannot_bypass_factory"
+        ],
+        "covered": true
+      },
+      {
+        "pre_case": 34,
+        "requirement": "all 39 Training tests remain PASS",
+        "executable_method": "independent Training/full-project execution",
+        "covered": true
+      },
+      {
+        "pre_case": 35,
+        "requirement": "full project suite PASS",
+        "executable_method": "independent Training/full-project execution",
+        "covered": true
+      }
+    ],
+    "independent_test_quality": {
+      "all_35_planned_cases_executable": true,
+      "evaluation_test_count": 46,
+      "all_19_mapping_tests_behavioral": true,
+      "no_constant_only_case_substitutions": true,
+      "blind_spots": [
+        "Generated __setstate__ hook is untested; test_33 checks only constructors/replace/setattr/delattr and frozen/slots declarations.",
+        "Existing mapping behavioral tests load unchanged local Learning Map path; independent POST additionally bound git immutable blob and exact rows."
+      ]
+    },
+    "independent_spec_runtime_consistency": {
+      "fields_types_mapping_factory_rules": "consistent on validated factory route",
+      "frozen_immutable_record_claim": "violated by generated __setstate__ (EVAL-POST-001)",
+      "semantic_prose_limit": "spec and authority explicitly disclaim NLP; caller-authored task-scoped prose is shape/protocol validated only"
+    },
+    "preservation": {
+      "candidate_contents": "UNCHANGED",
+      "candidate_normal_index": "UNCHANGED",
+      "candidate_head": "UNCHANGED",
+      "main_contents": "UNCHANGED",
+      "main_normal_index": "UNCHANGED",
+      "main_head": "UNCHANGED",
+      "candidate_index_sha256": "f85c556f2f0bb5145f9b345929dc88aa0b4f53691555d14aa268613069072857",
+      "main_index_sha256": "203741308abdcb6bab1a21745052acbc8e26c6e0e835ba01864ed15c44477d47",
+      "final_live_remote_refs": "a7c6e45bcb3bb2371be1b884d13de4fb14f07e37\trefs/heads/governance/price-action-learning-training-wu-001\n63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f\trefs/heads/main",
+      "final_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d"
+    }
+  },
+  "evidence_requirement_ledger": {
+    "files_read": [
+      {
+        "requirement": "Framework-native instruction schema, builder, validators and immutable-artifact resolver: repository=xqc2098948451-byte/gpt-codex-framework;commit=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c;version=2.7.4. Framework access=READ_ONLY. Do not substitute a later Framework version or mutate Framework sources.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Correlated Execution Instruction: repository=xqc2098948451-byte/price-action-learning;commit=541f32c0d99305a1f35dfbdd04d62565e5f82c87;path=.gpt-codex/evidence/instructions/c8a62193-6e38-4f74-8eb1-a715bc7d6a54.json;blob=96f58b5fa2c9830a368da88c4b731c56b618f09b. Independently resolve and read the exact immutable object.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Authorized Evaluation Work Unit: repository=xqc2098948451-byte/price-action-learning;commit=2431807f3b8e648942ee348f4526d5695115ef03;path=.gpt-codex/work-units/price-action-learning-evaluation-core-001.json;blob=7302bea75189d6418b31ebf68ea056d3d509fcab. Independently resolve and read the exact immutable object.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Durable PRE PASS: repository=xqc2098948451-byte/price-action-learning;commit=d418f157e152e5bce86114e942e6bf10563950ba;path=.gpt-codex/evidence/results/3f2c6e8d-4e1a-4d35-9a72-6d4a1f37c9b2.json;blob=58af8cd004050934489b22ef5b9526d48f8e6777. Independently resolve and read the exact immutable object.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "PRE Request: repository=xqc2098948451-byte/price-action-learning;commit=7546ec0d0069f0a2a51ae8625292e99ab20d7bb1;path=.gpt-codex/evidence/instructions/a61c9c4d-5147-4472-85cc-d020966af863.json;blob=6f3e792285a3273e4b14bb3a0d113e027cb9c012. Independently resolve and read the exact immutable object.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Current STATE: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/STATE.json;blob=a9c3767465e70e085f06a29dfbfb8c971d087443. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Current CONTROL: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/CONTROL.json;blob=e9c6d1b59003d4cafe93772ad3686ff2b033631e. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Current AGENTS: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=AGENTS.md;blob=53df21aa8b22e04c8f84f8d5d0afa75097357821. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Completed Training Work Unit: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/work-units/price-action-learning-training-core-001.json;blob=846a12902e8c726886603a22408f8d05ebb624e6. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Published Training specification: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=spec/training/TRAINING_SPEC.md;blob=9c2ed5e2c275f71073f68a93de1178a565ae9a79. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Published Training runtime: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=src/price_action_learning/training/core.py;blob=751fd8b84f332143616fbf018a7b4ef0c4b206d1. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Published Training public exports: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=src/price_action_learning/training/__init__.py;blob=66af9fd135c08942aa3973144b2a1fa763f13e3a. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Published Training tests: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=tests/training/test_training.py;blob=0102e37f34f30058941d173a43cf3364c1832d6b. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Training publication Result: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/evidence/results/training-core-publication.json;blob=082f385cf72391bc70bda32c29c7f16d49b34a36. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Shared contracts: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=docs/CONTRACTS.md;blob=aea93c1b8fdecb3098cada74e3d58068d80826ff. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Project scope: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=docs/PROJECT_SCOPE.md;blob=bf6ef572ccca3c6cd041658fa86d22a65f626f11. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Directory policy: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=docs/DIRECTORY_POLICY.md;blob=46f2da38b5189cb98f1c54e241e8eaa5ad01eb02. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Selected universal safety Guardrail: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/extensions/guardrails/universal-safety/GUARDRAIL.md;blob=fc4302ce3a3e28bbc0331e09e65645b78399fd09. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Selected context-binding Guardrail: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/extensions/guardrails/cross-project-context-binding/GUARDRAIL.md;blob=586039099e45a7749fcf2516dadea82711f3b250. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Selected repository-binding Guardrail: repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/extensions/guardrails/github-repository-binding/GUARDRAIL.md;blob=6b2181241c12e2e5722defdacc73f94dc88eb14d. Read this main-baseline object, not a historical governance-branch copy.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Immutable Learning Map: repository=xqc2098948451-byte/price-action-learning;commit=65cd6969e8ccf890d6e51b07fd7436564bf70421;path=spec/learning_map/LEARNING_MAP_SPEC.md;blob=726b35db8409ea03cbec33c916db7374e6724e03. Independently extract all 19 canonical Error IDs, exact Stages, related Skills and related Concept IDs from this object.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Actual candidate workspace: D:\\价格行为学习\\evaluation-core-candidate; candidate HEAD=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; complete candidate tree=95a5e5eddaf4fbe9071275e2cccf0e0943665c4d. Read all actual candidate files, the exact base-to-candidate diff and relevant Training contracts. The tree is an uncommitted candidate identity, not an implementation commit.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Actual candidate file: path=spec/evaluation/EVALUATION_SPEC.md;blob=31b91d998f48cfb1d0a382336c47cdd4e40d1119. Recompute from the actual workspace; inspect specification, runtime, public exports and tests directly. Do not replace expected identity with changed content.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Actual candidate file: path=src/price_action_learning/evaluation/__init__.py;blob=657d7b1ba94ed543b63e64b681ab64e678d3aac4. Recompute from the actual workspace; inspect specification, runtime, public exports and tests directly. Do not replace expected identity with changed content.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Actual candidate file: path=src/price_action_learning/evaluation/core.py;blob=08b45f601d0aab04eaf407c173afb1fe27c45f99. Recompute from the actual workspace; inspect specification, runtime, public exports and tests directly. Do not replace expected identity with changed content.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Actual candidate file: path=tests/evaluation/test_evaluation.py;blob=6b5b44c681605d94401739a586d7ba16d4c79861. Recompute from the actual workspace; inspect specification, runtime, public exports and tests directly. Do not replace expected identity with changed content.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Deleted baseline file: path=spec/evaluation/.gitkeep;original_blob=e69de29bb2d1d6434b8b29ae775ad8c2e48c5391;expected_status=D. Confirm absence in the candidate and original identity at immutable main.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      }
+    ],
+    "tests": [
+      {
+        "requirement": "PUBLIC CONSTRUCTION: Hostile runtime testing of every public construction path, including direct Evaluation(...), zero arguments, nine positional or keyword fields, malformed direct construction, dataclasses.replace, object mutation attempts, __dict__ absence, slots behavior, hidden persistent field absence, private-allocation leakage, alternate unchecked factory/builder paths and exported symbols from __init__.py. Confirm exactly nine persistent fields and no parallel record. A frozen dataclass declaration alone is insufficient evidence.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "CANONICAL TRAINING INPUT: Exercise real canonical TrainingAttempt plus duck-typed TrainingAttempt, TrainingContext, KnowledgeBoundary and LearningMapReference; forged canonical objects; tampered Stage/context combinations; tampered IDs, timestamps, status and revision; mutable/nested aliases; equality spoofing; str subclasses; malformed canonical containers. Require rejection or safe canonicalization only as the approved contract permits.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "CANONICAL RECONSTRUCTION: Verify reconstruction cannot mutate or reinterpret the original submitted TrainingAttempt, its TrainingContext or KnowledgeBoundary. Initial user_analysis must remain unchanged, on both successful and rejected calls; no rewriting or generation of user analysis.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "ALL-19 ERROR AUTHORITY: Independently verify every one of the 19 formal Error IDs against the immutable Learning Map, not merely examples. For each mapping verify canonical Error ID, exact Error Stage, exact related Skill and exact related Concept IDs. Reject caller mapping overrides and future-stage authority. Supporting mapped concepts must be Stage-allowed, CORE and historically learned at submission.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "HISTORICAL STAGE HOSTILITY: Attack S1 receiving S2/S3 errors, S2 receiving S3 errors, eligible earlier-stage errors, unlearned mapped concepts and an empty learned boundary, for both primary and contributor channels. Require a historically learned, permitted CORE supporting concept without borrowing future-stage authority.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "HISTORICAL CONTAMINATION: Attack later-learning contamination, later Learning Map contamination and caller-mutated source collections. Later changes cannot expand the saved attempt boundary. No current LearningState input or lookup is permitted.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "ERROR CARDINALITY: Verify primary_error has cardinality zero or one. Exercise contributors of size 0, 1, 2 and >2, duplicates, primary duplicated as a contributor and ordering semantics. Attack unknown IDs; verify no alternate persistent or parameter error-list channel exists.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "ERROR-ID PROSE PROTECTION: Attack protocol bypass through primary_issue and hint, punctuation around IDs, multiple canonical Error-ID tokens, str subclasses and malformed strings. Check every approved Error ID, including correct/no-error and abstention paths; prose cannot become another formal-error channel.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "STRICT ABSTAIN TYPE: Exercise exact bool True/False appropriately; reject 0, 1, strings, custom truthy objects and equality-spoof values. Bool-like substitutes must not pass.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "ABSTAIN AND CONFIDENCE: abstain=True requires primary_error=None and contributors=(); LOW requires abstain=True. Correct/no-error with abstain=False, primary_error=None and contributors=() remains valid. HIGH and MEDIUM abstention remain possible where the approved contract permits. Attack malformed and spoofed confidence and all invalid combinations.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "SKILL_SIGNAL DERIVATION: Verify exactly primary_error -> primary error Skill; otherwise first contributor -> first contributor Skill; otherwise Stage primary Skill. Attack caller skill_signal parameters, hidden overrides, contributor-order tricks, future-stage Skill, unknown Skill and mapping contamination. No LearningState mutation.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "IMMUTABILITY AND ALIASES: Test mutable what_was_correct and contributors inputs, nested mutable source aliases, post-call caller mutation, str-subclass normalization, malformed nonstring collection elements, tuple immutability, record field mutation and source TrainingAttempt mutation attempts. Returned Evaluation retains no mutable caller-owned alias.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "PROCESS-NOT-OUTCOME: Inspect public API and production dependencies for future candles, later market movement, realized P/L, trade result, prediction result and later market outcome. None may exist as an input or dependency. No prediction or trading signal may be produced.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "SPEC/RUNTIME CONSISTENCY: Compare EVALUATION_SPEC.md directly with core.py and public exports. Reject drift in the nine-field contract, types, constructor policy, historical authority, error eligibility, cardinality, abstention, confidence, Skill derivation, Error-ID prose protection, immutability, process-not-outcome or non-goals.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "TEST QUALITY: Review executable behavior rather than constant assertions. Check actual coverage of the PRE-approved complete hostile first-cycle plan, including every planned case. Passing tests do not replace hostile public-API inspection; identify implementation-specific blind spots and public bypasses.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "EVALUATION SUITE: In the actual candidate with PYTHONPATH=src and PYTHONDONTWRITEBYTECODE=1, independently run python -B -m unittest discover -s tests/evaluation -p test_evaluation.py -v. Expected 46 tests, 46 PASS, 0 failures, 0 errors, 0 skips; report actual command, count and result.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "TRAINING SUITE: In the same candidate/environment, independently run python -B -m unittest discover -s tests/training -p test_training.py -v. Expected 39 tests, 39 PASS, 0 failures, 0 errors, 0 skips; report actual command, count and result.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "FULL PROJECT INVENTORY: First enumerate all tests/**/test_*.py. Expected exact inventory: tests/evaluation/test_evaluation.py and tests/training/test_training.py. Then explicitly load and execute every enumerated file. Do not accept root discovery that silently skips non-package test directories.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "FULL PROJECT EXECUTION: A valid method is importlib.util.spec_from_file_location with a distinct module name for each enumerated file, insert each module in sys.modules, execute it, loadTestsFromModule, combine a TestSuite and run TextTestRunner. Record per-file load counts (46 Evaluation, 39 Training), expected 85 total / 85 PASS / 0 failure / 0 error / 0 skip, actual complete inventory, command, exit code and result.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "DIFF CHECK: Run git diff --check in the candidate and record the actual result. Also check the complete candidate delta including untracked additions through an isolated temporary index; do not stage business files in the normal candidate index. Require PASS.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "TEST FAILURE GATE: Any test failure or error, skipped or missing required test, unexpected inventory/count, incomplete suite execution or diff-check failure requires POST_STATUS=FAIL and PUBLICATION_READINESS=NOT_READY. Report all detectable findings from the complete review.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      }
+    ],
+    "validation": [
+      {
+        "requirement": "MISSION: A fresh independent CODEX_REVIEWER must perform one complete hostile POST review of the entire Evaluation Work Unit and entire candidate. Inspect EVALUATION_SPEC.md, evaluation/__init__.py, evaluation/core.py, test_evaluation.py, relevant Training runtime/contracts, immutable Learning Map mappings and the actual candidate diff. Do not conduct a narrow tests-passed review. Finish every required review area and report ALL detectable findings in the first POST round; do not stop after the first defect.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "FRESH REVIEWER CONTEXT: IMPLEMENTER_CONTEXT != REVIEWER_CONTEXT. Dispatch into a fresh independent reviewer context using only durable project authority, governed artifacts/instructions, repository content and verification evidence. No implementer-private prompts, transcripts, hidden reasoning or prior private review context may be supplied or copied into evidence. This request authoring task has not performed POST review.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "LIVE PREFLIGHT: Before reviewing, git fetch origin; resolve this durable request by its immutable repository/commit/path/blob handoff; re-observe repository_id=1394745962 and repository_full_name=xqc2098948451-byte/price-action-learning. Require live origin refs/heads/main=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f. Report the live governance head independently; the historical PRE Result commit is not the new request head. Any authority drift or candidate identity mismatch is HARD_STOP=YES, no silent adaptation and no PASS.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "CURRENT STATE AUTHORITY: Read STATE/CONTROL/AGENTS at immutable main@63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f. Require revision=11, state=AUTHORIZED, active_work_unit=null, blockers=[], reconciliation=null, active_execution_slots key ABSENT and continuity.sync_status=SYNCED. Historical governance STATE copies are not current authority.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "WORK UNIT: Independently resolve the exact Work Unit commit/path/blob; require work_unit_id=price-action-learning-evaluation-core-001, state=AUTHORIZED and basis_state_revision=11. Bind the correlated Execution Instruction c8a62193-6e38-4f74-8eb1-a715bc7d6a54 to this exact Work Unit/ref, project/context, repository, state revision and scope.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "PRE PASS: Require result_message_type=REVIEW_RESULT, status=PASS, response_to_instruction_id=a61c9c4d-5147-4472-85cc-d020966af863, work_unit_id=price-action-learning-evaluation-core-001, state_revision=11, finding_ids=[], blockers=[], deviations=[], implementation_readiness=READY and HOSTILE_FIRST_CYCLE_TEST_PLAN=COMPLETE. Verify the PRE Request correlates to the same Execution Instruction.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "CANDIDATE IDENTITY: Independently re-read the actual candidate. Require HEAD=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f and complete tree=95a5e5eddaf4fbe9071275e2cccf0e0943665c4d, all four exact blobs listed in files_read, and the .gitkeep baseline deletion. Recompute using a temporary GIT_INDEX_FILE or equivalent without altering worktree content or normal candidate index. Unreachable blob/tree objects solely for identity proof are allowed; no candidate commit, branch/ref movement or restaging into the normal index.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "EXACT BUSINESS DELTA: A spec/evaluation/EVALUATION_SPEC.md; D spec/evaluation/.gitkeep; A src/price_action_learning/evaluation/__init__.py; A src/price_action_learning/evaluation/core.py; A tests/evaluation/test_evaluation.py. No additional tracked business path is permitted. Scope path ordering/content must exactly match the five envelope paths.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "NINE-FIELD CONTRACT: Exactly attempt_id, what_was_correct, primary_issue, primary_error, contributors, hint, skill_signal, evaluation_confidence and abstain. No hidden persistent field, parallel Evaluation record or alternate unchecked public constructor. Check the spec directly against the shared contract and runtime.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "YAGNI/SCOPE: Reject any candidate implementation of LearningState, Review, Study Entry, Training changes, TrainingAttempt changes, Learning Map changes, S4-S8, new Concept/Error/Skill, LLM transport, prompt framework, screenshot interpretation, TradingView, market data, future outcome, prediction, trading signal, scoring, ranking, rewards, gamification, persistence, database, API server, Web UI, plugin, shared utils/helpers/common, generalized validator framework, speculative abstraction or a new top-level directory. Standard library only.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "NATIVE ENVELOPE VALIDATION: Using exact Framework 2.7.4@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c, validate_instruction_envelope_contract(this REVIEW_REQUEST) must return [].",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "NATIVE AUTHORITY VALIDATION: validate_instruction_authority(this REVIEW_REQUEST,current_state_revision=11,approved_scope={\"spec/evaluation/\",\"src/price_action_learning/evaluation/\",\"tests/evaluation/\"}) must return []. Independently verify exact project/context, repository, Work Unit/ref, Execution Instruction correlation, state revision, base, target tree, ordered scope, roles, actions, permission scope and remote ref/head.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "READ-ONLY REVIEWER: CODEX_REVIEWER may only READ, TEST, VALIDATE and REPORT. Must NOT mutate candidate, fix findings, commit, push, publish, authorize, expand scope, mutate STATE, mutate Work Unit, modify main, start LearningState, start the Review module or start Study Entry. Preserve candidate worktree and normal index. Future reviewer files_changed=[]; findings never authorize fixes.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "PASS GATE: REVIEW_RESULT/PASS is allowed only when the entire required hostile review is complete, no finding/blocker/deviation remains, actual tests and identity/authority checks pass, and the exact candidate is safe to proceed toward publication. Otherwise return REVIEW_FINDING/FAIL; POST_STATUS=FAIL; PUBLICATION_READINESS=NOT_READY. No approval may be inferred solely from tests.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "STOP AND RETURN: POST PASS does not declare the Work Unit COMPLETE, does not authorize publication or any fix and does not change STATE. Return to GPT_ORCHESTRATOR; completion_gate=GPT_DECISION; HARD_STOP=YES.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "REQUEST-AUTHOR PREFLIGHT FACTS (not a POST Result): Live main=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; governance parent before request publication=d418f157e152e5bce86114e942e6bf10563950ba; exact Framework v2.7.4 tag target=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c; current main STATE revision=11; native continuity resume=LATEST_SYNCED_REMOTE_STATE; candidate blobs/delta/tree reverified; Evaluation=46/46 PASS; Training=39/39 PASS; full project=85/85 PASS with both enumerated files explicitly loaded; failures=0; errors=0; skips=0; candidate git diff --check and complete isolated-index delta check=PASS. Candidate and its normal index unchanged. Future reviewer must independently rerun, verify and report actual facts.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      }
+    ],
+    "findings": [
+      {
+        "requirement": "Return a Framework-native Result classified either result_message_type=REVIEW_RESULT,status=PASS or result_message_type=REVIEW_FINDING,status=FAIL. Report result_id, response_to_instruction_id=b35e0a61-9f78-4fc8-9c96-0d65ac8bd56e, work_unit_id=price-action-learning-evaluation-core-001, Project ID PRJ-PRICE-ACTION-LEARNING-1394745962, source project/context e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9, project name Price Action Learning, repository ID/full name, Framework version, state revision=11, base SHA, review target/candidate tree SHA, four candidate blob identities and exact changed paths.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Report actual repository freshness and immutable authority resolution, candidate identity, spec/runtime consistency, test quality, constructor hardening, canonical Training validation, historical boundary, all-19 Error mapping verification, cardinality, abstention/confidence, Skill derivation, immutable alias defense, process-not-outcome and YAGNI/scope, with evidence for each required review area.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Report Evaluation test command/count/result, Training test command/count/result, full-project inventory/command/per-file load count/total count/result, failures/errors/skips, exit codes, and git diff --check plus complete-delta check. Current expected counts 46,39,85 are expectations; report actual independent execution facts.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Report ALL detectable findings from the complete first POST round with stable finding IDs, exact file/line and evidence, impact and violated requirement. Do not stop after the first finding. Include finding_ids, blockers and deviations; if none, use empty lists rather than omitting them.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Report PUBLICATION_READINESS=READY|NOT_READY and POST_STATUS=PASS|FAIL consistently with the Result classification. Any finding, failed test or incomplete required check makes PUBLICATION_READINESS=NOT_READY. Return to GPT_ORCHESTRATOR for its decision; HARD_STOP=YES.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      },
+      {
+        "requirement": "Report CANDIDATE_MUTATED=NO, MAIN_MUTATED=NO, STATE_MUTATED=NO, WORK_UNIT_MUTATED=NO, and no implementation fix/commit/push/publication/authorization/scope expansion. Reviewer read-only reporting does not permit durable repository writes.",
+        "completed": true,
+        "completion_basis": "Authority/native validation, actual source/diff review, explicit suites and complete independent hostile review; all detected contract defects are consolidated in findings."
+      }
+    ]
+  },
+  "next_gpt_action": "Decide EVAL-POST-001 and the next governed step. POST FAIL; publication NOT_READY. This Result authorizes no fix or publication and does not complete the Work Unit. HARD_STOP=YES.",
+  "validation": {
+    "POST_REQUEST_SCHEMA_VALIDATION": [],
+    "POST_REQUEST_AUTHORITY_VALIDATION": [],
+    "EXECUTION_INSTRUCTION_SCHEMA_VALIDATION": [],
+    "EXECUTION_INSTRUCTION_AUTHORITY_VALIDATION": [],
+    "PRE_REQUEST_SCHEMA_VALIDATION": [],
+    "PRE_REQUEST_AUTHORITY_VALIDATION": [],
+    "PRE_RESULT_SCHEMA_VALIDATION": [],
+    "PRE_REVIEW_RESULT_VALIDATION": [],
+    "PRE_RESULT_AUTHORITY_VALIDATION": [],
+    "PRE_COMPLETION_EVIDENCE_VALIDATION": [],
+    "PRE_EXECUTION_CORRELATION_VALIDATION": [],
+    "RESULT_SCHEMA_VALIDATION": [],
+    "REVIEW_RESULT_VALIDATION": [],
+    "RESULT_AUTHORITY_VALIDATION": [],
+    "COMPLETION_EVIDENCE_VALIDATION": []
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-EVALUATION-CORE-POST-001-REMEDIATION-BASIS",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "source": "SYSTEM_DERIVED",
+  "subject": "REMEDIATION_AUTHORITY_BASIS",
+  "state_revision": 12,
+  "result": "ACCEPTED",
+  "basis_type": "ACCEPTED_AUTHORITY_BASIS",
+  "finding_ids": [
+    "EVAL-POST-001"
+  ],
+  "accepted": true,
+  "failing": false,
+  "basis_statement": "Evaluation must preserve all validated invariants after creation. No ordinary/public state-restoration or standard serialization reconstruction path may mutate an existing Evaluation or construct a new Evaluation while bypassing complete factory-equivalent validation. The accepted remediation must close generated/public __setstate__, pickle protocol 0/1 reconstruction bypass, mutable restoration alias injection, historical Error eligibility and Stage-ceiling bypass, contributor cardinality/uniqueness/primary-separation bypass, Error-ID prose bypass, strict-bool abstain and confidence/abstain bypass, and caller-controlled skill_signal derivation bypass. Serialization/persistence remains a non-goal. A later governed FIX may either disable unsupported restoration/pickle paths or retain only paths with factory-equivalent validation. Pickle compatibility is not required; prefer the smaller correction. Do not introduce a persistence/serializer framework, hidden authority token, new Evaluation field, parallel Evaluation record, generalized reconstruction framework, shared helper/common/utils abstraction, or other business-scope expansion.",
+  "authority_refs": [
+    "repository=xqc2098948451-byte/price-action-learning;commit=62affd728d7ca9d48bc3139d84c5d58bf68e53f9;path=.gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json;blob=471510a417586578801571341f9944da1fb39330",
+    "repository=xqc2098948451-byte/price-action-learning;commit=2431807f3b8e648942ee348f4526d5695115ef03;path=.gpt-codex/work-units/price-action-learning-evaluation-core-001.json;blob=7302bea75189d6418b31ebf68ea056d3d509fcab",
+    "repository=xqc2098948451-byte/price-action-learning;commit=a4f1e3858401a43f5623187e1a33414bbce20efe;path=.gpt-codex/work-units/price-action-learning-evaluation-core-post-001-remediation-registration-001.json;blob=d9ca53a75d690341ff6623df6f5adb8158b8eca3",
+    "repository=xqc2098948451-byte/price-action-learning;commit=c857a8e37f523ec9d11fd7dedc1a6b05808e86d0;path=.gpt-codex/evidence/instructions/c09c60f9-2568-40ec-829a-f7e9d6d87fca.json;blob=b3475c5904b6e2f478db65962db96a960520541c",
+    "repository=xqc2098948451-byte/price-action-learning;commit=ac32b59c5544ea93fdc65f88aa5976e6382398c5;path=.gpt-codex/evidence/results/7306c026-6c3b-45a1-8003-9ae3e860fea5.json;blob=4a5ac0bc7cd4efdfea08f296f1f5639165774f75"
+  ]
+}
