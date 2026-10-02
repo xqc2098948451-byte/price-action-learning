@@ -1,0 +1,114 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "work_unit_id": "price-action-learning-evaluation-core-post-001-remediation-registration-001",
+  "goal": "Durably register Evaluation Core POST-001 finding EVAL-POST-001, record the accepted minimum remediation authority basis and adjudication, advance project STATE from revision 11 to revision 12, and materialize and rebind the existing authorized Evaluation Core Work Unit onto main at basis revision 12 without modifying the Evaluation candidate.",
+  "scope": {
+    "owned_paths": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+      ".gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json",
+      ".gpt-codex/evidence/evaluation-core-post-001-remediation-basis.json",
+      ".gpt-codex/evidence/evaluation-core-post-001-remediation-adjudication.json",
+      ".gpt-codex/evidence/evaluation-core-post-001-remediation-work-verification.json",
+      ".gpt-codex/evidence/results/evaluation-core-post-001-remediation-publication.json"
+    ]
+  },
+  "dependencies": {
+    "framework": {
+      "version": "2.7.4",
+      "commit_sha": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c"
+    },
+    "repository": {
+      "repository_id": "1394745962",
+      "repository_full_name": "xqc2098948451-byte/price-action-learning",
+      "main_commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+      "governance_commit_sha": "62affd728d7ca9d48bc3139d84c5d58bf68e53f9"
+    },
+    "finding_result": {
+      "commit_sha": "62affd728d7ca9d48bc3139d84c5d58bf68e53f9",
+      "path": ".gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json",
+      "blob_sha": "471510a417586578801571341f9944da1fb39330"
+    },
+    "authorized_evaluation_work_unit": {
+      "commit_sha": "2431807f3b8e648942ee348f4526d5695115ef03",
+      "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+      "blob_sha": "7302bea75189d6418b31ebf68ea056d3d509fcab"
+    }
+  },
+  "acceptance": [
+    "Before future execution, live-verify repository ID 1394745962 and full name xqc2098948451-byte/price-action-learning, refs/heads/main at 63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f, Framework 2.7.4 at 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c with READ_ONLY access, project PRJ-PRICE-ACTION-LEARNING-1394745962, and context e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9. Any identity, baseline, or authority mismatch requires STALE / STOP; do not silently adapt.",
+    "Require authoritative main STATE blob a9c3767465e70e085f06a29dfbfb8c971d087443, revision 11, state AUTHORIZED, active_work_unit null, blockers [], reconciliation null, continuity.sync_status SYNCED, and absence of active_execution_slots. Require .gpt-codex/work-units/price-action-learning-evaluation-core-001.json and .gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json both absent on main before registration. A mismatch requires STALE / STOP.",
+    "Resolve the canonical finding Result by immutable locator xqc2098948451-byte/price-action-learning@62affd728d7ca9d48bc3139d84c5d58bf68e53f9:.gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json with blob 471510a417586578801571341f9944da1fb39330. Require result_id 040c329e-33a9-4608-831e-1c47337e6e15, result_message_type REVIEW_FINDING, status FAIL, POST_STATUS FAIL, PUBLICATION_READINESS NOT_READY, work_unit_id price-action-learning-evaluation-core-001, response_to_instruction_id b35e0a61-9f78-4fc8-9c96-0d65ac8bd56e, state_revision 11, review_target_revision 95a5e5eddaf4fbe9071275e2cccf0e0943665c4d, and finding_ids exactly [EVAL-POST-001]. Require exactly one independent finding, EVAL-POST-001 / P1; do not infer or add findings.",
+    "Resolve the authorized Evaluation Work Unit by immutable locator xqc2098948451-byte/price-action-learning@2431807f3b8e648942ee348f4526d5695115ef03:.gpt-codex/work-units/price-action-learning-evaluation-core-001.json with blob 7302bea75189d6418b31ebf68ea056d3d509fcab. Require work_unit_id price-action-learning-evaluation-core-001, state AUTHORIZED, and basis_state_revision 11. Preserve its business scope and semantics.",
+    "Require the failed Evaluation candidate to retain HEAD 63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f and complete candidate tree 95a5e5eddaf4fbe9071275e2cccf0e0943665c4d. It is evidence only and remains unchanged throughout registration. A mismatch requires STALE / STOP.",
+    "Future mutation scope is exactly the seven scope.owned_paths entries. This remediation-registration Work Unit file is outside its own future mutation scope, consistent with the established Training pattern. Do not add an eighth owned path or modify the Evaluation candidate, spec/**, src/**, tests/**, AGENTS.md, README.md, docs/**, CONTROL.json, Framework source, or private/user data.",
+    "Freeze the accepted minimum EVAL-POST-001 correction: Evaluation must preserve all validated invariants after creation. No ordinary/public state-restoration or standard serialization reconstruction route may mutate an existing Evaluation or create a new Evaluation while bypassing complete factory-equivalent validation. Close at minimum the generated/public __setstate__ bypass, standard pickle reconstruction bypass demonstrated by protocols 0 and 1, and mutable list alias injection through restoration.",
+    "The minimum correction must close restoration-time bypass of historical Error eligibility, Error Stage ceiling, contributor cardinality, contributor uniqueness, primary/contributor separation, Error-ID prose protection, strict bool abstain, confidence/abstention relationship, and internally derived skill_signal.",
+    "Serialization/persistence is a NON-GOAL of Evaluation Core. The minimum remediation may explicitly disable unsupported state restoration / pickle serialization and reconstruction paths, or route any retained supported reconstruction path through validation equivalent to create_evaluation. There is no requirement to support pickle compatibility. Prefer the smaller solution. Introduce no persistence support, serializer framework, custom storage format, generalized reconstruction engine, hidden authority token, tenth persistent field, parallel Evaluation record, or shared helper framework.",
+    "Future FIX must add hostile regression coverage proving that factory-created Evaluation.__setstate__(...) cannot mutate the record; invalid future-stage Error, more than two contributors, unknown contributors, caller-controlled skill_signal, non-bool abstain, and LOW plus invalid error combination cannot be injected; and mutable source lists cannot become stored aliases. This registration Work Unit records these future requirements and does not implement or run FIX.",
+    "Future FIX pickle regression tests must cover at least protocols 0 and 1, preferably every protocol in range(pickle.HIGHEST_PROTOCOL + 1). Require either explicit rejection of serialization/reconstruction or reconstructed records that pass all canonical validation invariants. No unchecked reconstruction is permitted.",
+    "Preserve all behavior already passing POST: exactly nine persistent fields; blocked direct Evaluation(...); blocked dataclasses.replace; no __dict__; canonical Training validation and canonical reconstruction of Training input; all 19 Error mappings; historical knowledge boundary; later-learning isolation; Error cardinality factory rules; Error-ID prose protection; strict abstain; confidence semantics; skill_signal derivation; mutable input copying; process-not-outcome; and YAGNI/scope. No regression may be accepted and Evaluation business scope must not expand.",
+    "Future Work Commit W must have parent exactly 63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f and change exactly three paths: copy the canonical finding Result byte-identically to .gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json with expected blob 471510a417586578801571341f9944da1fb39330; create .gpt-codex/evidence/evaluation-core-post-001-remediation-basis.json; and create .gpt-codex/evidence/evaluation-core-post-001-remediation-adjudication.json. W must not modify STATE, the Evaluation Work Unit, the business candidate, spec/**, src/**, or tests/**. Push W without force and remotely verify it before Publication Commit P.",
+    "The future remediation basis Evidence must use kernel_version 2.0.0, schema_version 1, project_id PRJ-PRICE-ACTION-LEARNING-1394745962, evidence_id EVIDENCE-EVALUATION-CORE-POST-001-REMEDIATION-BASIS, source SYSTEM_DERIVED, subject REMEDIATION_AUTHORITY_BASIS, state_revision 12, result ACCEPTED, basis_type ACCEPTED_AUTHORITY_BASIS, finding_ids exactly [EVAL-POST-001], accepted true, and failing false. Its basis must contain only the accepted minimum correction frozen above.",
+    "The future remediation adjudication Evidence must use kernel_version 2.0.0, schema_version 1, project_id PRJ-PRICE-ACTION-LEARNING-1394745962, evidence_id DECISION-EVALUATION-CORE-POST-001-REMEDIATION, source SYSTEM_DERIVED, subject REMEDIATION_ADJUDICATION, state_revision 12, result ACCEPT, decision ACCEPT, finding_ids exactly [EVAL-POST-001], basis_type ACCEPTED_AUTHORITY_BASIS, basis_refs exactly [EVIDENCE-EVALUATION-CORE-POST-001-REMEDIATION-BASIS], and adjudicated_at_revision 12. Accept only the minimum EVAL-POST-001 correction.",
+    "After W remote verification, future Publication Commit P must have parent W_SHA and change exactly four paths: .gpt-codex/STATE.json; .gpt-codex/work-units/price-action-learning-evaluation-core-001.json; .gpt-codex/evidence/evaluation-core-post-001-remediation-work-verification.json; and .gpt-codex/evidence/results/evaluation-core-post-001-remediation-publication.json. No other path may change.",
+    "P must advance STATE revision 11 to 12 while preserving state AUTHORIZED, active_work_unit null, blockers [], reconciliation null, and absence of active_execution_slots. Preserve every existing evidence_ref in current order. Append exactly, in order: .gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json; .gpt-codex/evidence/evaluation-core-post-001-remediation-basis.json; .gpt-codex/evidence/evaluation-core-post-001-remediation-adjudication.json; .gpt-codex/evidence/evaluation-core-post-001-remediation-work-verification.json; and .gpt-codex/evidence/results/evaluation-core-post-001-remediation-publication.json. No duplicate ref is permitted.",
+    "At revision 12, P must set continuity.current_remote_ref refs/heads/main, continuity.latest_verified_remote_sha W_SHA, continuity.latest_synced_state_revision 12, continuity.last_verified_result_ref .gpt-codex/evidence/results/evaluation-core-post-001-remediation-publication.json, and continuity.sync_status SYNCED.",
+    "P must materialize the Evaluation Work Unit onto main from commit 2431807f3b8e648942ee348f4526d5695115ef03 and blob 7302bea75189d6418b31ebf68ea056d3d509fcab at .gpt-codex/work-units/price-action-learning-evaluation-core-001.json. Change only basis_state_revision from 11 to 12, unless exact Framework-native validation proves a mechanically required governance-only rebind field. Preserve all other semantics, particularly work_unit_id, goal, business scope, dependencies, acceptance, selected_extensions, permissions, state AUTHORIZED, implementation_authorized false, implementation_start_allowed false, and next_gate semantics. Do not expand Evaluation business scope.",
+    "The future work-verification Evidence must be TOOL_OBSERVED and verify repository ID/full name, remote main at W_SHA, exact three-path W delta, canonical finding Result blob, remediation basis, remediation adjudication, and that no Evaluation candidate fix has occurred. It must not claim EVAL-POST-001 is closed.",
+    "The future publication Result must use work_unit_id price-action-learning-evaluation-core-post-001-remediation-registration-001, status PASS, result_message_type IMPLEMENTATION_RESULT, responder_role CODEX_IMPLEMENTER, return_role GPT_ORCHESTRATOR, framework_version 2.7.4, state_revision 12, current_remote_ref refs/heads/main, remote_head_sha W_SHA, verified_baseline_sha W_SHA, sync_status SYNCED, push_status SUCCEEDED, remote_verification VERIFIED, publication_authority CONFIRMED_PUBLICATION, and completion_gate NONE. Its evidence_refs must include the canonical durable finding Result, accepted remediation basis, accepted adjudication, and work-verification Evidence.",
+    "Before future P publication, exact Framework 2.7.4 must return [] for validate_remediation_adjudication(decision, finding, resolved_basis), validate_result_envelope_contract(publication_result), validate_result_authority(publication_result), validate_completion_evidence(publication_result), and validate_state_authority(resulting_state, durable_results). No validator bypass is permitted. Push P without force and live-verify the selected remote main head equals P, its parent equals W_SHA, and its delta contains exactly the four required paths before claiming registration publication.",
+    "After remediation registration publication, STATE.next_action must require a governed FIX_INSTRUCTION with fix_round=1 targeting exactly EVAL-POST-001, minimum restoration/serialization hardening only, a fresh FIX PRE review before FIX implementation, and a complete full hostile POST re-review. It must not authorize direct fix without FIX PRE or start Learning State.",
+    "This registration Work Unit does not itself fix or publish Evaluation, execute FIX, execute FIX PRE, execute POST re-review, or start Learning State, Review, or Study Entry. Registration accepts minimum remediation authority only; it does not close EVAL-POST-001 or declare Evaluation publication-ready.",
+    "During the current proposal-authoring task, create and publish only this PROPOSED Work Unit file. Do not authorize it, create user approval evidence, create remediation basis or adjudication, copy the finding Result to main, modify main or STATE, materialize or rebind the Evaluation Work Unit on main, modify the candidate, issue FIX_INSTRUCTION, create FIX PRE Request, execute FIX or POST re-review, or start Learning State, Review, or Study Entry. Commit exactly this one file with message chore: propose Evaluation Core POST remediation registration and push only governance/price-action-learning-training-wu-001 with parent 62affd728d7ca9d48bc3139d84c5d58bf68e53f9. Remote-verify the one-file delta and PROPOSED / USER_WORK_UNIT_APPROVAL gate, then HARD_STOP and return to GPT_ORCHESTRATOR for explicit user approval.",
+    "The permissions below describe later governed execution of this Work Unit and do not authorize its execution during proposal authoring. Proposal validation success grants no authorization. Retain state PROPOSED, basis_state_revision 11, implementation_authorized false, implementation_start_allowed false, and next_gate USER_WORK_UNIT_APPROVAL until the explicit governed user-approval gate.",
+    "artifact_refs must be exactly design={path: docs/DIRECTORY_POLICY.md, sha: 63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f} and plan={path: docs/PROJECT_SCOPE.md, sha: 63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f}. Both immutable refs must resolve through exact Framework-native artifact resolution; use the commit SHA rather than file blob SHAs."
+  ],
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ],
+    "forbidden_actions": [
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 11,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "USER_WORK_UNIT_APPROVAL",
+  "artifact_refs": {
+    "design": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f"
+    },
+    "plan": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f"
+    }
+  }
+}
