@@ -1,0 +1,65 @@
+{
+  "instruction_id": "aacb9185-7c3f-43d2-bdd0-a6c9ea5281f6",
+  "instruction_type": "APPROVAL_REQUEST",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-evaluation-core-post-001-remediation-registration-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-post-001-remediation-registration-001.json",
+    "sha": "a4f1e3858401a43f5623187e1a33414bbce20efe"
+  },
+  "expected_state_revision": 11,
+  "expected_base_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "USER_APPROVER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "APPROVE",
+    "REJECT"
+  ],
+  "forbidden_actions": [],
+  "scope_paths": [
+    ".gpt-codex/STATE.json",
+    ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+    ".gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json",
+    ".gpt-codex/evidence/evaluation-core-post-001-remediation-basis.json",
+    ".gpt-codex/evidence/evaluation-core-post-001-remediation-adjudication.json",
+    ".gpt-codex/evidence/evaluation-core-post-001-remediation-work-verification.json",
+    ".gpt-codex/evidence/results/evaluation-core-post-001-remediation-publication.json"
+  ],
+  "permission_scope": "EVALUATION_POST_001_REMEDIATION_REGISTRATION_RECONCILIATION_APPROVAL_ONLY",
+  "in_response_to_instruction_id": "c09c60f9-2568-40ec-829a-f7e9d6d87fca",
+  "completion_gate": "USER_APPROVAL",
+  "evidence_requirements": {
+    "files_read": [
+      "Framework 2.7.4 at commit 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c; Framework access=READ_ONLY. Use its native instruction schema, builder, validators, immutable-artifact resolver and _control_plane_approved_core; do not substitute a later Framework.",
+      "Authorized remediation-registration Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=a4f1e3858401a43f5623187e1a33414bbce20efe; path=.gpt-codex/work-units/price-action-learning-evaluation-core-post-001-remediation-registration-001.json; blob=d9ca53a75d690341ff6623df6f5adb8158b8eca3; state=AUTHORIZED; basis_state_revision=11; implementation_authorized=false; implementation_start_allowed=false; next_gate=EVALUATION_CORE_POST_001_REMEDIATION_REGISTRATION_RECONCILIATION_REQUEST_AUTHORING; scope.owned_paths equals the exact seven scope_paths in order.",
+      "Work Unit user approval: repository=xqc2098948451-byte/price-action-learning; commit=a4f1e3858401a43f5623187e1a33414bbce20efe; path=.gpt-codex/evidence/evaluation-core-post-001-remediation-registration-user-approval.json; blob=c42439a3003def1058788d37e9960347ce7ee7f1; evidence_id=EVIDENCE-EVALUATION-CORE-POST-001-REMEDIATION-REGISTRATION-USER-APPROVAL; source=USER_ASSERTED; subject=WORK_UNIT_AUTHORIZATION; result=APPROVE; identity_binding.type=WORK_UNIT_BLOB; identity_binding.value=d44fc02c308619efeeea90b33514aee4a598a57d. This Work Unit approval does not substitute for this instruction-level reconciliation approval.",
+      "Live main: repository=xqc2098948451-byte/price-action-learning; repository_id=1394745962; project_id=PRJ-PRICE-ACTION-LEARNING-1394745962; project_context_id=e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9; ref=refs/heads/main; commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; STATE path=.gpt-codex/STATE.json; blob=a9c3767465e70e085f06a29dfbfb8c971d087443; revision=11; state=AUTHORIZED; active_work_unit=null; blockers=[]; reconciliation=null; active_execution_slots=ABSENT; continuity.sync_status=SYNCED.",
+      "Source REVIEW_FINDING Result: repository=xqc2098948451-byte/price-action-learning; commit=62affd728d7ca9d48bc3139d84c5d58bf68e53f9; path=.gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json; blob=471510a417586578801571341f9944da1fb39330; result_id=040c329e-33a9-4608-831e-1c47337e6e15; result_message_type=REVIEW_FINDING; status=FAIL; POST_STATUS=FAIL; PUBLICATION_READINESS=NOT_READY; finding_ids exactly [EVAL-POST-001]; priority=P1; state_revision=11.",
+      "Work Unit artifact_refs resolve at commit 63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f: design=docs/DIRECTORY_POLICY.md and plan=docs/PROJECT_SCOPE.md.",
+      "Evaluation candidate evidence: workspace=D:\\价格行为学习\\evaluation-core-candidate; HEAD=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; complete uncommitted candidate tree=95a5e5eddaf4fbe9071275e2cccf0e0943665c4d. Preserve its content, HEAD and normal index."
+    ],
+    "validation": [
+      "USER_APPROVER decides only APPROVE or REJECT for the exact approved_instruction core below. This APPROVAL_REQUEST does not record the user's decision, does not authorize execution, does not publish the future RECONCILIATION_REQUEST, does not create PRE, and does not execute reconciliation.",
+      "approved_instruction exact JSON: {\"instruction_id\":\"c09c60f9-2568-40ec-829a-f7e9d6d87fca\",\"expected_state_revision\":11,\"expected_base_sha\":\"63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f\",\"scope_paths\":[\".gpt-codex/STATE.json\",\".gpt-codex/work-units/price-action-learning-evaluation-core-001.json\",\".gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json\",\".gpt-codex/evidence/evaluation-core-post-001-remediation-basis.json\",\".gpt-codex/evidence/evaluation-core-post-001-remediation-adjudication.json\",\".gpt-codex/evidence/evaluation-core-post-001-remediation-work-verification.json\",\".gpt-codex/evidence/results/evaluation-core-post-001-remediation-publication.json\"],\"target_project_context_id\":\"e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9\",\"target_project_name\":\"Price Action Learning\",\"target_github_repository_id\":\"1394745962\",\"target_github_repository_full_name\":\"xqc2098948451-byte/price-action-learning\",\"target_work_unit_ref\":{\"path\":\".gpt-codex/work-units/price-action-learning-evaluation-core-post-001-remediation-registration-001.json\",\"sha\":\"a4f1e3858401a43f5623187e1a33414bbce20efe\"},\"issuer_role\":\"GPT_ORCHESTRATOR\",\"executor_role\":\"CODEX_IMPLEMENTER\",\"authorized_actions\":[\"READ\",\"TEST\",\"VALIDATE\",\"REPORT\",\"MUTATE_APPROVED_SCOPE\"]}",
+      "Require the exact approved_instruction key set and values with no extra or omitted keys. Require equality to Framework-native _control_plane_approved_core for the future RECONCILIATION_REQUEST, the exact seven scope paths in order with no eighth path, exact Work Unit commit a4f1e3858401a43f5623187e1a33414bbce20efe and blob d9ca53a75d690341ff6623df6f5adb8158b8eca3, exact project/context/repository identity, STATE revision 11, and main base SHA 63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f. Any mismatch requires STALE / HARD_STOP; do not silently adapt.",
+      "If approved, a future RECONCILIATION_REQUEST may only copy source Result 040c329e-33a9-4608-831e-1c47337e6e15 onto main byte-identically with blob 471510a417586578801571341f9944da1fb39330; create evaluation-core-post-001-remediation-basis.json and evaluation-core-post-001-remediation-adjudication.json; advance STATE revision 11 to 12; materialize and rebind price-action-learning-evaluation-core-001 from basis_state_revision 11 to 12; create evaluation-core-post-001-remediation-work-verification.json; and create results/evaluation-core-post-001-remediation-publication.json. These are the exact seven scope_paths and nothing else.",
+      "Even if approved, future reconciliation MUST NOT modify the Evaluation candidate; execute FIX round 1; close EVAL-POST-001; publish Evaluation; modify spec/**, src/** or tests/**; add persistence/serialization support; expand remediation beyond EVAL-POST-001; mark the Evaluation Work Unit COMPLETE; start Learning State, Review or Study Entry; or modify Framework source. The approved reconciliation only registers remediation authority.",
+      "The eventual full future envelope must use instruction_id=c09c60f9-2568-40ec-829a-f7e9d6d87fca; instruction_type=RECONCILIATION_REQUEST; artifact_stage=IMPLEMENTATION; framework_version=2.7.4; the exact project/context/repository identity and Work Unit/ref in this request; expected_state_revision=11; expected_base_sha=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; expected_remote_name=origin; expected_remote_ref=refs/heads/main; expected_remote_head_sha=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; issuer_role=GPT_ORCHESTRATOR; executor_role=CODEX_IMPLEMENTER; return_role=GPT_ORCHESTRATOR; authorized_actions exactly [READ, TEST, VALIDATE, REPORT, MUTATE_APPROVED_SCOPE]; forbidden_actions exactly [COMMIT, PUSH, PUBLISH, AUTHORIZE, SCOPE_EXPANSION]; scope_paths exactly the seven paths above in order; permission_scope=EVALUATION_POST_001_REMEDIATION_REGISTRATION_CONTROL_PLANE_ONLY; completion_gate=GPT_DECISION. Do not publish that future request during this authoring task.",
+      "This authoring transaction creates and publishes only .gpt-codex/evidence/instructions/aacb9185-7c3f-43d2-bdd0-a6c9ea5281f6.json on governance/price-action-learning-training-wu-001 with parent a4f1e3858401a43f5623187e1a33414bbce20efe. It must not create APPROVAL_RESULT, RECONCILIATION_REQUEST, PRE Request or PRE Review; execute reconciliation; create remediation basis or adjudication; modify main, STATE, Work Unit or candidate; execute FIX or POST re-review; or start Learning State, Review or Study Entry. Stop after publishing this APPROVAL_REQUEST and return to GPT_ORCHESTRATOR for the user's explicit APPROVE or REJECT.",
+      "Before committing this request, require empty native instruction-schema and instruction-authority validation lists, project/context/repository binding, immutable Work Unit authority and artifact refs, revision 11 and exact base SHA, exact seven ordered scope paths, exact native approved_instruction core, executor_role USER_APPROVER, authorized_actions exactly [APPROVE, REJECT], forbidden_actions [], and completion_gate USER_APPROVAL. Do not create an Approval Result to test admission."
+    ],
+    "result_references": [
+      "040c329e-33a9-4608-831e-1c47337e6e15"
+    ],
+    "revision": true
+  }
+}
