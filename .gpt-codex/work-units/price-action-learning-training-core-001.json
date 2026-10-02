@@ -101,7 +101,7 @@
     ]
   },
   "state": "AUTHORIZED",
-  "basis_state_revision": 9,
+  "basis_state_revision": 10,
   "implementation_authorized": false,
   "implementation_start_allowed": false,
   "next_gate": "TRAINING_CORE_PRE_EXECUTION"
