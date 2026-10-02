@@ -100,9 +100,9 @@
       "SCOPE_EXPANSION"
     ]
   },
-  "state": "AUTHORIZED",
-  "basis_state_revision": 10,
+  "state": "COMPLETE",
+  "basis_state_revision": 11,
   "implementation_authorized": false,
   "implementation_start_allowed": false,
-  "next_gate": "TRAINING_CORE_PRE_EXECUTION"
+  "next_gate": "COMPLETE"
 }

@@ -2,7 +2,7 @@
   "kernel_version": "2.0.0",
   "schema_version": 1,
   "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
-  "revision": 10,
+  "revision": 11,
   "state": "AUTHORIZED",
   "active_work_unit": null,
   "blockers": [],
@@ -37,14 +37,16 @@
     ".gpt-codex/evidence/training-core-post-002-remediation-basis.json",
     ".gpt-codex/evidence/training-core-post-002-remediation-adjudication.json",
     ".gpt-codex/evidence/training-core-post-002-remediation-work-verification.json",
-    ".gpt-codex/evidence/results/training-core-post-002-remediation-publication.json"
+    ".gpt-codex/evidence/results/training-core-post-002-remediation-publication.json",
+    ".gpt-codex/evidence/training-core-publication-verification.json",
+    ".gpt-codex/evidence/results/training-core-publication.json"
   ],
   "continuity": {
     "current_remote_ref": "refs/heads/main",
-    "latest_verified_remote_sha": "8c057d1e6d8111d84715c62ddb0c33ddf38a8567",
-    "latest_synced_state_revision": 10,
-    "last_verified_result_ref": ".gpt-codex/evidence/results/training-core-post-002-remediation-publication.json",
+    "latest_verified_remote_sha": "979457060272fc4a63d0c4b6f26395f6507bc4c1",
+    "latest_synced_state_revision": 11,
+    "last_verified_result_ref": ".gpt-codex/evidence/results/training-core-publication.json",
     "sync_status": "SYNCED"
   },
-  "next_action": "Issue a governed FIX_INSTRUCTION with fix_round=2 tied to source Result 35bb4884-3fa8-48ca-98cf-52930213473e for exactly FINDING-TRAINING-CORE-POST-001-001 (F001) and FINDING-TRAINING-CORE-POST-001-003 (F003); F002 remains CLOSED and regression-protected. Use FIX base ab4d62982b1fba90b9ed73b298e66491b2bbb88b; obtain a fresh FIX PRE_EXECUTION review; apply only the accepted minimum F001/F003 corrections; then perform a full Training POST re-review. F001 and F003 remain OPEN. Evaluation MUST NOT start before Training publication and closure."
+  "next_action": "Training Core MVP is published and Work Unit COMPLETE. Evaluation remains unstarted. Propose and authorize an Evaluation Work Unit through the project Fast Path before any Evaluation mutation."
 }

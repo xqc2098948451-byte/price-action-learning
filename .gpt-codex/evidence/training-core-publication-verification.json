@@ -1,0 +1,39 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-TRAINING-CORE-PUBLICATION-VERIFICATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-training-core-001",
+  "source": "TOOL_OBSERVED",
+  "subject": "TRAINING_CORE_WORK_COMMIT_REMOTE_VERIFICATION",
+  "state_revision": 10,
+  "identity_binding": {
+    "type": "GIT_COMMIT",
+    "value": "979457060272fc4a63d0c4b6f26395f6507bc4c1"
+  },
+  "result": "PASS",
+  "publication_observation": {
+    "repository_id": "1394745962",
+    "repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "remote_ref": "refs/heads/main",
+    "remote_head": "979457060272fc4a63d0c4b6f26395f6507bc4c1",
+    "remote_state_revision": 10,
+    "work_commit_parent": "e921cfa3ca82b35576e554d9c415137009b9960c",
+    "work_tree": "4b35ed3bb1ae0b9f470752445c9d278a3d328564",
+    "work_blobs": {
+      "spec/training/TRAINING_SPEC.md": "9c2ed5e2c275f71073f68a93de1178a565ae9a79",
+      "src/price_action_learning/training/__init__.py": "66af9fd135c08942aa3973144b2a1fa763f13e3a",
+      "src/price_action_learning/training/core.py": "751fd8b84f332143616fbf018a7b4ef0c4b206d1",
+      "tests/training/test_training.py": "0102e37f34f30058941d173a43cf3364c1832d6b"
+    },
+    "gitkeep_path": "spec/training/.gitkeep",
+    "gitkeep_status": "ABSENT"
+  },
+  "durable_post_pass": {
+    "repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "commit_sha": "d81f6a709132c70f8d628596960fd81fac91907f",
+    "path": ".gpt-codex/evidence/results/dd6d9b99-7963-499a-9f24-dff0051964b2.json",
+    "blob_sha": "c74d8f6b64f15e0417beb8cc2a975c8af2e0a137"
+  },
+  "observed_at": "2026-10-02"
+}

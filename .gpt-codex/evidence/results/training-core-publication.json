@@ -1,0 +1,93 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-training-core-001",
+  "extension": {
+    "kind": "SKILL",
+    "id": "github-project-continuity",
+    "version": "1.0.0"
+  },
+  "status": "PASS",
+  "result_message_type": "IMPLEMENTATION_RESULT",
+  "result_id": "RESULT-TRAINING-CORE-PUBLICATION",
+  "responder_role": "CODEX_IMPLEMENTER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "return_to_gpt_required": true,
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "framework_version": "2.7.4",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "current_remote_ref": "refs/heads/main",
+  "remote_head_sha": "979457060272fc4a63d0c4b6f26395f6507bc4c1",
+  "verified_baseline_sha": "979457060272fc4a63d0c4b6f26395f6507bc4c1",
+  "sync_status": "SYNCED",
+  "push_status": "SUCCEEDED",
+  "remote_verification": "VERIFIED",
+  "publication_authority": "CONFIRMED_PUBLICATION",
+  "state_revision": 11,
+  "evidence_refs": [
+    ".gpt-codex/evidence/training-core-publication-verification.json",
+    "repository=xqc2098948451-byte/price-action-learning;commit=d81f6a709132c70f8d628596960fd81fac91907f;path=.gpt-codex/evidence/results/dd6d9b99-7963-499a-9f24-dff0051964b2.json;blob=c74d8f6b64f15e0417beb8cc2a975c8af2e0a137",
+    "repository=xqc2098948451-byte/price-action-learning;commit=57b35893283c194fc2e4e14619023b7d22ecfa77;path=.gpt-codex/evidence/results/2c4da6ce-a653-4568-8711-ca1cf9dd90ed.json;blob=4a9af1a9eb5a20b2524f3555cb472033a5694d65"
+  ],
+  "completion_evidence": {
+    "execution_state": "COMPLETED",
+    "process_completed": true,
+    "exit_code": 0,
+    "intended_scope": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+      ".gpt-codex/evidence/training-core-publication-verification.json",
+      ".gpt-codex/evidence/results/training-core-publication.json"
+    ],
+    "executed_scope": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+      ".gpt-codex/evidence/training-core-publication-verification.json",
+      ".gpt-codex/evidence/results/training-core-publication.json"
+    ],
+    "test_files_expected": 1,
+    "test_files_executed": 1,
+    "test_count": 39,
+    "failure_count": 0,
+    "error_count": 0,
+    "validators_expected": [
+      "remote_repository_identity",
+      "remote_W_head",
+      "W_parent",
+      "exact_W_changed_paths",
+      "remote_W_blobs",
+      "training_test_suite",
+      "state_transition",
+      "state_authority",
+      "training_work_unit_semantic_diff",
+      "evidence_schema",
+      "result_envelope_contract",
+      "result_authority",
+      "completion_evidence",
+      "durable_post_pass",
+      "exact_P_diff"
+    ],
+    "validators_completed": [
+      "remote_repository_identity",
+      "remote_W_head",
+      "W_parent",
+      "exact_W_changed_paths",
+      "remote_W_blobs",
+      "training_test_suite",
+      "state_transition",
+      "state_authority",
+      "training_work_unit_semantic_diff",
+      "evidence_schema",
+      "result_envelope_contract",
+      "result_authority",
+      "completion_evidence",
+      "durable_post_pass",
+      "exact_P_diff"
+    ],
+    "blocker_evidence_refs": []
+  },
+  "completion_gate": "NONE"
+}
