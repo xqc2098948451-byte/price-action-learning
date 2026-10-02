@@ -1,0 +1,83 @@
+{
+  "instruction_id": "e19a7f63-0ff1-46fa-a257-f21ca1f6c527",
+  "instruction_type": "FIX_INSTRUCTION",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-training-core-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    "sha": "e921cfa3ca82b35576e554d9c415137009b9960c"
+  },
+  "expected_state_revision": 10,
+  "expected_base_sha": "ab4d62982b1fba90b9ed73b298e66491b2bbb88b",
+  "review_target_revision": "ab4d62982b1fba90b9ed73b298e66491b2bbb88b",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "e921cfa3ca82b35576e554d9c415137009b9960c",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_IMPLEMENTER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT",
+    "MUTATE_APPROVED_SCOPE"
+  ],
+  "forbidden_actions": [
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "scope_paths": [
+    "src/price_action_learning/training/core.py",
+    "tests/training/test_training.py"
+  ],
+  "permission_scope": "TRAINING_CORE_POST_002_FIX_ROUND_2_ONLY",
+  "in_response_to_result_id": "35bb4884-3fa8-48ca-98cf-52930213473e",
+  "finding_ids": [
+    "FINDING-TRAINING-CORE-POST-001-001",
+    "FINDING-TRAINING-CORE-POST-001-003"
+  ],
+  "fix_round": 2,
+  "remediation_decision_ref": "DECISION-TRAINING-CORE-POST-002-REMEDIATION",
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Use Framework 2.7.4 at commit 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c and its native validators.",
+      "Authorized Training Work Unit: repository=xqc2098948451-byte/price-action-learning;commit=e921cfa3ca82b35576e554d9c415137009b9960c;path=.gpt-codex/work-units/price-action-learning-training-core-001.json;blob=40a5e6e3862c477b91c7c3116661d16395ac3287;state=AUTHORIZED;basis_state_revision=10.",
+      "Source POST finding: repository=xqc2098948451-byte/price-action-learning;commit=e921cfa3ca82b35576e554d9c415137009b9960c;path=.gpt-codex/evidence/results/35bb4884-3fa8-48ca-98cf-52930213473e.json;blob=7073c63f3abefb308d0247158b8a272ab0394c4b;status=FAIL;fix_round=1;F001 and F003 OPEN;F002 CLOSED.",
+      "Accepted remediation basis: repository=xqc2098948451-byte/price-action-learning;commit=e921cfa3ca82b35576e554d9c415137009b9960c;path=.gpt-codex/evidence/training-core-post-002-remediation-basis.json;blob=4ae2d2c23c38d90ea74d20d758012e6b47b3ddd1.",
+      "Accepted remediation adjudication: repository=xqc2098948451-byte/price-action-learning;commit=e921cfa3ca82b35576e554d9c415137009b9960c;path=.gpt-codex/evidence/training-core-post-002-remediation-adjudication.json;blob=2db88058090e2186709c0dba89be58f79765ae78;decision=ACCEPT;state_revision=10.",
+      "Read spec/training/TRAINING_SPEC.md and docs/CONTRACTS.md for the existing initial-submission contract. Use the immutable Learning Map specification at commit 65cd6969e8ccf890d6e51b07fd7436564bf70421, path=spec/learning_map/LEARNING_MAP_SPEC.md, blob=726b35db8409ea03cbec33c916db7374e6724e03.",
+      "Before any fix, require the existing dedicated Training candidate at D:/价格行为学习/training-core-001 to resolve exactly to reviewed tree ab4d62982b1fba90b9ed73b298e66491b2bbb88b, with no unstaged difference. At that tree core.py blob=60558e7b713ef7dd5213446352d7545195d2b82f and test_training.py blob=37a9746c25e3587a7fca92e70310db0d1e7c77e1. Preserve TRAINING_SPEC.md blob=9c2ed5e2c275f71073f68a93de1178a565ae9a79 and training/__init__.py blob=66af9fd135c08942aa3973144b2a1fa763f13e3a; spec/training/.gitkeep remains absent. Do not reconstruct the candidate from current main."
+    ],
+    "files_changed": [
+      "src/price_action_learning/training/core.py",
+      "tests/training/test_training.py"
+    ],
+    "tests": [
+      "Run all 29 existing Training tests plus new direct-constructor regressions in tests/training/test_training.py; preserve F002's Stage-mismatch rejection test. Report actual test count, failures, and errors.",
+      "F001: cover mutable learning_map_reference alias, equality-spoofing reference, malformed or noncanonical direct-constructor reference, source mutation after construction, and the exact canonical immutable stored LearningMapReference.",
+      "F003: cover mutable or duck-typed context isolation or rejection; mutable user_analysis isolation or rejection; non-null image_reference rejection; invalid revision and status rejection; malformed or noncanonical id and created_at rejection; user_confidence's existing rule; and rejection of TrainingAttempt.stage different from context.knowledge_boundary.stage.",
+      "Exercise the public constructors and observable post-construction history, not only factory defaults or dataclass field types. Run git diff --check and git diff --cached --check against the candidate."
+    ],
+    "validation": [
+      "Before execution, obtain a fresh durable FIX PRE_EXECUTION review bound to this exact instruction and reviewed candidate tree. PRE_EXECUTION_REVIEW_REQUIRED is a stop condition until that review passes. This instruction alone does not authorize mutation.",
+      "F001 only: public KnowledgeBoundary and TrainingContext construction must store an independent canonical immutable module-owned LearningMapReference. Equality of a caller object to the canonical reference does not grant authority. Reject malformed, duck-typed, equality-spoofed, or noncanonical reference input, or normalize safely to the exact canonical value, without retaining any caller-owned mutable alias. Later source mutation must not change the stored historical reference.",
+      "F003 only: public TrainingAttempt direct construction must store a canonical immutable TrainingContext and the existing authorized immutable submitted-analysis representation. Reject a malformed or noncanonical context, or safely canonicalize it without retaining caller ownership. Reject or defensively copy mutable user_analysis without changing its required non-empty submission semantics. Later caller mutation must not alter historical context or analysis.",
+      "Require image_reference=None for this non-screenshot MVP, revision=None for the initial attempt, and status=SUBMITTED for the initial attempt. Require id to satisfy the existing unique canonical UUID creation semantics and created_at to satisfy the existing stable UTC submission timestamp semantics; reject malformed or noncanonical direct-constructor values. Preserve the existing user_confidence behavior without broadening it. Do not add a revision workflow or new status.",
+      "Keep the already-closed F002 invariant TrainingAttempt.stage == context.knowledge_boundary.stage and its regression coverage. F002 is not reopened by this fix.",
+      "Preserve existing factory behavior, Formal and Focused modes and their shared creation path, Focused's required focus_error_id, user-first behavior, S1/S2/S3 only, canonical cumulative Stage boundaries 13/19/28, internally derived allowed Concept IDs, learned subset rule, target_concept_id behavior including Stage-allowed not-yet-learned targets, submission-time historical semantics, and standard-library-only implementation.",
+      "Keep exactly the eight shared TrainingAttempt fields id, created_at, stage, image_reference, user_analysis, user_confidence, revision, and status, plus only the already-authorized minimum immutable context. Modify only the two scope_paths. Do not modify docs/CONTRACTS.md, TRAINING_SPEC.md, training/__init__.py, Learning Map, or the .gpt-codex control plane during the candidate fix; do not add fields, a module, a generalized validator framework, or a shared utility abstraction.",
+      "Do not implement screenshot support, persistence, Evaluation, LearningState, Review, scoring, grading, API, UI, plugin, trading signal, or any other business scope. Confirm the effective fix delta touches only the two authorized paths and the preserved blobs remain unchanged. Return bounded evidence for a full Training POST re-review afterward. The implementer must not commit, push, publish, authorize, or expand scope."
+    ],
+    "revision": true
+  }
+}
