@@ -1,0 +1,25 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-TRAINING-CORE-POST-002-REMEDIATION-BASIS",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "source": "SYSTEM_DERIVED",
+  "subject": "REMEDIATION_AUTHORITY_BASIS",
+  "state_revision": 10,
+  "result": "ACCEPTED",
+  "basis_type": "ACCEPTED_AUTHORITY_BASIS",
+  "finding_ids": [
+    "FINDING-TRAINING-CORE-POST-001-001",
+    "FINDING-TRAINING-CORE-POST-001-003"
+  ],
+  "accepted": true,
+  "failing": false,
+  "basis_statement": "F001: Public TrainingContext and KnowledgeBoundary must not retain a mutable caller-owned learning_map_reference. Equality with the canonical reference is insufficient authority. Store an independent canonical immutable module-owned value. Reject or normalize malformed, duck-typed, equality-spoofed, and noncanonical direct-constructor reference input without retaining caller ownership. Direct-constructor regression must prove source mutation cannot alter the stored reference. F003: Public TrainingAttempt direct construction must preserve the authorized initial-submission contract. Store a canonical immutable TrainingContext and the authorized immutable submitted-analysis representation for user_analysis, without retaining caller-owned mutable context or user_analysis aliases. Require image_reference null, initial revision only, initial status only, and id and created_at that satisfy existing TrainingAttempt creation semantics. Preserve existing user_confidence rules and the F002 Stage-consistency invariant; add direct-constructor regression coverage. Scope exclusions: no revision workflow, persistence, screenshot support, Evaluation behavior, LearningState behavior, generalized validator engine, new shared abstraction, or new business scope.",
+  "authority_refs": [
+    "repository=xqc2098948451-byte/price-action-learning;commit=714b0b564ebdb99d2115d482f6d3ff77d729aaac;path=.gpt-codex/evidence/results/35bb4884-3fa8-48ca-98cf-52930213473e.json;blob=7073c63f3abefb308d0247158b8a272ab0394c4b",
+    "repository=xqc2098948451-byte/price-action-learning;commit=924674ca7c983a6ccdf7e7167e58634d9b8fc35c;path=.gpt-codex/work-units/price-action-learning-training-core-001.json;blob=3b30a86ff746c9bd97ec855c1587ab68e3250c74",
+    "repository=xqc2098948451-byte/price-action-learning;commit=924674ca7c983a6ccdf7e7167e58634d9b8fc35c;path=docs/CONTRACTS.md;blob=aea93c1b8fdecb3098cada74e3d58068d80826ff",
+    "repository=xqc2098948451-byte/price-action-learning;commit=0d4f9af302fca3c6e7755160fcee3499fbdb2d09;path=.gpt-codex/evidence/instructions/7a8d7d0e-44b6-4fd1-9d36-2b24d5d8d735.json;blob=ce6f2f33d45492282ac3efa65a9a76109f669e2b",
+    "repository=xqc2098948451-byte/price-action-learning;commit=65cd6969e8ccf890d6e51b07fd7436564bf70421;path=spec/learning_map/LEARNING_MAP_SPEC.md;blob=726b35db8409ea03cbec33c916db7374e6724e03"
+  ]
+}
