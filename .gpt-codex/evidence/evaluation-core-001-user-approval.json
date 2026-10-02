@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-EVALUATION-CORE-001-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-evaluation-core-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 11,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "b937b93552fc15284addd89d13edc16488da9c2c"
+  },
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json@a9c683470a4a7c3ee83b03ae136fb3558c1dd877"
+  ],
+  "observed_at": "2026-10-02",
+  "notes": "The user approves the exact Work Unit identified by blob b937b93552fc15284addd89d13edc16488da9c2c. This approval authorizes only the frozen Evaluation Core scope. Approval does not itself authorize implementation start. PRE_EXECUTION remains required before any Evaluation business mutation. No LearningState / Review / Study Entry scope is approved."
+}

@@ -138,10 +138,10 @@
       "READ",
       "TEST",
       "VALIDATE",
-      "REPORT"
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
     ],
     "forbidden_actions": [
-      "MUTATE_APPROVED_SCOPE",
       "COMMIT",
       "PUSH",
       "PUBLISH",
@@ -149,11 +149,11 @@
       "SCOPE_EXPANSION"
     ]
   },
-  "state": "PROPOSED",
+  "state": "AUTHORIZED",
   "basis_state_revision": 11,
   "implementation_authorized": false,
   "implementation_start_allowed": false,
-  "next_gate": "USER_WORK_UNIT_APPROVAL",
+  "next_gate": "EVALUATION_CORE_PRE_EXECUTION",
   "artifact_refs": {
     "design": {
       "path": "docs/DIRECTORY_POLICY.md",
