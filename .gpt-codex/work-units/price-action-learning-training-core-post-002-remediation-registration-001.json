@@ -1,0 +1,116 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-training-core-post-002-remediation-registration-001",
+  "goal": "Durably register the second Training Core POST remediation authority for FINDING-TRAINING-CORE-POST-001-001 and FINDING-TRAINING-CORE-POST-001-003, advance project STATE from revision 9 to 10, and rebind the already-materialized Training Work Unit to basis revision 10 without modifying the Training candidate.",
+  "scope": {
+    "owned_paths": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+      ".gpt-codex/evidence/results/35bb4884-3fa8-48ca-98cf-52930213473e.json",
+      ".gpt-codex/evidence/training-core-post-002-remediation-basis.json",
+      ".gpt-codex/evidence/training-core-post-002-remediation-adjudication.json",
+      ".gpt-codex/evidence/training-core-post-002-remediation-work-verification.json",
+      ".gpt-codex/evidence/results/training-core-post-002-remediation-publication.json"
+    ]
+  },
+  "dependencies": {
+    "framework": {
+      "version": "2.7.4",
+      "commit_sha": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c"
+    },
+    "repository": {
+      "repository_id": "1394745962",
+      "repository_full_name": "xqc2098948451-byte/price-action-learning",
+      "main_commit_sha": "924674ca7c983a6ccdf7e7167e58634d9b8fc35c",
+      "governance_commit_sha": "714b0b564ebdb99d2115d482f6d3ff77d729aaac"
+    },
+    "finding_result": {
+      "commit_sha": "714b0b564ebdb99d2115d482f6d3ff77d729aaac",
+      "path": ".gpt-codex/evidence/results/35bb4884-3fa8-48ca-98cf-52930213473e.json",
+      "blob_sha": "7073c63f3abefb308d0247158b8a272ab0394c4b"
+    },
+    "authorized_training_work_unit": {
+      "commit_sha": "924674ca7c983a6ccdf7e7167e58634d9b8fc35c",
+      "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+      "blob_sha": "3b30a86ff746c9bd97ec855c1587ab68e3250c74"
+    },
+    "shared_contract": {
+      "commit_sha": "924674ca7c983a6ccdf7e7167e58634d9b8fc35c",
+      "path": "docs/CONTRACTS.md",
+      "blob_sha": "aea93c1b8fdecb3098cada74e3d58068d80826ff"
+    },
+    "training_execution_instruction": {
+      "commit_sha": "0d4f9af302fca3c6e7755160fcee3499fbdb2d09",
+      "path": ".gpt-codex/evidence/instructions/7a8d7d0e-44b6-4fd1-9d36-2b24d5d8d735.json",
+      "blob_sha": "ce6f2f33d45492282ac3efa65a9a76109f669e2b"
+    }
+  },
+  "acceptance": [
+    "Before future execution, live-verify repository ID 1394745962 and full name xqc2098948451-byte/price-action-learning, refs/heads/main at 924674ca7c983a6ccdf7e7167e58634d9b8fc35c, governance source at 714b0b564ebdb99d2115d482f6d3ff77d729aaac, Framework 2.7.4 at 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c, project PRJ-PRICE-ACTION-LEARNING-1394745962, and context e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9. Stop as STALE on a mismatch.",
+    "Require live main STATE revision 9, state AUTHORIZED, active_work_unit null, blockers [], reconciliation null, continuity.sync_status SYNCED, and no active_execution_slots key. Require the already-materialized Training Work Unit to be AUTHORIZED at basis_state_revision 9 with blob 3b30a86ff746c9bd97ec855c1587ab68e3250c74. Stop as STALE on a mismatch.",
+    "Resolve the source finding Result by immutable locator xqc2098948451-byte/price-action-learning@714b0b564ebdb99d2115d482f6d3ff77d729aaac:.gpt-codex/evidence/results/35bb4884-3fa8-48ca-98cf-52930213473e.json with blob 7073c63f3abefb308d0247158b8a272ab0394c4b. Require result_id 35bb4884-3fa8-48ca-98cf-52930213473e, status FAIL, result_message_type REVIEW_FINDING, review_target_revision ab4d62982b1fba90b9ed73b298e66491b2bbb88b, and finding_ids exactly [FINDING-TRAINING-CORE-POST-001-001, FINDING-TRAINING-CORE-POST-001-003]. Require F001 OPEN and F002 CLOSED; do not reopen F002.",
+    "Future mutation scope is exactly the seven scope.owned_paths entries. This control-plane Work Unit is outside its own mutation scope. Do not modify the Training candidate, spec/**, src/**, tests/**, AGENTS.md, README.md, docs/**, CONTROL.json, Framework source, or private/user data.",
+    "Future Work Commit W must have parent 924674ca7c983a6ccdf7e7167e58634d9b8fc35c and change exactly three paths: copy the source finding Result byte-identically to .gpt-codex/evidence/results/35bb4884-3fa8-48ca-98cf-52930213473e.json with blob 7073c63f3abefb308d0247158b8a272ab0394c4b; create .gpt-codex/evidence/training-core-post-002-remediation-basis.json; and create .gpt-codex/evidence/training-core-post-002-remediation-adjudication.json. W must not change STATE or a Work Unit. Push W without force and remotely verify it before P.",
+    "The future basis Evidence must use kernel_version 2.0.0, schema_version 1, project_id PRJ-PRICE-ACTION-LEARNING-1394745962, evidence_id EVIDENCE-TRAINING-CORE-POST-002-REMEDIATION-BASIS, source SYSTEM_DERIVED, subject REMEDIATION_AUTHORITY_BASIS, state_revision 10, result ACCEPTED, basis_type ACCEPTED_AUTHORITY_BASIS, finding_ids exactly [FINDING-TRAINING-CORE-POST-001-001, FINDING-TRAINING-CORE-POST-001-003], accepted true, and failing false. It must encode only the two accepted minimum corrections below.",
+    "F001 correction: public TrainingContext and KnowledgeBoundary construction must never retain a mutable caller-owned learning_map_reference merely because it compares equal to canonical. Store an independent canonical immutable module-owned value. Reject or normalize malformed, duck-typed, equality-spoofed, or otherwise noncanonical direct-constructor input without retaining caller ownership. Add direct-constructor regression proving source mutation cannot change the stored reference.",
+    "F003 correction: public TrainingAttempt construction must enforce the shared initial-submission invariants also enforced by the factory path. Store canonical immutable TrainingContext and authorized immutable submitted user_analysis without retaining mutable caller-owned objects; require image_reference null, initial revision and status under the existing initial Training contract, and generated id and created_at with stable creation semantics while rejecting malformed or noncanonical direct-constructor values. Preserve existing user_confidence rules and Stage consistency from closed F002. Add direct-constructor regression coverage.",
+    "The accepted F003 correction creates no revision workflow, persistence, Evaluation, LearningState, screenshot support, shared abstraction, or generalized validation framework. Future FIX round 2 targets reviewed candidate ab4d62982b1fba90b9ed73b298e66491b2bbb88b and normally limits business mutation to src/price_action_learning/training/core.py and tests/training/test_training.py. No spec change is authorized without a separate explicit future finding. Keep F002 CLOSED and regression-protected.",
+    "The future adjudication Evidence must use kernel_version 2.0.0, schema_version 1, project_id PRJ-PRICE-ACTION-LEARNING-1394745962, evidence_id DECISION-TRAINING-CORE-POST-002-REMEDIATION, source SYSTEM_DERIVED, subject REMEDIATION_ADJUDICATION, state_revision 10, result ACCEPT, decision ACCEPT, basis_type ACCEPTED_AUTHORITY_BASIS, basis_refs exactly [EVIDENCE-TRAINING-CORE-POST-002-REMEDIATION-BASIS], finding_ids exactly [FINDING-TRAINING-CORE-POST-001-001, FINDING-TRAINING-CORE-POST-001-003], and adjudicated_at_revision 10.",
+    "After verified W, future Publication Commit P must have parent W_SHA and change exactly four paths: .gpt-codex/STATE.json, .gpt-codex/work-units/price-action-learning-training-core-001.json, .gpt-codex/evidence/training-core-post-002-remediation-work-verification.json, and .gpt-codex/evidence/results/training-core-post-002-remediation-publication.json.",
+    "P must advance STATE revision 9 to 10 while preserving state AUTHORIZED, active_work_unit null, blockers [], reconciliation null, and absence of active_execution_slots. Preserve all existing evidence_refs in order and append exactly, in order, the five new paths: source finding Result, POST-002 remediation basis, POST-002 remediation adjudication, POST-002 work verification, and POST-002 publication Result. Do not duplicate a ref.",
+    "At revision 10 set STATE.continuity.current_remote_ref refs/heads/main, latest_verified_remote_sha W_SHA, latest_synced_state_revision 10, last_verified_result_ref .gpt-codex/evidence/results/training-core-post-002-remediation-publication.json, and sync_status SYNCED.",
+    "P must change only basis_state_revision from 9 to 10 in the already-materialized Training Work Unit on main. Preserve every other semantic value, including state AUTHORIZED, implementation_authorized false, implementation_start_allowed false, and next_gate TRAINING_CORE_PRE_EXECUTION.",
+    "The future work-verification Evidence must be TOOL_OBSERVED and verify the remote repository ID/full name, refs/heads/main at W_SHA, the exact three W changed paths, the byte-identical source finding Result blob, remediation basis, and remediation adjudication. It must not claim the Training candidate was fixed.",
+    "The future publication Result must use work_unit_id price-action-learning-training-core-post-002-remediation-registration-001, status PASS, result_message_type IMPLEMENTATION_RESULT, responder_role CODEX_IMPLEMENTER, return_role GPT_ORCHESTRATOR, framework_version 2.7.4, state_revision 10, current_remote_ref refs/heads/main, remote_head_sha W_SHA, verified_baseline_sha W_SHA, sync_status SYNCED, push_status SUCCEEDED, remote_verification VERIFIED, publication_authority CONFIRMED_PUBLICATION, and completion_gate NONE. Its evidence_refs must include verified work Evidence and accepted remediation artifacts.",
+    "Before P publication, exact Framework 2.7.4 must return [] for validate_remediation_adjudication(decision, finding, resolved_basis), validate_result_envelope_contract(publication_result), validate_result_authority(publication_result), validate_completion_evidence(publication_result), and validate_state_authority(resulting_state, durable_results).",
+    "After P, STATE.next_action must require a governed FIX_INSTRUCTION with fix_round=2 tied to source Result 35bb4884-3fa8-48ca-98cf-52930213473e and findings F001 and F003, a fresh FIX PRE_EXECUTION review, only these accepted minimum corrections, and a full Training POST re-review afterward. Evaluation remains blocked until Training publication and closure.",
+    "During this authoring task, do not authorize this proposed Work Unit, record user approval, create a reconciliation instruction, modify main or STATE or the current Training Work Unit, create remediation basis or adjudication Evidence, mutate the Training candidate, execute FIX round 2, mark Training COMPLETE, or start Evaluation.",
+    "artifact_refs must be exactly design={path: docs/DIRECTORY_POLICY.md, sha: 924674ca7c983a6ccdf7e7167e58634d9b8fc35c} and plan={path: docs/PROJECT_SCOPE.md, sha: 924674ca7c983a6ccdf7e7167e58634d9b8fc35c}. Both immutable refs must resolve through Framework-native artifact resolution; use the commit SHA, not file blob SHAs."
+  ],
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ],
+    "forbidden_actions": [
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 9,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "USER_WORK_UNIT_APPROVAL",
+  "artifact_refs": {
+    "design": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "sha": "924674ca7c983a6ccdf7e7167e58634d9b8fc35c"
+    },
+    "plan": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "sha": "924674ca7c983a6ccdf7e7167e58634d9b8fc35c"
+    }
+  }
+}
