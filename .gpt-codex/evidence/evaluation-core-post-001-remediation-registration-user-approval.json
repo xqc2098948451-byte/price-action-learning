@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-EVALUATION-CORE-POST-001-REMEDIATION-REGISTRATION-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-evaluation-core-post-001-remediation-registration-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 11,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "d44fc02c308619efeeea90b33514aee4a598a57d"
+  },
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-evaluation-core-post-001-remediation-registration-001.json@05bbded8d6cd828e4b49421d2ed5d9689dbd9f06"
+  ],
+  "observed_at": "2026-10-02",
+  "notes": "The user explicitly approved the proposed Work Unit bound to blob d44fc02c308619efeeea90b33514aee4a598a57d. Approval permits remaining governance gates for durable EVAL-POST-001 remediation registration, STATE 11 -> 12, Evaluation Work Unit rebind, and later governed FIX round 1. Approval does not execute remediation, authorize direct candidate mutation, skip remediation registration or FIX PRE Review, publish Evaluation, or start Learning State/Review/Study Entry."
+}
