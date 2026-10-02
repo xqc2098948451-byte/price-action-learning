@@ -1,0 +1,86 @@
+{
+  "instruction_id": "91d9b0ce-2467-4cd6-8c55-9d863c9f59d1",
+  "instruction_type": "REVIEW_REQUEST",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-training-core-post-002-remediation-registration-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-post-002-remediation-registration-001.json",
+    "sha": "2c9ef00533f34e2e9e26844968d3921f30ff718c"
+  },
+  "expected_state_revision": 9,
+  "expected_base_sha": "924674ca7c983a6ccdf7e7167e58634d9b8fc35c",
+  "review_target_revision": "924674ca7c983a6ccdf7e7167e58634d9b8fc35c",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "924674ca7c983a6ccdf7e7167e58634d9b8fc35c",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "permission_scope": "TRAINING_POST_002_REMEDIATION_REGISTRATION_PRE_EXECUTION_ONLY",
+  "scope_paths": [
+    ".gpt-codex/STATE.json",
+    ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    ".gpt-codex/evidence/results/35bb4884-3fa8-48ca-98cf-52930213473e.json",
+    ".gpt-codex/evidence/training-core-post-002-remediation-basis.json",
+    ".gpt-codex/evidence/training-core-post-002-remediation-adjudication.json",
+    ".gpt-codex/evidence/training-core-post-002-remediation-work-verification.json",
+    ".gpt-codex/evidence/results/training-core-post-002-remediation-publication.json"
+  ],
+  "in_response_to_instruction_id": "d8e3532a-44cb-4c39-84ce-26ad32f19929",
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Framework 2.7.4 at commit 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c; use its exact native validators.",
+      "Correlated RECONCILIATION_REQUEST: repository=xqc2098948451-byte/price-action-learning; commit=cc71ad80279d0ba742405e534881a24193ddcc1d; path=.gpt-codex/evidence/instructions/d8e3532a-44cb-4c39-84ce-26ad32f19929.json; blob=f2dc97b0bf58fc702cf2e3dce5cd7a90303b40ab.",
+      "Authorized POST-002 remediation Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=2c9ef00533f34e2e9e26844968d3921f30ff718c; path=.gpt-codex/work-units/price-action-learning-training-core-post-002-remediation-registration-001.json; blob=dd4a7c1d1137f45dd1499720439780da67222b15; state=AUTHORIZED; basis_state_revision=9.",
+      "Approval Request: commit=c7ba30937141ceec163b7c90ea653b12512e7606; path=.gpt-codex/evidence/instructions/76fdbcd7-4e85-4934-b02f-f21542007e3e.json; blob=4f649bf0153c9cc400ed0320069666e69146f975.",
+      "USER_APPROVER Approval Result: commit=80eed3b38840782da6ca83876ede2157b54329e4; path=.gpt-codex/evidence/results/RESULT-TRAINING-CORE-POST-002-REMEDIATION-RECONCILIATION-APPROVAL-001.json; blob=e818ddb36aea6fb4ea2a3d78c783b46a4a16a438.",
+      "Source POST finding Result: commit=714b0b564ebdb99d2115d482f6d3ff77d729aaac; path=.gpt-codex/evidence/results/35bb4884-3fa8-48ca-98cf-52930213473e.json; blob=7073c63f3abefb308d0247158b8a272ab0394c4b.",
+      "Live main at 924674ca7c983a6ccdf7e7167e58634d9b8fc35c: read .gpt-codex/CONTROL.json, .gpt-codex/STATE.json, .gpt-codex/work-units/price-action-learning-training-core-001.json, docs/DIRECTORY_POLICY.md, and docs/PROJECT_SCOPE.md."
+    ],
+    "tests": [
+      "Run Framework 2.7.4 read-only instruction-envelope, authority, PRE-correlation, and control-plane admission checks. Do not execute the PRE review or create a PRE Result.",
+      "Resolve the exact immutable Work Unit and its design and plan artifact_refs, Approval Request, USER_APPROVER Approval Result, RECONCILIATION_REQUEST, source finding Result, and current STATE. Report all PRE findings in one pass."
+    ],
+    "validation": [
+      "Perform one independent PRE review of the Training POST-002 remediation reconciliation. Report every detectable finding with exact evidence and a decision to GPT_ORCHESTRATOR; do not execute reconciliation or authorize mutation.",
+      "Verify CONTROL project/context identity e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9, repository ID 1394745962 and full name xqc2098948451-byte/price-action-learning, live origin refs/heads/main at 924674ca7c983a6ccdf7e7167e58634d9b8fc35c, and Framework 2.7.4 at 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c. Stop as stale on a mismatch.",
+      "Verify live main STATE revision 9, state AUTHORIZED, active_work_unit null, blockers [], reconciliation null, continuity.sync_status SYNCED, and active_execution_slots key absent.",
+      "Resolve the POST-002 remediation Work Unit at its exact commit/path/blob; require state AUTHORIZED, basis_state_revision 9, and design docs/DIRECTORY_POLICY.md and plan docs/PROJECT_SCOPE.md artifact_refs each resolving at commit 924674ca7c983a6ccdf7e7167e58634d9b8fc35c.",
+      "Verify exact authority chain: Work Unit -> Approval Request 76fdbcd7-4e85-4934-b02f-f21542007e3e -> USER_APPROVER Approval Result RESULT-TRAINING-CORE-POST-002-REMEDIATION-RECONCILIATION-APPROVAL-001 -> RECONCILIATION_REQUEST d8e3532a-44cb-4c39-84ce-26ad32f19929. Require approval status PASS, decision APPROVE, and approved_instruction equal to the native control-plane approved core with no extra keys.",
+      "Require control-plane admission PASS and absence of CONTROL_PLANE_AUTHORITY_REQUIRED, APPROVAL_EVIDENCE_COMMIT_MISSING, APPROVAL_EVIDENCE_UNRESOLVED, APPROVED_INSTRUCTION_MISMATCH, WORK_UNIT_AUTHORITY_REQUIRED, STALE_STATE_REVISION, SCOPE_EXPANSION_DENIED, and ROLE_AUTHORITY_CONFLICT.",
+      "Verify this request's in_response_to_instruction_id equals d8e3532a-44cb-4c39-84ce-26ad32f19929, review_target_revision equals reconciliation expected_base_sha 924674ca7c983a6ccdf7e7167e58634d9b8fc35c, and scope_paths match its exact seven paths in content and order. Reject any eighth path.",
+      "Verify source Result 35bb4884-3fa8-48ca-98cf-52930213473e at its immutable locator has status FAIL, result_message_type REVIEW_FINDING, review_target_revision ab4d62982b1fba90b9ed73b298e66491b2bbb88b, and finding_ids exactly FINDING-TRAINING-CORE-POST-001-001 and FINDING-TRAINING-CORE-POST-001-003. Require F001 OPEN and F002 CLOSED; do not reopen F002.",
+      "Verify planned Work Commit W has parent 924674ca7c983a6ccdf7e7167e58634d9b8fc35c and changes exactly three paths: a byte-identical copy of the source finding Result with blob 7073c63f3abefb308d0247158b8a272ab0394c4b, .gpt-codex/evidence/training-core-post-002-remediation-basis.json, and .gpt-codex/evidence/training-core-post-002-remediation-adjudication.json. Require W remote verification before P.",
+      "Verify planned F001 basis only eliminates mutable caller-owned learning_map_reference retention, stores a canonical immutable module-owned reference, rejects or normalizes malformed, duck-typed and equality-spoofed direct-constructor input without caller-owned aliases, and requires direct-constructor regression coverage.",
+      "Verify planned F003 basis only enforces public TrainingAttempt initial-submission invariants: canonical immutable TrainingContext, immutable submitted user_analysis, no caller-owned mutable aliases, image_reference null, initial revision and status only, valid id and created_at with stable creation semantics, existing user_confidence rules, and the closed F002 Stage-consistency invariant. Require direct-constructor regression coverage.",
+      "Require no new revision workflow, persistence, screenshot support, Evaluation, LearningState, generalized validator framework, shared abstraction, or scope expansion.",
+      "Verify planned adjudication has evidence_id DECISION-TRAINING-CORE-POST-002-REMEDIATION, decision ACCEPT, state_revision 10, adjudicated_at_revision 10, and exactly the two finding IDs and accepted basis reference.",
+      "Verify planned Publication Commit P has parent W_SHA and changes exactly .gpt-codex/STATE.json, .gpt-codex/work-units/price-action-learning-training-core-001.json, .gpt-codex/evidence/training-core-post-002-remediation-work-verification.json, and .gpt-codex/evidence/results/training-core-post-002-remediation-publication.json. Advance STATE 9 to 10 and change only Training Work Unit basis_state_revision from 9 to 10.",
+      "Require no Training candidate mutation during this reconciliation; no FIX round 2 execution, F002 reopening, Training COMPLETE decision, or Evaluation start."
+    ],
+    "result_references": [
+      "35bb4884-3fa8-48ca-98cf-52930213473e"
+    ],
+    "revision": true
+  }
+}
