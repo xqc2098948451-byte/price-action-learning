@@ -1,0 +1,698 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-evaluation-core-001",
+  "extension": null,
+  "status": "PASS",
+  "result_message_type": "REVIEW_RESULT",
+  "result_id": "3f2c6e8d-4e1a-4d35-9a72-6d4a1f37c9b2",
+  "response_to_instruction_id": "a61c9c4d-5147-4472-85cc-d020966af863",
+  "responder_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "return_to_gpt_required": true,
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "framework_version": "2.7.4",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "current_remote_ref": "refs/heads/main",
+  "remote_head_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+  "review_target_revision": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+  "artifact_stage": "IMPLEMENTATION",
+  "state_revision": 11,
+  "changed": [],
+  "push_status": "NOT_ATTEMPTED",
+  "remote_verification": "VERIFIED",
+  "completion_gate": "GPT_DECISION",
+  "finding_ids": [],
+  "findings": [],
+  "blockers": [],
+  "deviations": [],
+  "execution": "Independent PRE review: READ / TEST / VALIDATE / REPORT. No Evaluation implementation or candidate mutation.",
+  "evidence_refs": [
+    "repository=xqc2098948451-byte/price-action-learning;commit=541f32c0d99305a1f35dfbdd04d62565e5f82c87;path=.gpt-codex/evidence/instructions/c8a62193-6e38-4f74-8eb1-a715bc7d6a54.json;blob=96f58b5fa2c9830a368da88c4b731c56b618f09b",
+    "repository=xqc2098948451-byte/price-action-learning;commit=7546ec0d0069f0a2a51ae8625292e99ab20d7bb1;path=.gpt-codex/evidence/instructions/a61c9c4d-5147-4472-85cc-d020966af863.json;blob=6f3e792285a3273e4b14bb3a0d113e027cb9c012",
+    "repository=xqc2098948451-byte/price-action-learning;commit=2431807f3b8e648942ee348f4526d5695115ef03;path=.gpt-codex/work-units/price-action-learning-evaluation-core-001.json;blob=7302bea75189d6418b31ebf68ea056d3d509fcab",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/STATE.json;blob=a9c3767465e70e085f06a29dfbfb8c971d087443",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/work-units/price-action-learning-training-core-001.json;blob=846a12902e8c726886603a22408f8d05ebb624e6",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=docs/CONTRACTS.md;blob=aea93c1b8fdecb3098cada74e3d58068d80826ff",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=docs/PROJECT_SCOPE.md;blob=bf6ef572ccca3c6cd041658fa86d22a65f626f11",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=docs/DIRECTORY_POLICY.md;blob=46f2da38b5189cb98f1c54e241e8eaa5ad01eb02",
+    "repository=xqc2098948451-byte/price-action-learning;commit=65cd6969e8ccf890d6e51b07fd7436564bf70421;path=spec/learning_map/LEARNING_MAP_SPEC.md;blob=726b35db8409ea03cbec33c916db7374e6724e03",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=spec/training/TRAINING_SPEC.md;blob=9c2ed5e2c275f71073f68a93de1178a565ae9a79",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=src/price_action_learning/training/core.py;blob=751fd8b84f332143616fbf018a7b4ef0c4b206d1",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/evidence/results/training-core-publication.json;blob=082f385cf72391bc70bda32c29c7f16d49b34a36",
+    "repository=xqc2098948451-byte/price-action-learning;commit=2431807f3b8e648942ee348f4526d5695115ef03;path=.gpt-codex/evidence/evaluation-core-001-user-approval.json;blob=bffecd643faeb9039b8ef1a5bb18c44e9dbdbeef",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=.gpt-codex/CONTROL.json;blob=e9c6d1b59003d4cafe93772ad3686ff2b033631e",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=AGENTS.md;blob=53df21aa8b22e04c8f84f8d5d0afa75097357821",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=src/price_action_learning/training/__init__.py;blob=66af9fd135c08942aa3973144b2a1fa763f13e3a",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=tests/training/test_training.py;blob=0102e37f34f30058941d173a43cf3364c1832d6b",
+    "repository=xqc2098948451-byte/price-action-learning;commit=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f;path=spec/evaluation/.gitkeep;blob=e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "repository=xqc2098948451-byte/price-action-learning;commit=a9c683470a4a7c3ee83b03ae136fb3558c1dd877;path=.gpt-codex/work-units/price-action-learning-evaluation-core-001.json;blob=b937b93552fc15284addd89d13edc16488da9c2c",
+    "repository=xqc2098948451-byte/gpt-codex-framework;commit=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c;path=.gpt-codex/scripts/validate_project.py;blob=10dc93eeaea89f060f915aa82ec34beb50d12dcb",
+    "repository=xqc2098948451-byte/gpt-codex-framework;commit=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c;path=.gpt-codex/scripts/publication_contract.py;blob=0bcc411ebbf2346e2da128a674eef4915c3d17aa",
+    "repository=xqc2098948451-byte/gpt-codex-framework;commit=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c;path=.gpt-codex/scripts/instruction_envelope.py;blob=5ed3ed12a4adf65db4cb0365a0d2683007f30f0d",
+    "repository=xqc2098948451-byte/gpt-codex-framework;commit=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c;path=.gpt-codex/scripts/continuity_resume.py;blob=068b1da4a2d164e4f78e094b4195d61bdde59bd3",
+    "repository=xqc2098948451-byte/gpt-codex-framework;commit=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c;path=.gpt-codex/scripts/role_communication.py;blob=9ca1021ad7768dfaaac2ec52dad479c8e87cfe75",
+    "repository=xqc2098948451-byte/gpt-codex-framework;commit=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c;path=.gpt-codex/scripts/result_return.py;blob=a47e86d9bf15b577e1c74e151a7209cee9cc2569",
+    "repository=xqc2098948451-byte/gpt-codex-framework;commit=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c;path=.gpt-codex/schemas/instruction-envelope.schema.json;blob=8e9cf987eb04619da84a24359f02b7abfcbe4425",
+    "repository=xqc2098948451-byte/gpt-codex-framework;commit=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c;path=.gpt-codex/schemas/result-envelope.schema.json;blob=7c3fd115f33d346f573da549c7c7bf3c481ad672"
+  ],
+  "evidence_resolution": {
+    "status": "PASS",
+    "resolver": "Framework 2.7.4 continuity_resume.resolve_immutable_artifact",
+    "all_locator_status": "ALLOW",
+    "work_unit_artifact_refs": {
+      "design": {
+        "status": "PASS",
+        "locator": {
+          "repository": "xqc2098948451-byte/price-action-learning",
+          "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+          "path": "docs/DIRECTORY_POLICY.md",
+          "blob_sha": "46f2da38b5189cb98f1c54e241e8eaa5ad01eb02"
+        }
+      },
+      "plan": {
+        "status": "PASS",
+        "locator": {
+          "repository": "xqc2098948451-byte/price-action-learning",
+          "commit_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+          "path": "docs/PROJECT_SCOPE.md",
+          "blob_sha": "bf6ef572ccca3c6cd041658fa86d22a65f626f11"
+        }
+      }
+    }
+  },
+  "verify": {
+    "repository_freshness": "PASS",
+    "state_invariants": "PASS",
+    "work_unit_authority": "PASS",
+    "artifact_refs": "PASS",
+    "scope": "PASS",
+    "business_path_baseline": "PASS",
+    "training_dependency": "PASS",
+    "shared_contract_binding": "PASS",
+    "historical_boundary_design": "PASS",
+    "error_eligibility_design": "PASS",
+    "cardinality_design": "PASS",
+    "abstain_design": "PASS",
+    "skill_signal_design": "PASS",
+    "future_outcome_independence": "PASS",
+    "public_constructor_hardening": "PASS",
+    "hostile_test_plan": "PASS",
+    "yagni_scope": "PASS",
+    "implementation_readiness": "PASS"
+  },
+  "implementation_readiness": "READY",
+  "HOSTILE_TEST_PLAN_COMPLETE": "YES",
+  "HOSTILE_FIRST_CYCLE_TEST_PLAN": "COMPLETE",
+  "contract_readiness": [
+    {
+      "number": 1,
+      "status": "PASS",
+      "requirement": "Exactly nine frozen persistent Evaluation fields; no hidden authority or parallel record."
+    },
+    {
+      "number": 2,
+      "status": "PASS",
+      "requirement": "Only the canonical published TrainingAttempt is accepted; retain its submitted analysis and single task/objective/target."
+    },
+    {
+      "number": 3,
+      "status": "PASS",
+      "requirement": "Exact TrainingAttempt/context/boundary/reference type gates precede canonical snapshot reconstruction; duck typing cannot bypass validation."
+    },
+    {
+      "number": 4,
+      "status": "PASS",
+      "requirement": "No mutation of TrainingAttempt, user_analysis, TrainingContext or KnowledgeBoundary; output stores no input object alias."
+    },
+    {
+      "number": 5,
+      "status": "PASS",
+      "requirement": "Formal authority uses submission Stage, learned CORE allowed concepts, canonical Error->Concept and Error->Skill mappings only."
+    },
+    {
+      "number": 6,
+      "status": "PASS",
+      "requirement": "Later learning, caller-source changes and later Learning Map revisions cannot expand a saved attempt authority."
+    },
+    {
+      "number": 7,
+      "status": "PASS",
+      "requirement": "Error Stage ceiling is S1 only / S1-S2 / S1-S3 for attempt Stage S1 / S2 / S3."
+    },
+    {
+      "number": 8,
+      "status": "PASS",
+      "requirement": "Require nonempty intersection of Error mapped concepts, historical learned concepts and canonical Stage allowed CORE concepts."
+    },
+    {
+      "number": 9,
+      "status": "PASS",
+      "requirement": "primary_error is str|None with cardinality zero or one; no alternate formal error field or parameter."
+    },
+    {
+      "number": 10,
+      "status": "PASS",
+      "requirement": "contributors is tuple[str,...] with zero, one or two IDs."
+    },
+    {
+      "number": 11,
+      "status": "PASS",
+      "requirement": "Contributors are unique and exclude primary_error."
+    },
+    {
+      "number": 12,
+      "status": "PASS",
+      "requirement": "abstain requires no primary/contributors; LOW requires abstain; correct/no-error may remain non-abstaining."
+    },
+    {
+      "number": 13,
+      "status": "PASS",
+      "requirement": "Derive skill_signal from primary error, otherwise first contributor, otherwise Stage primary Skill, without override."
+    },
+    {
+      "number": 14,
+      "status": "PASS",
+      "requirement": "No later market movement, future candle, trade result, realized P/L or prediction-result API input."
+    },
+    {
+      "number": 15,
+      "status": "PASS",
+      "requirement": "what_was_correct is immutable tuple[str,...], with canonical nonempty text members."
+    },
+    {
+      "number": 16,
+      "status": "PASS",
+      "requirement": "contributors is immutable tuple[str,...] of canonical approved Error IDs."
+    },
+    {
+      "number": 17,
+      "status": "PASS",
+      "requirement": "evaluation_confidence is exactly canonical HIGH, MEDIUM or LOW."
+    },
+    {
+      "number": 18,
+      "status": "PASS",
+      "requirement": "abstain has exact bool type; reject integers, strings, truthy objects and other bool-like substitutes."
+    },
+    {
+      "number": 19,
+      "status": "PASS",
+      "requirement": "Base-str values and immutable tuples close mutable aliases using Evaluation-local validation only."
+    },
+    {
+      "number": 20,
+      "status": "PASS",
+      "requirement": "No change needed to shared contracts, Training, Learning Map, LearningState, Review or Study Entry."
+    }
+  ],
+  "public_constructor_strategy": {
+    "status": "PASS",
+    "record": "One Evaluation record: frozen, slotted dataclass with init disabled and a public __new__ that always raises TypeError. Exactly the nine shared dataclass fields and slots; no instance __dict__, hidden authority field, token field, or parallel type.",
+    "public_api": "Export only Evaluation and create_evaluation. All public Evaluation(...) calls, with no arguments, nine field arguments, or malformed combinations, are rejected. dataclasses.replace cannot construct a replacement through the blocked constructor.",
+    "factory": "Only create_evaluation validates and builds a record. Complete all Training, boundary, text, Error, cardinality, abstain, confidence and skill checks before its private allocation via object.__new__(Evaluation) and assignment of nine validated immutable fields. No caller allocation/validation token, unchecked public builder, skill_signal, target, objective, boundary, or mapping override.",
+    "training_validation": "Require exact published TrainingAttempt, TrainingContext, KnowledgeBoundary and LearningMapReference types before any reconstruction. Normalize string subclasses with the base str operation before comparisons; reject nonstrings and equality spoofs. Validate canonical containers, CORE confidence pairs and exact reference scalar values; reject mismatched Stage, expanded allowed/learned sets, future/unapproved concepts and constructor-invalid tampering. Reconstruct through published KnowledgeBoundary, TrainingContext and TrainingAttempt constructors without editing any source, preserving original ID/timestamp/analysis and initial submission invariants.",
+    "historical_authority": "Consume only the canonicalized attempt Stage and stored learned concepts. Copy no current LearningState or later Learning Map. All 19 Error->Stage/Concept/Skill mappings and three Stage->primary Skill mappings are minimal immutable compatibility tuples from the frozen Learning Map; no concept definitions or mutable mapping inputs.",
+    "text_and_prose": "Copy collections to tuples; normalize every stored str subclass to base str and reject empty/whitespace-only or nonstring values. Reject any canonical approved Error-ID token carried in primary_issue or hint before returning; include punctuation, multi-token and subclass cases. Prose is evaluator-supplied diagnostic content scoped to this attempt; no NLP classifier or invented technical-analysis detection criteria.",
+    "boundary_limit": "The review covers supported public constructors and factories and malformed or tampered values that violate canonical invariants. Python low-level object allocation or reflection is not an additional supported construction API. No persistent provenance store is introduced.",
+    "future_verification": "Constructor and factory regression cases must execute in tests/evaluation/test_evaluation.py in the first implementation cycle; this PRE creates no candidate and executes no Evaluation tests."
+  },
+  "implementation_readiness_details": {
+    "scope": "Four real files added, .gitkeep removed only after spec creation; implementation fits exactly the five concrete paths. No directory selector is a requested mutation path.",
+    "spec": "Ownership/non-goals, user-first/process judgment, historical boundary, nine fields, types, eligibility, cardinality, confidence/abstain, skills and constructor rules fit EVALUATION_SPEC.md.",
+    "runtime": "All Evaluation-specific validation, 19-row minimal immutable compatibility mapping and private factory allocation fit core.py; __init__.py exports only intended API.",
+    "tests": "All 35 requested cases and execution/PRE refinements fit the single Evaluation test file; Training remains untouched.",
+    "semantic_boundary": "This is a validated structured-diagnostic contract, not automatic analysis. Evaluator prose must stay relevant to the frozen attempt task/objective/target and historical knowledge; formal machine error authority is enforced through only canonical IDs. No detailed natural-language detector is required by the accepted instruction."
+  },
+  "hostile_test_plan": [
+    {
+      "number": 1,
+      "status": "PLANNED",
+      "requirement": "canonical TrainingAttempt accepted",
+      "future_test": "Create a published S1 attempt with learned CON-S1-HIGH and evaluate it; assert exact Evaluation type and original attempt_id.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 2,
+      "status": "PLANNED",
+      "requirement": "duck-typed TrainingAttempt rejected",
+      "future_test": "Pass SimpleNamespace carrying all attempt fields; exact type gate rejects.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 3,
+      "status": "PLANNED",
+      "requirement": "duck-typed TrainingContext rejected",
+      "future_test": "Tamper a real attempt to contain a SimpleNamespace context; reject before reconstruction. Also test arbitrary KnowledgeBoundary/reference substitutes.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 4,
+      "status": "PLANNED",
+      "requirement": "tampered TrainingAttempt rejected",
+      "future_test": "Subtests alter Stage/context agreement, UUID, timestamp, status, revision, analysis, allowed/learned/confidence/reference fields; reject each constructor-invalid case.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 5,
+      "status": "PLANNED",
+      "requirement": "equality-spoofed Error ID rejected",
+      "future_test": "Nonstring objects and str subclasses with invalid underlying Error tokens but equality/hash overrides cannot pass normalized canonical membership.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 6,
+      "status": "PLANNED",
+      "requirement": "equality-spoofed confidence rejected",
+      "future_test": "Reject nonstrings and invalid underlying str-subclass confidence despite equality or membership spoofing.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 7,
+      "status": "PLANNED",
+      "requirement": "non-bool abstain rejected",
+      "future_test": "Reject 0, 1, None, strings and truthy objects; assert strict bool storage.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 8,
+      "status": "PLANNED",
+      "requirement": "mutable what_was_correct isolated",
+      "future_test": "Supply a list and mutate it after creation; assert unchanged tuple output.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 9,
+      "status": "PLANNED",
+      "requirement": "mutable contributors isolated",
+      "future_test": "Supply eligible list contributors, mutate after creation; assert unchanged tuple and skills.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 10,
+      "status": "PLANNED",
+      "requirement": "str subclasses normalized to base str",
+      "future_test": "Cover positive text, prose, error IDs and confidence; assert each stored text has exact str type and cannot retain subclass attributes.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 11,
+      "status": "PLANNED",
+      "requirement": "source mutation after call cannot alter Evaluation",
+      "future_test": "Mutate all caller containers and source text attributes; assert every returned field unchanged.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 12,
+      "status": "PLANNED",
+      "requirement": "S1 rejects S2/S3 errors",
+      "future_test": "Parameterize all S2/S3 canonical Error IDs as primary and contributor for S1.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 13,
+      "status": "PLANNED",
+      "requirement": "S2 rejects S3 errors",
+      "future_test": "Parameterize all LOC Error IDs as primary and contributor for S2.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 14,
+      "status": "PLANNED",
+      "requirement": "historically learned eligible earlier-stage error accepted",
+      "future_test": "S2 attempt with historically learned CON-S1-HIGH accepts OBS-001 and derives SKL-S1-MARKET-STATE.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 15,
+      "status": "PLANNED",
+      "requirement": "unlearned mapped concept rejected",
+      "future_test": "S1 learned only CON-S1-HIGH cannot use OBS-002; parameterize primary and contributor and empty learned boundary.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 16,
+      "status": "PLANNED",
+      "requirement": "later learning cannot expand authority",
+      "future_test": "Submit from learned list, later add FACT-VS-INTERPRETATION, assert OBS-002 still rejected for saved attempt; no current/later mapping consultation.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 17,
+      "status": "PLANNED",
+      "requirement": "more than two contributors rejected",
+      "future_test": "Use three otherwise eligible unique S1 errors; reject cardinality independently of eligibility.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 18,
+      "status": "PLANNED",
+      "requirement": "duplicate contributors rejected",
+      "future_test": "Supply the same eligible ID twice, including normalization-equal str subclass instances.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 19,
+      "status": "PLANNED",
+      "requirement": "primary duplicated in contributors rejected",
+      "future_test": "Supply primary again as contributor, including normalized aliases.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 20,
+      "status": "PLANNED",
+      "requirement": "abstain plus primary rejected",
+      "future_test": "True abstain with eligible OBS-001 rejects.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 21,
+      "status": "PLANNED",
+      "requirement": "abstain plus contributors rejected",
+      "future_test": "True abstain with one/two eligible contributors rejects.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 22,
+      "status": "PLANNED",
+      "requirement": "LOW plus abstain false rejected",
+      "future_test": "Reject LOW/nonabstain; allow LOW/True with no errors and useful positive feedback. Cover authorized HIGH/MEDIUM abstention.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 23,
+      "status": "PLANNED",
+      "requirement": "unknown Error ID rejected",
+      "future_test": "Unknown, malformed and whitespace-only primary/contributor values reject.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 24,
+      "status": "PLANNED",
+      "requirement": "correct/no-error/non-abstain works",
+      "future_test": "HIGH/MEDIUM, primary None and empty contributors return abstain False.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 25,
+      "status": "PLANNED",
+      "requirement": "one-primary-error works",
+      "future_test": "Exactly one eligible OBS-001 returns canonical primary and mapped skill.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 26,
+      "status": "PLANNED",
+      "requirement": "zero contributors works",
+      "future_test": "Assert empty tuple for primary-error, correct and abstain cases.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 27,
+      "status": "PLANNED",
+      "requirement": "one contributor works",
+      "future_test": "Assert one eligible contributor with and without a distinct eligible primary.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 28,
+      "status": "PLANNED",
+      "requirement": "two contributors works",
+      "future_test": "Assert two eligible unique contributors and preserved order, both with and without distinct eligible primary.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 29,
+      "status": "PLANNED",
+      "requirement": "skill_signal derived correctly",
+      "future_test": "Exercise all branches: primary takes precedence, first contributor determines skill, and no errors uses S1/S2/S3 Stage primary skill.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 30,
+      "status": "PLANNED",
+      "requirement": "initial user analysis unchanged",
+      "future_test": "Compare attempt, context, boundary and analysis values before and after success and rejection; same ID and analysis.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 31,
+      "status": "PLANNED",
+      "requirement": "no future-market-outcome API dependency",
+      "future_test": "Inspect factory signature and reject unexpected future candle/price/result/P&L/prediction keyword arguments. No network/outcome computation.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 32,
+      "status": "PLANNED",
+      "requirement": "Error-ID protocol cannot be smuggled into prose",
+      "future_test": "Reject each of 19 IDs, combined IDs, punctuation and malicious str subclasses inside primary_issue/hint even on correct/abstain paths.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 33,
+      "status": "PLANNED",
+      "requirement": "direct Evaluation construction cannot bypass validation",
+      "future_test": "Evaluation() and direct nine-field constructions fail; dataclasses.replace fails; malformed constructor combinations cannot yield a record. Assert dataclass fields and slots are exactly nine, frozen assignments fail and no hidden persistent field.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 34,
+      "status": "PLANNED",
+      "requirement": "all 39 Training tests remain PASS",
+      "future_test": "Run unchanged tests/training/test_training.py and record 39 pass, zero failure/error.",
+      "path": "tests/evaluation/test_evaluation.py"
+    },
+    {
+      "number": 35,
+      "status": "PLANNED",
+      "requirement": "full project suite PASS",
+      "future_test": "Discover every existing test file including future Evaluation tests by directory; require complete execution and zero failure/error.",
+      "path": "tests/evaluation/test_evaluation.py"
+    }
+  ],
+  "additional_first_cycle_tests": [
+    "Reject empty/whitespace-only primary_issue, hint and positive-feedback members, malformed nonstring collection members and bare string/bytes collection arguments; None remains allowed only for optional prose/primary.",
+    "No caller skill_signal, target/objective, learned/boundary, mapping, alternate error-list or future-outcome override; reject unsupported keyword arguments.",
+    "Invalid canonical reference scalar or CORE-confidence spoofing is rejected before published constructors can normalize it into valid authority.",
+    "Accepted Error mappings and Stage->Skill mapping exactly match the frozen 19-row Learning Map; all mapped Concept IDs belong to canonical cumulative CORE sets.",
+    "Positive feedback remains evaluator-authored, attempt-scoped historical feedback; validate supplied content shape without introducing semantic classification or new authority inputs."
+  ],
+  "baseline_tests": {
+    "training": {
+      "status": "PASS",
+      "tested_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+      "process_completed": true,
+      "exit_code": 0,
+      "test_count": 39,
+      "pass_count": 39,
+      "failure_count": 0,
+      "error_count": 0,
+      "skip_count": 0,
+      "test_files": [
+        "tests/training/test_training.py"
+      ],
+      "command": "$env:PYTHONDONTWRITEBYTECODE='1'; $env:PYTHONPATH='src'; python -B -m unittest discover -s tests/training -v"
+    },
+    "project": {
+      "status": "PASS",
+      "tested_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+      "process_completed": true,
+      "exit_code": 0,
+      "test_count": 39,
+      "pass_count": 39,
+      "failure_count": 0,
+      "error_count": 0,
+      "skip_count": 0,
+      "test_files": [
+        "tests/training/test_training.py"
+      ],
+      "command": "$env:PYTHONDONTWRITEBYTECODE='1'; $env:PYTHONPATH='src'; @'\nimport pathlib, unittest, json, sys\nfiles=sorted(pathlib.Path('tests').rglob('test*.py'))\nsuite=unittest.TestSuite()\nloader=unittest.TestLoader()\nfor directory in sorted({p.parent for p in files}):\n    suite.addTests(loader.discover(str(directory),pattern='test*.py'))\nresult=unittest.TextTestRunner(verbosity=1).run(suite)\ncounts={'tested_sha':'63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f','test_files':[p.as_posix() for p in files],'test_count':result.testsRun,'pass_count':result.testsRun-len(result.failures)-len(result.errors)-len(result.skipped),'failures':len(result.failures),'errors':len(result.errors),'skips':len(result.skipped),'exit_code':0 if result.wasSuccessful() else 1}\nprint(json.dumps(counts))\nsys.exit(counts['exit_code'])\n'@ | python -B -",
+      "discovery": "Every tracked current project test file was inventoried and every test-containing directory was explicitly discovered. Root discovery initially reported 0 tests and was not accepted as full-suite evidence."
+    }
+  },
+  "BASELINE_TRAINING_TEST_COUNT": 39,
+  "BASELINE_TRAINING_PASS_COUNT": 39,
+  "BASELINE_TRAINING_FAILURE_COUNT": 0,
+  "BASELINE_TRAINING_ERROR_COUNT": 0,
+  "BASELINE_PROJECT_TEST_COUNT": 39,
+  "BASELINE_PROJECT_PASS_COUNT": 39,
+  "BASELINE_PROJECT_FAILURE_COUNT": 0,
+  "BASELINE_PROJECT_ERROR_COUNT": 0,
+  "authority_chain": {
+    "status": "PASS",
+    "user_approval_blob": "b937b93552fc15284addd89d13edc16488da9c2c",
+    "approved_draft_commit": "a9c683470a4a7c3ee83b03ae136fb3558c1dd877",
+    "authorized_work_unit_commit": "2431807f3b8e648942ee348f4526d5695115ef03",
+    "scope_and_acceptance_unchanged": true,
+    "execution_instruction_id": "c8a62193-6e38-4f74-8eb1-a715bc7d6a54",
+    "pre_request_id": "a61c9c4d-5147-4472-85cc-d020966af863",
+    "all_exact_binding_mismatches": [],
+    "correlation_preflight": [
+      "PRE_EXECUTION_REVIEW_REQUIRED"
+    ],
+    "expected_reviewed_revision": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "expected_state_revision": 11
+  },
+  "state_baseline": {
+    "revision": 11,
+    "state": "AUTHORIZED",
+    "active_work_unit": null,
+    "blockers": [],
+    "reconciliation": null,
+    "active_execution_slots_key": "ABSENT",
+    "continuity_sync_status": "SYNCED",
+    "training_work_unit_state": "COMPLETE",
+    "evaluation_work_unit_state": "AUTHORIZED",
+    "basis_state_revision": 11,
+    "implementation_authorized": false,
+    "implementation_start_allowed": false,
+    "next_gate": "EVALUATION_CORE_PRE_EXECUTION"
+  },
+  "business_path_baseline": {
+    "spec/evaluation/.gitkeep": "PRESENT",
+    "gitkeep_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "spec/evaluation/EVALUATION_SPEC.md": "ABSENT",
+    "src/price_action_learning/evaluation/": "ABSENT",
+    "tests/evaluation/": "ABSENT",
+    "reviewed_git_tree_and_filesystem": "PASS"
+  },
+  "future_mutation_paths": [
+    "spec/evaluation/EVALUATION_SPEC.md",
+    "spec/evaluation/.gitkeep",
+    "src/price_action_learning/evaluation/__init__.py",
+    "src/price_action_learning/evaluation/core.py",
+    "tests/evaluation/test_evaluation.py"
+  ],
+  "yagni_scope": {
+    "status": "PASS",
+    "standard_library_only": true,
+    "excluded_capabilities_required": [],
+    "other_paths_required": [],
+    "new_shared_abstraction_required": false
+  },
+  "review_context": {
+    "fresh_reviewer_context": true,
+    "implementer_private_context_used": false,
+    "agent_spawns": 0,
+    "input_sources": [
+      "DURABLE_PROJECT_AUTHORITY",
+      "GOVERNED_ARTIFACT",
+      "GOVERNED_INSTRUCTION",
+      "REPOSITORY_CONTENT",
+      "VERIFICATION_EVIDENCE"
+    ]
+  },
+  "native_resume": {
+    "status": "LATEST_SYNCED_REMOTE_STATE",
+    "reconciliation_required": false,
+    "active_work_unit": null,
+    "verified_business_baseline": "979457060272fc4a63d0c4b6f26395f6507bc4c1",
+    "observed_main_attestation_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "management_only_attestation_paths": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/evidence/results/training-core-publication.json",
+      ".gpt-codex/evidence/training-core-publication-verification.json",
+      ".gpt-codex/work-units/price-action-learning-training-core-001.json"
+    ],
+    "handoff_bindings": {
+      "target_work_unit_id": "price-action-learning-evaluation-core-001",
+      "target_work_unit_ref": {
+        "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+        "sha": "2431807f3b8e648942ee348f4526d5695115ef03"
+      },
+      "instruction_locator": {
+        "repository": "xqc2098948451-byte/price-action-learning",
+        "commit_sha": "7546ec0d0069f0a2a51ae8625292e99ab20d7bb1",
+        "path": ".gpt-codex/evidence/instructions/a61c9c4d-5147-4472-85cc-d020966af863.json",
+        "blob_sha": "6f3e792285a3273e4b14bb3a0d113e027cb9c012"
+      },
+      "expected_state_revision": 11
+    },
+    "fallback": "Exact Framework 2.7.4 lacks the later plugin instruction/result/repository-handoff helpers. Native immutable-artifact resolution, explicit four bindings, continuity resume, validators and result_return are used directly; no execution-slot target is inferred."
+  },
+  "publication": {
+    "authorization": "The direct human task expressly authorizes publication of only this governance Result; this bounded publication is separate from the PRE envelope business-read-only authority.",
+    "branch": "governance/price-action-learning-training-wu-001",
+    "required_parent": "7546ec0d0069f0a2a51ae8625292e99ab20d7bb1",
+    "allowed_changed_paths": [
+      ".gpt-codex/evidence/results/3f2c6e8d-4e1a-4d35-9a72-6d4a1f37c9b2.json"
+    ],
+    "method": "Normal fast-forward, no force push.",
+    "result_push_status_semantics": "NOT_ATTEMPTED describes the completed PRE review and its reviewed main baseline; the later single-file evidence publication is independently reported after live remote verification."
+  },
+  "completion_evidence": {
+    "execution_state": "COMPLETED",
+    "process_completed": true,
+    "exit_code": 0,
+    "intended_scope": [],
+    "executed_scope": [],
+    "test_files_expected": 1,
+    "test_files_executed": 1,
+    "test_count": 39,
+    "failure_count": 0,
+    "error_count": 0,
+    "validators_expected": [
+      "EXECUTION_INSTRUCTION_SCHEMA_VALIDATION",
+      "EXECUTION_INSTRUCTION_AUTHORITY_VALIDATION",
+      "PRE_REQUEST_SCHEMA_VALIDATION",
+      "PRE_REQUEST_AUTHORITY_VALIDATION",
+      "RESULT_SCHEMA_VALIDATION",
+      "REVIEW_RESULT_VALIDATION",
+      "RESULT_AUTHORITY_VALIDATION",
+      "COMPLETION_EVIDENCE_VALIDATION",
+      "PRE_EXECUTION_VALIDATION"
+    ],
+    "validators_completed": [
+      "EXECUTION_INSTRUCTION_SCHEMA_VALIDATION",
+      "EXECUTION_INSTRUCTION_AUTHORITY_VALIDATION",
+      "PRE_REQUEST_SCHEMA_VALIDATION",
+      "PRE_REQUEST_AUTHORITY_VALIDATION",
+      "RESULT_SCHEMA_VALIDATION",
+      "REVIEW_RESULT_VALIDATION",
+      "RESULT_AUTHORITY_VALIDATION",
+      "COMPLETION_EVIDENCE_VALIDATION",
+      "PRE_EXECUTION_VALIDATION"
+    ],
+    "blocker_evidence_refs": []
+  },
+  "completion_scope_note": "Completion refers to this read-only PRE review only. The Training and project suites overlap on the same one file and 39 unique tests; both runs completed. It does not complete or enable the Evaluation Work Unit.",
+  "IMPLEMENTATION_STARTED": "NO",
+  "CANDIDATE_MUTATED": "NO",
+  "MAIN_MUTATED": "NO",
+  "STATE_MUTATED": "NO",
+  "TRAINING_MUTATED": "NO",
+  "POST_REVIEW_STARTED": "NO",
+  "LEARNING_STATE_STARTED": "NO",
+  "REVIEW_STARTED": "NO",
+  "STUDY_ENTRY_STARTED": "NO",
+  "HARD_STOP": "YES",
+  "RETURN_TO_GPT": "YES",
+  "next_gpt_action": "Re-observe the immutable PRE Result locator, repository identity, main/STATE and Work Unit. Decide the next governed execution authorization. PRE PASS and publication alone do not enable implementation. HARD_STOP=YES.",
+  "validation": {
+    "EXECUTION_INSTRUCTION_SCHEMA_VALIDATION": [],
+    "EXECUTION_INSTRUCTION_AUTHORITY_VALIDATION": [],
+    "PRE_REQUEST_SCHEMA_VALIDATION": [],
+    "PRE_REQUEST_AUTHORITY_VALIDATION": [],
+    "RESULT_SCHEMA_VALIDATION": [],
+    "REVIEW_RESULT_VALIDATION": [],
+    "RESULT_AUTHORITY_VALIDATION": [],
+    "COMPLETION_EVIDENCE_VALIDATION": [],
+    "PRE_EXECUTION_VALIDATION": []
+  },
+  "repository_observation": {
+    "source": "TOOL_OBSERVED",
+    "repository_api": "https://api.github.com/repos/xqc2098948451-byte/price-action-learning",
+    "repository_id": "1394745962",
+    "repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "refs_command": "git ls-remote origin refs/heads/main refs/heads/governance/price-action-learning-training-wu-001",
+    "main": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "governance_before": "7546ec0d0069f0a2a51ae8625292e99ab20d7bb1",
+    "framework_remote_commit": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c",
+    "framework_remote_tree": "700402330edd3adeedd6345bb35c6a03a48d3f47",
+    "learning_map_remote_blob": "726b35db8409ea03cbec33c916db7374e6724e03"
+  }
+}
