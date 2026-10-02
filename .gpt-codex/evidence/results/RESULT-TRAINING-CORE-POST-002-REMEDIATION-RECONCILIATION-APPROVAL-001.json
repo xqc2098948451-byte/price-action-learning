@@ -1,0 +1,65 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-training-core-post-002-remediation-registration-001",
+  "extension": {
+    "kind": "SKILL",
+    "id": "verification",
+    "version": "1.0.0"
+  },
+  "status": "PASS",
+  "result_message_type": "APPROVAL_RESULT",
+  "result_id": "RESULT-TRAINING-CORE-POST-002-REMEDIATION-RECONCILIATION-APPROVAL-001",
+  "decision": "APPROVE",
+  "response_to_instruction_id": "76fdbcd7-4e85-4934-b02f-f21542007e3e",
+  "approved_instruction": {
+    "instruction_id": "d8e3532a-44cb-4c39-84ce-26ad32f19929",
+    "expected_state_revision": 9,
+    "expected_base_sha": "924674ca7c983a6ccdf7e7167e58634d9b8fc35c",
+    "scope_paths": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+      ".gpt-codex/evidence/results/35bb4884-3fa8-48ca-98cf-52930213473e.json",
+      ".gpt-codex/evidence/training-core-post-002-remediation-basis.json",
+      ".gpt-codex/evidence/training-core-post-002-remediation-adjudication.json",
+      ".gpt-codex/evidence/training-core-post-002-remediation-work-verification.json",
+      ".gpt-codex/evidence/results/training-core-post-002-remediation-publication.json"
+    ],
+    "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+    "target_project_name": "Price Action Learning",
+    "target_github_repository_id": "1394745962",
+    "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "target_work_unit_ref": {
+      "path": ".gpt-codex/work-units/price-action-learning-training-core-post-002-remediation-registration-001.json",
+      "sha": "2c9ef00533f34e2e9e26844968d3921f30ff718c"
+    },
+    "issuer_role": "GPT_ORCHESTRATOR",
+    "executor_role": "CODEX_IMPLEMENTER",
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ]
+  },
+  "responder_role": "USER_APPROVER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "return_to_gpt_required": true,
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "framework_version": "2.7.4",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "current_remote_ref": "refs/heads/governance/price-action-learning-training-wu-001",
+  "state_revision": 9,
+  "remote_head_sha": null,
+  "sync_status": null,
+  "push_status": "NOT_ATTEMPTED",
+  "remote_verification": "NOT_ATTEMPTED",
+  "publication_authority": null,
+  "evidence_refs": [],
+  "completion_evidence": null,
+  "completion_gate": "NONE"
+}
