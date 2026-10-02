@@ -1,0 +1,91 @@
+{
+  "instruction_id": "9f0f4746-480b-446b-bdac-48cce492efb9",
+  "instruction_type": "REVIEW_REQUEST",
+  "artifact_stage": "IMPLEMENTATION",
+  "framework_version": "2.7.4",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "target_work_unit": "price-action-learning-training-core-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+    "sha": "e921cfa3ca82b35576e554d9c415137009b9960c"
+  },
+  "expected_state_revision": 10,
+  "expected_base_sha": "ab4d62982b1fba90b9ed73b298e66491b2bbb88b",
+  "review_target_revision": "565c6c86c3a4660176d1ace5f62cbd312849235a",
+  "expected_remote_name": "origin",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "e921cfa3ca82b35576e554d9c415137009b9960c",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "scope_paths": [
+    "spec/training/TRAINING_SPEC.md",
+    "spec/training/.gitkeep",
+    "src/price_action_learning/training/__init__.py",
+    "src/price_action_learning/training/core.py",
+    "tests/training/test_training.py"
+  ],
+  "permission_scope": "TRAINING_CORE_POST_FIX_ROUND_2_FULL_REREVIEW_ONLY",
+  "in_response_to_instruction_id": "e19a7f63-0ff1-46fa-a257-f21ca1f6c527",
+  "finding_ids": [
+    "FINDING-TRAINING-CORE-POST-001-001",
+    "FINDING-TRAINING-CORE-POST-001-003"
+  ],
+  "fix_round": 2,
+  "remediation_decision_ref": "DECISION-TRAINING-CORE-POST-002-REMEDIATION",
+  "completion_gate": "GPT_DECISION",
+  "evidence_requirements": {
+    "files_read": [
+      "Use Framework 2.7.4 at commit 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c and its native validators.",
+      "Authorized Training Work Unit: repository=xqc2098948451-byte/price-action-learning;commit=e921cfa3ca82b35576e554d9c415137009b9960c;path=.gpt-codex/work-units/price-action-learning-training-core-001.json;blob=40a5e6e3862c477b91c7c3116661d16395ac3287;state=AUTHORIZED;basis_state_revision=10.",
+      "Correlated FIX_INSTRUCTION: repository=xqc2098948451-byte/price-action-learning;commit=6428796b80c26899e3cf6894c40dfb00513fab96;path=.gpt-codex/evidence/instructions/e19a7f63-0ff1-46fa-a257-f21ca1f6c527.json;blob=e3eb5ce3209ee29505a8907d8a82af43a5a33023.",
+      "FIX round 2 PRE PASS: repository=xqc2098948451-byte/price-action-learning;commit=57b35893283c194fc2e4e14619023b7d22ecfa77;path=.gpt-codex/evidence/results/2c4da6ce-a653-4568-8711-ca1cf9dd90ed.json;blob=4a9af1a9eb5a20b2524f3555cb472033a5694d65.",
+      "Source POST finding: repository=xqc2098948451-byte/price-action-learning;commit=e921cfa3ca82b35576e554d9c415137009b9960c;path=.gpt-codex/evidence/results/35bb4884-3fa8-48ca-98cf-52930213473e.json;blob=7073c63f3abefb308d0247158b8a272ab0394c4b;F001 and F003 OPEN;F002 CLOSED.",
+      "Independently inspect D:/价格行为学习/training-core-001, including the complete Training spec, runtime, public exports, tests, docs/CONTRACTS.md, and Learning Map dependency. Do not rely on previous review summaries or passing tests alone.",
+      "This request supersedes the earlier POST Request at repository=xqc2098948451-byte/price-action-learning;commit=8d787f604a6150d4ede6b8a4a51cde1059fb81f5;path=.gpt-codex/evidence/instructions/8d58ea3a-3bc7-489e-8313-f9f9375325d9.json;blob=53aa1c2451b93e712ff0ade1aed3e7391747ba80. Review feedback identified an ineffective F002 regression test before any durable POST Result; the same authorized fix round 2 changed only that test and produced the new candidate tree."
+    ],
+    "tests": [
+      "Verify live origin refs/heads/main=e921cfa3ca82b35576e554d9c415137009b9960c, STATE revision=10, Training Work Unit AUTHORIZED at basis_state_revision=10, and candidate git write-tree=565c6c86c3a4660176d1ace5f62cbd312849235a; stop if stale.",
+      "Compare FIX base tree ab4d62982b1fba90b9ed73b298e66491b2bbb88b with fixed tree 565c6c86c3a4660176d1ace5f62cbd312849235a. The fix delta must touch exactly src/price_action_learning/training/core.py and tests/training/test_training.py.",
+      "Verify fixed blobs core.py=751fd8b84f332143616fbf018a7b4ef0c4b206d1 and test_training.py=0102e37f34f30058941d173a43cf3364c1832d6b. Verify preserved TRAINING_SPEC.md=9c2ed5e2c275f71073f68a93de1178a565ae9a79 and training/__init__.py=66af9fd135c08942aa3973144b2a1fa763f13e3a; spec/training/.gitkeep absent.",
+      "Run PYTHONPATH=src python -m unittest discover -s tests/training -p \"test_*.py\" -v and report actual count, failures, and errors; fix execution observed 39 tests, 0 failures, 0 errors. Run git diff --check and git diff --cached --check.",
+      "Check test quality by exercising the public constructors and observing post-construction history, malformed values, aliasing, spoofed equality, and F002 Stage mismatch. Do not equate green tests with contract satisfaction."
+    ],
+    "validation": [
+      "Perform a FULL independent hostile POST re-review of every Training Work Unit acceptance criterion and both F001/F003 corrections. Report all detectable findings in one pass. PASS only if the fixed candidate is safe to publish as Training Core MVP.",
+      "Validate this REVIEW_REQUEST using Framework validate_instruction_envelope_contract and validate_instruction_authority at current_state_revision=10 and approved_scope={spec/training/,src/price_action_learning/training/,tests/training/}; require both []. Verify the exact PRE Result and validate_pre_execution_review=[] before accepting fix execution.",
+      "Close F001 only if public KnowledgeBoundary and TrainingContext store an independent exact canonical immutable LearningMapReference; caller-owned, duck-typed, equality-spoofed, malformed, and noncanonical source objects cannot change stored history after construction.",
+      "Close F003 only if public TrainingAttempt direct construction stores canonical immutable context and submitted user_analysis; does not retain mutable caller aliases; requires image_reference=None, revision=None, status=SUBMITTED, canonical UUID4 id, stable UTC created_at, and existing user_confidence semantics. Keep F002 Stage consistency closed.",
+      "Verify Formal and Focused modes use one shared creation path, Focused requires focus_error_id, initial analysis is user-first and immutable, and no diagnosis or Evaluation precedes submission.",
+      "Verify exactly S1/S2/S3, cumulative canonical Stage concept counts 13/19/28, internally derived allowed IDs and CORE confidence, learned subset restriction, Stage-allowed target_concept_id which may be not yet learned, and rejection of unknown/future-stage values.",
+      "Verify the attempt's unique ID, UTC submission timestamp, eight shared fields and only authorized immutable context; the context preserves market scenario, observation task, one objective and target, mode, and historical knowledge boundary including Learning Map commit/path/blob. Later caller mutation or later learning must not rewrite it.",
+      "Inspect direct constructors and factories for nested mutability, malformed input, equality spoofing, identifier and timestamp semantics, mutable defaults, and frozen-value overwrite paths. Confirm spec/runtime/test consistency, public exports, standard-library-only implementation, and absence of private user data.",
+      "Verify Training performs no Evaluation, LearningState transition, Review decision, scoring, grading, trading signal, screenshot integration, persistence, API, UI, plugin, revision workflow, new module, generalized validator engine, or shared utility abstraction.",
+      "For validate_review_lifecycle, a future POST Result must set response_to_instruction_id=e19a7f63-0ff1-46fa-a257-f21ca1f6c527, review_target_revision=565c6c86c3a4660176d1ace5f62cbd312849235a, fix_round=2; pass resulting_revision=565c6c86c3a4660176d1ace5f62cbd312849235a. Retain all exact source POST finding evidence_refs in the future Result and cite this POST Request by immutable locator.",
+      "Report review findings and POST decision only. Do not mutate candidate, commit, push, publish, authorize, mark Training COMPLETE, or start Evaluation.",
+      "Specifically verify the named F002 Stage-mismatch regression supplies a valid canonical UUID4 and asserts the Stage-mismatch error, so it cannot pass through earlier ID validation."
+    ],
+    "result_references": [
+      "35bb4884-3fa8-48ca-98cf-52930213473e",
+      "2c4da6ce-a653-4568-8711-ca1cf9dd90ed"
+    ],
+    "revision": true
+  }
+}
