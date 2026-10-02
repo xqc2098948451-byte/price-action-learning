@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-TRAINING-CORE-POST-002-REMEDIATION-REGISTRATION-001-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-training-core-post-002-remediation-registration-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 9,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "db646041c28669e9ae16c4779fbbeea26b97210c"
+  },
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-training-core-post-002-remediation-registration-001.json@6b170f4c6c6364794a12ed13c8c00171efa8c4a6"
+  ],
+  "observed_at": "2026-10-02",
+  "notes": "User approved the exact POST-002 remediation-registration Work Unit bound to blob db646041c28669e9ae16c4779fbbeea26b97210c. Approval permits remaining governance gates. Approval does not execute reconciliation. Approval does not mutate the Training candidate. Approval does not execute FIX round 2. Approval does not start Evaluation."
+}
