@@ -1,0 +1,1102 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-evaluation-core-001",
+  "extension": {
+    "kind": "SKILL",
+    "id": "verification",
+    "version": "1.0.0"
+  },
+  "result_id": "127411d1-ae19-4a51-a900-cb1ea52b4f9f",
+  "result_message_type": "REVIEW_RESULT",
+  "status": "PASS",
+  "pre_status": "PASS",
+  "implementation_readiness": "READY",
+  "task": "PRICE_ACTION_LEARNING_EVALUATION_CORE_POST_001_FIX_ROUND_1_PRE_REVIEW_001",
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "framework_version": "2.7.4",
+  "framework_commit": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c",
+  "framework_access": "READ_ONLY",
+  "response_to_instruction_id": "7d9eac21-7d6e-4e78-b3a1-0c98d982a603",
+  "fix_instruction_id": "f24cf687-0191-4b24-9d5f-3727d87f88fd",
+  "source_result_id": "040c329e-33a9-4608-831e-1c47337e6e15",
+  "source_finding_ids": [
+    "EVAL-POST-001"
+  ],
+  "finding_ids": [],
+  "findings": [],
+  "fix_round": 1,
+  "remediation_decision_ref": "DECISION-EVALUATION-CORE-POST-001-REMEDIATION",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+    "sha": "636bfc03650286c28890ca01402021a5c1621437"
+  },
+  "state_revision": 12,
+  "review_target_revision": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+  "artifact_stage": "IMPLEMENTATION",
+  "responder_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "completion_gate": "GPT_DECISION",
+  "return_to_gpt_required": true,
+  "changed": [],
+  "execution": "COMPLETED: independent read-only FIX PRE review; no FIX implementation.",
+  "current_remote_ref": "refs/heads/main",
+  "local_head_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+  "remote_head_sha": "636bfc03650286c28890ca01402021a5c1621437",
+  "remote_verification": "VERIFIED",
+  "sync_status": null,
+  "publication_authority": null,
+  "push_status": "NOT_ATTEMPTED",
+  "remote_verification_scope": "Existing repository main/governance refs observed live; this local Result and Evaluation candidate are not published.",
+  "latest_synced_remote_state": {
+    "main": "636bfc03650286c28890ca01402021a5c1621437",
+    "state_revision": 12,
+    "resume_status": "LATEST_SYNCED_REMOTE_STATE"
+  },
+  "local_result_persistence": "LOCAL_ONLY_NOT_PUBLISHED",
+  "candidate_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+  "candidate_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+  "candidate_business_blobs": {
+    "spec/evaluation/EVALUATION_SPEC.md": "31b91d998f48cfb1d0a382336c47cdd4e40d1119",
+    "src/price_action_learning/evaluation/__init__.py": "657d7b1ba94ed543b63e64b681ab64e678d3aac4",
+    "src/price_action_learning/evaluation/core.py": "08b45f601d0aab04eaf407c173afb1fe27c45f99",
+    "tests/evaluation/test_evaluation.py": "6b5b44c681605d94401739a586d7ba16d4c79861"
+  },
+  "candidate_delta": [
+    "D\tspec/evaluation/.gitkeep",
+    "A\tspec/evaluation/EVALUATION_SPEC.md",
+    "A\tsrc/price_action_learning/evaluation/__init__.py",
+    "A\tsrc/price_action_learning/evaluation/core.py",
+    "A\ttests/evaluation/test_evaluation.py"
+  ],
+  "candidate_preservation": {
+    "all_files_unchanged": true,
+    "normal_index_unchanged": true,
+    "normal_index_sha256": "f85c556f2f0bb5145f9b345929dc88aa0b4f53691555d14aa268613069072857",
+    "head_branches_refs_unchanged": true,
+    "before_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+    "after_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+    "diff_from_reviewed_tree": []
+  },
+  "known_finding_reproduced": "YES",
+  "known_finding_is_pre_blocker": "NO",
+  "known_finding_confirmation": {
+    "finding_id": "EVAL-POST-001",
+    "known_finding_reproduced": true,
+    "known_finding_is_pre_blocker": false,
+    "status": "OPEN",
+    "candidate_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "candidate_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+    "source_stage": "S1",
+    "learned_at_submission": [
+      "CON-S1-HIGH"
+    ],
+    "setstate_owner": "dataclasses._dataclass_setstate",
+    "setstate_source": "def _dataclass_setstate(self, state):\n    for field, value in zip(fields(self), state):\n        # use setattr because dataclass may be frozen\n        object.__setattr__(self, field.name, value)\n",
+    "original": {
+      "attempt_id": "8650a2fd-f9b8-45f0-b0ac-bfbaf11436c5",
+      "what_was_correct": [
+        "Original positive"
+      ],
+      "primary_issue": null,
+      "primary_error": "OBS-001",
+      "contributors": [],
+      "hint": null,
+      "skill_signal": "SKL-S1-MARKET-STATE",
+      "evaluation_confidence": "HIGH",
+      "abstain": false
+    },
+    "after_public_setstate": {
+      "attempt_id": "wrong-attempt-id",
+      "what_was_correct": [
+        "Original positive"
+      ],
+      "primary_issue": "LOC-006; OBS-002",
+      "primary_error": "LOC-001",
+      "contributors": [
+        "LOC-001",
+        "LOC-002",
+        "LOC-003",
+        "UNKNOWN"
+      ],
+      "hint": "Forecast LOC-002",
+      "skill_signal": "SKL-S8-CALLER-OVERRIDE",
+      "evaluation_confidence": "LOW",
+      "abstain": 1
+    },
+    "alias_identity": {
+      "what_was_correct": true,
+      "contributors": true
+    },
+    "after_caller_list_mutation": {
+      "attempt_id": "wrong-attempt-id",
+      "what_was_correct": [
+        "Original positive",
+        "Caller changed after restoration"
+      ],
+      "primary_issue": "LOC-006; OBS-002",
+      "primary_error": "LOC-001",
+      "contributors": [
+        "LOC-001",
+        "LOC-002",
+        "LOC-003",
+        "UNKNOWN",
+        "OBS-002"
+      ],
+      "hint": "Forecast LOC-002",
+      "skill_signal": "SKL-S8-CALLER-OVERRIDE",
+      "evaluation_confidence": "LOW",
+      "abstain": 1
+    },
+    "factory_rejection_of_future_stage": {
+      "type": "ValueError",
+      "message": "formal Error Stage exceeds the submission Stage"
+    },
+    "pickle_protocols": [
+      {
+        "protocol": 0,
+        "new_instance": true,
+        "exact_Evaluation_type": true,
+        "original_primary": "OBS-001",
+        "forged_primary": "LOC-001",
+        "forged_skill": "SKL-S1-MARKET-STATE",
+        "original_unchanged": true,
+        "caller_low_level_allocation_or_setattr": false
+      },
+      {
+        "protocol": 1,
+        "new_instance": true,
+        "exact_Evaluation_type": true,
+        "original_primary": "OBS-001",
+        "forged_primary": "LOC-001",
+        "forged_skill": "SKL-S1-MARKET-STATE",
+        "original_unchanged": true,
+        "caller_low_level_allocation_or_setattr": false
+      }
+    ],
+    "caller_low_level_allocation_or_setattr": false,
+    "candidate_files_mutated": false,
+    "purpose": "Confirm existing authorized finding only; no FIX implementation or POST re-review."
+  },
+  "fix_plan": {
+    "chosen_accepted_strategy": "A",
+    "summary": "Disable unsupported public state restoration and pickle reconstruction in Evaluation; keep create_evaluation as the sole validated creation route.",
+    "future_scope_paths": [
+      "src/price_action_learning/evaluation/core.py",
+      "tests/evaluation/test_evaluation.py"
+    ],
+    "proposed_minimal_mechanism": [
+      "Define __setstate__ rejection on the existing frozen slotted class; it must raise before reading/assigning any field. This prevents dataclasses from installing its generated mutating setter.",
+      "Refuse ordinary __reduce__ and __reduce_ex__ serialization/reconstruction descriptions explicitly for every pickle protocol. The restoration rejection must also reject legacy protocol-0/1 payloads during loads.",
+      "Add only public-behavior regression tests in the existing test_evaluation.py. Preserve the factory, mappings, record shape and public exports."
+    ],
+    "implementation_performed": false,
+    "canonical_validation_retained": "create_evaluation still reconstructs canonical TrainingAttempt/context/boundary and enforces every current diagnostic invariant before allocation.",
+    "alternative_B_assessment": "Permitted only with complete factory-equivalent canonical history validation. The nine output fields alone do not retain the source TrainingAttempt boundary; disabling the unsupported route avoids any need to add persistent authority state.",
+    "closure_coverage": [
+      [
+        "generated/public __setstate__",
+        "Invoke the bound method on a fresh factory-created Evaluation; reject before writes and compare all nine fields before/after."
+      ],
+      [
+        "pickle protocol 0",
+        "Explicitly reject dumps/reduction or reject a legacy protocol-0 reconstruction payload, including OBS-001 -> LOC-001 byte tampering."
+      ],
+      [
+        "pickle protocol 1",
+        "Explicitly reject dumps/reduction or reject a legacy protocol-1 reconstruction payload, including OBS-001 -> LOC-001 byte tampering."
+      ],
+      [
+        "mutable restoration aliases",
+        "Inject independent what_was_correct and contributors lists; rejection must leave original fields unchanged before and after caller append/replace/clear."
+      ],
+      [
+        "attempt_id replacement",
+        "Attempt both a different canonical UUID and an invalid ID; no record may acquire a caller replacement ID."
+      ],
+      [
+        "future-stage Error injection",
+        "Attempt LOC-001 as primary and as contributor on an S1 record; reject without changing the original."
+      ],
+      [
+        "historical eligibility bypass",
+        "Attempt OBS-002 when only CON-S1-HIGH was learned at submission; later caller learning cannot authorize restoration."
+      ],
+      [
+        "Stage ceiling bypass",
+        "Retain all existing S1->S2/S3 and S2->S3 rejection tests; restoration cannot bypass their factory authority."
+      ],
+      [
+        "unknown Error injection",
+        "Test unknown primary and unknown contributor independently; unsupported restoration always rejects."
+      ],
+      [
+        ">2 contributors",
+        "Attempt three individually eligible contributors, without relying on another invalid field to provoke rejection."
+      ],
+      [
+        "duplicate contributors",
+        "Attempt duplicate IDs, including normalized text variants, independently."
+      ],
+      [
+        "primary/contributor overlap",
+        "Attempt a primary also present in contributors, independently."
+      ],
+      [
+        "Error-ID prose bypass",
+        "Attempt approved Error tokens in primary_issue and hint; retain all-19 token coverage in existing factory tests."
+      ],
+      [
+        "caller-controlled skill_signal",
+        "Attempt arbitrary and mismatched existing skills in restored state; reduction or restoration may not accept caller authority."
+      ],
+      [
+        "non-bool abstain",
+        "Attempt 0, 1, truthy text and bool-like values independently; strict bool factory behavior remains unchanged."
+      ],
+      [
+        "LOW/confidence incompatible formal errors",
+        "Attempt LOW with abstain=False, and LOW/abstain=True with primary or contributors; reject each independently."
+      ]
+    ],
+    "pickle_compatibility_required": false,
+    "standard_library_only": true,
+    "exact_scope_sufficient": true
+  },
+  "preservation_constraints": [
+    [
+      "exactly nine persistent fields",
+      "dataclasses.fields(Evaluation) and Evaluation.__slots__ match the frozen nine-field contract exactly; method definitions add no persistent field."
+    ],
+    [
+      "direct constructor / replace / no __dict__ / frozen output",
+      "Keep init=False, frozen=True, slots=True and blocked __new__. Existing test_33 checks constructors, replace, setattr/delattr, exact slots and no __dict__."
+    ],
+    [
+      "canonical TrainingAttempt and historical boundary",
+      "Leave _canonical_attempt and all published Training files intact. Retain exact types, canonical reference, UUID4, UTC timestamp, submission fields and canonical immutable boundary reconstruction."
+    ],
+    [
+      "all 19 mappings / Stage ceilings / learned-at-submission / later-learning isolation",
+      "Independent mapping comparison passed for all 19 Error-to-Stage/Concept/Skill rows and three Stage skills. Existing tests 12-16 and exhaustive mapping tests remain required."
+    ],
+    [
+      "0/1 primary / 0/1/2 contributors / uniqueness / primary separation",
+      "Keep current factory validation and tests 17-19, 25-28. Disable unchecked restore routes before they can assign any value."
+    ],
+    [
+      "Error-ID prose protection",
+      "Keep _diagnostic_prose and all-19 token tests for primary_issue and hint; restoration cannot add an alternate prose channel."
+    ],
+    [
+      "strict bool / LOW=>abstain / abstain=>no errors / correct may not abstain",
+      "Keep confidence/abstention validation and tests 07, 20-24; no serialization-only exception."
+    ],
+    [
+      "internally derived skill_signal",
+      "Keep primary-error -> first-contributor -> attempt-Stage precedence. No new skill_signal factory parameter, token, authority store or override."
+    ],
+    [
+      "mutable input copying",
+      "Keep _text_tuple normalization and canonical Training reconstruction. New restoration regressions compare all fields after rejection and subsequent caller collection mutation."
+    ],
+    [
+      "process-not-outcome / user-first analysis / standard library",
+      "Factory signature and dependencies remain unchanged; no future market outcome, analysis mutation, network, SDK or new package."
+    ],
+    [
+      "non-scope preservation",
+      "Keep EVALUATION_SPEC.md=31b91d998f48cfb1d0a382336c47cdd4e40d1119 and evaluation/__init__.py=657d7b1ba94ed543b63e64b681ab64e678d3aac4, .gitkeep absent, every other candidate path and normal index unchanged."
+    ]
+  ],
+  "regression_test_plan": {
+    "status": "COMPLETE",
+    "phase": "FUTURE PLAN REVIEW ONLY",
+    "setstate_fixture": "Use factory-created Evaluations. Exercise each invalid state separately, assert explicit unsupported-operation rejection, and compare every original field and immutable type after each call. No caller low-level allocation or object.__setattr__ reproduction.",
+    "cases": [
+      [
+        "generated/public __setstate__",
+        "Invoke the bound method on a fresh factory-created Evaluation; reject before writes and compare all nine fields before/after."
+      ],
+      [
+        "pickle protocol 0",
+        "Explicitly reject dumps/reduction or reject a legacy protocol-0 reconstruction payload, including OBS-001 -> LOC-001 byte tampering."
+      ],
+      [
+        "pickle protocol 1",
+        "Explicitly reject dumps/reduction or reject a legacy protocol-1 reconstruction payload, including OBS-001 -> LOC-001 byte tampering."
+      ],
+      [
+        "mutable restoration aliases",
+        "Inject independent what_was_correct and contributors lists; rejection must leave original fields unchanged before and after caller append/replace/clear."
+      ],
+      [
+        "attempt_id replacement",
+        "Attempt both a different canonical UUID and an invalid ID; no record may acquire a caller replacement ID."
+      ],
+      [
+        "future-stage Error injection",
+        "Attempt LOC-001 as primary and as contributor on an S1 record; reject without changing the original."
+      ],
+      [
+        "historical eligibility bypass",
+        "Attempt OBS-002 when only CON-S1-HIGH was learned at submission; later caller learning cannot authorize restoration."
+      ],
+      [
+        "Stage ceiling bypass",
+        "Retain all existing S1->S2/S3 and S2->S3 rejection tests; restoration cannot bypass their factory authority."
+      ],
+      [
+        "unknown Error injection",
+        "Test unknown primary and unknown contributor independently; unsupported restoration always rejects."
+      ],
+      [
+        ">2 contributors",
+        "Attempt three individually eligible contributors, without relying on another invalid field to provoke rejection."
+      ],
+      [
+        "duplicate contributors",
+        "Attempt duplicate IDs, including normalized text variants, independently."
+      ],
+      [
+        "primary/contributor overlap",
+        "Attempt a primary also present in contributors, independently."
+      ],
+      [
+        "Error-ID prose bypass",
+        "Attempt approved Error tokens in primary_issue and hint; retain all-19 token coverage in existing factory tests."
+      ],
+      [
+        "caller-controlled skill_signal",
+        "Attempt arbitrary and mismatched existing skills in restored state; reduction or restoration may not accept caller authority."
+      ],
+      [
+        "non-bool abstain",
+        "Attempt 0, 1, truthy text and bool-like values independently; strict bool factory behavior remains unchanged."
+      ],
+      [
+        "LOW/confidence incompatible formal errors",
+        "Attempt LOW with abstain=False, and LOW/abstain=True with primary or contributors; reject each independently."
+      ]
+    ],
+    "alias_assertions": "After rejection, mutate both caller what_was_correct/contributors lists using replacement, append and clear; compare all nine original fields again. Any retained reconstruction must be fully validated and canonical without aliases.",
+    "intended_pickle_protocols": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "protocol_0_and_1_explicit": true,
+    "legacy_reconstruction_regressions": "Include ordinary pickle.loads tests with legacy protocol-0/1 in-memory byte fixtures from the pre-FIX representation and forged Error bytes; explicit rejection is acceptable. Fixtures remain test data, with no production serializer or persistence layer.",
+    "acceptable_outcomes": [
+      "Explicit unsupported serialization/restoration/reconstruction rejection",
+      "If reconstruction is retained, full canonical factory-equivalent validation and immutable alias-free output"
+    ],
+    "post_fix_baseline_requirements": {
+      "existing_evaluation_tests": 46,
+      "existing_training_tests": 39,
+      "existing_full_project_tests": 85,
+      "additional_hostile_regressions": "All new regressions must pass; report actual counts, failures, errors, skips and exit codes.",
+      "full_project": "Enumerate every tests/**/test_*.py file and execute every file with per-file counts.",
+      "diff_checks": "git diff --check and isolated-index complete delta against reviewed pre-FIX tree; changes only in the ordered two approved FIX paths."
+    },
+    "full_hostile_post_required": "After separately governed FIX execution, a fresh COMPLETE FULL HOSTILE Evaluation POST re-review must cover the ENTIRE Work Unit and candidate. Passing FIX tests cannot close EVAL-POST-001."
+  },
+  "yagni_scope": {
+    "satisfied": true,
+    "future_prohibited": [
+      "persistence",
+      "serializer framework",
+      "storage format",
+      "generalized reconstruction engine",
+      "generalized validator framework",
+      "hidden authority token",
+      "extra persistent Evaluation field or tenth field",
+      "parallel Evaluation record",
+      "shared helpers/common/utils",
+      "LLM SDK",
+      "prompt infrastructure",
+      "screenshot support",
+      "TradingView",
+      "market-data retrieval",
+      "future-price logic",
+      "signals",
+      "scoring/ranking/rewards/gamification",
+      "API/database/UI/plugin",
+      "LearningState",
+      "Review module",
+      "Study Entry",
+      "S4-S8",
+      "new Concept/Error/Skill",
+      "new business module/top-level directory"
+    ],
+    "implementation_scope": "Only existing Evaluation class methods and existing test file. No factory business semantics change or shared abstraction."
+  },
+  "evaluation_test_result": {
+    "command": "python -B -m unittest discover -s tests/evaluation -p test_evaluation.py -v",
+    "cwd": "D:\\价格行为学习\\evaluation-core-candidate",
+    "python_executable": "C:\\Python313\\python.exe",
+    "candidate_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "candidate_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+    "count": 46,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "exit_code": 0,
+    "passed": true,
+    "log": "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\evaluation-tests.log"
+  },
+  "training_test_result": {
+    "command": "python -B -m unittest discover -s tests/training -p test_training.py -v",
+    "cwd": "D:\\价格行为学习\\evaluation-core-candidate",
+    "python_executable": "C:\\Python313\\python.exe",
+    "candidate_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "candidate_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+    "count": 39,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "exit_code": 0,
+    "passed": true,
+    "log": "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\training-tests.log"
+  },
+  "full_project_test_result": {
+    "command": "python -B C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\review_checks.py full-tests",
+    "method": "Explicit sorted tests/**/test_*.py enumeration, distinct importlib modules, loadTestsFromModule, combined TextTestRunner",
+    "candidate_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "candidate_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+    "inventory": [
+      {
+        "path": "tests/evaluation/test_evaluation.py",
+        "loaded_count": 46
+      },
+      {
+        "path": "tests/training/test_training.py",
+        "loaded_count": 39
+      }
+    ],
+    "test_files_expected": 2,
+    "test_files_executed": 2,
+    "count": 85,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "passed": true,
+    "exit_code": 0
+  },
+  "git_diff_check": "PASS",
+  "complete_candidate_diff_check": "PASS",
+  "immutable_references": {
+    "pre": {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "1e9831f03c138560e21305fb19d319c2fc6e36b8",
+      "path": ".gpt-codex/evidence/instructions/7d9eac21-7d6e-4e78-b3a1-0c98d982a603.json",
+      "blob_sha": "663a7ae9fcedfeef5e8b13c640438c432b25ceac"
+    },
+    "fix": {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "9b3d5a1a5e87aadbeedca75b55bb20ec219715eb",
+      "path": ".gpt-codex/evidence/instructions/f24cf687-0191-4b24-9d5f-3727d87f88fd.json",
+      "blob_sha": "9f982602030491da03dd4a4c1bc85fc2a3f4e0ed"
+    },
+    "source": {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "636bfc03650286c28890ca01402021a5c1621437",
+      "path": ".gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json",
+      "blob_sha": "471510a417586578801571341f9944da1fb39330"
+    },
+    "basis": {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "636bfc03650286c28890ca01402021a5c1621437",
+      "path": ".gpt-codex/evidence/evaluation-core-post-001-remediation-basis.json",
+      "blob_sha": "1c31ba000cbef77a662812428e5fc92a0c3ecedb"
+    },
+    "adjudication": {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "636bfc03650286c28890ca01402021a5c1621437",
+      "path": ".gpt-codex/evidence/evaluation-core-post-001-remediation-adjudication.json",
+      "blob_sha": "e68705cd3ecddcc881c32730d0e18606475bc82c"
+    },
+    "state": {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "636bfc03650286c28890ca01402021a5c1621437",
+      "path": ".gpt-codex/STATE.json",
+      "blob_sha": "92bc9256abc2848837db6b6b83b28a3ab4db5105"
+    },
+    "work_unit": {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "636bfc03650286c28890ca01402021a5c1621437",
+      "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+      "blob_sha": "104aae119985f04051e4733c3ab853e2f6d14ed5"
+    },
+    "control": {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "636bfc03650286c28890ca01402021a5c1621437",
+      "path": ".gpt-codex/CONTROL.json",
+      "blob_sha": "e9c6d1b59003d4cafe93772ad3686ff2b033631e"
+    }
+  },
+  "requirement_completion": {
+    "files_read": [
+      {
+        "ordinal": 1,
+        "requirement": "Exact READ_ONLY Framework authority: repository=xqc2098948451-byte/gpt-codex-framework; version=2.7.4; commit=935d6f3fcf5e54a478810a79a82a8695fcf4cf4c. Independently resolve/read the native Instruction schema, instruction builder, immutable-artifact resolver, instruction authority validator, review lifecycle validator and validate_pre_execution_review from this exact commit. Do not substitute later or locally modified Framework source.",
+        "completed": true,
+        "completion_basis": "Exact framework source-manifest bytes rechecked against required commit; native schema, builder, immutable resolver and review validators read and used from that extraction."
+      },
+      {
+        "ordinal": 2,
+        "requirement": "Correlated FIX_INSTRUCTION: repository=xqc2098948451-byte/price-action-learning; commit=9b3d5a1a5e87aadbeedca75b55bb20ec219715eb; path=.gpt-codex/evidence/instructions/f24cf687-0191-4b24-9d5f-3727d87f88fd.json; blob=9f982602030491da03dd4a4c1bc85fc2a3f4e0ed; instruction_id=f24cf687-0191-4b24-9d5f-3727d87f88fd; instruction_type=FIX_INSTRUCTION; expected_state_revision=12; expected_base_sha=review_target_revision=95a5e5eddaf4fbe9071275e2cccf0e0943665c4d; expected_remote_head_sha=636bfc03650286c28890ca01402021a5c1621437; finding_ids exactly [EVAL-POST-001]; fix_round=1; remediation_decision_ref=DECISION-EVALUATION-CORE-POST-001-REMEDIATION; permission_scope=EVALUATION_CORE_POST_001_FIX_ROUND_1_ONLY; completion_gate=GPT_DECISION.",
+        "completed": true,
+        "completion_basis": "Exact FIX locator resolved; full FIX read; native schema/authority passed and explicit 21 shared bindings plus role/action/scope specifics verified."
+      },
+      {
+        "ordinal": 3,
+        "requirement": "Current Project authority: repository=xqc2098948451-byte/price-action-learning; repository_id=1394745962; commit=636bfc03650286c28890ca01402021a5c1621437. Read AGENTS.md, CONTROL.json and STATE.json from this immutable main authority, not historical governance-branch copies. CONTROL project_id=PRJ-PRICE-ACTION-LEARNING-1394745962; project_context_id=e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9; project_name=Price Action Learning. STATE path=.gpt-codex/STATE.json; blob=92bc9256abc2848837db6b6b83b28a3ab4db5105; revision=12; state=AUTHORIZED; active_work_unit=null; blockers=[]; reconciliation=null; active_execution_slots key ABSENT; continuity.sync_status=SYNCED.",
+        "completed": true,
+        "completion_basis": "Current immutable main AGENTS/CONTROL/STATE read and exact blobs verified. Current native resume is LATEST_SYNCED_REMOTE_STATE; all stated STATE values and next_action reviewed."
+      },
+      {
+        "ordinal": 4,
+        "requirement": "Authorized Evaluation Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=.gpt-codex/work-units/price-action-learning-evaluation-core-001.json; blob=104aae119985f04051e4733c3ab853e2f6d14ed5; work_unit_id=price-action-learning-evaluation-core-001; state=AUTHORIZED; basis_state_revision=12; implementation_authorized=false; implementation_start_allowed=false; next_gate=EVALUATION_CORE_PRE_EXECUTION. Preserve every existing business acceptance semantic.",
+        "completed": true,
+        "completion_basis": "Work Unit exact blob/state/basis/gates independently verified; existing business acceptance reviewed; no Work Unit mutation."
+      },
+      {
+        "ordinal": 5,
+        "requirement": "Source hostile POST finding: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=.gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json; blob=471510a417586578801571341f9944da1fb39330; result_id=040c329e-33a9-4608-831e-1c47337e6e15; result_message_type=REVIEW_FINDING; status=FAIL; POST_STATUS=FAIL; PUBLICATION_READINESS=NOT_READY; finding_ids exactly [EVAL-POST-001]. The P1 finding concerns generated/public Evaluation.__setstate__ and pickle reconstruction protocols 0 and 1 bypassing validated immutable-record invariants; it remains OPEN.",
+        "completed": true,
+        "completion_basis": "Source Result exact blob, REVIEW_FINDING/FAIL, EVAL-POST-001/P1 and candidate-tree binding verified. Known behavior independently reproduced only for correlation; finding remains OPEN."
+      },
+      {
+        "ordinal": 6,
+        "requirement": "Accepted remediation basis: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=.gpt-codex/evidence/evaluation-core-post-001-remediation-basis.json; blob=1c31ba000cbef77a662812428e5fc92a0c3ecedb; evidence_id=EVIDENCE-EVALUATION-CORE-POST-001-REMEDIATION-BASIS; state_revision=12; result=ACCEPTED; finding_ids exactly [EVAL-POST-001]; accepted=true; failing=false.",
+        "completed": true,
+        "completion_basis": "Exact accepted basis read and resolved: revision12, EVAL-POST-001, ACCEPTED, accepted=true/failing=false."
+      },
+      {
+        "ordinal": 7,
+        "requirement": "Accepted remediation adjudication: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=.gpt-codex/evidence/evaluation-core-post-001-remediation-adjudication.json; blob=e68705cd3ecddcc881c32730d0e18606475bc82c; evidence_id=DECISION-EVALUATION-CORE-POST-001-REMEDIATION; decision=ACCEPT; result=ACCEPT; state_revision=12; finding_ids exactly [EVAL-POST-001]; basis_refs exactly [EVIDENCE-EVALUATION-CORE-POST-001-REMEDIATION-BASIS].",
+        "completed": true,
+        "completion_basis": "Exact adjudication read and resolved: ACCEPT, revision12, exact finding and accepted-basis ref; native lifecycle returned []."
+      },
+      {
+        "ordinal": 8,
+        "requirement": "Existing reviewed candidate: workspace=D:\\价格行为学习\\evaluation-core-candidate; HEAD=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; reviewed complete tree=95a5e5eddaf4fbe9071275e2cccf0e0943665c4d. Before FIX, spec/evaluation/EVALUATION_SPEC.md blob=31b91d998f48cfb1d0a382336c47cdd4e40d1119; src/price_action_learning/evaluation/__init__.py blob=657d7b1ba94ed543b63e64b681ab64e678d3aac4; src/price_action_learning/evaluation/core.py blob=08b45f601d0aab04eaf407c173afb1fe27c45f99; tests/evaluation/test_evaluation.py blob=6b5b44c681605d94401739a586d7ba16d4c79861; spec/evaluation/.gitkeep is absent, with its existing deletion preserved. Do not reconstruct a candidate from current main.",
+        "completed": true,
+        "completion_basis": "Before/after independent isolated-index tree, four blobs, five-path delta and .gitkeep absence match; raw candidate files, HEAD/shared refs and index SHA256 unchanged."
+      },
+      {
+        "ordinal": 9,
+        "requirement": "Read the candidate Evaluation spec, public exports, runtime and tests, docs/CONTRACTS.md, docs/PROJECT_SCOPE.md, docs/DIRECTORY_POLICY.md, relevant canonical published TrainingAttempt/context/knowledge-boundary contracts and runtime, and the immutable S1-S3 Learning Map Error-to-Concept/Error-to-Skill mappings. These are read-only references except the exact two FIX scope paths.",
+        "completed": true,
+        "completion_basis": "All four candidate Evaluation files and published Training/spec/tests/contracts/scope/directory/Learning Map references read. Independent all-19 mapping/Stage-skill comparison passed; bounded preservation analysis completed."
+      },
+      {
+        "ordinal": 10,
+        "requirement": "Immutable read-only published reference: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=AGENTS.md; blob=53df21aa8b22e04c8f84f8d5d0afa75097357821. Independently read the referenced contract/runtime/tests; preserve canonical TrainingAttempt behavior and immutable S1-S3 Learning Map Error-to-Concept, Error-to-Skill and Stage-to-Skill authority.",
+        "completed": true,
+        "completion_basis": "Individually resolved/read repeated published locator; exact immutable and candidate reference blobs match. See published-reference-reads.json requirement ordinal10."
+      },
+      {
+        "ordinal": 11,
+        "requirement": "Immutable read-only published reference: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=.gpt-codex/CONTROL.json; blob=e9c6d1b59003d4cafe93772ad3686ff2b033631e. Independently read the referenced contract/runtime/tests; preserve canonical TrainingAttempt behavior and immutable S1-S3 Learning Map Error-to-Concept, Error-to-Skill and Stage-to-Skill authority.",
+        "completed": true,
+        "completion_basis": "Individually resolved/read repeated published locator; exact immutable and candidate reference blobs match. See published-reference-reads.json requirement ordinal11."
+      },
+      {
+        "ordinal": 12,
+        "requirement": "Immutable read-only published reference: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=spec/training/TRAINING_SPEC.md; blob=9c2ed5e2c275f71073f68a93de1178a565ae9a79. Independently read the referenced contract/runtime/tests; preserve canonical TrainingAttempt behavior and immutable S1-S3 Learning Map Error-to-Concept, Error-to-Skill and Stage-to-Skill authority.",
+        "completed": true,
+        "completion_basis": "Individually resolved/read repeated published locator; exact immutable and candidate reference blobs match. See published-reference-reads.json requirement ordinal12."
+      },
+      {
+        "ordinal": 13,
+        "requirement": "Immutable read-only published reference: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=src/price_action_learning/training/__init__.py; blob=66af9fd135c08942aa3973144b2a1fa763f13e3a. Independently read the referenced contract/runtime/tests; preserve canonical TrainingAttempt behavior and immutable S1-S3 Learning Map Error-to-Concept, Error-to-Skill and Stage-to-Skill authority.",
+        "completed": true,
+        "completion_basis": "Individually resolved/read repeated published locator; exact immutable and candidate reference blobs match. See published-reference-reads.json requirement ordinal13."
+      },
+      {
+        "ordinal": 14,
+        "requirement": "Immutable read-only published reference: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=src/price_action_learning/training/core.py; blob=751fd8b84f332143616fbf018a7b4ef0c4b206d1. Independently read the referenced contract/runtime/tests; preserve canonical TrainingAttempt behavior and immutable S1-S3 Learning Map Error-to-Concept, Error-to-Skill and Stage-to-Skill authority.",
+        "completed": true,
+        "completion_basis": "Individually resolved/read repeated published locator; exact immutable and candidate reference blobs match. See published-reference-reads.json requirement ordinal14."
+      },
+      {
+        "ordinal": 15,
+        "requirement": "Immutable read-only published reference: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=tests/training/test_training.py; blob=0102e37f34f30058941d173a43cf3364c1832d6b. Independently read the referenced contract/runtime/tests; preserve canonical TrainingAttempt behavior and immutable S1-S3 Learning Map Error-to-Concept, Error-to-Skill and Stage-to-Skill authority.",
+        "completed": true,
+        "completion_basis": "Individually resolved/read repeated published locator; exact immutable and candidate reference blobs match. See published-reference-reads.json requirement ordinal15."
+      },
+      {
+        "ordinal": 16,
+        "requirement": "Immutable read-only published reference: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=spec/learning_map/LEARNING_MAP_SPEC.md; blob=726b35db8409ea03cbec33c916db7374e6724e03. Independently read the referenced contract/runtime/tests; preserve canonical TrainingAttempt behavior and immutable S1-S3 Learning Map Error-to-Concept, Error-to-Skill and Stage-to-Skill authority.",
+        "completed": true,
+        "completion_basis": "Individually resolved/read repeated published locator; exact immutable and candidate reference blobs match. See published-reference-reads.json requirement ordinal16."
+      },
+      {
+        "ordinal": 17,
+        "requirement": "Immutable read-only published reference: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=docs/CONTRACTS.md; blob=aea93c1b8fdecb3098cada74e3d58068d80826ff. Independently read the referenced contract/runtime/tests; preserve canonical TrainingAttempt behavior and immutable S1-S3 Learning Map Error-to-Concept, Error-to-Skill and Stage-to-Skill authority.",
+        "completed": true,
+        "completion_basis": "Individually resolved/read repeated published locator; exact immutable and candidate reference blobs match. See published-reference-reads.json requirement ordinal17."
+      },
+      {
+        "ordinal": 18,
+        "requirement": "Immutable read-only published reference: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=docs/PROJECT_SCOPE.md; blob=bf6ef572ccca3c6cd041658fa86d22a65f626f11. Independently read the referenced contract/runtime/tests; preserve canonical TrainingAttempt behavior and immutable S1-S3 Learning Map Error-to-Concept, Error-to-Skill and Stage-to-Skill authority.",
+        "completed": true,
+        "completion_basis": "Individually resolved/read repeated published locator; exact immutable and candidate reference blobs match. See published-reference-reads.json requirement ordinal18."
+      },
+      {
+        "ordinal": 19,
+        "requirement": "Immutable read-only published reference: repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=docs/DIRECTORY_POLICY.md; blob=46f2da38b5189cb98f1c54e241e8eaa5ad01eb02. Independently read the referenced contract/runtime/tests; preserve canonical TrainingAttempt behavior and immutable S1-S3 Learning Map Error-to-Concept, Error-to-Skill and Stage-to-Skill authority.",
+        "completed": true,
+        "completion_basis": "Individually resolved/read repeated published locator; exact immutable and candidate reference blobs match. See published-reference-reads.json requirement ordinal19."
+      }
+    ],
+    "tests": [
+      {
+        "ordinal": 1,
+        "requirement": "BEFORE FIX, execute the existing candidate Evaluation suite read-only: python -B -m unittest discover -s tests/evaluation -p test_evaluation.py -v. Use candidate cwd, PYTHONPATH=src and PYTHONDONTWRITEBYTECODE=1. Expected baseline is 46 tests / all PASS; report actual count, command, tested candidate identity, exit code, failures, errors and skips. Do not add or change tests during PRE.",
+        "completed": true,
+        "completion_basis": "Authentic Evaluation command: 46/46 PASS, exit0, failures0/errors0/skips0 on exact candidate; evaluation-tests.log retained."
+      },
+      {
+        "ordinal": 2,
+        "requirement": "BEFORE FIX, execute the published Training suite from the same existing candidate: python -B -m unittest discover -s tests/training -p test_training.py -v. Expected 39/39 PASS; report actual counts/outcomes/exit code/failures/errors/skips. No Training mutation.",
+        "completed": true,
+        "completion_basis": "Authentic Training command: 39/39 PASS, exit0, failures0/errors0/skips0; training-tests.log retained; Training unchanged."
+      },
+      {
+        "ordinal": 3,
+        "requirement": "BEFORE FIX, explicitly enumerate every tests/**/test_*.py file and execute every enumerated file, including non-package directories. Use importlib file loading with distinct module names and unittest.loadTestsFromModule, or an equivalent complete method. Report complete inventory, per-file counts, combined command, actual total, exit code, failures, errors and skips. Expected actual baseline is 85/85 PASS (46 Evaluation plus 39 Training). Silent root discovery that skips nested non-package directories is not acceptable.",
+        "completed": true,
+        "completion_basis": "Every tests/**/test_*.py file explicitly loaded with distinct importlib names: Evaluation46 + Training39 =85/85 PASS; exit0, failures0/errors0/skips0; complete inventory/log retained."
+      },
+      {
+        "ordinal": 4,
+        "requirement": "Run git diff --check and a complete-candidate isolated-index git diff --cached --check HEAD. Use temporary GIT_INDEX_FILE outside the repository, read-tree HEAD, add -A -- ., write-tree, and diff --cached --name-status HEAD. Include all untracked additions and the existing .gitkeep deletion. Require exact candidate tree and exact five-path baseline delta; preserve normal index bytes and all candidate files/HEAD/refs. Report both diff-check results.",
+        "completed": true,
+        "completion_basis": "Before/after git diff --check and isolated-index cached diff check HEAD passed; exact complete tree/five-path delta and normal-index preservation verified."
+      },
+      {
+        "ordinal": 5,
+        "requirement": "Independently reproduce or otherwise confirm the known EVAL-POST-001 behavior on the exact reviewed pre-FIX candidate sufficiently to prove the target still exists: factory-created Evaluation.__setstate__ mutation/alias bypass and standard pickle protocols 0 and 1 reconstruction bypass. Use ordinary public behavior and in-memory test objects; no repository changes. Record original/invalid values, protocol evidence and historical scope. Keep EVAL-POST-001 OPEN; mark known finding is_pre_blocker=false. This expected defect does not itself warrant a new PRE finding or NOT_READY.",
+        "completed": true,
+        "completion_basis": "Public factory-record __setstate__ mutation and two mutable-list aliases reproduced; standard pickle0/1 byte-tampered LOC-001 reconstruction reproduced without caller low-level operations. OPEN/is_pre_blocker=false."
+      },
+      {
+        "ordinal": 6,
+        "requirement": "REVIEW THE FUTURE REGRESSION PLAN ONLY: require hostile tests of factory-created Evaluation.__setstate__, rejected restoration leaving all nine original fields unchanged, and mutable what_was_correct/contributors restoration input aliases. After each rejected call and subsequent caller list mutation, the original record must remain unchanged. A retained reconstruction path must store canonical immutable content without aliases.",
+        "completed": true,
+        "completion_basis": "Future regression plan has factory-created restoration fixtures, rejection before writes, all-nine-field equality, both alias lists and subsequent caller-mutation checks."
+      },
+      {
+        "ordinal": 7,
+        "requirement": "REVIEW THE FUTURE PICKLE PLAN ONLY: explicitly cover protocols 0 and 1 and preferably all supported protocols using range(pickle.HIGHEST_PROTOCOL + 1). Explicit rejection of unsupported serialization/reconstruction is acceptable; valid reconstruction is acceptable only after complete factory-equivalent canonical validation. Report intended protocol coverage. Pickle compatibility is not required.",
+        "completed": true,
+        "completion_basis": "Future pickle plan explicitly includes0/1 and every protocol0 through HIGHEST_PROTOCOL, including legacy reconstruction fixtures; unsupported rejection accepted; no compatibility requirement."
+      },
+      {
+        "ordinal": 8,
+        "requirement": "REVIEW THE FUTURE HOSTILE PLAN ONLY: cover future-stage Error injection, historically unlearned Error injection/later-learning isolation, unknown Error or contributor, more than two contributors, duplicate contributors, primary/contributor overlap, Error IDs in diagnostic prose, caller skill_signal override, non-bool abstain, LOW confidence with incompatible formal errors, wrong attempt_id, and mutable restoration aliases. Unsupported routes must reject; retained routes must perform complete canonical validation. No invalid input may mutate or construct an invalid Evaluation.",
+        "completed": true,
+        "completion_basis": "Future plan contains each hostile case independently, both primary/contributor paths where relevant, historical-unlearned/later-learning, all cardinality/prose/skill/bool/confidence/ID/alias cases."
+      },
+      {
+        "ordinal": 9,
+        "requirement": "REVIEW THE FUTURE POST-FIX VALIDATION PLAN ONLY: preserve all 46 existing Evaluation tests and add the complete hostile regressions; retain Training 39/39 PASS; enumerate and run every full-project test file. All 85 baseline tests plus new regressions must pass with actual counts reported. Require git diff --check and complete isolated-index delta verification against the reviewed pre-FIX tree, with effective changes restricted to exactly core.py and test_evaluation.py. Passing FIX tests alone cannot close EVAL-POST-001.",
+        "completed": true,
+        "completion_basis": "Future validation plan retains46 Evaluation+39 Training baseline tests plus all new regressions; full explicit inventory, actual counts and both diff checks restricted to exact two-path effective delta. Closure still requires full hostile POST."
+      }
+    ],
+    "validation": [
+      {
+        "ordinal": 1,
+        "requirement": "MISSION: Perform a fresh independent FIX PRE_EXECUTION review of the authority, candidate identity, exact scope, accepted remediation basis, bounded fix strategy, preservation constraints and regression test plan. This is a PRE review request only. Do not execute the FIX, create a POST decision, publish Evaluation or start Learning State.",
+        "completed": true,
+        "completion_basis": "Fresh PRE authority/identity/strategy/preservation/regression review completed; no FIX, POST decision, publication or Learning State work."
+      },
+      {
+        "ordinal": 2,
+        "requirement": "FRESH REVIEWER CONTEXT: IMPLEMENTER_CONTEXT != REVIEWER_CONTEXT. The later CODEX_REVIEWER must receive a fresh independent context using only durable Project authority, governed artifacts/instructions, repository content, verification evidence and accepted finding. Do not provide implementer-private prompts, transcripts, hidden reasoning or previous reviewer-private context. Request publication does not execute PRE or authorize candidate mutation.",
+        "completed": true,
+        "completion_basis": "This new reviewer chat used only the supplied durable request, repository authority/content, accepted finding and fresh verification; no implementer/private reviewer transcripts or hidden reasoning consumed or exported; agent_spawns=0."
+      },
+      {
+        "ordinal": 3,
+        "requirement": "REFERENCE-FIRST / LIVE FRESHNESS: Before PRE, git fetch origin; resolve this durable request by its exact immutable publication repository/commit/path/blob handoff. Independently observe repository_id=1394745962, repository_full_name=xqc2098948451-byte/price-action-learning, project_id=PRJ-PRICE-ACTION-LEARNING-1394745962, context=e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9 and origin refs/heads/main=636bfc03650286c28890ca01402021a5c1621437. Report the live governance branch head independently; the FIX instruction commit is a historical locator, not the new PRE request publication head. Any authority drift, stale identity or unresolved/conflicting binding requires NOT_READY / HARD_STOP=YES; do not silently adapt.",
+        "completed": true,
+        "completion_basis": "Fetch plus independent GitHub API identity and ls-remote pre/final observations exactly match main and governance heads; PRE exact immutable locator resolved."
+      },
+      {
+        "ordinal": 4,
+        "requirement": "CURRENT STATE: Require immutable current main STATE blob=92bc9256abc2848837db6b6b83b28a3ab4db5105; revision=12; state=AUTHORIZED; active_work_unit=null; blockers=[]; reconciliation=null; active_execution_slots key ABSENT; continuity.sync_status=SYNCED. next_action must still require FIX_INSTRUCTION round 1 for exactly EVAL-POST-001, fresh FIX PRE before any candidate mutation, complete full hostile Evaluation POST afterward, Evaluation not COMPLETE/published and Learning State not started. Do not use governance-branch STATE copies as current authority.",
+        "completed": true,
+        "completion_basis": "Current main STATE blob/revision/authorized/null/empty/absent/SYNCED values verified, and next_action retains fresh PRE, round1 source, complete full POST and publication/Learning State restrictions."
+      },
+      {
+        "ordinal": 5,
+        "requirement": "WORK UNIT: Independently require exact main Work Unit blob=104aae119985f04051e4733c3ab853e2f6d14ed5; work_unit_id=price-action-learning-evaluation-core-001; state=AUTHORIZED; basis_state_revision=12; implementation_authorized=false; implementation_start_allowed=false; next_gate=EVALUATION_CORE_PRE_EXECUTION. PRE PASS does not itself change these fields or issue implementation/publication authority; return to GPT for the next governed decision.",
+        "completed": true,
+        "completion_basis": "Exact Work Unit blob, AUTHORIZED/basis12/implementation_authorized=false/start_allowed=false/next_gate verified; no authority changes inferred from PRE."
+      },
+      {
+        "ordinal": 6,
+        "requirement": "CANDIDATE IDENTITY: Independently inspect existing workspace D:\\价格行为学习\\evaluation-core-candidate, never reconstruct it from main. Require HEAD=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f, complete reviewed tree=95a5e5eddaf4fbe9071275e2cccf0e0943665c4d, all four exact business blobs in files_read, spec/evaluation/.gitkeep absent, and the exact baseline delta A spec/evaluation/EVALUATION_SPEC.md; D spec/evaluation/.gitkeep; A src/price_action_learning/evaluation/__init__.py; A src/price_action_learning/evaluation/core.py; A tests/evaluation/test_evaluation.py. Recompute the complete tree with a temporary isolated index. Before and after PRE, require normal index unchanged and candidate files/HEAD/branches/refs unchanged. A mismatch requires HARD_STOP.",
+        "completed": true,
+        "completion_basis": "Candidate before/after tree/head/blobs/.gitkeep/five-path delta, raw files, index SHA256 and refs verified using two isolated indexes only."
+      },
+      {
+        "ordinal": 7,
+        "requirement": "EXACT ENVELOPE/CORRELATION: Compare this PRE Request and FIX_INSTRUCTION f24cf687-0191-4b24-9d5f-3727d87f88fd independently for the exact project/context/name/repository, entire target_work_unit_ref, framework_version=2.7.4, artifact_stage=IMPLEMENTATION, expected_state_revision=12, expected_base_sha=review_target_revision=95a5e5eddaf4fbe9071275e2cccf0e0943665c4d, remote origin/refs/heads/main/head=636bfc03650286c28890ca01402021a5c1621437, ordered scope_paths exactly [src/price_action_learning/evaluation/core.py,tests/evaluation/test_evaluation.py], finding_ids exactly [EVAL-POST-001], fix_round=1, remediation_decision_ref=DECISION-EVALUATION-CORE-POST-001-REMEDIATION and completion_gate=GPT_DECISION. Require this request in_response_to_instruction_id=f24cf687-0191-4b24-9d5f-3727d87f88fd, issuer/return=GPT_ORCHESTRATOR, executor=CODEX_REVIEWER, authorized_actions exactly [READ,TEST,VALIDATE,REPORT], forbidden_actions exactly [MUTATE_APPROVED_SCOPE,COMMIT,PUSH,PUBLISH,AUTHORIZE,SCOPE_EXPANSION], permission_scope=EVALUATION_CORE_POST_001_FIX_ROUND_1_PRE_EXECUTION_ONLY and evidence_requirements.revision=true. The FIX has executor=CODEX_IMPLEMENTER and its distinct implementation permissions. A missing-Result early-return preflight is not a substitute for these explicit binding comparisons.",
+        "completed": true,
+        "completion_basis": "Every stated shared binding compared explicitly; both instruction roles/action permissions and exact scope/decision/source/request/round/revision fields verified; no reliance on preflight early return."
+      },
+      {
+        "ordinal": 8,
+        "requirement": "FINDING/REMEDIATION AUTHORITY: Resolve source Result 040c329e-33a9-4608-831e-1c47337e6e15 at its exact current-main locator; require REVIEW_FINDING/FAIL, finding_ids exactly [EVAL-POST-001], P1/OPEN and reviewed candidate tree binding. Resolve the accepted basis and adjudication at their exact current-main locators. Require basis accepted=true/failing=false, adjudication decision=ACCEPT, both state_revision=12 and finding_ids exactly [EVAL-POST-001]; decision evidence_id=DECISION-EVALUATION-CORE-POST-001-REMEDIATION and its exact accepted basis ref. Validate the FIX/source-result/round/decision correlation.",
+        "completed": true,
+        "completion_basis": "Exact current-main source/basis/adjudication immutable blobs resolved; source P1/FAIL/tree and round0->FIX1, accepted decision/basis and finding correlation validated."
+      },
+      {
+        "ordinal": 9,
+        "requirement": "NATIVE VALIDATION: Use exact READ_ONLY Framework 2.7.4@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c. Require validate_instruction_envelope_contract(FIX_INSTRUCTION)=[]; validate_instruction_authority(FIX_INSTRUCTION,current_state_revision=12,approved_scope={src/price_action_learning/evaluation/core.py,tests/evaluation/test_evaluation.py})=[]; validate_instruction_envelope_contract(PRE_REQUEST)=[]; validate_instruction_authority(PRE_REQUEST,current_state_revision=12)=[]; validate_review_lifecycle(FIX_INSTRUCTION,source_finding,repository_root=<live main>,current_state_revision=12,re_review_result=None)=[]. Before any review Result exists, validate_pre_execution_review(mutation_instruction=FIX_INSTRUCTION,review_request=PRE_REQUEST,review_result=None,current_state_revision=12) must return exactly [PRE_EXECUTION_REVIEW_REQUIRED]. This is the expected pending PRE gate. Do not fabricate a Result, bypass a validator, or interpret it as evidence that PRE has passed.",
+        "completed": true,
+        "completion_basis": "Required exact native validation calls ran: all five instruction/lifecycle lists empty; pending PRE preflight exactly [PRE_EXECUTION_REVIEW_REQUIRED]; final actual Result correlation validated after completed review."
+      },
+      {
+        "ordinal": 10,
+        "requirement": "KNOWN FINDING IS NOT A PRE BLOCKER: The existing EVAL-POST-001 defect is the authorized FIX target and remains OPEN. Its independent confirmation on the original candidate is expected; record is_pre_blocker=false. Do not treat it as a new PRE finding or automatically return NOT_READY because it still reproduces. PRE should fail for defects in authority, stale identity, scope, remediation basis, proposed fix strategy, preservation constraints, regression test plan, candidate identity, or ability to perform the bounded safe FIX. Record any such new PRE findings separately.",
+        "completed": true,
+        "completion_basis": "Known finding independently reproduced; remains OPEN and is_pre_blocker=false. No new PRE defect detected."
+      },
+      {
+        "ordinal": 11,
+        "requirement": "ACCEPTED FIX PLAN: Require either A: disable unsupported ordinary/public state restoration and pickle reconstruction, or B: retain only reconstruction performing complete factory-equivalent canonical validation. Prefer the smaller implementation. Serialization/persistence remains a non-goal and pickle compatibility is not required. Reject a plan that needs a serializer framework, persistence, generalized reconstruction engine, new hidden authority state/token, new persistent field, parallel Evaluation type, shared helpers/common/utils or generalized validation framework.",
+        "completed": true,
+        "completion_basis": "Accepted Strategy A reviewed as implementable in existing class/test file without persistent authority, serializer or generalized framework."
+      },
+      {
+        "ordinal": 12,
+        "requirement": "REQUIRED CLOSURE PLAN: Verify the plan covers generated/public __setstate__ mutation bypass; pickle protocol 0 and protocol 1 reconstruction bypass; restoration mutable-alias injection; attempt_id replacement; historical Error eligibility bypass; Stage-ceiling bypass; more than two contributors; duplicate contributors; primary/contributor overlap; unknown formal Errors/contributors; Error-ID diagnostic-prose bypass; caller skill_signal injection; non-bool abstain; and LOW/confidence incompatibility. All ordinary/public retained construction/restoration paths must preserve factory-equivalent invariants. Require the complete hostile regression plan in tests; no scope expansion.",
+        "completed": true,
+        "completion_basis": "All16 closure surfaces mapped to independent future hostile regression expectations; no scope expansion needed."
+      },
+      {
+        "ordinal": 13,
+        "requirement": "NINE-FIELD PRESERVATION: Preserve exactly attempt_id, what_was_correct, primary_issue, primary_error, contributors, hint, skill_signal, evaluation_confidence and abstain. Direct constructor and dataclasses.replace stay blocked, no __dict__, immutable output, no hidden persistent field/token, no tenth field and no parallel type.",
+        "completed": true,
+        "completion_basis": "Exact nine fields/slots independently confirmed. Existing blocked constructor/replace/frozen/no-dict behavior retained by the planned method-only correction."
+      },
+      {
+        "ordinal": 14,
+        "requirement": "CANONICAL/HISTORICAL PRESERVATION: Preserve canonical published Training validation and the actual validated attempt_id; all 19 approved S1-S3 Error mappings; CORE plus learned-at-submission historical eligibility; S1/S2/S3 Stage ceilings; later-learning isolation; user-first submitted analysis; and canonical immutable attempt/context/boundary behavior. No TrainingAttempt, Training or Learning Map mutation.",
+        "completed": true,
+        "completion_basis": "Canonical Training/history code unchanged; all19 mappings and Stage-skill authority independently matched; existing exhaustive historical/stage/input-preservation tests pass."
+      },
+      {
+        "ordinal": 15,
+        "requirement": "COLLECTION/PROSE PRESERVATION: Preserve zero or one primary Error, zero to two unique contributors, primary/contributor separation, rejection of unknown or historically ineligible formal Errors, Error-ID prose protection and mutable-input copying. Rejected restoration leaves every original field unchanged; retained reconstruction must not store mutable caller aliases.",
+        "completed": true,
+        "completion_basis": "Factory cardinality/uniqueness/separation/unknown/prose/copying validation retained; rejection-before-mutation and subsequent-alias-mutation assertions planned."
+      },
+      {
+        "ordinal": 16,
+        "requirement": "ABSTAIN/CONFIDENCE/SKILL PRESERVATION: abstain remains strict bool; LOW implies abstain; abstain implies no primary/contributor errors; correct/no-error need not abstain. Derive skill_signal internally from primary Error, else first contributor, else attempt Stage. Never trust caller skill override or incompatible confidence/error combinations. Preserve process-not-outcome judgment, standard-library-only implementation and all existing business acceptance semantics.",
+        "completed": true,
+        "completion_basis": "Factory strict bool/confidence/abstention/skill derivation retained; process-not-outcome/user-first/standard-library business semantics preserved."
+      },
+      {
+        "ordinal": 17,
+        "requirement": "EXACT FUTURE MUTATION/PRESERVATION: Future authorized FIX may change only src/price_action_learning/evaluation/core.py and tests/evaluation/test_evaluation.py. Preserve spec/evaluation/EVALUATION_SPEC.md blob=31b91d998f48cfb1d0a382336c47cdd4e40d1119 and src/price_action_learning/evaluation/__init__.py blob=657d7b1ba94ed543b63e64b681ab64e678d3aac4; preserve .gitkeep absence, every other candidate path and normal index. PRE itself changes no path, including both future scope paths.",
+        "completed": true,
+        "completion_basis": "Only core.py and test_evaluation.py are future mutable; PRE changed no candidate path, normal index or governance; exact non-scope spec/export blobs and .gitkeep absence preserved."
+      },
+      {
+        "ordinal": 18,
+        "requirement": "FULL HOSTILE POST STILL REQUIRED: After a successful separately authorized FIX, require a complete fresh hostile Evaluation POST re-review of the ENTIRE Evaluation Work Unit and ENTIRE candidate. It must not be limited to EVAL-POST-001. FIX tests passing does not close the finding, declare Evaluation COMPLETE or authorize publication. Only later governed POST review and decisions may determine closure/publication readiness. Learning State, Review module and Study Entry remain not started.",
+        "completed": true,
+        "completion_basis": "Fresh COMPLETE FULL HOSTILE POST of entire Evaluation Work Unit/candidate remains mandatory after separately authorized FIX; tests cannot close finding or authorize completion/publication."
+      },
+      {
+        "ordinal": 19,
+        "requirement": "READ-ONLY REVIEWER/HARD STOP: CODEX_REVIEWER may READ, TEST, VALIDATE and REPORT only. Do not mutate candidate/core.py/test_evaluation.py/spec/exports/main/STATE/Work Unit/FIX instruction/remediation evidence, perform FIX, commit, push, publish, authorize, expand scope, execute POST re-review, start Learning State, start the Review module or start Study Entry. Return to GPT_ORCHESTRATOR with completion_gate=GPT_DECISION and HARD_STOP=YES after reporting the independent PRE decision.",
+        "completed": true,
+        "completion_basis": "Only READ/TEST/VALIDATE/REPORT performed; local Result only. All prohibited mutations and downstream stages not performed. GPT_DECISION/HARD_STOP=YES retained."
+      }
+    ],
+    "findings": [
+      {
+        "ordinal": 1,
+        "requirement": "PRE RESULT CONTRACT: The future reviewer returns Framework-native REVIEW_RESULT/PASS or REVIEW_FINDING/FAIL bound to response_to_instruction_id=7d9eac21-7d6e-4e78-b3a1-0c98d982a603; work_unit_id=price-action-learning-evaluation-core-001; state_revision=12; review_target_revision=95a5e5eddaf4fbe9071275e2cccf0e0943665c4d; fix_round=1; remediation_decision_ref=DECISION-EVALUATION-CORE-POST-001-REMEDIATION; responder_role=CODEX_REVIEWER; return_role=GPT_ORCHESTRATOR; changed=[]; completion_gate=GPT_DECISION. Include exact Project/context/name/repository and Framework identity, request/FIX/Work Unit/STATE/source-finding/basis/adjudication immutable references and authentic completion evidence. Use the native Result schema and validators.",
+        "completed": true,
+        "completion_basis": "Native local REVIEW_RESULT/PASS built with exact response/work-unit/state/tree/round/decision/roles and changed=[]/GPT_DECISION; all Result validator lists empty."
+      },
+      {
+        "ordinal": 2,
+        "requirement": "Report repository freshness; candidate HEAD/tree/all four blobs/complete delta/normal-index preservation; FIX instruction authority and exact PRE/FIX correlation; source finding and accepted remediation authority; exact ordered two-path future scope; bounded chosen fix plan; complete closure coverage; preservation constraints; future hostile regression plan; actual existing Evaluation/Training/full-project test counts and inventory; both diff checks; and all native validation lists. A missing, incomplete or failed required check must be reported accurately.",
+        "completed": true,
+        "completion_basis": "Authentic before/after identity, immutable locators, native validation, exact scope, strategy/preservation/regression and real baseline/diff evidence recorded in this Result and local evidence files."
+      },
+      {
+        "ordinal": 3,
+        "requirement": "Report the independent known finding confirmation with EVAL-POST-001 status OPEN and is_pre_blocker=false; post_rereview_required=true for the complete Evaluation Work Unit/candidate; IMPLEMENTATION_READINESS=READY|NOT_READY; findings; blockers; deviations. Known source correlation belongs in immutable result/evidence references; a PASS has no new PRE finding_ids, findings, blockers or deviations. A new PRE defect returns REVIEW_FINDING/FAIL and NOT_READY; use stable IDs and concrete evidence for new findings.",
+        "completed": true,
+        "completion_basis": "Known source finding independently confirmed OPEN/is_pre_blocker=false; new PRE finding_ids/findings/blockers/deviations empty; IMPLEMENTATION_READINESS=READY; complete full hostile POST still required."
+      },
+      {
+        "ordinal": 4,
+        "requirement": "Report MAIN_MUTATED=NO, STATE_MUTATED=NO, WORK_UNIT_MUTATED=NO, CANDIDATE_MUTATED=NO, FIX_STARTED=NO, EVAL_POST_001_STATUS=OPEN, EVALUATION_COMPLETE=NO and LEARNING_STATE_STARTED=NO. PRE PASS does not close the known finding or authorize publication. Return control to GPT for the next separately governed decision; HARD_STOP=YES.",
+        "completed": true,
+        "completion_basis": "No main/STATE/Work Unit/candidate/FIX/publication/Learning State changes; no EVALUATION completion inferred. Local Result returns control to GPT; HARD_STOP=YES."
+      }
+    ]
+  },
+  "post_rereview_required": true,
+  "post_rereview_scope": "Fresh COMPLETE FULL HOSTILE Evaluation POST of the ENTIRE Work Unit and candidate after separately governed FIX execution; not limited to EVAL-POST-001. FIX tests do not close findings.",
+  "candidate_mutated": "NO",
+  "main_mutated": "NO",
+  "state_mutated": "NO",
+  "work_unit_mutated": "NO",
+  "governance_mutated": "NO",
+  "fix_started": "NO",
+  "eval_post_001_status": "OPEN",
+  "evaluation_complete": "NO",
+  "candidate_published": "NO",
+  "learning_state_started": "NO",
+  "review_module_started": "NO",
+  "study_entry_started": "NO",
+  "commit": "NOT_PERFORMED",
+  "push": "NOT_PERFORMED",
+  "publish": "NOT_PERFORMED",
+  "authorize": "NOT_PERFORMED",
+  "scope_expansion": "NOT_PERFORMED",
+  "hard_stop": "YES",
+  "blockers": [],
+  "deviations": [],
+  "git": {
+    "base_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "implementation_sha": null
+  },
+  "completion_evidence": {
+    "execution_state": "COMPLETED",
+    "process_completed": true,
+    "exit_code": 0,
+    "intended_scope": [
+      "src/price_action_learning/evaluation/core.py",
+      "tests/evaluation/test_evaluation.py"
+    ],
+    "executed_scope": [
+      "src/price_action_learning/evaluation/core.py",
+      "tests/evaluation/test_evaluation.py"
+    ],
+    "test_files_expected": 2,
+    "test_files_executed": 2,
+    "test_count": 85,
+    "failure_count": 0,
+    "error_count": 0,
+    "validators_expected": [
+      "FIX_INSTRUCTION_SCHEMA_VALIDATION",
+      "FIX_INSTRUCTION_AUTHORITY_VALIDATION",
+      "PRE_REQUEST_SCHEMA_VALIDATION",
+      "PRE_REQUEST_AUTHORITY_VALIDATION",
+      "REVIEW_LIFECYCLE_VALIDATION",
+      "PRE_CORRELATION_PREFLIGHT",
+      "RESULT_SCHEMA_VALIDATION",
+      "REVIEW_RESULT_VALIDATION",
+      "RESULT_AUTHORITY_VALIDATION",
+      "COMPLETION_EVIDENCE_VALIDATION",
+      "FINAL_PRE_EXECUTION_REVIEW_VALIDATION"
+    ],
+    "validators_completed": [
+      "FIX_INSTRUCTION_SCHEMA_VALIDATION",
+      "FIX_INSTRUCTION_AUTHORITY_VALIDATION",
+      "PRE_REQUEST_SCHEMA_VALIDATION",
+      "PRE_REQUEST_AUTHORITY_VALIDATION",
+      "REVIEW_LIFECYCLE_VALIDATION",
+      "PRE_CORRELATION_PREFLIGHT",
+      "RESULT_SCHEMA_VALIDATION",
+      "REVIEW_RESULT_VALIDATION",
+      "RESULT_AUTHORITY_VALIDATION",
+      "COMPLETION_EVIDENCE_VALIDATION",
+      "FINAL_PRE_EXECUTION_REVIEW_VALIDATION"
+    ],
+    "blocker_evidence_refs": []
+  },
+  "evidence_refs": [
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\artifact-locators.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\framework-source-manifest.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\native-resume.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\authority-checks.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\candidate-before.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\published-reference-reads.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\mapping-and-contract-checks.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\baseline-tests.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\evaluation-tests.log",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\training-tests.log",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\full-project-tests.log",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\known-finding-confirmation.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\review-analysis.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\candidate-preservation.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\requirement-completion.json"
+  ],
+  "verify": [
+    "FIX/PRE Instruction schema and authority: []",
+    "Review lifecycle: []",
+    "Pending PRE correlation: [PRE_EXECUTION_REVIEW_REQUIRED]",
+    "Exact candidate identity and before/after file/index/HEAD/ref preservation: PASS",
+    "Known EVAL-POST-001: reproduced; OPEN; not a PRE blocker",
+    "Exact two-path Strategy A / preservation / complete future regressions / YAGNI: PASS",
+    "Evaluation46/46; Training39/39; complete explicit full-project85/85; failures/errors/skips0; exits0",
+    "Both diff checks: PASS",
+    "Actual generated Result schema/review/authority/completion/final PRE correlation: []"
+  ],
+  "next_gpt_action": "Judge this local PRE Result. If accepted, separately persist the exact Result bytes and decide the subsequent governed FIX execution. Reverify live authority before execution. This PRE does not authorize mutation, close EVAL-POST-001, complete/publish Evaluation, or start Learning State. Complete fresh hostile POST of entire Work Unit/candidate remains mandatory after FIX. HARD_STOP=YES.",
+  "reviewed_at": "2026-10-03T12:18:07.658305+08:00",
+  "role_observation": {
+    "role": "CODEX_REVIEWER",
+    "instruction_id": "7d9eac21-7d6e-4e78-b3a1-0c98d982a603",
+    "work_unit": "price-action-learning-evaluation-core-001",
+    "reviewed_revision": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+    "executed_revision": null,
+    "files_read": [
+      ".gpt-codex/evidence/instructions/7d9eac21-7d6e-4e78-b3a1-0c98d982a603.json",
+      ".gpt-codex/evidence/instructions/f24cf687-0191-4b24-9d5f-3727d87f88fd.json",
+      ".gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json",
+      ".gpt-codex/evidence/evaluation-core-post-001-remediation-basis.json",
+      ".gpt-codex/evidence/evaluation-core-post-001-remediation-adjudication.json",
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+      ".gpt-codex/CONTROL.json",
+      "AGENTS.md",
+      "spec/training/TRAINING_SPEC.md",
+      "src/price_action_learning/training/__init__.py",
+      "src/price_action_learning/training/core.py",
+      "tests/training/test_training.py",
+      "spec/learning_map/LEARNING_MAP_SPEC.md",
+      "docs/CONTRACTS.md",
+      "docs/PROJECT_SCOPE.md",
+      "docs/DIRECTORY_POLICY.md",
+      "spec/evaluation/EVALUATION_SPEC.md",
+      "src/price_action_learning/evaluation/__init__.py",
+      "src/price_action_learning/evaluation/core.py",
+      "tests/evaluation/test_evaluation.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/project-template/INSTRUCTION_ENVELOPE.template.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/project-template/RESULT_ENVELOPE.template.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/control.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/evidence.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/extension.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/framework-module-registry.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/framework-module.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/harvest-candidate.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/instruction-envelope.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/module-map.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/project-map.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/result-envelope.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/resume.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/state.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/schemas/work-unit.schema.json",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/consumer_projection.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/context_binding.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/continuity_resume.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/execution_telemetry.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/framework_feedback.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/framework_module_routing.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/git_continuity.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/github_repository_binding.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/instruction_envelope.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/kernel_rules.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/project_navigation.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/publication_contract.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/release_archive.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/release_framework.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/result_return.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/role_communication.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/validate_consumer_projection.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/validate_framework.py",
+      "Framework@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c:.gpt-codex/scripts/validate_project.py"
+    ],
+    "files_changed": [],
+    "tests_run": [
+      {
+        "command": "python -B -m unittest discover -s tests/evaluation -p test_evaluation.py -v",
+        "cwd": "D:\\价格行为学习\\evaluation-core-candidate",
+        "python_executable": "C:\\Python313\\python.exe",
+        "candidate_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+        "candidate_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+        "count": 46,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "exit_code": 0,
+        "passed": true,
+        "log": "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\evaluation-tests.log"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests/training -p test_training.py -v",
+        "cwd": "D:\\价格行为学习\\evaluation-core-candidate",
+        "python_executable": "C:\\Python313\\python.exe",
+        "candidate_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+        "candidate_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+        "count": 39,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "exit_code": 0,
+        "passed": true,
+        "log": "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\training-tests.log"
+      },
+      {
+        "command": "python -B C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\review_checks.py full-tests",
+        "method": "Explicit sorted tests/**/test_*.py enumeration, distinct importlib modules, loadTestsFromModule, combined TextTestRunner",
+        "candidate_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+        "candidate_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+        "inventory": [
+          {
+            "path": "tests/evaluation/test_evaluation.py",
+            "loaded_count": 46
+          },
+          {
+            "path": "tests/training/test_training.py",
+            "loaded_count": 39
+          }
+        ],
+        "test_files_expected": 2,
+        "test_files_executed": 2,
+        "count": 85,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "passed": true,
+        "exit_code": 0
+      },
+      "Known finding public __setstate__ / mutable alias / pickle0/1 confirmation"
+    ],
+    "findings": [],
+    "fix_round": 1,
+    "agent_spawns": 0,
+    "result": "REVIEW_RESULT"
+  },
+  "local_result_path": "C:\\Users\\xqc\\.codex\\reports\\evaluation-fix-pre-20261003-7d9eac21\\127411d1-ae19-4a51-a900-cb1ea52b4f9f.json",
+  "validation": {
+    "FIX_INSTRUCTION_SCHEMA_VALIDATION": [],
+    "FIX_INSTRUCTION_AUTHORITY_VALIDATION": [],
+    "PRE_REQUEST_SCHEMA_VALIDATION": [],
+    "PRE_REQUEST_AUTHORITY_VALIDATION": [],
+    "REVIEW_LIFECYCLE_VALIDATION": [],
+    "PRE_CORRELATION_PREFLIGHT": [
+      "PRE_EXECUTION_REVIEW_REQUIRED"
+    ],
+    "RESULT_SCHEMA_VALIDATION": [],
+    "REVIEW_RESULT_VALIDATION": [],
+    "RESULT_AUTHORITY_VALIDATION": [],
+    "COMPLETION_EVIDENCE_VALIDATION": [],
+    "FINAL_PRE_EXECUTION_REVIEW_VALIDATION": []
+  }
+}
