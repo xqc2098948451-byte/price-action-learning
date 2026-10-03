@@ -2,7 +2,7 @@
   "kernel_version": "2.0.0",
   "schema_version": 1,
   "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
-  "revision": 15,
+  "revision": 16,
   "state": "AUTHORIZED",
   "active_work_unit": null,
   "blockers": [],
@@ -53,14 +53,16 @@
     ".gpt-codex/evidence/submission-provenance-evaluation-publication-verification.json",
     ".gpt-codex/evidence/results/submission-provenance-evaluation-publication.json",
     ".gpt-codex/evidence/learning-state-core-publication-verification.json",
-    ".gpt-codex/evidence/results/learning-state-core-publication.json"
+    ".gpt-codex/evidence/results/learning-state-core-publication.json",
+    ".gpt-codex/evidence/review-core-publication-verification.json",
+    ".gpt-codex/evidence/results/review-core-publication.json"
   ],
   "continuity": {
     "current_remote_ref": "refs/heads/main",
-    "latest_verified_remote_sha": "391c94497989938e4bb6eb686e805030803f23e6",
-    "latest_synced_state_revision": 15,
-    "last_verified_result_ref": ".gpt-codex/evidence/results/learning-state-core-publication.json",
+    "latest_verified_remote_sha": "b298bc2e810de55d9ce80f701e451ab346d64cba",
+    "latest_synced_state_revision": 16,
+    "last_verified_result_ref": ".gpt-codex/evidence/results/review-core-publication.json",
     "sync_status": "SYNCED"
   },
-  "next_action": "Learning Map S1-S3 is COMPLETE. Training Core is COMPLETE. Evaluation Core is COMPLETE. Submission provenance hardening is COMPLETE. Learning State Core is COMPLETE and published. Review has not started. Study Entry has not started. Propose and authorize a bounded Review Core Work Unit before any Review business mutation. Review must own ReviewRecord, scheduling, 3 / 7 / 30-day review intervals, hidden-old-answer independent review, and review-driven IMPROVING / RESOLVED evidence. Do not start Study Entry before Review's governed sequence. This next_action is descriptive authority only. No Review Work Unit is created or implemented by this publication task."
+  "next_action": "Learning Map S1-S3 is COMPLETE. Training Core is COMPLETE. Evaluation Core is COMPLETE. Submission provenance hardening is COMPLETE. Learning State Core is COMPLETE and published. Review Core is COMPLETE and published. REVIEW-CORE-PRE-001 was resolved through accepted remediation and a fresh independent PRE PASS. Review -> LearningState integration has NOT started. Study Entry has NOT started. Propose and authorize a bounded Review-to-LearningState Integration Work Unit before any cross-module mutation. That future integration may govern, subject to separate approval, applying canonical ReviewRecord result evidence to LearningState, reviews_due consumption/update, Error-state transition to IMPROVING / RESOLVED / REPEATED / FOCUS as explicitly designed, and any carefully bounded Skill stability effect if separately approved. Do not start Study Entry before this integration sequence is governed and completed. This next_action is descriptive authority only. No integration Work Unit is created or implemented in this publication task."
 }
