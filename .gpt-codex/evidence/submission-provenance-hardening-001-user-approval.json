@@ -1,0 +1,28 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-SUBMISSION-PROVENANCE-HARDENING-001-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-submission-provenance-hardening-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 13,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "c0ee90ecb7be5791288ef3624265de5a971e133d"
+  },
+  "result": "APPROVE",
+  "observed_at": "2026-10-03",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-submission-provenance-hardening-001.json@0b643ffe3c4ce5dd981e17162f31c79a2cf7b8b0"
+  ],
+  "mechanism": "FACTORY_ONLY_TRAINING_ATTEMPT_PROVENANCE_BOUNDARY",
+  "approved_scope_paths": [
+    "spec/training/TRAINING_SPEC.md",
+    "src/price_action_learning/training/core.py",
+    "tests/training/test_training.py",
+    "spec/evaluation/EVALUATION_SPEC.md",
+    "src/price_action_learning/evaluation/core.py",
+    "tests/evaluation/test_evaluation.py"
+  ]
+}

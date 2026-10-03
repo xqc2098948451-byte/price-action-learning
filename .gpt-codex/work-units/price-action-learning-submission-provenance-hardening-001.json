@@ -152,7 +152,7 @@
     "This artifact is a scope-escalation proposal only, not implementation, PRE approval, user approval, or Work Unit authorization. Keep EVAL-POST-002 OPEN, preserve EVAL-POST-001 CLOSED, keep Evaluation NOT COMPLETE / NOT PUBLISHED, and do not start Learning State. Stop after publishing the PROPOSED Work Unit and return to GPT for USER_WORK_UNIT_APPROVAL."
   ],
   "future_execution": {
-    "workspace": "D:\\价格行为学习\\evaluation-core-candidate",
+    "workspace": "D:\\浠锋牸琛屼负瀛︿範\\evaluation-core-candidate",
     "initial_head_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
     "initial_complete_tree_sha": "e9695c0b9496e6d2dbf6f770b76886686662ba20",
     "initial_blobs": {
@@ -200,11 +200,11 @@
       "SCOPE_EXPANSION"
     ]
   },
-  "state": "PROPOSED",
+  "state": "AUTHORIZED",
   "basis_state_revision": 13,
   "implementation_authorized": false,
   "implementation_start_allowed": false,
-  "next_gate": "USER_WORK_UNIT_APPROVAL",
+  "next_gate": "SUBMISSION_PROVENANCE_HARDENING_PRE_EXECUTION",
   "artifact_refs": {
     "design": {
       "path": "docs/DIRECTORY_POLICY.md",
