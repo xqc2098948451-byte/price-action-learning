@@ -1,0 +1,69 @@
+{
+  "instruction_id": "ea67d809-1268-4c5a-bb7f-d0908b95ed88",
+  "instruction_type": "APPROVAL_REQUEST",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "expected_state_revision": 12,
+  "framework_version": "2.7.4",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "USER_APPROVER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "target_work_unit": "price-action-learning-evaluation-core-post-002-remediation-registration-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-post-002-remediation-registration-001.json",
+    "sha": "783ddfcd4de536add29725f8a8849fcb5badd9ae"
+  },
+  "scope_paths": [
+    ".gpt-codex/STATE.json",
+    ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+    ".gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json",
+    ".gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json",
+    ".gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json",
+    ".gpt-codex/evidence/evaluation-core-post-002-remediation-work-verification.json",
+    ".gpt-codex/evidence/results/evaluation-core-post-002-remediation-publication.json"
+  ],
+  "expected_base_sha": "636bfc03650286c28890ca01402021a5c1621437",
+  "permission_scope": "EVALUATION_POST_002_REMEDIATION_REGISTRATION_RECONCILIATION_APPROVAL_ONLY",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "636bfc03650286c28890ca01402021a5c1621437",
+  "expected_remote_name": "origin",
+  "authorized_actions": [
+    "APPROVE",
+    "REJECT"
+  ],
+  "forbidden_actions": [],
+  "evidence_requirements": {
+    "files_read": [
+      "READ_ONLY Framework 2.7.4 at commit 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c; use its exact native schemas, builders, and validators without bypass or mutation.",
+      "Authoritative main: repository=xqc2098948451-byte/price-action-learning; repository_id=1394745962; project=PRJ-PRICE-ACTION-LEARNING-1394745962; context=e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9; ref=refs/heads/main; commit=636bfc03650286c28890ca01402021a5c1621437; STATE blob=92bc9256abc2848837db6b6b83b28a3ab4db5105; revision=12; state=AUTHORIZED; active_work_unit=null; blockers=[]; reconciliation=null; active_execution_slots ABSENT; continuity.sync_status=SYNCED.",
+      "Authorized remediation-registration Work Unit: repository=xqc2098948451-byte/price-action-learning; commit=783ddfcd4de536add29725f8a8849fcb5badd9ae; path=.gpt-codex/work-units/price-action-learning-evaluation-core-post-002-remediation-registration-001.json; blob=173262f3dbae90391b56de8165ec7c4dcbb2bb2d; state=AUTHORIZED; basis_state_revision=12; implementation_authorized=false; implementation_start_allowed=false; next_gate=EVALUATION_CORE_POST_002_REMEDIATION_REGISTRATION_RECONCILIATION_REQUEST_AUTHORING.",
+      "Work Unit user approval: repository=xqc2098948451-byte/price-action-learning; commit=783ddfcd4de536add29725f8a8849fcb5badd9ae; path=.gpt-codex/evidence/evaluation-core-post-002-remediation-registration-user-approval.json; blob=d810beba9218e2f7e17ec9c83bedb1deefe07c47; source=USER_ASSERTED; subject=WORK_UNIT_AUTHORIZATION; result=APPROVE; state_revision=12; identity_binding.type=WORK_UNIT_BLOB; identity_binding.value=936113f468ec057b5eef3f632e775448c1911b36. This is Work Unit authorization provenance and does not substitute for the instruction-level decision requested here.",
+      "Canonical finding Result: repository=xqc2098948451-byte/price-action-learning; commit=791a90a87acfb72b4be69b971ac1c05e10676acc; path=.gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json; blob=64cad2444ca1b3d4c51e040a3c758475bdc6be65; result_id=6c0c510b-6fd8-4117-97e4-375bea002803; REVIEW_FINDING/FAIL; finding_ids exactly [EVAL-POST-002]; EVAL-POST-002=P1/OPEN; latest independent EVAL_POST_001_CLOSURE=CLOSED. Neither historical source Result may be modified.",
+      "Evidence-only candidate D:/价格行为学习/evaluation-core-candidate: HEAD=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; complete content tree=e9695c0b9496e6d2dbf6f770b76886686662ba20; preserve all contents, working-tree changes and normal index."
+    ],
+    "validation": [
+      "USER_APPROVER decides APPROVE or REJECT only for the exact approved_instruction core below. This APPROVAL_REQUEST does not record or imply a decision.",
+      "approved_instruction exact JSON: {\"instruction_id\":\"4aa71c9c-32f1-4bc7-9a63-1261d3f0a7f2\",\"expected_state_revision\":12,\"expected_base_sha\":\"636bfc03650286c28890ca01402021a5c1621437\",\"scope_paths\":[\".gpt-codex/STATE.json\",\".gpt-codex/work-units/price-action-learning-evaluation-core-001.json\",\".gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json\",\".gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json\",\".gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json\",\".gpt-codex/evidence/evaluation-core-post-002-remediation-work-verification.json\",\".gpt-codex/evidence/results/evaluation-core-post-002-remediation-publication.json\"],\"target_project_context_id\":\"e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9\",\"target_project_name\":\"Price Action Learning\",\"target_github_repository_id\":\"1394745962\",\"target_github_repository_full_name\":\"xqc2098948451-byte/price-action-learning\",\"target_work_unit_ref\":{\"path\":\".gpt-codex/work-units/price-action-learning-evaluation-core-post-002-remediation-registration-001.json\",\"sha\":\"783ddfcd4de536add29725f8a8849fcb5badd9ae\"},\"issuer_role\":\"GPT_ORCHESTRATOR\",\"executor_role\":\"CODEX_IMPLEMENTER\",\"authorized_actions\":[\"READ\",\"TEST\",\"VALIDATE\",\"REPORT\",\"MUTATE_APPROVED_SCOPE\"]}",
+      "Require the exact approved_instruction key set and exact semantic equality to Framework-native _control_plane_approved_core(FUTURE_RECONCILIATION_REQUEST). No extra or omitted key, reordered scope path, substituted Work Unit ref, or added action is permitted.",
+      "Frozen future reconciliation envelope semantics exact JSON: {\"instruction_id\":\"4aa71c9c-32f1-4bc7-9a63-1261d3f0a7f2\",\"instruction_type\":\"RECONCILIATION_REQUEST\",\"target_project_context_id\":\"e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9\",\"target_project_name\":\"Price Action Learning\",\"expected_state_revision\":12,\"framework_version\":\"2.7.4\",\"issuer_role\":\"GPT_ORCHESTRATOR\",\"executor_role\":\"CODEX_IMPLEMENTER\",\"return_role\":\"GPT_ORCHESTRATOR\",\"target_work_unit\":\"price-action-learning-evaluation-core-post-002-remediation-registration-001\",\"target_work_unit_ref\":{\"path\":\".gpt-codex/work-units/price-action-learning-evaluation-core-post-002-remediation-registration-001.json\",\"sha\":\"783ddfcd4de536add29725f8a8849fcb5badd9ae\"},\"scope_paths\":[\".gpt-codex/STATE.json\",\".gpt-codex/work-units/price-action-learning-evaluation-core-001.json\",\".gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json\",\".gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json\",\".gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json\",\".gpt-codex/evidence/evaluation-core-post-002-remediation-work-verification.json\",\".gpt-codex/evidence/results/evaluation-core-post-002-remediation-publication.json\"],\"expected_base_sha\":\"636bfc03650286c28890ca01402021a5c1621437\",\"permission_scope\":\"EVALUATION_POST_002_REMEDIATION_REGISTRATION_CONTROL_PLANE_ONLY\",\"target_github_repository_id\":\"1394745962\",\"target_github_repository_full_name\":\"xqc2098948451-byte/price-action-learning\",\"expected_remote_ref\":\"refs/heads/main\",\"expected_remote_head_sha\":\"636bfc03650286c28890ca01402021a5c1621437\",\"expected_remote_name\":\"origin\",\"authorized_actions\":[\"READ\",\"TEST\",\"VALIDATE\",\"REPORT\",\"MUTATE_APPROVED_SCOPE\"],\"forbidden_actions\":[\"COMMIT\",\"PUSH\",\"PUBLISH\",\"AUTHORIZE\",\"SCOPE_EXPANSION\"],\"completion_gate\":\"GPT_DECISION\",\"artifact_stage\":\"IMPLEMENTATION\"}",
+      "Future envelope semantics are frozen requirements only; this transaction creates no RECONCILIATION_REQUEST artifact. Future authorship must retain all frozen fields, roles, actions, forbidden actions, permission_scope, completion_gate, and exact seven scope_paths, with any mechanically required approval binding resolved from a real later durable USER_APPROVER decision.",
+      "If explicitly APPROVED later, reconciliation is limited to registration authority already contained in the authorized Work Unit: copy the complete durable POST Result to main byte-identically; create the EVAL-POST-002 remediation basis and adjudication; advance STATE revision 12 to 13; rebind the existing Evaluation Work Unit basis revision 12 to 13; create work-verification evidence; and create the remediation publication Result. No eighth path.",
+      "Registration accepts authority at invariant/design level only: formal Evaluation authority must bind to the immutable ORIGINAL Training submission boundary. Constructor validity or caller-value self-consistency alone does not establish original submission provenance; same-Stage later-learning expansion and future-Stage context transplantation must not expand either primary_error or contributor eligibility. Preserve EVAL-POST-001 closure and all existing passing Evaluation semantics.",
+      "Approval does not authorize Evaluation candidate mutation, Training mutation, shared-contract mutation, FIX round 2, hidden provenance fields/tokens/fingerprints, persistence/database, scope expansion, Evaluation publication, or Learning State / Review / Study Entry. Registration must not select or authorize a concrete provenance mechanism.",
+      "If a later sound FIX requires wider scope, STOP and return SCOPE_ESCALATION_REQUIRED. Obtain separate bounded authority before changing Training, shared contracts or integration; never silently expand this registration scope.",
+      "Before publication require exact Framework 2.7.4 approval-request schema and authority validation errors []; project/context/repository binding errors []; authorized Work Unit binding errors []; Work Unit user approval binding errors []; source Result binding errors []; APPROVED_INSTRUCTION_CORE_MATCH=EXACT; EXACT_SEVEN_SCOPE_PATHS=PASS. No Approval Result may be fabricated for validation.",
+      "Current authoring transaction creates only .gpt-codex/evidence/instructions/ea67d809-1268-4c5a-bb7f-d0908b95ed88.json. Do not create APPROVAL_RESULT or RECONCILIATION_REQUEST; perform PRE or reconciliation; mutate main, STATE, the authorized Work Unit or candidate; create remediation basis/adjudication; or start FIX round 2.",
+      "Publish only governance/price-action-learning-training-wu-001 with parent exactly 783ddfcd4de536add29725f8a8849fcb5badd9ae and one-file addition; commit message exactly chore: request Evaluation POST-002 reconciliation approval. Reverify remote parent, delta, envelope, exact core, ordered scope, unchanged origin/main=636bfc03650286c28890ca01402021a5c1621437, unchanged STATE and unchanged candidate.",
+      "HARD_STOP=YES after durable APPROVAL_REQUEST publication. Return control to GPT_ORCHESTRATOR for the user's single explicit reconciliation APPROVE / REJECT. Only after that approval may the remaining pure-governance reconciliation chain proceed serially in a consolidated task, provided every native validator passes and no scope escalation occurs."
+    ],
+    "result_references": [
+      "6c0c510b-6fd8-4117-97e4-375bea002803"
+    ],
+    "revision": true
+  },
+  "completion_gate": "USER_APPROVAL",
+  "in_response_to_instruction_id": "4aa71c9c-32f1-4bc7-9a63-1261d3f0a7f2",
+  "artifact_stage": "IMPLEMENTATION"
+}
