@@ -1,0 +1,246 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "work_unit_id": "price-action-learning-review-learning-state-integration-001",
+  "goal": "Implement the minimum Review-to-LearningState integration that registers one canonical active 3/7/30 Review schedule into LearningState.reviews_due and sequentially consumes completed canonical ReviewRecord evidence to update only LearningState errors, current_focus and reviews_due. ReviewRecord remains immutable READ_ONLY evidence. Review Core remains unchanged. Skill states and current_stage remain unchanged by this integration. No automatic STABLE, no Stage promotion, no Study Entry, no persistence.",
+  "scope": {
+    "owned_paths": [
+      "spec/learning_state/LEARNING_STATE_SPEC.md",
+      "src/price_action_learning/learning_state/__init__.py",
+      "src/price_action_learning/learning_state/core.py",
+      "tests/learning_state/test_learning_state.py"
+    ],
+    "excluded_paths": [
+      ".gpt-codex/",
+      "AGENTS.md",
+      "README.md",
+      "docs/",
+      "spec/learning_map/",
+      "spec/training/",
+      "spec/evaluation/",
+      "spec/review/",
+      "spec/study_entry/",
+      "src/price_action_learning/learning_map/",
+      "src/price_action_learning/training/",
+      "src/price_action_learning/evaluation/",
+      "src/price_action_learning/review/",
+      "src/price_action_learning/study_entry/",
+      "tests/learning_map/",
+      "tests/training/",
+      "tests/evaluation/",
+      "tests/review/",
+      "tests/study_entry/"
+    ]
+  },
+  "dependencies": {
+    "framework": {
+      "version": "2.7.4",
+      "commit_sha": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c"
+    },
+    "project_baseline": {
+      "repository_id": "1394745962",
+      "repository_full_name": "xqc2098948451-byte/price-action-learning",
+      "main_commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c"
+    },
+    "project_state": {
+      "path": ".gpt-codex/STATE.json",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "d88abe41b26a554e4696bec655f207b7ebacd7f8",
+      "revision": 16
+    },
+    "learning_state_work_unit": {
+      "path": ".gpt-codex/work-units/price-action-learning-learning-state-core-001.json",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "bddccd1868b946a49c0bc96e4f847eea2781f7cf",
+      "state": "COMPLETE"
+    },
+    "review_work_unit": {
+      "path": ".gpt-codex/work-units/price-action-learning-review-core-001.json",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "03f6759416794c9dc5ae7cf10b27173398c6d666",
+      "state": "COMPLETE"
+    },
+    "review_publication": {
+      "path": ".gpt-codex/evidence/results/review-core-publication.json",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "c74b5540fe5fff23455b4a65fcbb7281f9dfaf53",
+      "status": "PASS",
+      "publication_authority": "CONFIRMED_PUBLICATION"
+    },
+    "learning_state_spec": {
+      "path": "spec/learning_state/LEARNING_STATE_SPEC.md",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "21cfaabb3d6362894ab07bc48d5d9b3f4c329432"
+    },
+    "learning_state_exports": {
+      "path": "src/price_action_learning/learning_state/__init__.py",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "16b7ead4202c847d7a3a90d82a283bcc7e6bf51e"
+    },
+    "learning_state_runtime": {
+      "path": "src/price_action_learning/learning_state/core.py",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "d9d2eb7fee405530afd4f05f8cd49aee1546f864"
+    },
+    "learning_state_tests": {
+      "path": "tests/learning_state/test_learning_state.py",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "2d2247d56bdea683206ef3a01a70aa27bd02b9ae"
+    },
+    "review_spec": {
+      "path": "spec/review/REVIEW_SPEC.md",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "6ae46bd297c6adebc6ac43f12111b407f752c8f1"
+    },
+    "review_exports": {
+      "path": "src/price_action_learning/review/__init__.py",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "bc56d37d69e8e9638648903066ce9847dd016efa"
+    },
+    "review_runtime": {
+      "path": "src/price_action_learning/review/core.py",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "5e2d54e70fa8f7e68702bad3e790cb53d63cd685"
+    },
+    "review_tests": {
+      "path": "tests/review/test_review.py",
+      "commit_sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c",
+      "blob_sha": "0f4c6c35c26bc292706c9504c03448d14cbebba5"
+    }
+  },
+  "acceptance": [
+    "Implement only the minimum Review-to-LearningState integration after explicit USER_WORK_UNIT_APPROVAL and the later governed execution sequence. ReviewRecord is immutable READ_ONLY evidence; Review Core remains unchanged; LearningState is the sole mutation owner. This proposal grants no implementation authority.",
+    "Future business mutation is limited to EXACTLY the four existing scope.owned_paths files. Do not add a fifth business path, alter any Review path, modify docs/CONTRACTS.md or any excluded path, or introduce a shared utils/helpers/common module or generalized integration framework.",
+    "LearningState remains EXACTLY five persistent fields in its frozen order: current_stage, skills, errors, current_focus, reviews_due. Preserve frozen, slots and factory-controlled construction. No new field, hidden history/count/timestamp/provenance field, parallel integration record, registry or public state builder. ReviewRecord retains its published seven-field contract.",
+    "The package exposes EXACTLY LearningState, create_learning_state, apply_evaluation, register_review_schedule and apply_review_record. Add only register_review_schedule(*, state, source_attempt, records) and apply_review_record(*, state, source_attempt, record). Preserve the existing public API and behavior; add no generic mutation/update function.",
+    "register_review_schedule requires type(state) is LearningState, type(source_attempt) is TrainingAttempt, type(records) is tuple and len(records) == 3. Require exact canonical published observable representations, rejecting duck types, subclasses and spoofed inputs before comparisons. Preserve published original-submission validation; never reconstruct source_attempt.",
+    "Registration requires state.reviews_due == (). This MVP permits exactly ONE active Review schedule at a time. Require state.current_focus is not None, exists in state.errors and has a status other than RESOLVED. Require source_attempt.stage == state.current_stage.",
+    "Every registration member must be an exact canonical published ReviewRecord with completed_at, new_analysis and result ALL None. Require source_attempt_id == source_attempt.id and error_id == state.current_focus for all three records, with distinct canonical lower-case UUID4 base-string record IDs.",
+    "Require scheduled_for EXACTLY source_attempt.created_at + timedelta(days=3), + timedelta(days=7), + timedelta(days=30) in that order. Preserve exact published UTC datetime representation. Reject wrong order, any alternate interval, caller ordering override, duplicate ID, completed/partially completed member or mismatched source/Error.",
+    "Registration returns a NEW immutable validated LearningState preserving current_stage, skills, errors and current_focus EXACTLY and setting reviews_due to (day3_record.id, day7_record.id, day30_record.id). Do not mutate state, source_attempt, the tuple or any ReviewRecord. Do not create/schedule ReviewRecords, persist data, run timers or add a scheduler service.",
+    "apply_review_record requires exact canonical published LearningState, TrainingAttempt and ReviewRecord types, rejecting ducks, subclasses, spoofed inputs and malformed observable fields. The completed ReviewRecord has completed_at, new_analysis and result ALL non-None, canonical result membership, exact UTC timestamps and completed_at >= scheduled_for. Validate representation only; do not interpret new_analysis semantically.",
+    "Application requires record.source_attempt_id == source_attempt.id and source_attempt.stage == state.current_stage. Preserve original-submission validation without reconstructing TrainingAttempt. Require record.error_id already exists in state.errors. A Review result must never create a new Error entry.",
+    "Application requires nonempty state.reviews_due and record.id == state.reviews_due[0]. Reject lengths other than 3, 2 or 1. Determine the expected slot ONLY from the remaining length: 3 -> exact source-created_at + 3 days; 2 -> + 7 days; 1 -> + 30 days. Reject the wrong slot, wrong first ID, out-of-order record and already-consumed record.",
+    "After every successful application, set reviews_due EXACTLY to state.reviews_due[1:], consuming exactly the first due ID. Return a NEW immutable validated LearningState and preserve all inputs. Do not retain an application history, consumption counter, timestamp, provenance field or persistence record.",
+    "Trust only the canonical completed ReviewRecord result: REPEATED, IMPROVING, RESOLVED or INCONCLUSIVE. Integration does not derive these results or rerun Review result logic. Review Core remains evidence authority; LearningState records its canonical result only.",
+    "INCONCLUSIVE preserves errors, current_focus, skills and current_stage EXACTLY. Only consume the first reviews_due ID. Uncertain Review evidence changes no learner Error state.",
+    "IMPROVING sets only record.error_id status to IMPROVING and preserves current_focus regardless of whether it refers to the target or another Error. Preserve all unrelated Error statuses, all Skill states and current_stage.",
+    "REPEATED when state.current_focus is None or equals record.error_id sets the target Error to FOCUS and current_focus to record.error_id. When another Error is already the current focus, set the target to REPEATED and preserve the other current_focus. An older active schedule must not automatically displace a newer focus.",
+    "RESOLVED is accepted ONLY in the canonical final slot: len(state.reviews_due) == 1 AND scheduled_for == source_attempt.created_at + timedelta(days=30). Set the target Error to RESOLVED. Clear current_focus to None only if it equals record.error_id; otherwise preserve it. Do not select, promote or auto-focus another Error.",
+    "A future canonical completed REPEATED ReviewRecord may reopen a previously RESOLVED tracked Error under the same sequential due-ID/source/Stage/slot validation. Apply the REPEATED rule; do not permanently lock RESOLVED and do not bypass registration restrictions.",
+    "Every Review-result branch preserves ALL Skill states exactly. No automatic STABLE, no UNSTABLE -> LEARNING and no Skill derivation from ReviewRecord.error_id. Resolving one Error does not establish mastery of its whole Skill; any future stability policy needs separate explicit authority.",
+    "Every operation and result branch preserves current_stage exactly. No Stage promotion, demotion or S4-S8 authority.",
+    "Do not reconstruct ReviewRecord, rerun/duplicate the Review result algorithm, inspect prior_reviews, inspect Review new_analysis semantically, derive IMPROVING/RESOLVED, inspect old GPT feedback, parse Review prose or import/call a Review private builder.",
+    "Use TrainingAttempt only to bind source_attempt_id, Stage and the 3/7/30 source-created_at schedule anchor, while retaining published original-submission validation. Do not reconstruct it, rerun Evaluation, change provenance rules or inspect future market outcome.",
+    "No integration public API accepts future candles, future prices, realized P/L, trade result, prediction result or market outcome. State mutation depends only on canonical prior LearningState, canonical source TrainingAttempt and canonical ReviewRecord evidence.",
+    "Preserve existing direct-construction, dataclasses.replace, copy.copy, copy.deepcopy, pickle at every supported protocol, reduce/reduce_ex and setstate protections. No input mutation, mutable aliases or new public state builder; every operation returns a new factory-controlled frozen/slotted LearningState.",
+    "Preserve canonical published Error membership/order and statuses. Change only the tracked target Error as explicitly specified, preserve every unrelated Error status, and add no Error, Skill or Concept ID or new status.",
+    "Account for the published Review -> LearningState read dependency when consuming ReviewRecord, keeping package imports usable without modifying Review Core. Resolve import dependencies within the four owned Learning State files only, without a new module, shared helper or Review private builder.",
+    "Future implementation tests must cover ALL 53 required_future_tests in this proposal, including representations, bindings, registration rejection, sequential consumption, all result transitions, recurrence after resolution, unchanged inputs/skills/stage, exact public signatures and hostile construction/restoration.",
+    "The future implementation must retain PASS for the existing Review 67 tests, Learning State 43 tests before replacement/addition, Training 43 tests and Evaluation 58 tests, and explicitly enumerate and execute the full tests/**/test_*.py inventory including new integration coverage. No omitted test files or skipped cases may be treated as full-project PASS. This proposal does not implement business code or claim a new business test run.",
+    "Do NOT implement Skill mastery/STABLE policy, Stage advancement, automatic next-focus selection, simultaneous schedules, Review scheduling/result derivation/mutation, Training/Evaluation/Learning Map mutation, Study Entry, S4-S8, scoring, ranking, rewards, gamification, prediction, signals, market data, persistence, database, background scheduler, API, UI, plugin, network/LLM SDK, shared utils/helpers/common or a generalized integration framework.",
+    "The permissions below describe the future approved implementation boundary only. COMMIT, PUSH, PUBLISH, AUTHORIZE and SCOPE_EXPANSION remain forbidden to that implementation. Proposal publication under the current explicit user task is not Work Unit authorization or implementation authority.",
+    "This current task creates and publishes EXACTLY .gpt-codex/work-units/price-action-learning-review-learning-state-integration-001.json on governance/price-action-learning-training-wu-001, parent 4d9408c448dbbf22f83e229d06ec5f90bd4f25e9. main and every existing file, including STATE, remain unchanged. Do not create PRE or USER_WORK_UNIT_APPROVAL, authorize the Work Unit, implement integration or start Study Entry. State remains PROPOSED, basis_state_revision 16, both implementation flags false, next_gate USER_WORK_UNIT_APPROVAL. HARD_STOP after proposal publication and return control to GPT for explicit approval."
+  ],
+  "required_future_tests": [
+    "existing LearningState still exactly five fields.",
+    "package exports include exactly the existing API plus register_review_schedule and apply_review_record.",
+    "valid 3/7/30 schedule registration.",
+    "registered reviews_due IDs are exact 3/7/30 record IDs in order.",
+    "registration preserves stage/skills/errors/focus.",
+    "registration rejects non-empty reviews_due.",
+    "registration rejects current_focus=None.",
+    "registration rejects current_focus absent from errors.",
+    "registration rejects RESOLVED current_focus.",
+    "registration rejects Stage mismatch.",
+    "registration rejects non-tuple records.",
+    "registration rejects !=3 records.",
+    "registration rejects completed ReviewRecord.",
+    "registration rejects source_attempt mismatch.",
+    "registration rejects error mismatch.",
+    "registration rejects duplicate ReviewRecord IDs.",
+    "registration rejects wrong 3/7/30 schedule.",
+    "registration rejects wrong order.",
+    "apply rejects empty reviews_due.",
+    "apply rejects record ID not first due ID.",
+    "apply rejects out-of-order day7 before day3.",
+    "apply rejects out-of-order day30.",
+    "apply rejects source_attempt mismatch.",
+    "apply rejects Stage mismatch.",
+    "apply rejects Error absent from LearningState.",
+    "INCONCLUSIVE consumes due ID only.",
+    "IMPROVING changes target Error to IMPROVING.",
+    "IMPROVING preserves current_focus.",
+    "REPEATED with same focus -> FOCUS.",
+    "REPEATED with current_focus None -> FOCUS and selects target.",
+    "REPEATED while another Error is current focus -> target REPEATED and preserve other focus.",
+    "RESOLVED at day30 -> RESOLVED.",
+    "RESOLVED clears current_focus only when target is current focus.",
+    "RESOLVED preserves different current_focus.",
+    "RESOLVED before final slot rejected.",
+    "successful apply removes exactly one first reviews_due ID.",
+    "three sequential applications consume reviews_due in order.",
+    "already-consumed ReviewRecord rejected.",
+    "REPEATED can reopen RESOLVED Error.",
+    "all unrelated Error states preserved.",
+    "all Skill states unchanged for every Review result.",
+    "current_stage unchanged for every Review result.",
+    "inputs remain unchanged.",
+    "duck/subclass/spoofed state/attempt/ReviewRecord inputs rejected.",
+    "existing LearningState direct constructor/copy/pickle protections remain.",
+    "Review private builder is not imported/called.",
+    "Review result algorithm is not duplicated.",
+    "no future-market argument exists.",
+    "all existing Review 67 tests PASS.",
+    "all existing Learning State 43 tests PASS before replacement/addition.",
+    "all existing Training 43 tests PASS.",
+    "all existing Evaluation 58 tests PASS.",
+    "explicit full-project test inventory PASS."
+  ],
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ],
+    "forbidden_actions": [
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 16,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "USER_WORK_UNIT_APPROVAL",
+  "artifact_refs": {
+    "design": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c"
+    },
+    "plan": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "sha": "908273bbc436092c57d52dbf06abf62b2e1ba37c"
+    }
+  }
+}
