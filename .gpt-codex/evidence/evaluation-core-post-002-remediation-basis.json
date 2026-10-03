@@ -1,0 +1,55 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "evidence_id": "EVIDENCE-EVALUATION-CORE-POST-002-REMEDIATION-BASIS",
+  "source": "SYSTEM_DERIVED",
+  "subject": "REMEDIATION_AUTHORITY_BASIS",
+  "state_revision": 13,
+  "result": "ACCEPTED",
+  "basis_type": "ACCEPTED_AUTHORITY_BASIS",
+  "finding_ids": [
+    "EVAL-POST-002"
+  ],
+  "accepted": true,
+  "failing": false,
+  "basis_statement": "Accept remediation authority only at invariant/design level: formal Evaluation authority must be bound to the immutable ORIGINAL Training submission boundary. Constructor validity or value consistency alone is not proof of original submission authority. Evaluation must reject or fail closed when a reconstructed different TrainingAttempt preserves submission-looking id, created_at, and user_analysis but changes authority-bearing historical stage, context, knowledge_boundary, learned_concept_ids, or target/objective/task values where authority depends on them. Prevent both same-Stage later-learning expansion and future-Stage context transplantation from expanding formal primary or contributor Error eligibility. Field revalidation alone is not an accepted remediation. Comparing only attempt_id, created_at, and user_analysis is insufficient. Reconstructing another internally valid TrainingAttempt and canonicalizing it again is insufficient. A caller-supplied fingerprint, duplicate snapshot, nonce, provenance value, or second copy is insufficient if the same caller can freely forge both sides of the comparison. Public Training constructor validity must never be treated as proof that a record is the original submitted object. Registration must not prematurely invent or authorize a provenance mechanism. Do not authorize a database, persistence layer, durable user-data registry, hidden persistent TrainingAttempt field, hidden persistent Evaluation field, tenth Evaluation field, secret embedded in public repository data, generalized provenance framework, generalized identity framework, serializer framework, shared helpers/common/utils abstraction, or private user learning data in the public repository. The basis may recognize that current Evaluation-only value validation may be insufficient to establish original-submission provenance. Freeze the scope-escalation rule: if a sound EVAL-POST-002 correction cannot be implemented within the currently authorized Evaluation scope while preserving published Training semantics, future execution MUST STOP and return SCOPE_ESCALATION_REQUIRED. It must not mutate Training or shared contracts without separate authority, introduce hidden provenance state, invent persistence, weaken historical-boundary guarantees, or accept caller reconstruction as original submission. If Training/shared-contract/integration changes are genuinely required, GPT must first propose and obtain approval for a separate bounded Work Unit or explicit scope authority. This registration Work Unit authorizes no scope expansion. Preserve the already independently verified EVAL-POST-001 closure. Do not regress __setstate__ rejection, __reduce__ rejection, __reduce_ex__ rejection, pickle protocols 0..HIGHEST_PROTOCOL rejection/safety, copy/deepcopy/replace restoration defenses, the immutable nine-field record, or the absence of mutable restoration aliases. The new remediation must not reopen EVAL-POST-001; its historical source Result remains immutable and it is not an open remediation finding in this registration. Preserve all passing Evaluation behavior: exactly nine Evaluation fields, no hidden persistent Evaluation fields, blocked direct Evaluation construction, blocked dataclasses.replace on Evaluation, no __dict__, canonical immutable Evaluation output, all 19 Error mappings, S1/S2/S3 Stage ceilings, CORE eligibility, learned-at-submission semantics, primary cardinality, contributor cardinality 0..2, uniqueness, primary/contributor separation, Error-ID prose protection, strict bool abstain, LOW implies abstain, abstain implies no formal errors, correct/no-error may be non-abstaining, internal skill_signal derivation, mutable diagnostic input copying, process-not-outcome, no future market dependency, and YAGNI. Same-Stage later-learning expansion must not grant OBS-002; future-Stage context transplant must not grant LOC-001. Both primary_error and contributors are protected. The concrete minimum provenance mechanism remains unresolved and is not selected or authorized by this registration.",
+  "authority_refs": [
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "791a90a87acfb72b4be69b971ac1c05e10676acc",
+      "path": ".gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json",
+      "blob_sha": "64cad2444ca1b3d4c51e040a3c758475bdc6be65"
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "783ddfcd4de536add29725f8a8849fcb5badd9ae",
+      "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-post-002-remediation-registration-001.json",
+      "blob_sha": "173262f3dbae90391b56de8165ec7c4dcbb2bb2d"
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "1a64eabc7ef57dd0d31b46c94d9037f2452b91d0",
+      "path": ".gpt-codex/evidence/results/RESULT-EVALUATION-CORE-POST-002-REMEDIATION-RECONCILIATION-APPROVAL-001.json",
+      "blob_sha": "0e2cf122cde91d8833bfb31d01b9c4fd703a0f8c"
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "b6c9b0d6436ebd929b3e7fb5511ee9a1bd468403",
+      "path": ".gpt-codex/evidence/instructions/4aa71c9c-32f1-4bc7-9a63-1261d3f0a7f2.json",
+      "blob_sha": "01a641809d896fd64398223dac49c12d0d11515f"
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "0baee38e6e58341e18494486f0bd78f0f75647ce",
+      "path": ".gpt-codex/evidence/instructions/9d0f1d20-0f33-4bf0-99d1-6e32e2f769c4.json",
+      "blob_sha": "69c059d4a2a857aee402bf132c1457bff4c12429"
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "4d76fc90c4b76e46a110437020413523e9b2f2c1",
+      "path": ".gpt-codex/evidence/results/b2dce595-2491-4c78-9606-3f5a16c1d2a4.json",
+      "blob_sha": "012e7571622b75892590ea372f6196f734b02e60"
+    }
+  ]
+}

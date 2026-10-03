@@ -1,0 +1,1477 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-evaluation-core-001",
+  "extension": {
+    "kind": "SKILL",
+    "id": "verification",
+    "version": "1.0.0"
+  },
+  "result_id": "6c0c510b-6fd8-4117-97e4-375bea002803",
+  "result_message_type": "REVIEW_FINDING",
+  "status": "FAIL",
+  "post_status": "FAIL",
+  "publication_readiness": "NOT_READY",
+  "task": "PRICE_ACTION_LEARNING_EVALUATION_CORE_POST_001_FIX_ROUND_1_FULL_POST_REVIEW_001",
+  "post_request_id": "5ef89f7c-b00d-4b68-8d4e-99150d462ca7",
+  "fix_instruction_id": "f24cf687-0191-4b24-9d5f-3727d87f88fd",
+  "fix_pre_result_id": "127411d1-ae19-4a51-a900-cb1ea52b4f9f",
+  "source_result_id": "040c329e-33a9-4608-831e-1c47337e6e15",
+  "source_finding_ids": [
+    "EVAL-POST-001"
+  ],
+  "response_to_instruction_id": "f24cf687-0191-4b24-9d5f-3727d87f88fd",
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "framework_version": "2.7.4",
+  "framework_commit": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c",
+  "framework_access": "READ_ONLY",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+    "sha": "636bfc03650286c28890ca01402021a5c1621437"
+  },
+  "state_revision": 12,
+  "review_target_revision": "e9695c0b9496e6d2dbf6f770b76886686662ba20",
+  "fix_round": 1,
+  "remediation_decision_ref": "DECISION-EVALUATION-CORE-POST-001-REMEDIATION",
+  "responder_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "return_to_gpt_required": true,
+  "completion_gate": "GPT_DECISION",
+  "changed": [],
+  "finding_ids": [
+    "EVAL-POST-002"
+  ],
+  "findings": [
+    {
+      "finding_id": "EVAL-POST-002",
+      "priority": "P1",
+      "status": "OPEN",
+      "title": "Public Training reconstruction can expand authority for the same historical submission",
+      "file": "src/price_action_learning/evaluation/core.py",
+      "start_line": 116,
+      "end_line": 169,
+      "root_cause": "_canonical_attempt verifies only the self-consistency of caller-supplied values using public Training constructors. It trusts supplied learned_concept_ids and Stage/context as the historical submission boundary without binding them to the original ID/timestamp submission. Public reconstruction with constructor-valid expanded knowledge therefore remains canonical and is accepted by the Evaluation factory.",
+      "impact": "OBS-002 becomes permitted for an existing S1 submission that learned only CON-S1-HIGH; transplanting a later S3 context also authorizes LOC-001 for the same original S1 attempt ID, timestamp and user analysis. Both primary and contributor channels are affected.",
+      "acceptance_violated": [
+        1,
+        3,
+        4,
+        5,
+        16,
+        19
+      ],
+      "no_candidate_or_training_file_mutation": true,
+      "ordinary_public_route": true,
+      "low_level_reflection_required": false,
+      "deterministic_observations": [
+        {
+          "case": "same-stage-later-learning/repeat-0",
+          "channel": "primary_error",
+          "error": "OBS-002",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S1",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S1-FACT-VS-INTERPRETATION",
+            "CON-S1-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "ea0f6e75-f203-4184-bab7-9576f8d05871",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": "OBS-002",
+            "contributors": [],
+            "hint": null,
+            "skill_signal": "SKL-S1-MARKET-STATE",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "same-stage-later-learning/repeat-0",
+          "channel": "contributors",
+          "error": "OBS-002",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S1",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S1-FACT-VS-INTERPRETATION",
+            "CON-S1-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "ea0f6e75-f203-4184-bab7-9576f8d05871",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": null,
+            "contributors": [
+              "OBS-002"
+            ],
+            "hint": null,
+            "skill_signal": "SKL-S1-MARKET-STATE",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "future-stage-context-transplant/repeat-0",
+          "channel": "primary_error",
+          "error": "LOC-001",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error Stage exceeds the submission Stage"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S3",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S3-RANGE-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "ea0f6e75-f203-4184-bab7-9576f8d05871",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": "LOC-001",
+            "contributors": [],
+            "hint": null,
+            "skill_signal": "SKL-S3-MARKET-LOCATION",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "future-stage-context-transplant/repeat-0",
+          "channel": "contributors",
+          "error": "LOC-001",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error Stage exceeds the submission Stage"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S3",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S3-RANGE-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "ea0f6e75-f203-4184-bab7-9576f8d05871",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": null,
+            "contributors": [
+              "LOC-001"
+            ],
+            "hint": null,
+            "skill_signal": "SKL-S3-MARKET-LOCATION",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "same-stage-later-learning/repeat-1",
+          "channel": "primary_error",
+          "error": "OBS-002",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S1",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S1-FACT-VS-INTERPRETATION",
+            "CON-S1-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "32f045b6-4d62-4f2d-b776-272e23f98729",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": "OBS-002",
+            "contributors": [],
+            "hint": null,
+            "skill_signal": "SKL-S1-MARKET-STATE",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "same-stage-later-learning/repeat-1",
+          "channel": "contributors",
+          "error": "OBS-002",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S1",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S1-FACT-VS-INTERPRETATION",
+            "CON-S1-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "32f045b6-4d62-4f2d-b776-272e23f98729",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": null,
+            "contributors": [
+              "OBS-002"
+            ],
+            "hint": null,
+            "skill_signal": "SKL-S1-MARKET-STATE",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "future-stage-context-transplant/repeat-1",
+          "channel": "primary_error",
+          "error": "LOC-001",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error Stage exceeds the submission Stage"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S3",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S3-RANGE-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "32f045b6-4d62-4f2d-b776-272e23f98729",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": "LOC-001",
+            "contributors": [],
+            "hint": null,
+            "skill_signal": "SKL-S3-MARKET-LOCATION",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "future-stage-context-transplant/repeat-1",
+          "channel": "contributors",
+          "error": "LOC-001",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error Stage exceeds the submission Stage"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S3",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S3-RANGE-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "32f045b6-4d62-4f2d-b776-272e23f98729",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": null,
+            "contributors": [
+              "LOC-001"
+            ],
+            "hint": null,
+            "skill_signal": "SKL-S3-MARKET-LOCATION",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "same-stage-later-learning/repeat-2",
+          "channel": "primary_error",
+          "error": "OBS-002",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S1",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S1-FACT-VS-INTERPRETATION",
+            "CON-S1-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "f7fd18a0-8add-434d-bee5-f7de54098946",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": "OBS-002",
+            "contributors": [],
+            "hint": null,
+            "skill_signal": "SKL-S1-MARKET-STATE",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "same-stage-later-learning/repeat-2",
+          "channel": "contributors",
+          "error": "OBS-002",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S1",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S1-FACT-VS-INTERPRETATION",
+            "CON-S1-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "f7fd18a0-8add-434d-bee5-f7de54098946",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": null,
+            "contributors": [
+              "OBS-002"
+            ],
+            "hint": null,
+            "skill_signal": "SKL-S1-MARKET-STATE",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "future-stage-context-transplant/repeat-2",
+          "channel": "primary_error",
+          "error": "LOC-001",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error Stage exceeds the submission Stage"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S3",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S3-RANGE-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "f7fd18a0-8add-434d-bee5-f7de54098946",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": "LOC-001",
+            "contributors": [],
+            "hint": null,
+            "skill_signal": "SKL-S3-MARKET-LOCATION",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "future-stage-context-transplant/repeat-2",
+          "channel": "contributors",
+          "error": "LOC-001",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error Stage exceeds the submission Stage"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S3",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S3-RANGE-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "f7fd18a0-8add-434d-bee5-f7de54098946",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": null,
+            "contributors": [
+              "LOC-001"
+            ],
+            "hint": null,
+            "skill_signal": "SKL-S3-MARKET-LOCATION",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "direct-published-constructor",
+          "channel": "primary_error",
+          "error": "OBS-002",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S1",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S1-FACT-VS-INTERPRETATION",
+            "CON-S1-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "fbfeb926-8907-49df-bb18-a2200e85d8b8",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": "OBS-002",
+            "contributors": [],
+            "hint": null,
+            "skill_signal": "SKL-S1-MARKET-STATE",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        },
+        {
+          "case": "direct-published-constructor",
+          "channel": "contributors",
+          "error": "OBS-002",
+          "original_rejection": {
+            "type": "ValueError",
+            "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+          },
+          "replacement_accepted": true,
+          "same_id": true,
+          "same_created_at": true,
+          "same_user_analysis": true,
+          "original_unchanged": true,
+          "original_stage": "S1",
+          "replacement_stage": "S1",
+          "original_learned": [
+            "CON-S1-HIGH"
+          ],
+          "replacement_learned": [
+            "CON-S1-FACT-VS-INTERPRETATION",
+            "CON-S1-HIGH"
+          ],
+          "evaluation": {
+            "attempt_id": "fbfeb926-8907-49df-bb18-a2200e85d8b8",
+            "what_was_correct": [],
+            "primary_issue": null,
+            "primary_error": null,
+            "contributors": [
+              "OBS-002"
+            ],
+            "hint": null,
+            "skill_signal": "SKL-S1-MARKET-STATE",
+            "evaluation_confidence": "HIGH",
+            "abstain": false
+          },
+          "exact_published_types": true,
+          "uses_object_new_or_setattr": false,
+          "uses_private_API_or_monkeypatch": false
+        }
+      ],
+      "spec_gap": "EVALUATION_SPEC.md describes accepting any record satisfying public constructor invariants. That limitation cannot waive the higher-authority Work Unit requirements to reject forged/expanded caller boundaries and preserve learned-at-submission authority. No fix or scope expansion is authorized by this finding.",
+      "remediation_authority": "GPT adjudication is required to reconcile the original-submission trust boundary with the no-persistence/no-hidden-field and Training-read-only constraints; this report selects no implementation mechanism."
+    }
+  ],
+  "blockers": [],
+  "deviations": [],
+  "execution": "COMPLETED: independent full read-only hostile POST re-review; READ / TEST / VALIDATE / REPORT",
+  "verify": {
+    "POST_STATUS": "FAIL",
+    "PUBLICATION_READINESS": "NOT_READY",
+    "REVIEW_COMPLETENESS": "COMPLETE; all durable files_read/tests/validation entries and all 23 Work Unit criteria reviewed; review continued after new finding",
+    "EVAL_POST_001_CLOSURE": "CLOSED",
+    "EVAL_POST_001_CLOSURE_SCOPE": "Original Evaluation __setstate__/pickle reconstruction bypass independently closed; durable finding status awaits GPT adjudication.",
+    "RESTORATION_SERIALIZATION_HOSTILE_REVIEW": {
+      "status": "PASS",
+      "protocols": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "independent_checks": 396,
+      "legacy_payloads": 44,
+      "restoration_dimensions": [
+        "wrong-attempt-id",
+        "S1-future-primary",
+        "S1-future-contributor",
+        "unlearned-primary",
+        "unlearned-contributor",
+        "unknown-primary",
+        "unknown-contributor",
+        "three-contributors",
+        "duplicate-contributors",
+        "primary-overlap",
+        "issue-ID",
+        "hint-ID",
+        "arbitrary-skill",
+        "mismatched-skill",
+        "nonbool-abstain",
+        "LOW-no-abstain",
+        "LOW-formal-errors",
+        "mutable-positives",
+        "mutable-contributors"
+      ],
+      "original_nine_fields_unchanged": true,
+      "copy_copy_deepcopy_replace": "REJECTED",
+      "other_surfaces": "copyreg.__newobj__/__newobj_ex__ reject; C and pure-Python Pickler/Unpickler reject; asdict/astuple/getstate yield detached data, blocked constructors/restoration cannot rebuild; marshal rejects"
+    },
+    "ALL_19_MAPPING_REVIEW": {
+      "status": "PASS",
+      "exact_mapping_rows": 19,
+      "matrix_cases": 2394,
+      "accepted": 234,
+      "correctly_rejected": 2160,
+      "channels": [
+        "primary_error",
+        "contributors"
+      ]
+    },
+    "HISTORICAL_AUTHORITY_REVIEW": "FAIL EVAL-POST-002: public reconstruction adds unlearned support or transplants future-Stage context for the same submission ID/time/analysis.",
+    "CARDINALITY_REVIEW": "PASS",
+    "PROSE_PROTECTION_REVIEW": "PASS: all19 Error IDs blocked in primary_issue/hint",
+    "ABSTENTION_CONFIDENCE_REVIEW": "PASS",
+    "SKILL_DERIVATION_REVIEW": "PASS for supplied canonical structured fields; original-submission authority fails EVAL-POST-002",
+    "CANONICAL_INPUT_REVIEW": "FAIL EVAL-POST-002: constructor self-consistency is checked, original-submission binding is absent.",
+    "PROCESS_NOT_OUTCOME_REVIEW": "PASS within approved evaluator-authored structured diagnostics; no future market input/dependency, source analysis untouched.",
+    "SPEC_RUNTIME_TEST_CONSISTENCY": "FAIL EVAL-POST-002: spec limits validation to public-constructor invariants but Work Unit requires rejecting expanded caller history; supplied tests omit this valid-shape public reconstruction.",
+    "YAGNI_SCOPE": "PASS",
+    "EVALUATION_TEST_RESULT": {
+      "command": [
+        "C:\\Python313\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/evaluation",
+        "-p",
+        "test_evaluation.py",
+        "-v"
+      ],
+      "tested_tree": "e9695c0b9496e6d2dbf6f770b76886686662ba20",
+      "count": 55,
+      "exit_code": 0,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    "TRAINING_TEST_RESULT": {
+      "command": [
+        "C:\\Python313\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/training",
+        "-p",
+        "test_training.py",
+        "-v"
+      ],
+      "tested_tree": "e9695c0b9496e6d2dbf6f770b76886686662ba20",
+      "count": 39,
+      "exit_code": 0,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    "FULL_PROJECT_TEST_RESULT": {
+      "command": "python -B run_tests.py: enumerate tests/**/*.test_*.py via Path.rglob(test_*.py), load EVERY file with importlib and loadTestsFromModule, run combined suite",
+      "files": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/training/test_training.py"
+      ],
+      "per_file_counts": {
+        "tests/evaluation/test_evaluation.py": 55,
+        "tests/training/test_training.py": 39
+      },
+      "count": 94,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "tested_tree": "e9695c0b9496e6d2dbf6f770b76886686662ba20"
+    },
+    "GIT_DIFF_CHECK": {
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "COMPLETE_CANDIDATE_DIFF_CHECK": {
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "CANDIDATE_PRESERVATION": "PASS: HEAD/tree/normal index/all five business identities/all candidate and live-main files unchanged; Framework snapshot unchanged",
+    "FINDING_IDS": [
+      "EVAL-POST-002"
+    ],
+    "FINDINGS": [
+      {
+        "finding_id": "EVAL-POST-002",
+        "priority": "P1",
+        "status": "OPEN",
+        "title": "Public Training reconstruction can expand authority for the same historical submission",
+        "file": "src/price_action_learning/evaluation/core.py",
+        "start_line": 116,
+        "end_line": 169,
+        "root_cause": "_canonical_attempt verifies only the self-consistency of caller-supplied values using public Training constructors. It trusts supplied learned_concept_ids and Stage/context as the historical submission boundary without binding them to the original ID/timestamp submission. Public reconstruction with constructor-valid expanded knowledge therefore remains canonical and is accepted by the Evaluation factory.",
+        "impact": "OBS-002 becomes permitted for an existing S1 submission that learned only CON-S1-HIGH; transplanting a later S3 context also authorizes LOC-001 for the same original S1 attempt ID, timestamp and user analysis. Both primary and contributor channels are affected.",
+        "acceptance_violated": [
+          1,
+          3,
+          4,
+          5,
+          16,
+          19
+        ],
+        "no_candidate_or_training_file_mutation": true,
+        "ordinary_public_route": true,
+        "low_level_reflection_required": false,
+        "deterministic_observations": [
+          {
+            "case": "same-stage-later-learning/repeat-0",
+            "channel": "primary_error",
+            "error": "OBS-002",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S1",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S1-FACT-VS-INTERPRETATION",
+              "CON-S1-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "ea0f6e75-f203-4184-bab7-9576f8d05871",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": "OBS-002",
+              "contributors": [],
+              "hint": null,
+              "skill_signal": "SKL-S1-MARKET-STATE",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "same-stage-later-learning/repeat-0",
+            "channel": "contributors",
+            "error": "OBS-002",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S1",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S1-FACT-VS-INTERPRETATION",
+              "CON-S1-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "ea0f6e75-f203-4184-bab7-9576f8d05871",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": null,
+              "contributors": [
+                "OBS-002"
+              ],
+              "hint": null,
+              "skill_signal": "SKL-S1-MARKET-STATE",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "future-stage-context-transplant/repeat-0",
+            "channel": "primary_error",
+            "error": "LOC-001",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error Stage exceeds the submission Stage"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S3",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S3-RANGE-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "ea0f6e75-f203-4184-bab7-9576f8d05871",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": "LOC-001",
+              "contributors": [],
+              "hint": null,
+              "skill_signal": "SKL-S3-MARKET-LOCATION",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "future-stage-context-transplant/repeat-0",
+            "channel": "contributors",
+            "error": "LOC-001",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error Stage exceeds the submission Stage"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S3",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S3-RANGE-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "ea0f6e75-f203-4184-bab7-9576f8d05871",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": null,
+              "contributors": [
+                "LOC-001"
+              ],
+              "hint": null,
+              "skill_signal": "SKL-S3-MARKET-LOCATION",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "same-stage-later-learning/repeat-1",
+            "channel": "primary_error",
+            "error": "OBS-002",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S1",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S1-FACT-VS-INTERPRETATION",
+              "CON-S1-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "32f045b6-4d62-4f2d-b776-272e23f98729",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": "OBS-002",
+              "contributors": [],
+              "hint": null,
+              "skill_signal": "SKL-S1-MARKET-STATE",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "same-stage-later-learning/repeat-1",
+            "channel": "contributors",
+            "error": "OBS-002",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S1",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S1-FACT-VS-INTERPRETATION",
+              "CON-S1-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "32f045b6-4d62-4f2d-b776-272e23f98729",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": null,
+              "contributors": [
+                "OBS-002"
+              ],
+              "hint": null,
+              "skill_signal": "SKL-S1-MARKET-STATE",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "future-stage-context-transplant/repeat-1",
+            "channel": "primary_error",
+            "error": "LOC-001",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error Stage exceeds the submission Stage"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S3",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S3-RANGE-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "32f045b6-4d62-4f2d-b776-272e23f98729",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": "LOC-001",
+              "contributors": [],
+              "hint": null,
+              "skill_signal": "SKL-S3-MARKET-LOCATION",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "future-stage-context-transplant/repeat-1",
+            "channel": "contributors",
+            "error": "LOC-001",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error Stage exceeds the submission Stage"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S3",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S3-RANGE-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "32f045b6-4d62-4f2d-b776-272e23f98729",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": null,
+              "contributors": [
+                "LOC-001"
+              ],
+              "hint": null,
+              "skill_signal": "SKL-S3-MARKET-LOCATION",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "same-stage-later-learning/repeat-2",
+            "channel": "primary_error",
+            "error": "OBS-002",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S1",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S1-FACT-VS-INTERPRETATION",
+              "CON-S1-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "f7fd18a0-8add-434d-bee5-f7de54098946",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": "OBS-002",
+              "contributors": [],
+              "hint": null,
+              "skill_signal": "SKL-S1-MARKET-STATE",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "same-stage-later-learning/repeat-2",
+            "channel": "contributors",
+            "error": "OBS-002",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S1",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S1-FACT-VS-INTERPRETATION",
+              "CON-S1-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "f7fd18a0-8add-434d-bee5-f7de54098946",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": null,
+              "contributors": [
+                "OBS-002"
+              ],
+              "hint": null,
+              "skill_signal": "SKL-S1-MARKET-STATE",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "future-stage-context-transplant/repeat-2",
+            "channel": "primary_error",
+            "error": "LOC-001",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error Stage exceeds the submission Stage"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S3",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S3-RANGE-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "f7fd18a0-8add-434d-bee5-f7de54098946",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": "LOC-001",
+              "contributors": [],
+              "hint": null,
+              "skill_signal": "SKL-S3-MARKET-LOCATION",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "future-stage-context-transplant/repeat-2",
+            "channel": "contributors",
+            "error": "LOC-001",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error Stage exceeds the submission Stage"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S3",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S3-RANGE-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "f7fd18a0-8add-434d-bee5-f7de54098946",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": null,
+              "contributors": [
+                "LOC-001"
+              ],
+              "hint": null,
+              "skill_signal": "SKL-S3-MARKET-LOCATION",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "direct-published-constructor",
+            "channel": "primary_error",
+            "error": "OBS-002",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S1",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S1-FACT-VS-INTERPRETATION",
+              "CON-S1-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "fbfeb926-8907-49df-bb18-a2200e85d8b8",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": "OBS-002",
+              "contributors": [],
+              "hint": null,
+              "skill_signal": "SKL-S1-MARKET-STATE",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          },
+          {
+            "case": "direct-published-constructor",
+            "channel": "contributors",
+            "error": "OBS-002",
+            "original_rejection": {
+              "type": "ValueError",
+              "message": "formal Error needs a mapped historical learned allowed CORE Concept"
+            },
+            "replacement_accepted": true,
+            "same_id": true,
+            "same_created_at": true,
+            "same_user_analysis": true,
+            "original_unchanged": true,
+            "original_stage": "S1",
+            "replacement_stage": "S1",
+            "original_learned": [
+              "CON-S1-HIGH"
+            ],
+            "replacement_learned": [
+              "CON-S1-FACT-VS-INTERPRETATION",
+              "CON-S1-HIGH"
+            ],
+            "evaluation": {
+              "attempt_id": "fbfeb926-8907-49df-bb18-a2200e85d8b8",
+              "what_was_correct": [],
+              "primary_issue": null,
+              "primary_error": null,
+              "contributors": [
+                "OBS-002"
+              ],
+              "hint": null,
+              "skill_signal": "SKL-S1-MARKET-STATE",
+              "evaluation_confidence": "HIGH",
+              "abstain": false
+            },
+            "exact_published_types": true,
+            "uses_object_new_or_setattr": false,
+            "uses_private_API_or_monkeypatch": false
+          }
+        ],
+        "spec_gap": "EVALUATION_SPEC.md describes accepting any record satisfying public constructor invariants. That limitation cannot waive the higher-authority Work Unit requirements to reject forged/expanded caller boundaries and preserve learned-at-submission authority. No fix or scope expansion is authorized by this finding.",
+        "remediation_authority": "GPT adjudication is required to reconcile the original-submission trust boundary with the no-persistence/no-hidden-field and Training-read-only constraints; this report selects no implementation mechanism."
+      }
+    ],
+    "BLOCKERS": [],
+    "DEVIATIONS": [],
+    "POST_REQUEST_SCHEMA_VALIDATION": [],
+    "POST_REQUEST_AUTHORITY_VALIDATION": [],
+    "FIX_INSTRUCTION_SCHEMA_VALIDATION": [],
+    "FIX_INSTRUCTION_AUTHORITY_VALIDATION": [],
+    "FIX_PRE_REQUEST_SCHEMA_VALIDATION": [],
+    "FIX_PRE_REQUEST_AUTHORITY_VALIDATION": [],
+    "FIX_PRE_RESULT_SCHEMA_VALIDATION": [],
+    "FIX_PRE_RESULT_AUTHORITY_VALIDATION": [],
+    "FINAL_PRE_EXECUTION_REVIEW_VALIDATION": [],
+    "REVIEW_LIFECYCLE_PREFLIGHT": [],
+    "RESULT_SCHEMA_VALIDATION": [],
+    "REVIEW_RESULT_VALIDATION": [],
+    "RESULT_AUTHORITY_VALIDATION": [],
+    "COMPLETION_EVIDENCE_VALIDATION": [],
+    "FINAL_REVIEW_LIFECYCLE_VALIDATION": []
+  },
+  "evidence_refs": [
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\authority-validation.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\authority-manifest.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\identity.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\candidate.diff",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\all19-primary-verification.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\independent_hostile_runtime_report.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\setstate-independent-reproduction.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\pickle-independent-reproduction.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\tests.json",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\evaluation-suite.log",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\training-suite.log",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\full-project-suite.log",
+    "C:\\Users\\xqc\\AppData\\Local\\Temp\\pa-post-review-adfpyhoc\\preservation.json",
+    "repository=xqc2098948451-byte/price-action-learning; commit=e23c17ae695969abf51267dfc3af613134127edd; path=.gpt-codex/evidence/instructions/5ef89f7c-b00d-4b68-8d4e-99150d462ca7.json; blob=8c7e6201ce18e0659ab64d7a8b94613ac3281601",
+    "repository=xqc2098948451-byte/price-action-learning; commit=9b3d5a1a5e87aadbeedca75b55bb20ec219715eb; path=.gpt-codex/evidence/instructions/f24cf687-0191-4b24-9d5f-3727d87f88fd.json; blob=9f982602030491da03dd4a4c1bc85fc2a3f4e0ed",
+    "repository=xqc2098948451-byte/price-action-learning; commit=1e9831f03c138560e21305fb19d319c2fc6e36b8; path=.gpt-codex/evidence/instructions/7d9eac21-7d6e-4e78-b3a1-0c98d982a603.json; blob=663a7ae9fcedfeef5e8b13c640438c432b25ceac",
+    "repository=xqc2098948451-byte/price-action-learning; commit=ae9089f3f0a6cd4c3a859867acf2817efb6ea27c; path=.gpt-codex/evidence/results/127411d1-ae19-4a51-a900-cb1ea52b4f9f.json; blob=b763d5b45b939a51738aacb6457de862fde8afa2",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=.gpt-codex/STATE.json; blob=92bc9256abc2848837db6b6b83b28a3ab4db5105",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=.gpt-codex/work-units/price-action-learning-evaluation-core-001.json; blob=104aae119985f04051e4733c3ab853e2f6d14ed5",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=.gpt-codex/evidence/results/040c329e-33a9-4608-831e-1c47337e6e15.json; blob=471510a417586578801571341f9944da1fb39330",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=.gpt-codex/evidence/evaluation-core-post-001-remediation-basis.json; blob=1c31ba000cbef77a662812428e5fc92a0c3ecedb",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=.gpt-codex/evidence/evaluation-core-post-001-remediation-adjudication.json; blob=e68705cd3ecddcc881c32730d0e18606475bc82c",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=spec/training/TRAINING_SPEC.md; blob=9c2ed5e2c275f71073f68a93de1178a565ae9a79",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=src/price_action_learning/training/__init__.py; blob=66af9fd135c08942aa3973144b2a1fa763f13e3a",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=src/price_action_learning/training/core.py; blob=751fd8b84f332143616fbf018a7b4ef0c4b206d1",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=tests/training/test_training.py; blob=0102e37f34f30058941d173a43cf3364c1832d6b",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=docs/CONTRACTS.md; blob=aea93c1b8fdecb3098cada74e3d58068d80826ff",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=docs/PROJECT_SCOPE.md; blob=bf6ef572ccca3c6cd041658fa86d22a65f626f11",
+    "repository=xqc2098948451-byte/price-action-learning; commit=636bfc03650286c28890ca01402021a5c1621437; path=docs/DIRECTORY_POLICY.md; blob=46f2da38b5189cb98f1c54e241e8eaa5ad01eb02",
+    "repository=xqc2098948451-byte/price-action-learning; commit=65cd6969e8ccf890d6e51b07fd7436564bf70421; path=spec/learning_map/LEARNING_MAP_SPEC.md; blob=726b35db8409ea03cbec33c916db7374e6724e03",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\authority-validation.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\authority-binding-audit.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\authority-manifest-complete.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\identity.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\candidate.diff",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\fix.diff",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\all19-mapping-matrix.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\independent-hostile-review.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\historical-authority-finding.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\reproduce_historical_finding.py",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\acceptance-review.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\requirement-coverage.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\tests.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\run_tests.py",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\hostile_review.py",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\evaluation-suite.log",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\training-suite.log",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\full-project-suite.log",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\preservation.json",
+    "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\result-validation.json"
+  ],
+  "artifact_stage": "IMPLEMENTATION",
+  "current_remote_ref": "refs/heads/main",
+  "local_head_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+  "remote_head_sha": "636bfc03650286c28890ca01402021a5c1621437",
+  "remote_verification": "VERIFIED",
+  "remote_verification_scope": "Existing main and governance refs observed live; local Result and Evaluation candidate remain unpublished.",
+  "sync_status": null,
+  "publication_authority": null,
+  "push_status": "NOT_ATTEMPTED",
+  "latest_synced_remote_state": {
+    "main": "636bfc03650286c28890ca01402021a5c1621437",
+    "state_revision": 12,
+    "continuity_sync_status": "SYNCED"
+  },
+  "local_unsynced_state": {
+    "candidate_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "candidate_tree": "e9695c0b9496e6d2dbf6f770b76886686662ba20",
+    "result_persistence": "LOCAL_ONLY_NOT_PUBLISHED",
+    "primary_main_checkout_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "primary_main_checkout_state_revision": 11,
+    "current_authority_root": "D:\\价格行为学习\\evaluation-core-post-001-remediation-registration-001"
+  },
+  "candidate_head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+  "pre_fix_candidate_tree": "95a5e5eddaf4fbe9071275e2cccf0e0943665c4d",
+  "fixed_candidate_tree": "e9695c0b9496e6d2dbf6f770b76886686662ba20",
+  "fixed_core_blob_sha": "919fa7343adc6b36398cc351bc4f7873bda651da",
+  "fixed_test_blob_sha": "594828dd2634d4e62ea1cd592c70967a61739745",
+  "eval_post_001_closure": "CLOSED",
+  "source_finding_closure_is_review_evidence_only": true,
+  "candidate_mutated": "NO",
+  "main_mutated": "NO",
+  "state_mutated": "NO",
+  "work_unit_mutated": "NO",
+  "commit": "NOT_PERFORMED",
+  "push": "NOT_PERFORMED",
+  "publish": "NOT_PERFORMED",
+  "evaluation_complete": "NO",
+  "evaluation_published": "NO",
+  "learning_state_started": "NO",
+  "hard_stop": "YES",
+  "local_result_path": "C:\\Users\\xqc\\.codex\\reports\\evaluation-full-post-20261003-5ef89f7c-5dca095c\\6c0c510b-6fd8-4117-97e4-375bea002803.json",
+  "next_gpt_action": "Adjudicate this complete local REVIEW_FINDING/FAIL and EVAL-POST-002; independently assess EVAL-POST-001 closure. Do not publish Evaluation or mark Work Unit COMPLETE. If remediation is accepted, issue separate governed authority addressing the historical-submission trust boundary; this Result authorizes no fix or scope expansion.",
+  "completion_evidence": {
+    "execution_state": "COMPLETED",
+    "process_completed": true,
+    "exit_code": 0,
+    "intended_scope": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT"
+    ],
+    "executed_scope": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT"
+    ],
+    "test_files_expected": 2,
+    "test_files_executed": 2,
+    "test_count": 94,
+    "failure_count": 0,
+    "error_count": 0,
+    "validators_expected": [
+      "POST_REQUEST_SCHEMA_VALIDATION",
+      "POST_REQUEST_AUTHORITY_VALIDATION",
+      "FIX_INSTRUCTION_SCHEMA_VALIDATION",
+      "FIX_INSTRUCTION_AUTHORITY_VALIDATION",
+      "FIX_PRE_REQUEST_SCHEMA_VALIDATION",
+      "FIX_PRE_REQUEST_AUTHORITY_VALIDATION",
+      "FIX_PRE_RESULT_SCHEMA_VALIDATION",
+      "FIX_PRE_RESULT_AUTHORITY_VALIDATION",
+      "FINAL_PRE_EXECUTION_REVIEW_VALIDATION",
+      "REVIEW_LIFECYCLE_PREFLIGHT",
+      "validate_result_envelope_contract",
+      "validate_review_result",
+      "validate_result_authority",
+      "validate_completion_evidence",
+      "validate_review_lifecycle"
+    ],
+    "validators_completed": [
+      "POST_REQUEST_SCHEMA_VALIDATION",
+      "POST_REQUEST_AUTHORITY_VALIDATION",
+      "FIX_INSTRUCTION_SCHEMA_VALIDATION",
+      "FIX_INSTRUCTION_AUTHORITY_VALIDATION",
+      "FIX_PRE_REQUEST_SCHEMA_VALIDATION",
+      "FIX_PRE_REQUEST_AUTHORITY_VALIDATION",
+      "FIX_PRE_RESULT_SCHEMA_VALIDATION",
+      "FIX_PRE_RESULT_AUTHORITY_VALIDATION",
+      "FINAL_PRE_EXECUTION_REVIEW_VALIDATION",
+      "REVIEW_LIFECYCLE_PREFLIGHT",
+      "validate_result_envelope_contract",
+      "validate_review_result",
+      "validate_result_authority",
+      "validate_completion_evidence",
+      "validate_review_lifecycle"
+    ],
+    "blocker_evidence_refs": []
+  },
+  "validation": {
+    "POST_REQUEST_SCHEMA_VALIDATION": [],
+    "POST_REQUEST_AUTHORITY_VALIDATION": [],
+    "FIX_INSTRUCTION_SCHEMA_VALIDATION": [],
+    "FIX_INSTRUCTION_AUTHORITY_VALIDATION": [],
+    "FIX_PRE_REQUEST_SCHEMA_VALIDATION": [],
+    "FIX_PRE_REQUEST_AUTHORITY_VALIDATION": [],
+    "FIX_PRE_RESULT_SCHEMA_VALIDATION": [],
+    "FIX_PRE_RESULT_AUTHORITY_VALIDATION": [],
+    "FINAL_PRE_EXECUTION_REVIEW_VALIDATION": [],
+    "REVIEW_LIFECYCLE_PREFLIGHT": [],
+    "RESULT_SCHEMA_VALIDATION": [],
+    "REVIEW_RESULT_VALIDATION": [],
+    "RESULT_AUTHORITY_VALIDATION": [],
+    "COMPLETION_EVIDENCE_VALIDATION": [],
+    "FINAL_REVIEW_LIFECYCLE_VALIDATION": []
+  }
+}
