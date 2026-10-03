@@ -1,0 +1,224 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "work_unit_id": "price-action-learning-learning-state-core-001",
+  "goal": "Implement the first immutable Learning State runtime that consumes a canonical submitted TrainingAttempt and its canonical Evaluation, updates only the frozen five-field LearningState contract, records skill/error/focus signals conservatively, prioritizes repeated errors, and preserves Review scheduling and Stage progression as separate future responsibilities. No scoring, prediction, persistence or Review execution.",
+  "scope": {
+    "owned_paths": [
+      "spec/learning_state/",
+      "src/price_action_learning/learning_state/",
+      "tests/learning_state/"
+    ],
+    "excluded_paths": [
+      ".gpt-codex/",
+      "AGENTS.md",
+      "README.md",
+      "docs/",
+      "spec/learning_map/",
+      "spec/training/",
+      "spec/evaluation/",
+      "spec/review/",
+      "spec/study_entry/",
+      "src/price_action_learning/learning_map/",
+      "src/price_action_learning/training/",
+      "src/price_action_learning/evaluation/",
+      "src/price_action_learning/review/",
+      "src/price_action_learning/study_entry/",
+      "tests/learning_map/",
+      "tests/training/",
+      "tests/evaluation/",
+      "tests/review/",
+      "tests/study_entry/"
+    ]
+  },
+  "dependencies": {
+    "framework": {
+      "version": "2.7.4",
+      "commit_sha": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c"
+    },
+    "project_baseline": {
+      "repository_id": "1394745962",
+      "repository_full_name": "xqc2098948451-byte/price-action-learning",
+      "main_commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa"
+    },
+    "project_state": {
+      "path": ".gpt-codex/STATE.json",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "18cf6324b822a3700d5fdd68f33830cf8bd8aaed",
+      "revision": 14,
+      "state": "AUTHORIZED"
+    },
+    "training_work_unit": {
+      "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "846a12902e8c726886603a22408f8d05ebb624e6",
+      "state": "COMPLETE"
+    },
+    "evaluation_work_unit": {
+      "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "9247c2ba63bc62d711bdfd0491abfc1cd7c1e92c",
+      "state": "COMPLETE",
+      "basis_state_revision": 14
+    },
+    "submission_provenance_work_unit": {
+      "path": ".gpt-codex/work-units/price-action-learning-submission-provenance-hardening-001.json",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "562e7c0eb2b2bf196fab5f4bd2b0b9bed859bdee",
+      "state": "COMPLETE",
+      "basis_state_revision": 14
+    },
+    "publication_result": {
+      "path": ".gpt-codex/evidence/results/submission-provenance-evaluation-publication.json",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "c561b20b3068b238c44f4e51751d697d49fab093",
+      "status": "PASS",
+      "publication_authority": "CONFIRMED_PUBLICATION",
+      "state_revision": 14
+    },
+    "shared_contracts": {
+      "path": "docs/CONTRACTS.md",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "aea93c1b8fdecb3098cada74e3d58068d80826ff"
+    },
+    "project_scope": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "bf6ef572ccca3c6cd041658fa86d22a65f626f11"
+    },
+    "directory_policy": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "46f2da38b5189cb98f1c54e241e8eaa5ad01eb02"
+    },
+    "learning_map": {
+      "path": "spec/learning_map/LEARNING_MAP_SPEC.md",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "726b35db8409ea03cbec33c916db7374e6724e03"
+    },
+    "training_spec": {
+      "path": "spec/training/TRAINING_SPEC.md",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "265077d6bcddf165b4317dd0441d1c6f93f025eb"
+    },
+    "training_runtime": {
+      "path": "src/price_action_learning/training/core.py",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "3fd2a8101b0b919ad487dec39dd80136f7dcce9b"
+    },
+    "training_exports": {
+      "path": "src/price_action_learning/training/__init__.py",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "66af9fd135c08942aa3973144b2a1fa763f13e3a"
+    },
+    "training_tests": {
+      "path": "tests/training/test_training.py",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "2fe1099db77e37651d91f31502d5bfef6d41ac87"
+    },
+    "evaluation_spec": {
+      "path": "spec/evaluation/EVALUATION_SPEC.md",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "50e4fde7230b3f184b4dff9d180b0c1a5bb46911"
+    },
+    "evaluation_runtime": {
+      "path": "src/price_action_learning/evaluation/core.py",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "7203d9de2850abbe4633b5c08ab2644be176df7f"
+    },
+    "evaluation_exports": {
+      "path": "src/price_action_learning/evaluation/__init__.py",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "657d7b1ba94ed543b63e64b681ab64e678d3aac4"
+    },
+    "evaluation_tests": {
+      "path": "tests/evaluation/test_evaluation.py",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "3b66c3469808e6ff077dc65f48ecfc424ba5215a"
+    },
+    "learning_state_placeholder": {
+      "path": "spec/learning_state/.gitkeep",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    }
+  },
+  "acceptance": [
+    "Implement only the minimum Evaluation -> Learning State closed loop after explicit Work Unit approval and later governed execution authorization. Consume the already-published TrainingAttempt and Evaluation contracts as READ_ONLY dependencies; preserve Submission Provenance Hardening, EVAL-POST-001 closure and EVAL-POST-002 closure. No cross-module mutation is authorized.",
+    "Expose one immutable LearningState record with EXACTLY five persistent fields in the frozen shared order: current_stage, skills, errors, current_focus, reviews_due. Do not modify docs/CONTRACTS.md, create a parallel state record, or add attempt history, scores, counts, timestamps, rewards, confidence, provenance, review schedule fields or hidden state. Use the smallest canonical immutable nested representations within the existing five fields.",
+    "Support current_stage EXACTLY S1, S2 or S3. Initial creation requires one explicit current Stage. Applying an Evaluation requires LearningState.current_stage == TrainingAttempt.stage; reject mismatch. Preserve current_stage on every application; no Stage advancement, promotion or S4-S8.",
+    "Canonical Skill IDs are EXACTLY SKL-S1-MARKET-STATE, SKL-S2-STRUCTURE-MOVEMENT and SKL-S3-MARKET-LOCATION. Represent all three deterministically in every initial state, each NOT_STARTED. Skill states are EXACTLY NOT_STARTED, LEARNING, UNSTABLE and STABLE. Introduce no new Skill ID or status.",
+    "For a non-abstaining Evaluation with at least one formal primary_error or contributor, set the LearningState skill identified by evaluation.skill_signal to UNSTABLE. Preserve other skills and the immutable Evaluation itself. An abstaining Evaluation changes no skill.",
+    "For a non-abstaining Evaluation with no formal errors, update only the skill identified by evaluation.skill_signal using EXACTLY NOT_STARTED -> LEARNING, LEARNING -> LEARNING, UNSTABLE -> UNSTABLE and STABLE -> STABLE. Do not automatically create STABLE or infer improvement from one correct Evaluation. Later Review evidence owns improvement, resolution and stability where applicable.",
+    "Only the already-approved 19 Error IDs may appear in LearningState.errors or current_focus: OBS-001, OBS-002, OBS-004, STR-001, STR-002, STR-006, STR-007, STR-003, STR-004, STR-005, REA-002, REA-003, REA-005, LOC-001, LOC-002, LOC-003, LOC-004, LOC-005 and LOC-006. Introduce no new Error IDs.",
+    "Canonical Error states are EXACTLY NEW, REPEATED, FOCUS, IMPROVING and RESOLVED. Ordinary Evaluation may create only NEW, REPEATED and FOCUS; it must not infer IMPROVING or RESOLVED. Preserve canonical prior statuses for errors not present in the current Evaluation; improvement and resolution require future Review evidence.",
+    "Define formal Error input order deterministically as primary_error if present, followed by contributors in their stored canonical tuple order. These structured fields are the only error source. Do not parse Error IDs from prose, infer hidden errors from hint or primary_issue, or rerun Error mapping or judgment logic.",
+    "Determine repeated occurrence against the previous LearningState.errors before applying the current Evaluation. A formal Error absent from previous errors becomes NEW. An Error already present in any canonical prior state is repeated evidence: a repeated non-selected Error is recorded as REPEATED and a repeated selected focus Error becomes FOCUS. Recurrence of a previously IMPROVING or RESOLVED Error must return to REPEATED or FOCUS rather than remain IMPROVING or RESOLVED. Add no counters or history.",
+    "When formal errors exist, select current_focus by first choosing the first error in canonical Evaluation error order that was already present in the previous LearningState. If none is repeated, choose primary_error if present, otherwise the first contributor. Set current_focus to that Error ID. A selected repeated occurrence has status FOCUS; a selected first occurrence remains NEW. No caller current_focus override is allowed.",
+    "A non-abstaining no-error Evaluation does not clear current_focus, resolve errors or mark errors IMPROVING. Preserve errors and current_focus unchanged and apply only the minimum Skill transition; one correct Evaluation is insufficient resolution evidence.",
+    "If Evaluation.abstain is true, LearningState remains semantically unchanged: no skill, error, focus, Stage or reviews_due transition and no review scheduling. An uncertain Evaluation must not mutate learner history.",
+    "reviews_due remains one of the five frozen fields. Initial reviews_due is empty; apply_evaluation preserves existing canonical reviews_due unchanged. Do not schedule Review, calculate 3/7/30-day intervals, create ReviewRecord or duplicate Review logic. The later Review Work Unit owns scheduling.",
+    "Provide only the minimum validated public operations equivalent to create_learning_state(...) and apply_evaluation(...), with names following project conventions. create_learning_state creates one validated immutable initial state with explicit S1/S2/S3 Stage, all three Skills NOT_STARTED, errors empty, current_focus None and reviews_due empty. No extra workflow is required.",
+    "apply_evaluation consumes the previous canonical LearningState, the exact published submitted TrainingAttempt and the exact published Evaluation, and returns a new immutable LearningState without mutating any input. Require Evaluation.attempt_id == TrainingAttempt.id and matching state/attempt Stage. Reject duck-typed state, attempt or Evaluation, unsupported record subclasses, noncanonical identifiers/statuses and equality-spoofed identifier or status values.",
+    "Preserve the published factory and original-submission provenance boundaries. Do not reconstruct TrainingAttempt or Evaluation from caller fields; matching identity or fields is not authority to create replacements. Validate canonical input shapes and observable invariants without re-evaluating the analysis or duplicating Evaluation's Error-to-Concept judgment authority.",
+    "Learning State consumes only already-authorized structured Evaluation signals. It does not inspect market scenarios semantically, inspect future movement, re-evaluate analysis, broaden Stage authority, rerun Error mapping or teach additional technical-analysis concepts. Formal judgment remains in Evaluation; Learning State only records its canonical outcome.",
+    "No public Learning State API may accept future candles, future price movement, realized P/L, trade result, prediction result or market outcome. State transitions depend only on canonical prior state, submitted attempt identity/Stage and canonical Evaluation; no process judgment may be inferred from subsequent market outcomes.",
+    "LearningState and all stored nested representations must be canonical and immutable, retaining no mutable caller aliases. Prefer a validated factory boundary consistent with the hardened Training/Evaluation design. Hostile tests must review direct construction, dataclasses.replace, copy/deepcopy, pickle at every supported protocol and restoration. Add no persistence or security infrastructure merely to enforce record immutability.",
+    "Tests must cover initial state creation for S1, S2 and S3; exactly five persistent fields; deterministic representation of all three canonical Skills as NOT_STARTED; empty errors, None current_focus and empty reviews_due.",
+    "Tests must cover correct non-abstaining Evaluation changing NOT_STARTED to LEARNING, retaining LEARNING/UNSTABLE/STABLE on subsequent correct Evaluations, primary-error and contributor-only paths setting evaluation.skill_signal's state to UNSTABLE, and no automatic STABLE mastery or Stage promotion.",
+    "Tests must cover first Error occurrence as NEW; repeated occurrence prioritized over new errors, including a repeated contributor outranking a new primary; selected repeated Error becoming FOCUS; deterministic ordering across primary and multiple contributors; contributor-only focus; recurrence from all canonical prior Error states including IMPROVING/RESOLVED; and preservation of unrelated errors.",
+    "Tests must cover no-error Evaluation retaining old errors and current_focus without automatic improvement/resolution, and abstain retaining the entire prior state semantically unchanged.",
+    "Tests must reject attempt_id mismatch and Stage mismatch; unknown/noncanonical Skills, Errors, statuses and Stages must be rejected or impossible through public creation. Exercise duck-typed and equality-spoofed state/attempt/Evaluation inputs and preserve the published submission provenance boundary without copied-field reconstruction.",
+    "Tests must prove input objects remain unchanged, nested caller-owned mutable collections cannot become retained aliases, output immutability and hostile construction/restoration behavior, preservation of existing canonical reviews_due without scheduling, and absence of future-market arguments from every public operation.",
+    "All existing Training/Evaluation and full-project tests must remain PASS during future implementation verification. The pinned publication Result retains baseline Training 43/43 PASS, Evaluation 58/58 PASS and full project 101/101 PASS. Enumerate and execute the actual full test inventory; discovery that silently skips non-package test directories is insufficient.",
+    "After future fresh live verification, normally materialize exactly A spec/learning_state/LEARNING_STATE_SPEC.md, D spec/learning_state/.gitkeep, A src/price_action_learning/learning_state/__init__.py, A src/price_action_learning/learning_state/core.py and A tests/learning_state/test_learning_state.py. Freeze the exact concrete mutation paths in the later governed execution Instruction; this proposal is not an execution Instruction and does not materialize business files.",
+    "Do not implement Review scheduling, ReviewRecord, 3/7/30-day calculations, IMPROVING/RESOLVED decision logic, automatic STABLE mastery, Stage promotion, Study Entry, Training revision, new Learning Map IDs or S4-S8.",
+    "Do not implement scoring, grades, ranking, rewards/gamification, prediction, trading signals, screenshots, TradingView, market data, persistence/database, private learning history, API, UI, plugin, network/LLM SDK, prompt framework, generalized validator engine or shared utils/helpers/common. Create no new top-level directory, placeholder or cross-module abstraction.",
+    "Publication of this PROPOSED Work Unit grants no implementation, PRE, Review or Study Entry authority. Both implementation flags remain false, basis_state_revision remains 14 and next_gate remains USER_WORK_UNIT_APPROVAL. Explicit user approval and the later governed sequence are required before any Learning State business mutation; this proposal creates no approval or authorization."
+  ],
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ],
+    "forbidden_actions": [
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 14,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "USER_WORK_UNIT_APPROVAL",
+  "artifact_refs": {
+    "design": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa"
+    },
+    "plan": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa"
+    }
+  }
+}
