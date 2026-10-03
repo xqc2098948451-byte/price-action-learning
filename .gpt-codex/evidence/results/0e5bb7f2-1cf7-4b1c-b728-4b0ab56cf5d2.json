@@ -1,0 +1,773 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-state-core-001",
+  "extension": {
+    "kind": "SKILL",
+    "id": "verification",
+    "version": "1.0.0"
+  },
+  "status": "PASS",
+  "result_message_type": "REVIEW_RESULT",
+  "result_id": "0e5bb7f2-1cf7-4b1c-b728-4b0ab56cf5d2",
+  "response_to_instruction_id": "33ba5302-11c9-45b9-9df9-bc67dbde7c11",
+  "responder_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "return_to_gpt_required": true,
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "framework_version": "2.7.4",
+  "framework_commit": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c",
+  "framework_access": "READ_ONLY",
+  "state_revision": 14,
+  "review_target_revision": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+  "artifact_stage": "IMPLEMENTATION",
+  "finding_ids": [],
+  "implementation_readiness": "READY",
+  "current_remote_ref": "refs/heads/main",
+  "local_head_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+  "remote_head_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+  "sync_status": null,
+  "push_status": "NOT_ATTEMPTED",
+  "remote_verification": "VERIFIED",
+  "publication_authority": null,
+  "execution": "Fresh independent read-only PRE review of the entire concrete five-path design against all 31 Work Unit acceptance items and governed request constraints; baseline tests, immutable identities and native contracts verified.",
+  "changed": [],
+  "verify": {
+    "training": "43/43 PASS",
+    "evaluation": "58/58 PASS",
+    "full_project": "101/101 PASS",
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "native_validation_lists": "all []",
+    "design": "31/31 acceptance areas feasible within exact five paths; no cross-module/shared-contract mutation",
+    "identity": "main49ea/STATE14 and Framework2.7.4 pinned; recorded reviewer file/index snapshots unchanged",
+    "candidate": "Not created during PRE; creation and clean baseline gate required only after durable PRE"
+  },
+  "evidence_refs": [
+    "repository=xqc2098948451-byte/price-action-learning;commit=3ac8d9ef1e9e5a9cefaeb0a4c58773461a41d57b;path=.gpt-codex/evidence/instructions/33ba5302-11c9-45b9-9df9-bc67dbde7c11.json;blob=1979135c5eab29f5fc6660ed80a3b36fc0f67ee6",
+    "repository=xqc2098948451-byte/price-action-learning;commit=3ac8d9ef1e9e5a9cefaeb0a4c58773461a41d57b;path=.gpt-codex/evidence/instructions/72cbf349-9a0c-4d80-b94e-4a9ff6d7d71a.json;blob=16701185f4e1cba21c1e1c642cd9a8c8cd3ddd24",
+    "repository=xqc2098948451-byte/price-action-learning;commit=48e3ddc642ea1c3b58f2825e443de3220143047c;path=.gpt-codex/work-units/price-action-learning-learning-state-core-001.json;blob=9f467f6c6872ea56851d403a209564f4e93ea0d7",
+    "repository=xqc2098948451-byte/price-action-learning;commit=48e3ddc642ea1c3b58f2825e443de3220143047c;path=.gpt-codex/evidence/learning-state-core-001-user-approval.json;blob=ce48d5b7e131bd288c34a69680a1b72c719794a5",
+    "repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=.gpt-codex/evidence/results/submission-provenance-evaluation-publication.json;blob=c561b20b3068b238c44f4e51751d697d49fab093"
+  ],
+  "deviations": [],
+  "blockers": [],
+  "completion_gate": "GPT_DECISION",
+  "completion_evidence": {
+    "execution_state": "COMPLETED",
+    "process_completed": true,
+    "exit_code": 0,
+    "intended_scope": [],
+    "executed_scope": [],
+    "test_files_expected": 2,
+    "test_files_executed": 2,
+    "test_count": 101,
+    "failure_count": 0,
+    "error_count": 0,
+    "validators_expected": [
+      "review_instruction_schema",
+      "execution_instruction_schema",
+      "review_instruction_authority",
+      "execution_instruction_authority",
+      "work_unit_schema",
+      "current_state_schema",
+      "user_approval_schema",
+      "user_approval_project_binding",
+      "project_identity_boundary",
+      "framework_adoption_execution",
+      "state_authority",
+      "published_result_authority",
+      "published_completion_evidence",
+      "immutable_locators",
+      "user_approval_proposal_binding",
+      "baseline_layout",
+      "baseline_and_Framework_identity",
+      "live_main_and_governance",
+      "explicit_test_inventory",
+      "Training43",
+      "Evaluation58",
+      "full101",
+      "complete_31_item_design_review",
+      "native_resume",
+      "result_envelope_contract",
+      "review_result",
+      "result_authority",
+      "completion_evidence",
+      "result_protocol",
+      "validate_pre_execution_review",
+      "governed_mutation_entry",
+      "result_return_context"
+    ],
+    "validators_completed": [
+      "review_instruction_schema",
+      "execution_instruction_schema",
+      "review_instruction_authority",
+      "execution_instruction_authority",
+      "work_unit_schema",
+      "current_state_schema",
+      "user_approval_schema",
+      "user_approval_project_binding",
+      "project_identity_boundary",
+      "framework_adoption_execution",
+      "state_authority",
+      "published_result_authority",
+      "published_completion_evidence",
+      "immutable_locators",
+      "user_approval_proposal_binding",
+      "baseline_layout",
+      "baseline_and_Framework_identity",
+      "live_main_and_governance",
+      "explicit_test_inventory",
+      "Training43",
+      "Evaluation58",
+      "full101",
+      "complete_31_item_design_review",
+      "native_resume",
+      "result_envelope_contract",
+      "review_result",
+      "result_authority",
+      "completion_evidence",
+      "result_protocol",
+      "validate_pre_execution_review",
+      "governed_mutation_entry",
+      "result_return_context"
+    ],
+    "blocker_evidence_refs": []
+  },
+  "git": {
+    "base_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+    "implementation_sha": null
+  },
+  "next_gpt_action": "Transport these exact Result bytes through governance only, then reverify current authority. Candidate creation and business mutation remain separate gated actions; no Learning State publication is decided by this PRE.",
+  "role_observation": {
+    "role": "CODEX_REVIEWER",
+    "instruction_id": "33ba5302-11c9-45b9-9df9-bc67dbde7c11",
+    "work_unit": "price-action-learning-learning-state-core-001",
+    "reviewed_revision": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+    "executed_revision": null,
+    "files_read": [
+      "project_state: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=.gpt-codex/STATE.json;blob=18cf6324b822a3700d5fdd68f33830cf8bd8aaed",
+      "training_work_unit: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=.gpt-codex/work-units/price-action-learning-training-core-001.json;blob=846a12902e8c726886603a22408f8d05ebb624e6",
+      "evaluation_work_unit: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=.gpt-codex/work-units/price-action-learning-evaluation-core-001.json;blob=9247c2ba63bc62d711bdfd0491abfc1cd7c1e92c",
+      "submission_provenance_work_unit: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=.gpt-codex/work-units/price-action-learning-submission-provenance-hardening-001.json;blob=562e7c0eb2b2bf196fab5f4bd2b0b9bed859bdee",
+      "publication_result: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=.gpt-codex/evidence/results/submission-provenance-evaluation-publication.json;blob=c561b20b3068b238c44f4e51751d697d49fab093",
+      "shared_contracts: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=docs/CONTRACTS.md;blob=aea93c1b8fdecb3098cada74e3d58068d80826ff",
+      "project_scope: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=docs/PROJECT_SCOPE.md;blob=bf6ef572ccca3c6cd041658fa86d22a65f626f11",
+      "directory_policy: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=docs/DIRECTORY_POLICY.md;blob=46f2da38b5189cb98f1c54e241e8eaa5ad01eb02",
+      "learning_map: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=spec/learning_map/LEARNING_MAP_SPEC.md;blob=726b35db8409ea03cbec33c916db7374e6724e03",
+      "training_spec: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=spec/training/TRAINING_SPEC.md;blob=265077d6bcddf165b4317dd0441d1c6f93f025eb",
+      "training_runtime: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=src/price_action_learning/training/core.py;blob=3fd2a8101b0b919ad487dec39dd80136f7dcce9b",
+      "training_exports: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=src/price_action_learning/training/__init__.py;blob=66af9fd135c08942aa3973144b2a1fa763f13e3a",
+      "training_tests: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=tests/training/test_training.py;blob=2fe1099db77e37651d91f31502d5bfef6d41ac87",
+      "evaluation_spec: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=spec/evaluation/EVALUATION_SPEC.md;blob=50e4fde7230b3f184b4dff9d180b0c1a5bb46911",
+      "evaluation_runtime: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=src/price_action_learning/evaluation/core.py;blob=7203d9de2850abbe4633b5c08ab2644be176df7f",
+      "evaluation_exports: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=src/price_action_learning/evaluation/__init__.py;blob=657d7b1ba94ed543b63e64b681ab64e678d3aac4",
+      "evaluation_tests: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=tests/evaluation/test_evaluation.py;blob=3b66c3469808e6ff077dc65f48ecfc424ba5215a",
+      "learning_state_placeholder: repository=xqc2098948451-byte/price-action-learning;commit=49ea8aeaed1ad5e734732ec7217a216192b16dfa;path=spec/learning_state/.gitkeep;blob=e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "AUTHORIZED_WORK_UNIT: repository=xqc2098948451-byte/price-action-learning;commit=48e3ddc642ea1c3b58f2825e443de3220143047c;path=.gpt-codex/work-units/price-action-learning-learning-state-core-001.json;blob=9f467f6c6872ea56851d403a209564f4e93ea0d7",
+      "USER_APPROVAL: commit=48e3ddc642ea1c3b58f2825e443de3220143047c;path=.gpt-codex/evidence/learning-state-core-001-user-approval.json;blob=ce48d5b7e131bd288c34a69680a1b72c719794a5;binds proposal 2a64b91d8d4ab5f5076b2be9dbf23da94a6fe1d9",
+      ".gpt-codex/evidence/instructions/33ba5302-11c9-45b9-9df9-bc67dbde7c11.json@3ac8d9ef1e9e5a9cefaeb0a4c58773461a41d57b",
+      ".gpt-codex/evidence/instructions/72cbf349-9a0c-4d80-b94e-4a9ff6d7d71a.json@3ac8d9ef1e9e5a9cefaeb0a4c58773461a41d57b"
+    ],
+    "files_changed": [],
+    "tests_run": [
+      {
+        "suite": "training",
+        "command": "C:\\Python313\\python.exe -B C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-test-runner.py --project C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-checkout --suite training --report C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-training-tests.json",
+        "tested_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+        "inventory": [
+          "tests/evaluation/test_evaluation.py",
+          "tests/training/test_training.py"
+        ],
+        "explicitly_loaded": [
+          "tests/training/test_training.py"
+        ],
+        "loaded_counts": {
+          "tests/training/test_training.py": 43
+        },
+        "test_count": 43,
+        "failure_count": 0,
+        "error_count": 0,
+        "skip_count": 0,
+        "exit_code": 0
+      },
+      {
+        "suite": "evaluation",
+        "command": "C:\\Python313\\python.exe -B C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-test-runner.py --project C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-checkout --suite evaluation --report C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-evaluation-tests.json",
+        "tested_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+        "inventory": [
+          "tests/evaluation/test_evaluation.py",
+          "tests/training/test_training.py"
+        ],
+        "explicitly_loaded": [
+          "tests/evaluation/test_evaluation.py"
+        ],
+        "loaded_counts": {
+          "tests/evaluation/test_evaluation.py": 58
+        },
+        "test_count": 58,
+        "failure_count": 0,
+        "error_count": 0,
+        "skip_count": 0,
+        "exit_code": 0
+      },
+      {
+        "suite": "full",
+        "command": "C:\\Python313\\python.exe -B C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-test-runner.py --project C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-checkout --suite full --report C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-full-tests.json",
+        "tested_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+        "inventory": [
+          "tests/evaluation/test_evaluation.py",
+          "tests/training/test_training.py"
+        ],
+        "explicitly_loaded": [
+          "tests/evaluation/test_evaluation.py",
+          "tests/training/test_training.py"
+        ],
+        "loaded_counts": {
+          "tests/evaluation/test_evaluation.py": 58,
+          "tests/training/test_training.py": 43
+        },
+        "test_count": 101,
+        "failure_count": 0,
+        "error_count": 0,
+        "skip_count": 0,
+        "exit_code": 0
+      }
+    ],
+    "findings": [],
+    "fix_round": 0,
+    "agent_spawns": 0,
+    "result": "REVIEW_RESULT"
+  },
+  "test_execution_records": [
+    {
+      "suite": "training",
+      "command": "C:\\Python313\\python.exe -B C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-test-runner.py --project C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-checkout --suite training --report C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-training-tests.json",
+      "tested_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "inventory": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/training/test_training.py"
+      ],
+      "explicitly_loaded": [
+        "tests/training/test_training.py"
+      ],
+      "loaded_counts": {
+        "tests/training/test_training.py": 43
+      },
+      "test_count": 43,
+      "failure_count": 0,
+      "error_count": 0,
+      "skip_count": 0,
+      "exit_code": 0
+    },
+    {
+      "suite": "evaluation",
+      "command": "C:\\Python313\\python.exe -B C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-test-runner.py --project C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-checkout --suite evaluation --report C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-evaluation-tests.json",
+      "tested_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "inventory": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/training/test_training.py"
+      ],
+      "explicitly_loaded": [
+        "tests/evaluation/test_evaluation.py"
+      ],
+      "loaded_counts": {
+        "tests/evaluation/test_evaluation.py": 58
+      },
+      "test_count": 58,
+      "failure_count": 0,
+      "error_count": 0,
+      "skip_count": 0,
+      "exit_code": 0
+    },
+    {
+      "suite": "full",
+      "command": "C:\\Python313\\python.exe -B C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-test-runner.py --project C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-checkout --suite full --report C:\\Users\\xqc\\.codex\\reports\\learning-state-core-recovery-20261003\\pre-review-full-tests.json",
+      "tested_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "inventory": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/training/test_training.py"
+      ],
+      "explicitly_loaded": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/training/test_training.py"
+      ],
+      "loaded_counts": {
+        "tests/evaluation/test_evaluation.py": 58,
+        "tests/training/test_training.py": 43
+      },
+      "test_count": 101,
+      "failure_count": 0,
+      "error_count": 0,
+      "skip_count": 0,
+      "exit_code": 0
+    }
+  ],
+  "immutable_locator_verification": [
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": ".gpt-codex/STATE.json",
+      "blob_sha": "18cf6324b822a3700d5fdd68f33830cf8bd8aaed",
+      "byte_count": 4453,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": ".gpt-codex/work-units/price-action-learning-training-core-001.json",
+      "blob_sha": "846a12902e8c726886603a22408f8d05ebb624e6",
+      "byte_count": 5282,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+      "blob_sha": "9247c2ba63bc62d711bdfd0491abfc1cd7c1e92c",
+      "byte_count": 11143,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": ".gpt-codex/work-units/price-action-learning-submission-provenance-hardening-001.json",
+      "blob_sha": "562e7c0eb2b2bf196fab5f4bd2b0b9bed859bdee",
+      "byte_count": 16912,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": ".gpt-codex/evidence/results/submission-provenance-evaluation-publication.json",
+      "blob_sha": "c561b20b3068b238c44f4e51751d697d49fab093",
+      "byte_count": 6775,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "docs/CONTRACTS.md",
+      "blob_sha": "aea93c1b8fdecb3098cada74e3d58068d80826ff",
+      "byte_count": 938,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "docs/PROJECT_SCOPE.md",
+      "blob_sha": "bf6ef572ccca3c6cd041658fa86d22a65f626f11",
+      "byte_count": 1928,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "docs/DIRECTORY_POLICY.md",
+      "blob_sha": "46f2da38b5189cb98f1c54e241e8eaa5ad01eb02",
+      "byte_count": 3941,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "spec/learning_map/LEARNING_MAP_SPEC.md",
+      "blob_sha": "726b35db8409ea03cbec33c916db7374e6724e03",
+      "byte_count": 17443,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "spec/training/TRAINING_SPEC.md",
+      "blob_sha": "265077d6bcddf165b4317dd0441d1c6f93f025eb",
+      "byte_count": 5738,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "src/price_action_learning/training/core.py",
+      "blob_sha": "3fd2a8101b0b919ad487dec39dd80136f7dcce9b",
+      "byte_count": 9692,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "src/price_action_learning/training/__init__.py",
+      "blob_sha": "66af9fd135c08942aa3973144b2a1fa763f13e3a",
+      "byte_count": 287,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "tests/training/test_training.py",
+      "blob_sha": "2fe1099db77e37651d91f31502d5bfef6d41ac87",
+      "byte_count": 24886,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "spec/evaluation/EVALUATION_SPEC.md",
+      "blob_sha": "50e4fde7230b3f184b4dff9d180b0c1a5bb46911",
+      "byte_count": 12495,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "src/price_action_learning/evaluation/core.py",
+      "blob_sha": "7203d9de2850abbe4633b5c08ab2644be176df7f",
+      "byte_count": 13846,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "src/price_action_learning/evaluation/__init__.py",
+      "blob_sha": "657d7b1ba94ed543b63e64b681ab64e678d3aac4",
+      "byte_count": 159,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "tests/evaluation/test_evaluation.py",
+      "blob_sha": "3b66c3469808e6ff077dc65f48ecfc424ba5215a",
+      "byte_count": 45077,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "path": "spec/learning_state/.gitkeep",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "byte_count": 0,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "48e3ddc642ea1c3b58f2825e443de3220143047c",
+      "path": ".gpt-codex/work-units/price-action-learning-learning-state-core-001.json",
+      "blob_sha": "9f467f6c6872ea56851d403a209564f4e93ea0d7",
+      "byte_count": 17899,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "48e3ddc642ea1c3b58f2825e443de3220143047c",
+      "path": ".gpt-codex/evidence/learning-state-core-001-user-approval.json",
+      "blob_sha": "ce48d5b7e131bd288c34a69680a1b72c719794a5",
+      "byte_count": 820,
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "3ac8d9ef1e9e5a9cefaeb0a4c58773461a41d57b",
+      "path": ".gpt-codex/evidence/instructions/33ba5302-11c9-45b9-9df9-bc67dbde7c11.json",
+      "blob_sha": "1979135c5eab29f5fc6660ed80a3b36fc0f67ee6",
+      "resolved": true
+    },
+    {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "3ac8d9ef1e9e5a9cefaeb0a4c58773461a41d57b",
+      "path": ".gpt-codex/evidence/instructions/72cbf349-9a0c-4d80-b94e-4a9ff6d7d71a.json",
+      "blob_sha": "16701185f4e1cba21c1e1c642cd9a8c8cd3ddd24",
+      "resolved": true
+    }
+  ],
+  "identity_verification": {
+    "baseline": {
+      "head": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "index_sha256": "4319c69d5490aacca08f39e80bd639995a183db59f8bce27da1fd0e51ed80e93",
+      "file_count": 89,
+      "recorded_snapshot_byte_identity": true,
+      "index_tree_equals_HEAD": true,
+      "staged_delta": [],
+      "worktree_delta": [],
+      "creation_time_index_hash": null,
+      "limit": "No checkout-creation-time index hash was retained; byte identity is established from the recorded reviewer snapshot, with clean HEAD/index/source identity independently verified."
+    },
+    "framework": {
+      "head": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c",
+      "index_sha256": "7999245bef5ae87caad393a7c9de3ace39253c1ae12155657e15ead59f6cf70a",
+      "file_count": 407,
+      "recorded_snapshot_byte_identity": true,
+      "access": "READ_ONLY",
+      "pycache_change": false
+    },
+    "remote_main": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+    "remote_governance": "3ac8d9ef1e9e5a9cefaeb0a4c58773461a41d57b",
+    "candidate": {
+      "exists_during_PRE": false,
+      "creation_after_durable_PRE_required": true,
+      "current_candidate_readiness_claimed": false,
+      "pre_mutation_gate": "Create dedicated real candidate at BASE after durable PRE; independently verify HEAD/base and clean normal index before any business mutation."
+    }
+  },
+  "complete_acceptance_design_review": [
+    {
+      "acceptance_item": 1,
+      "requirement": "Implement only the minimum Evaluation -> Learning State closed loop after explicit Work Unit approval and later governed execution authorization. Consume the already-published TrainingAttempt and Evaluation contracts as READ_ONLY dependencies; preserve Submission Provenance Hardening, EVAL-POST-001 closure and EVAL-POST-002 closure. No cross-module mutation is authorized.",
+      "assessment": "Only the Learning State module records already-published outcomes. Existing dependency record factories are hardened; no dependency or shared-contract mutation is needed.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 2,
+      "requirement": "Expose one immutable LearningState record with EXACTLY five persistent fields in the frozen shared order: current_stage, skills, errors, current_focus, reviews_due. Do not modify docs/CONTRACTS.md, create a parallel state record, or add attempt history, scores, counts, timestamps, rewards, confidence, provenance, review schedule fields or hidden state. Use the smallest canonical immutable nested representations within the existing five fields.",
+      "assessment": "A frozen slots dataclass with init disabled can contain exactly current_stage, skills, errors, current_focus, reviews_due. No persistent provenance or other field is needed.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 3,
+      "requirement": "Support current_stage EXACTLY S1, S2 or S3. Initial creation requires one explicit current Stage. Applying an Evaluation requires LearningState.current_stage == TrainingAttempt.stage; reject mismatch. Preserve current_stage on every application; no Stage advancement, promotion or S4-S8.",
+      "assessment": "Exact base str S1/S2/S3 validation, state/attempt Stage equality and preserving Stage provide the required boundary without promotion.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 4,
+      "requirement": "Canonical Skill IDs are EXACTLY SKL-S1-MARKET-STATE, SKL-S2-STRUCTURE-MOVEMENT and SKL-S3-MARKET-LOCATION. Represent all three deterministically in every initial state, each NOT_STARTED. Skill states are EXACTLY NOT_STARTED, LEARNING, UNSTABLE and STABLE. Introduce no new Skill ID or status.",
+      "assessment": "The three published Skill IDs can be stored once in fixed ordered exact tuple pairs, with only the four published statuses and NOT_STARTED initialization.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 5,
+      "requirement": "For a non-abstaining Evaluation with at least one formal primary_error or contributor, set the LearningState skill identified by evaluation.skill_signal to UNSTABLE. Preserve other skills and the immutable Evaluation itself. An abstaining Evaluation changes no skill.",
+      "assessment": "An error-bearing non-abstaining application changes only the existing evaluation.skill_signal entry to UNSTABLE and preserves the other Skill entries.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 6,
+      "requirement": "For a non-abstaining Evaluation with no formal errors, update only the skill identified by evaluation.skill_signal using EXACTLY NOT_STARTED -> LEARNING, LEARNING -> LEARNING, UNSTABLE -> UNSTABLE and STABLE -> STABLE. Do not automatically create STABLE or infer improvement from one correct Evaluation. Later Review evidence owns improvement, resolution and stability where applicable.",
+      "assessment": "The no-error transition table has only NOT_STARTED to LEARNING and identity for LEARNING/UNSTABLE/STABLE; no path creates automatic STABLE.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 7,
+      "requirement": "Only the already-approved 19 Error IDs may appear in LearningState.errors or current_focus: OBS-001, OBS-002, OBS-004, STR-001, STR-002, STR-006, STR-007, STR-003, STR-004, STR-005, REA-002, REA-003, REA-005, LOC-001, LOC-002, LOC-003, LOC-004, LOC-005 and LOC-006. Introduce no new Error IDs.",
+      "assessment": "All 19 Error IDs and their canonical order are present in the published Learning Map; a module-local ID membership tuple needs no new mapping or ID.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 8,
+      "requirement": "Canonical Error states are EXACTLY NEW, REPEATED, FOCUS, IMPROVING and RESOLVED. Ordinary Evaluation may create only NEW, REPEATED and FOCUS; it must not infer IMPROVING or RESOLVED. Preserve canonical prior statuses for errors not present in the current Evaluation; improvement and resolution require future Review evidence.",
+      "assessment": "The five published Error statuses are sufficient. Current Evaluation writes only NEW/REPEATED/FOCUS; unrelated IMPROVING/RESOLVED remain unchanged.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 9,
+      "requirement": "Define formal Error input order deterministically as primary_error if present, followed by contributors in their stored canonical tuple order. These structured fields are the only error source. Do not parse Error IDs from prose, infer hidden errors from hint or primary_issue, or rerun Error mapping or judgment logic.",
+      "assessment": "The immutable primary_error followed by stored contributor tuple supplies formal errors directly. No prose parsing, hint interpretation or judgment rerun is needed.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 10,
+      "requirement": "Determine repeated occurrence against the previous LearningState.errors before applying the current Evaluation. A formal Error absent from previous errors becomes NEW. An Error already present in any canonical prior state is repeated evidence: a repeated non-selected Error is recorded as REPEATED and a repeated selected focus Error becomes FOCUS. Recurrence of a previously IMPROVING or RESOLVED Error must return to REPEATED or FOCUS rather than remain IMPROVING or RESOLVED. Add no counters or history.",
+      "assessment": "Snapshot prior membership before updates. Current absent IDs become NEW; repeated selected becomes FOCUS and other repeated becomes REPEATED, including prior IMPROVING/RESOLVED.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 11,
+      "requirement": "When formal errors exist, select current_focus by first choosing the first error in canonical Evaluation error order that was already present in the previous LearningState. If none is repeated, choose primary_error if present, otherwise the first contributor. Set current_focus to that Error ID. A selected repeated occurrence has status FOCUS; a selected first occurrence remains NEW. No caller current_focus override is allowed.",
+      "assessment": "Select the first current formal Error found in prior membership; otherwise select the first current formal Error. This exactly gives primary-before-contributor fallback with no caller override.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 12,
+      "requirement": "A non-abstaining no-error Evaluation does not clear current_focus, resolve errors or mark errors IMPROVING. Preserve errors and current_focus unchanged and apply only the minimum Skill transition; one correct Evaluation is insufficient resolution evidence.",
+      "assessment": "The no-error branch preserves prior errors and current_focus and changes only the specified Skill transition.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 13,
+      "requirement": "If Evaluation.abstain is true, LearningState remains semantically unchanged: no skill, error, focus, Stage or reviews_due transition and no review scheduling. An uncertain Evaluation must not mutate learner history.",
+      "assessment": "The abstain branch allocates a fresh validated LearningState preserving all five fields semantically.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 14,
+      "requirement": "reviews_due remains one of the five frozen fields. Initial reviews_due is empty; apply_evaluation preserves existing canonical reviews_due unchanged. Do not schedule Review, calculate 3/7/30-day intervals, create ReviewRecord or duplicate Review logic. The later Review Work Unit owns scheduling.",
+      "assessment": "reviews_due is an immutable exact tuple of nonempty base strings, initially empty and copied/preserved without interpreting dates or intervals.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 15,
+      "requirement": "Provide only the minimum validated public operations equivalent to create_learning_state(...) and apply_evaluation(...), with names following project conventions. create_learning_state creates one validated immutable initial state with explicit S1/S2/S3 Stage, all three Skills NOT_STARTED, errors empty, current_focus None and reviews_due empty. No extra workflow is required.",
+      "assessment": "Only LearningState, create_learning_state and apply_evaluation are exported; both operations use the minimal keyword-only parameters required by the request.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 16,
+      "requirement": "apply_evaluation consumes the previous canonical LearningState, the exact published submitted TrainingAttempt and the exact published Evaluation, and returns a new immutable LearningState without mutating any input. Require Evaluation.attempt_id == TrainingAttempt.id and matching state/attempt Stage. Reject duck-typed state, attempt or Evaluation, unsupported record subclasses, noncanonical identifiers/statuses and equality-spoofed identifier or status values.",
+      "assessment": "Require exact published record types and canonical nested shapes/base identifier and status strings before comparison; bind Evaluation.attempt_id to attempt.id and state Stage to attempt Stage.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 17,
+      "requirement": "Preserve the published factory and original-submission provenance boundaries. Do not reconstruct TrainingAttempt or Evaluation from caller fields; matching identity or fields is not authority to create replacements. Validate canonical input shapes and observable invariants without re-evaluating the analysis or duplicating Evaluation's Error-to-Concept judgment authority.",
+      "assessment": "Consume the supplied original TrainingAttempt and Evaluation. Their blocked public reconstruction boundaries provide public provenance; observable validation need not reconstruct either dependency.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 18,
+      "requirement": "Learning State consumes only already-authorized structured Evaluation signals. It does not inspect market scenarios semantically, inspect future movement, re-evaluate analysis, broaden Stage authority, rerun Error mapping or teach additional technical-analysis concepts. Formal judgment remains in Evaluation; Learning State only records its canonical outcome.",
+      "assessment": "Learning State only consumes structured Evaluation signals and records transitions; it never re-evaluates analysis, Error-to-Concept eligibility or market scenarios.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 19,
+      "requirement": "No public Learning State API may accept future candles, future price movement, realized P/L, trade result, prediction result or market outcome. State transitions depend only on canonical prior state, submitted attempt identity/Stage and canonical Evaluation; no process judgment may be inferred from subsequent market outcomes.",
+      "assessment": "The two minimal public operation signatures require no market outcome, forecast, future candle, trading or P/L input.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 20,
+      "requirement": "LearningState and all stored nested representations must be canonical and immutable, retaining no mutable caller aliases. Prefer a validated factory boundary consistent with the hardened Training/Evaluation design. Hostile tests must review direct construction, dataclasses.replace, copy/deepcopy, pickle at every supported protocol and restoration. Add no persistence or security infrastructure merely to enforce record immutability.",
+      "assessment": "Blocked __new__, __setstate__, __reduce__ and __reduce_ex__ plus a private validated allocator give the published ordinary public threat boundary. Exact immutable tuples/base strings retain no mutable caller aliases.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 21,
+      "requirement": "Tests must cover initial state creation for S1, S2 and S3; exactly five persistent fields; deterministic representation of all three canonical Skills as NOT_STARTED; empty errors, None current_focus and empty reviews_due.",
+      "assessment": "The single new test file can exercise all three Stage initializations, exact five field/slot order, three NOT_STARTED Skills and empty Error/focus/review fields.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 22,
+      "requirement": "Tests must cover correct non-abstaining Evaluation changing NOT_STARTED to LEARNING, retaining LEARNING/UNSTABLE/STABLE on subsequent correct Evaluations, primary-error and contributor-only paths setting evaluation.skill_signal's state to UNSTABLE, and no automatic STABLE mastery or Stage promotion.",
+      "assessment": "The single test file can cover the complete correct transition table, primary and contributor-only error signals, preservation of other skills and lack of Stage promotion or automatic mastery.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 23,
+      "requirement": "Tests must cover first Error occurrence as NEW; repeated occurrence prioritized over new errors, including a repeated contributor outranking a new primary; selected repeated Error becoming FOCUS; deterministic ordering across primary and multiple contributors; contributor-only focus; recurrence from all canonical prior Error states including IMPROVING/RESOLVED; and preservation of unrelated errors.",
+      "assessment": "The single test file can cover new versus repeated membership, repeated contributor over new primary, multiple contributors, all prior Error states, deterministic output order and unrelated preservation.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 24,
+      "requirement": "Tests must cover no-error Evaluation retaining old errors and current_focus without automatic improvement/resolution, and abstain retaining the entire prior state semantically unchanged.",
+      "assessment": "The single test file can separately cover no-error preservation and semantically unchanged abstention across all five fields.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 25,
+      "requirement": "Tests must reject attempt_id mismatch and Stage mismatch; unknown/noncanonical Skills, Errors, statuses and Stages must be rejected or impossible through public creation. Exercise duck-typed and equality-spoofed state/attempt/Evaluation inputs and preserve the published submission provenance boundary without copied-field reconstruction.",
+      "assessment": "Hostile tests can reject mismatched attempt ID/Stage, duck types, subclasses, malformed identifiers/statuses and equality spoofs without modifying dependency construction or historical eligibility.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 26,
+      "requirement": "Tests must prove input objects remain unchanged, nested caller-owned mutable collections cannot become retained aliases, output immutability and hostile construction/restoration behavior, preservation of existing canonical reviews_due without scheduling, and absence of future-market arguments from every public operation.",
+      "assessment": "A private validated builder permitted by the request can supply prior STABLE/IMPROVING/RESOLVED/nonempty reviews_due test states; public restoration/copy/pickle/alias attacks and signature checks stay in the owned test file.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 27,
+      "requirement": "All existing Training/Evaluation and full-project tests must remain PASS during future implementation verification. The pinned publication Result retains baseline Training 43/43 PASS, Evaluation 58/58 PASS and full project 101/101 PASS. Enumerate and execute the actual full test inventory; discovery that silently skips non-package test directories is insufficient.",
+      "assessment": "Independently executed baseline Training43, Evaluation58 and explicitly enumerated full101 with zero failures/errors/skips. Future implementation must retain these and add the complete Learning State coverage.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 28,
+      "requirement": "After future fresh live verification, normally materialize exactly A spec/learning_state/LEARNING_STATE_SPEC.md, D spec/learning_state/.gitkeep, A src/price_action_learning/learning_state/__init__.py, A src/price_action_learning/learning_state/core.py and A tests/learning_state/test_learning_state.py. Freeze the exact concrete mutation paths in the later governed execution Instruction; this proposal is not an execution Instruction and does not materialize business files.",
+      "assessment": "Baseline has the exact empty placeholder and four absent destinations. The concrete scope is exactly four additions plus that deletion. Candidate creation belongs after durable PRE and must be clean at baseline before business mutation.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 29,
+      "requirement": "Do not implement Review scheduling, ReviewRecord, 3/7/30-day calculations, IMPROVING/RESOLVED decision logic, automatic STABLE mastery, Stage promotion, Study Entry, Training revision, new Learning Map IDs or S4-S8.",
+      "assessment": "No Review scheduling/record, improvement/resolution decision, automatic STABLE, Stage promotion, Study Entry, Training revision or new Learning Map authority is needed.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 30,
+      "requirement": "Do not implement scoring, grades, ranking, rewards/gamification, prediction, trading signals, screenshots, TradingView, market data, persistence/database, private learning history, API, UI, plugin, network/LLM SDK, prompt framework, generalized validator engine or shared utils/helpers/common. Create no new top-level directory, placeholder or cross-module abstraction.",
+      "assessment": "The design is standard-library-only and within the five owned paths; no persistence, API/UI, network/LLM SDK, generalized validator or other abstraction is required.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    },
+    {
+      "acceptance_item": 31,
+      "requirement": "Publication of this PROPOSED Work Unit grants no implementation, PRE, Review or Study Entry authority. Both implementation flags remain false, basis_state_revision remains 14 and next_gate remains USER_WORK_UNIT_APPROVAL. Explicit user approval and the later governed sequence are required before any Learning State business mutation; this proposal creates no approval or authorization.",
+      "assessment": "Authorized Work Unit plus durable user approval and correlated governed instructions provide this read-only PRE authority. PRE reporting does not publish Learning State, mutate STATE, commit or authorize another action.",
+      "decision": "SATISFIED_BY_CONCRETE_DESIGN"
+    }
+  ],
+  "factory_provenance_design": {
+    "mechanism": "frozen slots/init-disabled public constructor; rejecting reduction/restoration; validated private allocation",
+    "exact_LearningState_fields": [
+      "current_stage",
+      "skills",
+      "errors",
+      "current_focus",
+      "reviews_due"
+    ],
+    "no_dependency_reconstruction": true,
+    "no_Error_eligibility_rerun": true,
+    "no_global_registry_or_token_or_hidden_field": true,
+    "ordinary_public_threat_model_only": true
+  },
+  "review_freshness": {
+    "independent_reviewer_context": true,
+    "implementer_private_context_consumed": false,
+    "authoritative_source": "immutable durable project authority and governed artifacts plus independent baseline verification",
+    "resume": {
+      "status": "LATEST_SYNCED_REMOTE_STATE",
+      "repository_id": "1394745962",
+      "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+      "active_work_unit": null,
+      "remote_reverification_required": true,
+      "verified_baseline_sha": "99dc16f3a4d2efcb35e8a797e9672e4d32a9b1a3",
+      "current_attestation_head": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+      "reconciliation_required": false,
+      "resume_mode": "COLD_RESUME",
+      "map_route": "MAP_HIT",
+      "candidate_modules": [
+        "learning_state",
+        "training",
+        "evaluation"
+      ],
+      "stale_modules": [],
+      "module_map_reads": [],
+      "required_reads": [],
+      "hot_modules": [],
+      "hot_files": [],
+      "invalidated_context": []
+    },
+    "latest_live_main": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+    "state_revision": 14,
+    "historical_governance_STATE_used_as_current_authority": false
+  },
+  "native_result_construction": "Exact Framework2.7.4 result-envelope schema and native validators; this pinned version exposes no build_result_envelope. No newer builder or validator was used.",
+  "native_validation_lists": {
+    "review_instruction_schema": [],
+    "execution_instruction_schema": [],
+    "review_instruction_authority": [],
+    "execution_instruction_authority": [],
+    "work_unit_schema": [],
+    "current_state_schema": [],
+    "user_approval_schema": [],
+    "user_approval_project_binding": [],
+    "project_identity_boundary": [],
+    "framework_adoption_execution": [],
+    "state_authority": [],
+    "published_result_authority": [],
+    "published_completion_evidence": [],
+    "result_envelope_contract": [],
+    "review_result": [],
+    "result_authority": [],
+    "completion_evidence": [],
+    "result_protocol": [],
+    "validate_pre_execution_review": [],
+    "governed_mutation_entry": [],
+    "result_return_context": []
+  }
+}
