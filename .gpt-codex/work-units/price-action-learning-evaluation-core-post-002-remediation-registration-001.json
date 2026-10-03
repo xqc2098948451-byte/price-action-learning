@@ -1,0 +1,118 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "work_unit_id": "price-action-learning-evaluation-core-post-002-remediation-registration-001",
+  "goal": "Durably register the complete Evaluation POST round-1 re-review Result 6c0c510b-6fd8-4117-97e4-375bea002803, including its independent closure conclusion for EVAL-POST-001 and its new open P1 finding EVAL-POST-002; record the accepted minimum EVAL-POST-002 remediation authority basis and adjudication; advance project STATE from revision 12 to 13; and rebind the existing authorized Evaluation Core Work Unit to basis revision 13 without modifying the Evaluation candidate or prematurely selecting an unsafe provenance mechanism.",
+  "scope": {
+    "owned_paths": [
+      ".gpt-codex/STATE.json",
+      ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+      ".gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json",
+      ".gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json",
+      ".gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json",
+      ".gpt-codex/evidence/evaluation-core-post-002-remediation-work-verification.json",
+      ".gpt-codex/evidence/results/evaluation-core-post-002-remediation-publication.json"
+    ]
+  },
+  "dependencies": {
+    "framework": {
+      "version": "2.7.4",
+      "commit_sha": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c"
+    },
+    "repository": {
+      "repository_id": "1394745962",
+      "repository_full_name": "xqc2098948451-byte/price-action-learning",
+      "main_commit_sha": "636bfc03650286c28890ca01402021a5c1621437",
+      "governance_commit_sha": "791a90a87acfb72b4be69b971ac1c05e10676acc"
+    },
+    "finding_result": {
+      "commit_sha": "791a90a87acfb72b4be69b971ac1c05e10676acc",
+      "path": ".gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json",
+      "blob_sha": "64cad2444ca1b3d4c51e040a3c758475bdc6be65"
+    },
+    "authorized_evaluation_work_unit": {
+      "commit_sha": "636bfc03650286c28890ca01402021a5c1621437",
+      "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+      "blob_sha": "104aae119985f04051e4733c3ab853e2f6d14ed5"
+    }
+  },
+  "acceptance": [
+    "Use Reference-First. Before future execution, live-verify repository ID 1394745962 and full name xqc2098948451-byte/price-action-learning, project PRJ-PRICE-ACTION-LEARNING-1394745962, context e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9, refs/heads/main at exactly 636bfc03650286c28890ca01402021a5c1621437, and Framework 2.7.4 at 935d6f3fcf5e54a478810a79a82a8695fcf4cf4c with READ_ONLY access. Any identity, baseline, or authority mismatch requires STALE / STOP; do not silently adapt.",
+    "Require authoritative main .gpt-codex/STATE.json at commit 636bfc03650286c28890ca01402021a5c1621437 with blob 92bc9256abc2848837db6b6b83b28a3ab4db5105: revision 12, state AUTHORIZED, active_work_unit null, blockers [], reconciliation null, active_execution_slots absent, and continuity.sync_status SYNCED. Require the current authorized Evaluation Core Work Unit at the exact dependency locator with work_unit_id price-action-learning-evaluation-core-001, state AUTHORIZED, basis_state_revision 12, implementation_authorized false, and implementation_start_allowed false. Preserve all its existing business semantics and acceptance criteria.",
+    "Resolve the complete durable POST Result by immutable locator repository xqc2098948451-byte/price-action-learning, commit 791a90a87acfb72b4be69b971ac1c05e10676acc, path .gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json, blob 64cad2444ca1b3d4c51e040a3c758475bdc6be65. Require result_id 6c0c510b-6fd8-4117-97e4-375bea002803, result_message_type REVIEW_FINDING, status FAIL, POST_STATUS FAIL, PUBLICATION_READINESS NOT_READY, state_revision 12, fix_round 1, source_result_id 040c329e-33a9-4608-831e-1c47337e6e15, source_finding_ids exactly [EVAL-POST-001], and finding_ids exactly [EVAL-POST-002]. Preserve its independent EVAL_POST_001_CLOSURE CLOSED review conclusion and its sole new finding EVAL-POST-002 / P1 / OPEN. Do not invent another finding or rewrite either historical source Result.",
+    "Freeze EVAL-POST-002 root cause: Evaluation verifies only the internal self-consistency of caller-supplied TrainingAttempt, TrainingContext, and KnowledgeBoundary values; that does not prove immutable original user submission authority. Ordinary public reconstruction can preserve attempt_id, created_at, and user_analysis while expanding or replacing Stage, TrainingContext, historical KnowledgeBoundary, and learned_concept_ids, and still pass published constructors. For an original S1 submission learned only CON-S1-HIGH, a same-ID/same-time/same-analysis S1 reconstruction adding CON-S1-FACT-VS-INTERPRETATION incorrectly permits OBS-002; an S3 context/boundary transplant incorrectly permits LOC-001. Both primary_error and contributors are affected. No private API, reflection, object.__new__, object.__setattr__, monkeypatching, or candidate mutation is required.",
+    "Accept remediation authority only at invariant/design level: formal Evaluation authority must be bound to the immutable ORIGINAL Training submission boundary. Constructor validity or value consistency alone is not proof of original submission authority. Evaluation must reject or fail closed when a reconstructed different TrainingAttempt preserves submission-looking id, created_at, and user_analysis but changes authority-bearing historical stage, context, knowledge_boundary, learned_concept_ids, or target/objective/task values where authority depends on them. Prevent both same-Stage later-learning expansion and future-Stage context transplantation from expanding formal primary or contributor Error eligibility.",
+    "Field revalidation alone is not an accepted remediation. Comparing only attempt_id, created_at, and user_analysis is insufficient. Reconstructing another internally valid TrainingAttempt and canonicalizing it again is insufficient. A caller-supplied fingerprint, duplicate snapshot, nonce, provenance value, or second copy is insufficient if the same caller can freely forge both sides of the comparison. Public Training constructor validity must never be treated as proof that a record is the original submitted object.",
+    "Registration must not prematurely invent or authorize a provenance mechanism. Do not authorize a database, persistence layer, durable user-data registry, hidden persistent TrainingAttempt field, hidden persistent Evaluation field, tenth Evaluation field, secret embedded in public repository data, generalized provenance framework, generalized identity framework, serializer framework, shared helpers/common/utils abstraction, or private user learning data in the public repository. The basis may recognize that current Evaluation-only value validation may be insufficient to establish original-submission provenance.",
+    "Freeze the scope-escalation rule: if a sound EVAL-POST-002 correction cannot be implemented within the currently authorized Evaluation scope while preserving published Training semantics, future execution MUST STOP and return SCOPE_ESCALATION_REQUIRED. It must not mutate Training or shared contracts without separate authority, introduce hidden provenance state, invent persistence, weaken historical-boundary guarantees, or accept caller reconstruction as original submission. If Training/shared-contract/integration changes are genuinely required, GPT must first propose and obtain approval for a separate bounded Work Unit or explicit scope authority. This registration Work Unit authorizes no scope expansion.",
+    "Freeze future hostile regressions: an original S1 attempt with learned_concept_ids exactly [CON-S1-HIGH] must reject OBS-002. A public reconstruction preserving the same id, created_at, and user_analysis but adding CON-S1-FACT-VS-INTERPRETATION must not make OBS-002 eligible, tested separately for primary_error and contributors. An original S1 attempt reconstructed with the same id, created_at, and user_analysis but an S3 context/boundary must not make LOC-001 eligible, tested separately for primary_error and contributors. Exercise dataclasses.replace, published Training constructors, and every other discovered public value reconstruction route.",
+    "Future hostile regressions must verify the original TrainingAttempt remains unchanged; a genuinely original historically eligible attempt still permits its legitimate formal Error mappings; later learning cannot retroactively expand the original attempt; and later Learning Map changes cannot retroactively expand the original attempt.",
+    "Preserve the already independently verified EVAL-POST-001 closure. Do not regress __setstate__ rejection, __reduce__ rejection, __reduce_ex__ rejection, pickle protocols 0..HIGHEST_PROTOCOL rejection/safety, copy/deepcopy/replace restoration defenses, the immutable nine-field record, or the absence of mutable restoration aliases. The new remediation must not reopen EVAL-POST-001; its historical source Result remains immutable and it is not an open remediation finding in this registration.",
+    "Preserve all passing Evaluation behavior: exactly nine Evaluation fields, no hidden persistent Evaluation fields, blocked direct Evaluation construction, blocked dataclasses.replace on Evaluation, no __dict__, canonical immutable Evaluation output, all 19 Error mappings, S1/S2/S3 Stage ceilings, CORE eligibility, learned-at-submission semantics, primary cardinality, contributor cardinality 0..2, uniqueness, primary/contributor separation, Error-ID prose protection, strict bool abstain, LOW implies abstain, abstain implies no formal errors, correct/no-error may be non-abstaining, internal skill_signal derivation, mutable diagnostic input copying, process-not-outcome, no future market dependency, and YAGNI.",
+    "Candidate D:/价格行为学习/evaluation-core-candidate is evidence only and must remain unchanged during registration: HEAD 63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; complete content tree e9695c0b9496e6d2dbf6f770b76886686662ba20; src/price_action_learning/evaluation/core.py blob 919fa7343adc6b36398cc351bc4f7873bda651da; tests/evaluation/test_evaluation.py blob 594828dd2634d4e62ea1cd592c70967a61739745; spec/evaluation/EVALUATION_SPEC.md blob 31b91d998f48cfb1d0a382336c47cdd4e40d1119; and src/price_action_learning/evaluation/__init__.py blob 657d7b1ba94ed543b63e64b681ab64e678d3aac4. Preserve candidate contents and existing working-tree changes without staging, resetting, committing, or modifying them. No EVAL-POST-002 FIX occurs during registration, and EVAL-POST-002 remains OPEN.",
+    "Future Work Commit W must have parent exactly 636bfc03650286c28890ca01402021a5c1621437 and change exactly three paths: copy the complete canonical .gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json byte-identically, retaining blob 64cad2444ca1b3d4c51e040a3c758475bdc6be65; create .gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json; and create .gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json. No fourth path. W must not modify STATE, the Evaluation WU, candidate, Training, spec/**, src/**, or tests/**. Require W remote verification before P.",
+    "The future basis must use kernel_version 2.0.0, schema_version 1, project_id PRJ-PRICE-ACTION-LEARNING-1394745962, evidence_id EVIDENCE-EVALUATION-CORE-POST-002-REMEDIATION-BASIS, source SYSTEM_DERIVED, subject REMEDIATION_AUTHORITY_BASIS, state_revision 13, result ACCEPTED, basis_type ACCEPTED_AUTHORITY_BASIS, finding_ids exactly [EVAL-POST-002], accepted true, and failing false. Its basis statement must contain only the accepted EVAL-POST-002 historical-submission provenance authority and scope-escalation rule frozen above, preserving the architectural safety constraints without selecting a concrete mechanism. Do not include EVAL-POST-001 as an open remediation finding.",
+    "The future adjudication must use kernel_version 2.0.0, schema_version 1, project_id PRJ-PRICE-ACTION-LEARNING-1394745962, evidence_id DECISION-EVALUATION-CORE-POST-002-REMEDIATION, source SYSTEM_DERIVED, subject REMEDIATION_ADJUDICATION, state_revision 13, result ACCEPT, decision ACCEPT, finding_ids exactly [EVAL-POST-002], basis_type ACCEPTED_AUTHORITY_BASIS, basis_refs exactly [EVIDENCE-EVALUATION-CORE-POST-002-REMEDIATION-BASIS], and adjudicated_at_revision 13. No extra finding.",
+    "After verified W, future Publication Commit P must have parent W_SHA and change exactly four paths: .gpt-codex/STATE.json; .gpt-codex/work-units/price-action-learning-evaluation-core-001.json; .gpt-codex/evidence/evaluation-core-post-002-remediation-work-verification.json; and .gpt-codex/evidence/results/evaluation-core-post-002-remediation-publication.json. No fifth path. Future W/P publication requires its own governed authority; this proposal grants no permission to execute or publish W/P.",
+    "P must advance STATE revision 12 to 13 while preserving state AUTHORIZED, active_work_unit null, blockers [], reconciliation null, and active_execution_slots absent. Preserve existing evidence_refs in exact current order. Append exactly, in order: .gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json; .gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json; .gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json; .gpt-codex/evidence/evaluation-core-post-002-remediation-work-verification.json; and .gpt-codex/evidence/results/evaluation-core-post-002-remediation-publication.json. No duplicate ref.",
+    "At P, rebind the existing Evaluation WU from current main commit 636bfc03650286c28890ca01402021a5c1621437, path .gpt-codex/work-units/price-action-learning-evaluation-core-001.json, blob 104aae119985f04051e4733c3ab853e2f6d14ed5. Change only basis_state_revision 12 to 13 unless exact Framework-native validation proves a mechanically required governance-only rebind field. Preserve all business semantics, scope, goal, dependencies, acceptance criteria, selected_extensions, permissions, state AUTHORIZED, implementation_authorized false, and implementation_start_allowed false. Do not mark COMPLETE or authorize implementation directly.",
+    "At revision 13 require continuity.current_remote_ref refs/heads/main, continuity.latest_verified_remote_sha W_SHA, continuity.latest_synced_state_revision 13, continuity.last_verified_result_ref .gpt-codex/evidence/results/evaluation-core-post-002-remediation-publication.json, and continuity.sync_status SYNCED.",
+    "The future work-verification Evidence must be TOOL_OBSERVED and verify repository identity, remote main at W_SHA, the exact three-path W delta, canonical POST-002 Result blob, remediation basis, remediation adjudication, candidate complete tree still e9695c0b9496e6d2dbf6f770b76886686662ba20, no EVAL-POST-002 FIX occurred, and EVAL-POST-002 remains OPEN. It may report the durable source Result's independent POST review conclusion that EVAL-POST-001 was CLOSED, but must not rewrite that finding's historical source Result.",
+    "The future publication Result must use work_unit_id price-action-learning-evaluation-core-post-002-remediation-registration-001, status PASS, result_message_type IMPLEMENTATION_RESULT, responder_role CODEX_IMPLEMENTER, return_role GPT_ORCHESTRATOR, framework_version 2.7.4, state_revision 13, current_remote_ref refs/heads/main, remote_head_sha W_SHA, verified_baseline_sha W_SHA, sync_status SYNCED, push_status SUCCEEDED, remote_verification VERIFIED, publication_authority CONFIRMED_PUBLICATION, and completion_gate NONE. Its evidence_refs must include the complete canonical POST Result, accepted remediation basis, accepted adjudication, and TOOL_OBSERVED work-verification Evidence.",
+    "Before future P publication, exact Framework 2.7.4 must return [] for every required applicable validation, at minimum validate_remediation_adjudication(...), validate_result_envelope_contract(publication_result), validate_result_authority(publication_result), validate_completion_evidence(publication_result), and validate_state_authority(resulting_state, durable_results). No validator bypass. Push P without force and live-verify remote main equals P, P parent equals W_SHA, and P delta is exactly the four required paths before claiming registration publication.",
+    "Future revision-13 STATE.next_action must first require resolving and freezing a concrete minimum EVAL-POST-002 provenance mechanism, then verifying whether it fits the existing authorized Evaluation scope without Training/shared-contract mutation or hidden/persistent provenance state. Only if YES may GPT issue a governed FIX_INSTRUCTION with fix_round 2 and finding exactly EVAL-POST-002, followed by a fresh FIX PRE before any candidate mutation. If NO, return SCOPE_ESCALATION_REQUIRED and first propose/authorize a separate bounded Work Unit or explicit scope authority before any Training/shared-contract/integration change. After any eventual FIX require a complete full hostile Evaluation POST re-review. Do not blindly authorize FIX round 2 immediately. Learning State MUST NOT start.",
+    "This registration Work Unit does not fix EVAL-POST-002, modify or publish the Evaluation candidate, modify Training, execute FIX round 2, create FIX PRE, execute POST, mark Evaluation COMPLETE/publication-ready, or start Learning State, Review, or Study Entry. Remediation registration remains NOT STARTED until separately authorized future execution. The proposed Work Unit file is outside its own future mutation scope; scope.owned_paths contains exactly the seven listed paths and no eighth path.",
+    "During the current proposal-authoring task, create exactly one file: .gpt-codex/work-units/price-action-learning-evaluation-core-post-002-remediation-registration-001.json. Do not authorize the WU, create user approval evidence, create remediation basis or adjudication, copy Result to main, modify main or STATE, rebind the Evaluation WU, modify candidate or Training, execute reconciliation, create FIX round 2 or FIX PRE, execute FIX or POST, or start Learning State, Review, or Study Entry. Current proposal publication is explicitly authorized separately from the later Work Unit permissions.",
+    "Before current proposal authoring run git fetch origin and require origin/main exactly 636bfc03650286c28890ca01402021a5c1621437 and governance/price-action-learning-training-wu-001 exactly 791a90a87acfb72b4be69b971ac1c05e10676acc. Any mismatch requires WORK_UNIT_PROPOSED NO and HARD_STOP YES; do not silently adapt. Before proposal commit use exact Framework 2.7.4 and require all applicable validation lists empty for native Work Unit schema and definitions, guardrails, project/context/repository binding, exact dependencies and source locators, immutable artifact resolution, basis revision 12, PROPOSED state, exact seven owned paths, no scope expansion, and no implementation authorization.",
+    "Before proposal commit git status --short must contain exactly this one new Work Unit file and git diff --check must PASS. Commit exactly this file with message chore: propose Evaluation Core POST-002 remediation registration and parent exactly 791a90a87acfb72b4be69b971ac1c05e10676acc. No amend, rebase, or force. Push only governance/price-action-learning-training-wu-001, never main; fetch origin after push and require main unchanged at 636bfc03650286c28890ca01402021a5c1621437.",
+    "Remote-verify proposal commit parent exactly 791a90a87acfb72b4be69b971ac1c05e10676acc, delta exactly this one file, exact Work Unit ID, state PROPOSED, basis_state_revision 12, implementation_authorized false, implementation_start_allowed false, next_gate USER_WORK_UNIT_APPROVAL, owned_paths count 7, exact durable POST Result and Evaluation WU locators, and unchanged main, STATE, Evaluation WU, candidate, and Training. Stop immediately after publishing the PROPOSED Work Unit with HARD_STOP YES and return control to GPT_ORCHESTRATOR for explicit USER_WORK_UNIT_APPROVAL. Proposal validation grants no execution authority.",
+    "The permissions below describe later governed execution of this Work Unit and do not authorize execution during this proposal-authoring task. Retain state PROPOSED, basis_state_revision 12, implementation_authorized false, implementation_start_allowed false, and next_gate USER_WORK_UNIT_APPROVAL until the explicit governed user-approval gate. No approval evidence is created by this proposal.",
+    "artifact_refs must be exactly design={path: docs/DIRECTORY_POLICY.md, sha: 636bfc03650286c28890ca01402021a5c1621437} and plan={path: docs/PROJECT_SCOPE.md, sha: 636bfc03650286c28890ca01402021a5c1621437}. Resolve both through exact Framework-native immutable artifact resolution. The resolved file blobs must be 46f2da38b5189cb98f1c54e241e8eaa5ad01eb02 and bf6ef572ccca3c6cd041658fa86d22a65f626f11 respectively; artifact_refs use the commit SHA, not file blob SHA."
+  ],
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ],
+    "forbidden_actions": [
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 12,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "USER_WORK_UNIT_APPROVAL",
+  "artifact_refs": {
+    "design": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "sha": "636bfc03650286c28890ca01402021a5c1621437"
+    },
+    "plan": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "sha": "636bfc03650286c28890ca01402021a5c1621437"
+    }
+  }
+}
