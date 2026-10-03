@@ -1,0 +1,87 @@
+{
+  "instruction_id": "e8c9bf53-0bd4-4613-9055-a8558f4fd178",
+  "instruction_type": "REVIEW_REQUEST",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "expected_state_revision": 13,
+  "framework_version": "2.7.4",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "target_work_unit": "price-action-learning-submission-provenance-hardening-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-submission-provenance-hardening-001.json",
+    "sha": "c5a702cbe937265d5f6b0541316e97d3500cc64e"
+  },
+  "scope_paths": [
+    "spec/training/TRAINING_SPEC.md",
+    "src/price_action_learning/training/core.py",
+    "tests/training/test_training.py",
+    "spec/evaluation/EVALUATION_SPEC.md",
+    "src/price_action_learning/evaluation/core.py",
+    "tests/evaluation/test_evaluation.py"
+  ],
+  "remediation_decision_ref": "DECISION-EVALUATION-CORE-POST-002-REMEDIATION",
+  "expected_base_sha": "5b6815e41c106fc0b63ae0c49fd8f5f334460c45",
+  "permission_scope": "SUBMISSION_PROVENANCE_HARDENING_FIX_ROUND_2_COMPLETE_CROSS_MODULE_POST_ONLY",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001",
+  "expected_remote_name": "origin",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "evidence_requirements": {
+    "files_read": [
+      "READ_ONLY Framework 2.7.4@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c exact native scripts/schemas.",
+      "Real Git main authority root C:\\Users\\xqc\\.codex\\reports\\submission-provenance-pre-recovery-resume-20261003\\git-main-authority at HEAD 55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001; STATE revision 13 AUTHORIZED SYNCED; CONTROL repository id 1394745962.",
+      "Durable FIX 59d65fa4cbc72b25367c2f611c114921dc655789:.gpt-codex/evidence/instructions/53f1a0d5-1d1d-4a9c-a1a0-037d65e67881.json blob 9e7659977d64a3ebe65ca640455b19b05b260418; WU c5a702cbe937265d5f6b0541316e97d3500cc64e:.gpt-codex/work-units/price-action-learning-submission-provenance-hardening-001.json blob 6fb05841afeb97ad587b8ffa44745d76cc5bf181.",
+      "Durable original independent PRE f2d8e90a314b1168654e6c8b500fc5269f96fc90:.gpt-codex/evidence/results/8a7c2d71-d4f2-46fa-9584-5ff465cd70d3.json blob 2fd62298ed8ebd0ff2a404fa9f947dc4579b6bd2. PRE recovery native validation PASS, original bytes retained.",
+      "Candidate D:\\\u4ef7\u683c\u884c\u4e3a\u5b66\u4e60\\evaluation-core-candidate HEAD 63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f pre-fix tree e9695c0b9496e6d2dbf6f770b76886686662ba20 fixed tree 5b6815e41c106fc0b63ae0c49fd8f5f334460c45; read complete Training and Evaluation specs/core/tests/exports, frozen Learning Map and docs/CONTRACTS.md, docs/DIRECTORY_POLICY.md, docs/PROJECT_SCOPE.md.",
+      "Source finding 55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001:.gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json blob 64cad2444ca1b3d4c51e040a3c758475bdc6be65 and POST-002 accepted remediation basis/adjudication at same Git HEAD."
+    ],
+    "files_changed": [],
+    "tests": [
+      "Fresh independent review of BOTH full Training and Evaluation contracts; run all Training/Evaluation tests and enumerate and execute every tests/**/test_*.py; 0 failures/errors/skips. Independently verify normal index and candidate bytes unchanged and exact six/eight path diffs.",
+      "Training ordinary/public constructor with zero/valid copied/positional fields; same-ID/time/analysis expanded learned S1 boundary and S3 transplant; replace/copy/deepcopy/pickle ALL protocols; public reduce/reduce_ex/setstate, valid/hostile/partial/generator state; historical pickle payloads; duck/subclass; original unchanged.",
+      "Independently reproduce EVAL-POST-002: original S1 learned CON-S1-HIGH rejects OBS-002 in primary and contributors; copied same-ID/time/analysis expansion adding CON-S1-FACT-VS-INTERPRETATION impossible publicly. Same-ID S3 transplant impossible before LOC-001 eligibility in both channels. Fresh legitimate later factory submission gets fresh identity and uses its own boundary.",
+      "Require EVAL_POST_002_CLOSURE=CLOSED. Hostile Evaluation restoration matrix preserves EVAL-POST-001: setstate/reduce/reduce_ex/pickle all protocols/copy/deepcopy/replace/public constructor; immutable exactly nine fields and no mutable restoration aliases. Require EVAL_POST_001_CLOSURE=PRESERVED.",
+      "Re-review all 19 Error mappings, Stage ceilings, learned allowed CORE support, historical context/knowledge, diagnostic canonicalization and prose Error-ID protection, cardinality, confidence, abstention and Skill derivation."
+    ],
+    "validation": [
+      "Exact six-path effective fix and exact eight-path complete candidate. No main/STATE mutation, candidate commit/push/publication or Learning State. No registry/database/persistence/hidden provenance field/token/fingerprint/nonce/secret/generalized framework. Low-level object memory tampering and private internal abuse outside supported MVP threat model.",
+      "Training create_training_attempt is sole supported creator; no replacement TrainingAttempt construction in Evaluation; validate business invariants directly and consume supplied immutable attempt and stored historical boundary. ID/time/analysis equality never proves provenance.",
+      "Result id f5e1d8ab-920b-4c98-b442-77d6234e6e39. Bind response_to_instruction_id=53f1a0d5-1d1d-4a9c-a1a0-037d65e67881 for native re-review lifecycle, and record review_request_id=e8c9bf53-0bd4-4613-9055-a8558f4fd178. PASS uses REVIEW_RESULT, POST_STATUS=PASS, PUBLICATION_READINESS=READY, finding_ids=[]. FAIL uses REVIEW_FINDING, POST_STATUS=FAIL, PUBLICATION_READINESS=NOT_READY; report every finding. Never self-review.",
+      "Native Instruction contract/authority and Result contract/review/authority/completion/lifecycle/return validators must return []; lifecycle real Git main root, re_review_result=POST_RESULT, resulting_revision=fixed tree, preserve original source finding evidence refs. Reviewer cannot mutate candidate. Coordinator persists exact Result bytes to governance and HARD_STOP returns GPT without business publication."
+    ],
+    "findings": [
+      "EVAL-POST-002"
+    ],
+    "revision": true,
+    "result_references": [
+      "6c0c510b-6fd8-4117-97e4-375bea002803",
+      "8a7c2d71-d4f2-46fa-9584-5ff465cd70d3"
+    ]
+  },
+  "completion_gate": "GPT_DECISION",
+  "in_response_to_instruction_id": "53f1a0d5-1d1d-4a9c-a1a0-037d65e67881",
+  "in_response_to_result_id": "6c0c510b-6fd8-4117-97e4-375bea002803",
+  "review_target_revision": "5b6815e41c106fc0b63ae0c49fd8f5f334460c45",
+  "finding_ids": [
+    "EVAL-POST-002"
+  ],
+  "fix_round": 2,
+  "artifact_stage": "IMPLEMENTATION"
+}
