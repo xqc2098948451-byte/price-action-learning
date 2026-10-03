@@ -1,0 +1,24 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "evidence_id": "EVIDENCE-REVIEW-CORE-PRE-001-REMEDIATION-BASIS",
+  "source": "SYSTEM_DERIVED",
+  "subject": "REMEDIATION_AUTHORITY_BASIS",
+  "state_revision": 15,
+  "result": "ACCEPTED",
+  "basis_type": "ACCEPTED_AUTHORITY_BASIS",
+  "finding_ids": [
+    "REVIEW-CORE-PRE-001"
+  ],
+  "accepted": true,
+  "failing": false,
+  "basis_statement": "REVIEW-CORE-PRE-001 is accepted. APPROVED_WORK_UNIT_WINS: approved Review Work Unit semantics remain unchanged. Only the later execution instruction introduced the conflicting incomplete predecessor chain rejection and global prior-evidence gate. Valid incomplete day-30 target-absent predecessor evidence (empty, only day-3, or only day-7) falls back to IMPROVING; only canonical ordered day-3 and day-7 completed predecessors both IMPROVING qualify RESOLVED. Invalid or mismatched supplied resolution evidence rejects. Result precedence remains abstain -> INCONCLUSIVE, target formal recurrence -> REPEATED, day-3/day-7 target absent -> IMPROVING, day-30 target absent -> resolution evidence. No scope expansion or business mutation occurred. No new user approval is required. Authorized Work Unit, user approval, old execution instruction, old PRE request and failed PRE Result remain immutable.",
+  "authority_refs": [
+    "repository=xqc2098948451-byte/price-action-learning;commit=e4fc76efba31d347fda7fe24485a05db20c2f7df;path=.gpt-codex/work-units/price-action-learning-review-core-001.json;blob=510c43ca270ba73403cf329f3b5297b5fd5619db",
+    "repository=xqc2098948451-byte/price-action-learning;commit=e4fc76efba31d347fda7fe24485a05db20c2f7df;path=.gpt-codex/evidence/review-core-001-user-approval.json;blob=d2ecedc3889ca5ae49ffb2afd567de8f20a74d13",
+    "repository=xqc2098948451-byte/price-action-learning;commit=1e3fcad49c348ce2a5844d9c7500dc382c12705b;path=.gpt-codex/evidence/instructions/4cb24f83-0c29-49b4-8ff5-1528a6cb07b9.json;blob=7769bd2b3843366844ce8a1bf9a39e5f95aa81f1",
+    "repository=xqc2098948451-byte/price-action-learning;commit=1e3fcad49c348ce2a5844d9c7500dc382c12705b;path=.gpt-codex/evidence/instructions/93a37d8b-5355-4490-99ec-27237c9ee117.json;blob=4387c1db78f8a3a91868d27d1d6a3bbf21eedef4",
+    "repository=xqc2098948451-byte/price-action-learning;commit=41be3b8834778770affcd629c7f4b8d50feff446;path=.gpt-codex/evidence/results/7a0b5cc4-b3f1-4a59-a5dc-8bd8f92a201a.json;blob=ae5ed1a1c81a54c8f26aa004dce236f03412ca6f"
+  ]
+}
