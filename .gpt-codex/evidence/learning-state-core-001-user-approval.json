@@ -1,0 +1,22 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-LEARNING-STATE-CORE-001-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "work_unit_id": "price-action-learning-learning-state-core-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 14,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "2a64b91d8d4ab5f5076b2be9dbf23da94a6fe1d9"
+  },
+  "result": "APPROVE",
+  "observed_at": "2026-10-03",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-learning-state-core-001.json@8bebfe9d8c4fcbb6b84b74fc83e5ef905c979a4b"
+  ]
+}
