@@ -18,6 +18,35 @@ Each creation requires non-empty `market_scenario`, `observation_task`, `primary
 
 The scenario, task, objective, target, analysis, and boundary are frozen in the returned record. The operation copies caller-owned concept collections before storing them, so later caller mutation cannot rewrite the submission.
 
+## Factory-only original submission
+
+`create_training_attempt(...)` is the only supported creator. Ordinary/public
+`TrainingAttempt(...)` construction always raises `TypeError`, including zero
+arguments, all nine valid copied fields, positional fields, same-ID historical
+boundary expansion, and a later-Stage context transplant. Validation of field
+values alone does not prove original submission provenance. Callers cannot
+supply `id`, `created_at`, `context`, or initial defaults to the factory; each
+legitimate later submission gets a fresh UUID4 and UTC timestamp with its own
+historical Stage and learned boundary.
+
+The attempt is frozen and slotted, retains exactly the existing nine fields,
+and has no instance `__dict__`. The factory validates and canonicalizes all
+business input before its module-owned private allocation. Text and numeric
+subclasses are copied to independent immutable base scalars.
+`dataclasses.replace`, `copy.copy`, `copy.deepcopy`, pickle serialization at
+every supported protocol, `__reduce__`, `__reduce_ex__`, and `__setstate__`
+reject with `TypeError` without changing the original record. Restoration
+rejects before inspecting caller state or retaining mutable aliases.
+
+This boundary covers supported public construction and standard-library
+reconstruction. Explicit low-level object allocation, memory tampering,
+reflection-based mutation, and abuse of private module internals are outside
+the MVP threat model. There is no registry, database, persistence, hidden
+provenance field, token, fingerprint, nonce, secret, or generalized provenance
+framework. Evaluation consumes the supplied immutable original attempt and
+its stored historical boundary; matching ID, time, or analysis is never proof
+of provenance. The shared field contract and public exports remain unchanged.
+
 ## Authoritative knowledge boundary
 
 The authoritative Learning Map is `spec/learning_map/LEARNING_MAP_SPEC.md` at commit `65cd6969e8ccf890d6e51b07fd7436564bf70421`, blob `726b35db8409ea03cbec33c916db7374e6724e03`. Runtime compatibility data contains only Stage to Concept ID membership from that specification; it does not duplicate definitions, prerequisites, errors, or teaching content.

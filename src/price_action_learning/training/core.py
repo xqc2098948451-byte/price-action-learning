@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from uuid import UUID, uuid4
+from uuid import uuid4
 
 
 # Compatibility membership only. Definitions and teaching rules remain in the
@@ -145,8 +145,10 @@ class TrainingContext:
         object.__setattr__(self, "knowledge_boundary", boundary)
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True, init=False)
 class TrainingAttempt:
+    """Immutable original submission; only create_training_attempt creates one."""
+
     id: str
     created_at: datetime
     stage: str
@@ -157,56 +159,17 @@ class TrainingAttempt:
     status: str
     context: TrainingContext
 
-    def __post_init__(self) -> None:
-        if type(self.id) is not str:
-            raise ValueError("id must be a canonical UUID4 string")
-        try:
-            parsed_id = UUID(self.id)
-        except ValueError as exc:
-            raise ValueError("id must be a canonical UUID4 string") from exc
-        if parsed_id.version != 4 or str(parsed_id) != self.id:
-            raise ValueError("id must be a canonical UUID4 string")
-        if type(self.created_at) is not datetime or self.created_at.tzinfo is not timezone.utc:
-            raise ValueError("created_at must be a UTC submission timestamp")
-        if self.image_reference is not None:
-            raise ValueError("image_reference must be None")
-        if self.revision is not None:
-            raise ValueError("revision must be None for initial submission")
-        if type(self.status) is not str or self.status != "SUBMITTED":
-            raise ValueError("status must be SUBMITTED for initial submission")
-        if not isinstance(self.user_analysis, str):
-            raise ValueError("user_analysis must be a non-empty string")
-        analysis = _required_text(str.__str__(self.user_analysis), "user_analysis")
-        if self.user_confidence is not None and (
-            isinstance(self.user_confidence, bool)
-            or not isinstance(self.user_confidence, (str, int, float))
-        ):
-            raise ValueError("user_confidence must be an immutable scalar or None")
-        confidence = self.user_confidence
-        if isinstance(confidence, str):
-            confidence = str.__str__(confidence)
-        elif isinstance(confidence, int):
-            confidence = int.__int__(confidence)
-        elif isinstance(confidence, float):
-            confidence = float.__float__(confidence)
-        if type(self.context) is not TrainingContext:
-            raise ValueError("context must be a canonical TrainingContext")
-        source = self.context
-        context = TrainingContext(
-            market_scenario=source.market_scenario,
-            observation_task=source.observation_task,
-            primary_objective=source.primary_objective,
-            target_concept_id=source.target_concept_id,
-            training_mode=source.training_mode,
-            focus_error_id=source.focus_error_id,
-            knowledge_boundary=source.knowledge_boundary,
-        )
-        if not isinstance(self.stage, str) or str.__str__(self.stage) != context.knowledge_boundary.stage:
-            raise ValueError("stage must match context.knowledge_boundary.stage")
-        object.__setattr__(self, "stage", context.knowledge_boundary.stage)
-        object.__setattr__(self, "user_analysis", analysis)
-        object.__setattr__(self, "user_confidence", confidence)
-        object.__setattr__(self, "context", context)
+    def __new__(cls, *args, **kwargs):
+        raise TypeError("TrainingAttempt must be created through create_training_attempt")
+
+    def __setstate__(self, state):
+        raise TypeError("TrainingAttempt state restoration is not supported")
+
+    def __reduce__(self):
+        raise TypeError("TrainingAttempt pickle serialization is not supported")
+
+    def __reduce_ex__(self, protocol):
+        raise TypeError("TrainingAttempt pickle serialization is not supported")
 
 
 def create_training_attempt(
@@ -224,12 +187,19 @@ def create_training_attempt(
 ) -> TrainingAttempt:
     """Record one Formal or Focused user submission without evaluating it."""
     allowed = _allowed_for_stage(stage)
-    _required_text(user_analysis, "user_analysis")
+    analysis = _required_text(user_analysis, "user_analysis")
     if user_confidence is not None and (
         isinstance(user_confidence, bool)
         or not isinstance(user_confidence, (str, int, float))
     ):
         raise ValueError("user_confidence must be an immutable scalar or None")
+    confidence = user_confidence
+    if isinstance(confidence, str):
+        confidence = str.__str__(confidence)
+    elif isinstance(confidence, int):
+        confidence = int.__int__(confidence)
+    elif isinstance(confidence, float):
+        confidence = float.__float__(confidence)
     if isinstance(learned_concept_ids, (str, bytes)):
         raise ValueError("learned_concept_ids must be a collection of Concept IDs")
     try:
@@ -254,14 +224,11 @@ def create_training_attempt(
         focus_error_id=focus_error_id,
         knowledge_boundary=boundary,
     )
-    return TrainingAttempt(
-        id=str(uuid4()),
-        created_at=datetime.now(timezone.utc),
-        stage=stage,
-        image_reference=None,
-        user_analysis=user_analysis,
-        user_confidence=user_confidence,
-        revision=None,
-        status="SUBMITTED",
-        context=context,
-    )
+    # Validation and canonicalization finish before private allocation. Identity
+    # and timestamp belong to this new submission and cannot be supplied by callers.
+    values = (str(uuid4()), datetime.now(timezone.utc), boundary.stage, None,
+              analysis, confidence, None, "SUBMITTED", context)
+    attempt = object.__new__(TrainingAttempt)
+    for field, value in zip(TrainingAttempt.__slots__, values):
+        object.__setattr__(attempt, field, value)
+    return attempt

@@ -1,8 +1,10 @@
+import copy
+import pickle
 import unittest
-from dataclasses import FrozenInstanceError, fields
-from datetime import datetime, timedelta, timezone
+from dataclasses import FrozenInstanceError, asdict, fields, replace
+from datetime import datetime, timezone
 from types import SimpleNamespace
-from uuid import uuid4
+from uuid import UUID
 
 from price_action_learning.training import (
     KnowledgeBoundary,
@@ -45,11 +47,6 @@ class TrainingAttemptTests(unittest.TestCase):
             knowledge_boundary=boundary,
         )
 
-    def make_direct_attempt(self, **overrides):
-        source = self.make_attempt()
-        values = {field.name: getattr(source, field.name) for field in fields(TrainingAttempt)}
-        values.update(overrides)
-        return TrainingAttempt(**values)
 
     def test_direct_context_copies_mutable_boundary_into_immutable_canonical_form(self):
         canonical = self.make_attempt().context.knowledge_boundary
@@ -161,40 +158,8 @@ class TrainingAttemptTests(unittest.TestCase):
         self.assertTrue(all(type(concept) is str for concept in boundary.learned_concept_ids))
         self.assertIsNot(next(iter(boundary.learned_concept_ids)), learned)
 
-    def test_direct_attempt_accepts_matching_stage(self):
-        context = self.make_direct_context(self.make_attempt().context.knowledge_boundary)
-        attempt = TrainingAttempt(
-            id=str(uuid4()), created_at=datetime.now(timezone.utc), stage="S1",
-            image_reference=None, user_analysis="A high is visible.",
-            user_confidence=None, revision=None, status="SUBMITTED", context=context,
-        )
-        self.assertEqual(attempt.stage, attempt.context.knowledge_boundary.stage)
 
-    def test_direct_attempt_copies_context_before_source_mutation(self):
-        source = self.make_attempt().context
-        attempt = self.make_direct_attempt(context=source)
-        object.__setattr__(source, "market_scenario", "changed-after-submission")
-        self.assertIsNot(attempt.context, source)
-        self.assertEqual(attempt.context.market_scenario,
-                         "An observable sequence of swing highs and lows")
 
-    def test_direct_attempt_stores_canonical_context_text(self):
-        class CallerText(str):
-            pass
-
-        source = self.make_attempt().context
-        context = TrainingContext(
-            market_scenario=CallerText("Visible swing highs and lows"),
-            observation_task=source.observation_task,
-            primary_objective=source.primary_objective,
-            target_concept_id=source.target_concept_id,
-            training_mode=source.training_mode,
-            focus_error_id=source.focus_error_id,
-            knowledge_boundary=source.knowledge_boundary,
-        )
-        attempt = self.make_direct_attempt(context=context)
-        self.assertIs(type(attempt.context.market_scenario), str)
-        self.assertEqual(attempt.context.market_scenario, "Visible swing highs and lows")
 
     def test_direct_context_rejects_empty_text_subclass_with_spoofed_strip(self):
         class EmptySpoof(str):
@@ -213,63 +178,138 @@ class TrainingAttemptTests(unittest.TestCase):
                 knowledge_boundary=source.knowledge_boundary,
             )
 
-    def test_direct_attempt_rejects_duck_context_and_mutable_analysis(self):
-        source = self.make_attempt().context
-        with self.assertRaises(ValueError):
-            self.make_direct_attempt(context=SimpleNamespace(**vars(source)))
-        with self.assertRaises(ValueError):
-            self.make_direct_attempt(user_analysis=["Initial analysis"])
 
-    def test_direct_attempt_normalizes_caller_owned_scalar_subclasses(self):
+
+
+
+
+    def test_public_attempt_construction_rejects_zero_copied_and_positional_fields(self):
+        original = self.make_attempt()
+        values = {field.name: getattr(original, field.name) for field in fields(original)}
+        before = asdict(original)
+        for construct in (lambda: TrainingAttempt(),
+                          lambda: TrainingAttempt(**values),
+                          lambda: TrainingAttempt(*values.values())):
+            with self.subTest(construct=construct), self.assertRaises(TypeError):
+                construct()
+            self.assertEqual(asdict(original), before)
+
+    def test_replace_cannot_reconstruct_or_transplant_original_submission(self):
+        original = self.make_attempt()
+        expanded = self.make_attempt(learned_concept_ids={S1, "CON-S1-FACT-VS-INTERPRETATION"})
+        future = self.make_attempt(stage="S3", target_concept_id=S3, learned_concept_ids={S3})
+        before = asdict(original)
+        for changes in ({}, {"context": expanded.context},
+                        {"stage": "S3", "context": future.context},
+                        {"user_analysis": "Changed after feedback"}):
+            with self.subTest(changes=changes), self.assertRaises(TypeError):
+                replace(original, **changes)
+            self.assertEqual(asdict(original), before)
+
+    def test_shallow_and_deep_copy_reject_without_changing_submission(self):
+        original = self.make_attempt()
+        before = asdict(original)
+        for reconstruct in (copy.copy, copy.deepcopy):
+            with self.subTest(route=reconstruct.__name__), self.assertRaises(TypeError):
+                reconstruct(original)
+            self.assertEqual(asdict(original), before)
+
+    def test_pickle_every_protocol_rejects_without_changing_submission(self):
+        original = self.make_attempt()
+        before = asdict(original)
+        for protocol in range(pickle.HIGHEST_PROTOCOL + 1):
+            with self.subTest(protocol=protocol), self.assertRaises(TypeError):
+                pickle.dumps(original, protocol=protocol)
+            self.assertEqual(asdict(original), before)
+
+    def test_public_reduce_and_reduce_ex_reject_without_changing_submission(self):
+        original = self.make_attempt()
+        before = asdict(original)
+        with self.assertRaises(TypeError):
+            original.__reduce__()
+        self.assertEqual(asdict(original), before)
+        for protocol in range(pickle.HIGHEST_PROTOCOL + 1):
+            with self.subTest(protocol=protocol), self.assertRaises(TypeError):
+                original.__reduce_ex__(protocol)
+            self.assertEqual(asdict(original), before)
+
+    def test_setstate_rejects_valid_hostile_partial_and_noniterable_state(self):
+        original = self.make_attempt()
+        expanded = self.make_attempt(learned_concept_ids={S1, "CON-S1-FACT-VS-INTERPRETATION"})
+        future = self.make_attempt(stage="S3", target_concept_id=S3, learned_concept_ids={S3})
+        values = {field.name: getattr(original, field.name) for field in fields(original)}
+        before = asdict(original)
+        for state in (list(values.values()), values, [], None,
+                      {**values, "context": expanded.context},
+                      {**values, "stage": "S3", "context": future.context}):
+            with self.subTest(state=state), self.assertRaises(TypeError):
+                original.__setstate__(state)
+            self.assertEqual(asdict(original), before)
+
+    def test_setstate_rejects_before_iterating_caller_state(self):
+        class CallerState:
+            def __iter__(self):
+                raise AssertionError("rejected state must not be read")
+
+        original = self.make_attempt()
+        before = asdict(original)
+        with self.assertRaises(TypeError):
+            original.__setstate__(CallerState())
+        self.assertEqual(asdict(original), before)
+
+    def test_factory_canonicalizes_caller_owned_scalar_subclasses(self):
         class MutableText(str):
             pass
+        class MutableInt(int):
+            pass
+        class MutableFloat(float):
+            pass
 
-        analysis = MutableText("Initial analysis")
-        confidence = MutableText("MEDIUM")
-        attempt = self.make_direct_attempt(user_analysis=analysis,
-                                           user_confidence=confidence)
-        analysis.marker = "changed"
-        confidence.marker = "changed"
-        self.assertIs(type(attempt.user_analysis), str)
-        self.assertIs(type(attempt.user_confidence), str)
-        self.assertIsNot(attempt.user_analysis, analysis)
-        self.assertIsNot(attempt.user_confidence, confidence)
-        self.assertEqual(attempt.user_analysis, "Initial analysis")
-        self.assertEqual(attempt.user_confidence, "MEDIUM")
+        for confidence, kind in ((MutableText("MEDIUM"), str),
+                                 (MutableInt(3), int), (MutableFloat(0.5), float)):
+            analysis = MutableText("Initial analysis")
+            attempt = self.make_attempt(user_analysis=analysis, user_confidence=confidence)
+            before = asdict(attempt)
+            analysis.marker = "changed"
+            confidence.marker = "changed"
+            self.assertIs(type(attempt.user_analysis), str)
+            self.assertIs(type(attempt.user_confidence), kind)
+            self.assertEqual(asdict(attempt), before)
 
-    def test_direct_attempt_rejects_stage_equality_spoof(self):
+    def test_factory_canonicalizes_stage_and_context_text(self):
+        class CallerText(str):
+            pass
+
+        attempt = self.make_attempt(stage=CallerText("S1"),
+                                    market_scenario=CallerText("Visible high"))
+        self.assertIs(type(attempt.stage), str)
+        self.assertIs(type(attempt.context.market_scenario), str)
+        self.assertEqual(attempt.context.market_scenario, "Visible high")
+        self.assertEqual(attempt.stage, attempt.context.knowledge_boundary.stage)
+
+    def test_factory_rejects_mutable_analysis_confidence_and_stage_spoofs(self):
         class EqualStage:
             def __eq__(self, other):
                 return True
 
-        with self.assertRaises(ValueError):
-            self.make_direct_attempt(stage=EqualStage())
+        for changes in ({"user_analysis": ["Initial analysis"]},
+                        {"user_confidence": True}, {"user_confidence": []},
+                        {"stage": EqualStage()}):
+            with self.subTest(changes=changes), self.assertRaises(ValueError):
+                self.make_attempt(**changes)
 
-    def test_direct_attempt_enforces_initial_submission_fields(self):
-        invalid = (
-            {"image_reference": "image.png"},
-            {"revision": 0},
-            {"status": "DRAFT"},
-            {"id": "direct-attempt"},
-            {"id": str(uuid4()).upper()},
-            {"id": "00000000-0000-1000-8000-000000000000"},
-            {"created_at": datetime.now()},
-            {"created_at": datetime.now(timezone(timedelta(hours=1)))},
-            {"user_confidence": True},
-            {"user_confidence": []},
-        )
-        for override in invalid:
-            with self.subTest(override=override), self.assertRaises(ValueError):
-                self.make_direct_attempt(**override)
+    def test_factory_rejects_caller_submission_identity_and_initial_defaults(self):
+        original = self.make_attempt()
+        for field in ("id", "created_at", "image_reference", "revision", "status", "context"):
+            with self.subTest(field=field), self.assertRaises(TypeError):
+                self.make_attempt(**{field: getattr(original, field)})
+        fresh = self.make_attempt()
+        self.assertNotEqual(original.id, fresh.id)
+        self.assertEqual(UUID(fresh.id).version, 4)
+        self.assertIs(fresh.created_at.tzinfo, timezone.utc)
 
-    def test_direct_attempt_rejects_mismatching_stage(self):
-        context = self.make_direct_context(self.make_attempt().context.knowledge_boundary)
-        with self.assertRaisesRegex(ValueError, "stage must match context.knowledge_boundary.stage"):
-            TrainingAttempt(
-                id=str(uuid4()), created_at=datetime.now(timezone.utc), stage="S2",
-                image_reference=None, user_analysis="A high is visible.",
-                user_confidence=None, revision=None, status="SUBMITTED", context=context,
-            )
+    def test_attempt_has_no_mutable_instance_dictionary(self):
+        self.assertFalse(hasattr(self.make_attempt(), "__dict__"))
 
     def test_formal_creation_uses_shared_record_and_submission_defaults(self):
         before = datetime.now(timezone.utc)
