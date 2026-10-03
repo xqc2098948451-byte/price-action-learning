@@ -149,11 +149,11 @@
       "SCOPE_EXPANSION"
     ]
   },
-  "state": "AUTHORIZED",
-  "basis_state_revision": 13,
+  "state": "COMPLETE",
+  "basis_state_revision": 14,
   "implementation_authorized": false,
   "implementation_start_allowed": false,
-  "next_gate": "EVALUATION_CORE_PRE_EXECUTION",
+  "next_gate": "COMPLETE",
   "artifact_refs": {
     "design": {
       "path": "docs/DIRECTORY_POLICY.md",

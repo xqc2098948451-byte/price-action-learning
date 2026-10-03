@@ -1,0 +1,131 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-SUBMISSION-PROVENANCE-EVALUATION-PUBLICATION-VERIFICATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-submission-provenance-hardening-001",
+  "source": "TOOL_OBSERVED",
+  "subject": "SUBMISSION_PROVENANCE_EVALUATION_WORK_COMMIT_REMOTE_VERIFICATION",
+  "state_revision": 14,
+  "identity_binding": {
+    "type": "GIT_COMMIT",
+    "value": "99dc16f3a4d2efcb35e8a797e9672e4d32a9b1a3"
+  },
+  "result": "PASS",
+  "publication_observation": {
+    "repository_id": "1394745962",
+    "repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "remote_ref": "refs/heads/main",
+    "remote_head": "99dc16f3a4d2efcb35e8a797e9672e4d32a9b1a3",
+    "work_commit_parent": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001",
+    "exact_work_delta": {
+      "spec/training/TRAINING_SPEC.md": "M",
+      "src/price_action_learning/training/core.py": "M",
+      "tests/training/test_training.py": "M",
+      "spec/evaluation/EVALUATION_SPEC.md": "A",
+      "spec/evaluation/.gitkeep": "D",
+      "src/price_action_learning/evaluation/__init__.py": "A",
+      "src/price_action_learning/evaluation/core.py": "A",
+      "tests/evaluation/test_evaluation.py": "A"
+    },
+    "remote_business_blobs": {
+      "spec/training/TRAINING_SPEC.md": "265077d6bcddf165b4317dd0441d1c6f93f025eb",
+      "src/price_action_learning/training/core.py": "3fd2a8101b0b919ad487dec39dd80136f7dcce9b",
+      "tests/training/test_training.py": "2fe1099db77e37651d91f31502d5bfef6d41ac87",
+      "spec/evaluation/EVALUATION_SPEC.md": "50e4fde7230b3f184b4dff9d180b0c1a5bb46911",
+      "spec/evaluation/.gitkeep": null,
+      "src/price_action_learning/evaluation/__init__.py": "657d7b1ba94ed543b63e64b681ab64e678d3aac4",
+      "src/price_action_learning/evaluation/core.py": "7203d9de2850abbe4633b5c08ab2644be176df7f",
+      "tests/evaluation/test_evaluation.py": "3b66c3469808e6ff077dc65f48ecfc424ba5215a"
+    },
+    "removed_gitkeep_status": "ABSENT",
+    "removed_gitkeep_baseline_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "work_tree": "db80087f5e1ac7beadbd0952eafe7828df2b0906",
+    "no_ninth_business_path": true,
+    "governance_unchanged_in_W": true,
+    "learning_state_mutation": false
+  },
+  "clean_work_commit_tests": {
+    "training": {
+      "command": "python -B C:\\Users\\xqc\\.codex\\reports\\submission-provenance-evaluation-publication-20261003\\run_tests.py training",
+      "tested_sha": "99dc16f3a4d2efcb35e8a797e9672e4d32a9b1a3",
+      "clean_checkout": "C:\\Users\\xqc\\.codex\\reports\\submission-provenance-pre-recovery-resume-20261003\\git-main-authority",
+      "complete_inventory": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/training/test_training.py"
+      ],
+      "executed": {
+        "tests/training/test_training.py": 43
+      },
+      "tests": 43,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0
+    },
+    "evaluation": {
+      "command": "python -B C:\\Users\\xqc\\.codex\\reports\\submission-provenance-evaluation-publication-20261003\\run_tests.py evaluation",
+      "tested_sha": "99dc16f3a4d2efcb35e8a797e9672e4d32a9b1a3",
+      "clean_checkout": "C:\\Users\\xqc\\.codex\\reports\\submission-provenance-pre-recovery-resume-20261003\\git-main-authority",
+      "complete_inventory": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/training/test_training.py"
+      ],
+      "executed": {
+        "tests/evaluation/test_evaluation.py": 58
+      },
+      "tests": 58,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0
+    },
+    "full": {
+      "command": "python -B C:\\Users\\xqc\\.codex\\reports\\submission-provenance-evaluation-publication-20261003\\run_tests.py full",
+      "tested_sha": "99dc16f3a4d2efcb35e8a797e9672e4d32a9b1a3",
+      "clean_checkout": "C:\\Users\\xqc\\.codex\\reports\\submission-provenance-pre-recovery-resume-20261003\\git-main-authority",
+      "complete_inventory": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/training/test_training.py"
+      ],
+      "executed": {
+        "tests/evaluation/test_evaluation.py": 58,
+        "tests/training/test_training.py": 43
+      },
+      "tests": 101,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0
+    }
+  },
+  "durable_pre": {
+    "repository": "xqc2098948451-byte/price-action-learning",
+    "commit_sha": "f2d8e90a314b1168654e6c8b500fc5269f96fc90",
+    "path": ".gpt-codex/evidence/results/8a7c2d71-d4f2-46fa-9584-5ff465cd70d3.json",
+    "blob_sha": "2fd62298ed8ebd0ff2a404fa9f947dc4579b6bd2"
+  },
+  "durable_post_pass": {
+    "repository": "xqc2098948451-byte/price-action-learning",
+    "commit_sha": "a4ac86d3d0c0d6785b358c2fec42c843e841846d",
+    "path": ".gpt-codex/evidence/results/f5e1d8ab-920b-4c98-b442-77d6234e6e39.json",
+    "blob_sha": "9cd6a5fd0dff27a6d1fbe7132e1ed8f10099eb76"
+  },
+  "durable_post_request": {
+    "repository": "xqc2098948451-byte/price-action-learning",
+    "commit_sha": "d47b1e5d0b50870be47acfef411e5d3ef009426b",
+    "path": ".gpt-codex/evidence/instructions/e8c9bf53-0bd4-4613-9055-a8558f4fd178.json",
+    "blob_sha": "71adb2e7ecf0a38398825e907f673ced0f8be6fa"
+  },
+  "eval_post_001_closure": "PRESERVED",
+  "eval_post_002_closure": "CLOSED",
+  "candidate_preservation": {
+    "head": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "fixed_tree": "5b6815e41c106fc0b63ae0c49fd8f5f334460c45",
+    "normal_index_unchanged": true,
+    "normal_index_sha256": "f85c556f2f0bb5145f9b345929dc88aa0b4f53691555d14aa268613069072857",
+    "files_unchanged": true,
+    "candidate_committed": false
+  },
+  "observed_at": "2026-10-03T18:42:05.150334+08:00"
+}
