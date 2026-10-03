@@ -1,0 +1,218 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "work_unit_id": "price-action-learning-submission-provenance-hardening-001",
+  "goal": "Introduce the minimum cross-module original-submission provenance boundary required to close EVAL-POST-002 by making TrainingAttempt ordinary/public construction factory-only, preventing ordinary/public same-identity reconstruction, and adapting Evaluation to trust that construction boundary rather than caller-reconstructed values, while preserving all Training/Evaluation business semantics that do not depend on public TrainingAttempt reconstruction. Introduce no persistence, registry, hidden provenance field, secret token field, fingerprint, nonce, or generalized identity framework.",
+  "scope_decision": "SCOPE_ESCALATION_REQUIRED",
+  "mechanism": "FACTORY_ONLY_TRAINING_ATTEMPT_PROVENANCE_BOUNDARY",
+  "scope": {
+    "owned_paths": [
+      "spec/training/TRAINING_SPEC.md",
+      "src/price_action_learning/training/core.py",
+      "tests/training/test_training.py",
+      "spec/evaluation/EVALUATION_SPEC.md",
+      "src/price_action_learning/evaluation/core.py",
+      "tests/evaluation/test_evaluation.py"
+    ],
+    "excluded_paths": [
+      ".gpt-codex/",
+      "AGENTS.md",
+      "README.md",
+      "docs/",
+      "docs/CONTRACTS.md",
+      "src/price_action_learning/training/__init__.py",
+      "src/price_action_learning/evaluation/__init__.py",
+      "spec/learning_map/",
+      "spec/learning_state/",
+      "spec/review/",
+      "spec/study_entry/",
+      "src/price_action_learning/learning_map/",
+      "src/price_action_learning/learning_state/",
+      "src/price_action_learning/review/",
+      "src/price_action_learning/study_entry/",
+      "tests/learning_map/",
+      "tests/learning_state/",
+      "tests/review/",
+      "tests/study_entry/"
+    ]
+  },
+  "dependencies": {
+    "framework": {
+      "version": "2.7.4",
+      "commit_sha": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c",
+      "access": "READ_ONLY"
+    },
+    "repository": {
+      "repository_id": "1394745962",
+      "repository_full_name": "xqc2098948451-byte/price-action-learning",
+      "main_commit_sha": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001",
+      "governance_commit_sha": "4d76fc90c4b76e46a110437020413523e9b2f2c1"
+    },
+    "project_state": {
+      "commit_sha": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001",
+      "path": ".gpt-codex/STATE.json",
+      "blob_sha": "99562c723a3db73877f0aaf989b117523756c0af",
+      "revision": 13,
+      "state": "AUTHORIZED",
+      "active_work_unit": null,
+      "blockers": [],
+      "reconciliation": null,
+      "active_execution_slots_presence": "ABSENT",
+      "continuity_sync_status": "SYNCED"
+    },
+    "evaluation_work_unit": {
+      "commit_sha": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001",
+      "path": ".gpt-codex/work-units/price-action-learning-evaluation-core-001.json",
+      "blob_sha": "3a01fd0a13cefb712a2054e1f7a4016cdc8367bf",
+      "state": "AUTHORIZED",
+      "basis_state_revision": 13,
+      "implementation_authorized": false,
+      "implementation_start_allowed": false,
+      "training_owned": false
+    },
+    "eval_post_002_result": {
+      "commit_sha": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001",
+      "path": ".gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json",
+      "blob_sha": "64cad2444ca1b3d4c51e040a3c758475bdc6be65",
+      "finding_ids": [
+        "EVAL-POST-002"
+      ],
+      "finding_status": "OPEN",
+      "priority": "P1",
+      "eval_post_001_closure": "CLOSED"
+    },
+    "eval_post_002_basis": {
+      "commit_sha": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001",
+      "path": ".gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json",
+      "blob_sha": "4c4ac97a9bd0ce3de983b675cbbed9346940e32a",
+      "finding_ids": [
+        "EVAL-POST-002"
+      ],
+      "state_revision": 13,
+      "accepted": true
+    },
+    "eval_post_002_adjudication": {
+      "commit_sha": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001",
+      "path": ".gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json",
+      "blob_sha": "b905b589f131ef80e832d8b12a24f29b7d6ddeaf",
+      "finding_ids": [
+        "EVAL-POST-002"
+      ],
+      "decision": "ACCEPT",
+      "state_revision": 13
+    },
+    "published_training": {
+      "commit_sha": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001",
+      "runtime": {
+        "path": "src/price_action_learning/training/core.py",
+        "blob_sha": "751fd8b84f332143616fbf018a7b4ef0c4b206d1"
+      },
+      "spec": {
+        "path": "spec/training/TRAINING_SPEC.md",
+        "blob_sha": "9c2ed5e2c275f71073f68a93de1178a565ae9a79"
+      },
+      "tests": {
+        "path": "tests/training/test_training.py",
+        "blob_sha": "0102e37f34f30058941d173a43cf3364c1832d6b"
+      },
+      "public_exports": {
+        "path": "src/price_action_learning/training/__init__.py",
+        "blob_sha": "66af9fd135c08942aa3973144b2a1fa763f13e3a",
+        "mutation_allowed": false
+      },
+      "construction_fact": "Published TrainingAttempt permits ordinary/public direct construction with caller-chosen internally valid id, created_at, stage, context, learned_concept_ids, and user_analysis; existing tests exercise constructor-valid direct reconstruction. Evaluation-only value validation cannot distinguish an original submission from a publicly reconstructed lookalike."
+    }
+  },
+  "acceptance": [
+    "Keep create_training_attempt(...) as the supported public creator of submitted TrainingAttempt records through the same FORMAL and FOCUSED creation path. Every legitimate factory call assigns a fresh UUID4 and a fresh UTC submission timestamp, image_reference=None, revision=None, and status=SUBMITTED; callers cannot choose an existing submission identity through the factory.",
+    "Make ordinary/public TrainingAttempt construction factory-only. Reject TrainingAttempt(...) with copied or chosen values, including internally valid values, before Evaluation can treat a reconstructed record as an original submission. Reject every ordinary/public route that can create another valid same-submission lookalike.",
+    "Reject dataclasses.replace, copy.copy, copy.deepcopy, pickle for every protocol 0 through pickle.HIGHEST_PROTOCOL, and exposed reduction/state-restoration routes for TrainingAttempt. Equivalent ordinary standard-library reconstruction routes must not preserve an existing submission identity while changing authority-bearing stage, context, knowledge_boundary, learned_concept_ids, target, objective, or observation task. Cover __setstate__, __reduce__, and __reduce_ex__ or their implementation-exposed equivalents without creating a serializer framework.",
+    "Keep factory-created TrainingAttempt frozen, with normal frozen-dataclass immutability for supported public use and exactly the existing fields id, created_at, stage, image_reference, user_analysis, user_confidence, revision, status, and context. Add no provenance field, token field, hidden persistent field, alternate TrainingAttempt type, or additional record field.",
+    "Preserve KnowledgeBoundary and TrainingContext canonicalization and caller-owned collection copying, immutable context/boundary, exact Learning Map reference, canonical cumulative S1/S2/S3 allowed concept counts 13/19/28, learned-subset rules, and target-concept rules.",
+    "Preserve user-first submission, the initial user_analysis, user confidence semantics, and all unrelated Training business behavior. Training must remain standard-library-only, with no Evaluation, scoring, LearningState, database, or persistence behavior. Replace direct-constructor tests that conflict with factory-only authority with factory-only provenance regressions; do not retain public direct construction merely to keep old tests green.",
+    "Evaluation must require the exact supported TrainingAttempt type and validate its business invariants and historical boundary. Rely on the factory-only construction contract for ordinary/public original-submission provenance; do not reconstruct a new TrainingAttempt from caller values as proof of provenance or infer provenance from id/created_at/user_analysis equality alone. Preserve submission-time learned knowledge exactly and retain public-type and spoofed-input defenses.",
+    "For an original factory-created S1 submission learned_concept_ids=[CON-S1-HIGH], OBS-002 must remain ineligible in both primary_error and contributors. Direct TrainingAttempt(...) reconstruction preserving id, created_at, and user_analysis while adding CON-S1-FACT-VS-INTERPRETATION must be rejected before Evaluation can consume it as the original submission; assert rejection and original-object preservation for both channels.",
+    "Reject same-identity S3 context transplantation before LOC-001 becomes eligible, covering both primary_error and contributors while preserving the original S1 submission unchanged.",
+    "Regressions must attack direct construction, dataclasses.replace(original_attempt, ...), copy.copy, copy.deepcopy, all supported pickle protocols, and every restoration/reduction route exposed by the implementation. Cover identity-preserving same-Stage later-learning expansion and future-Stage transplant through applicable reconstruction routes; the original object must remain unchanged after each attempt.",
+    "A fresh legitimate create_training_attempt(...) call must produce a new submission identity and continue to work. A genuinely historically eligible factory-created attempt must remain evaluable in both primary and contributor paths; protection must not reject legitimate eligibility or contaminate earlier submissions with later learning.",
+    "Preserve exactly the nine Evaluation fields attempt_id, what_was_correct, primary_issue, primary_error, contributors, hint, skill_signal, evaluation_confidence, and abstain. Add no Evaluation field, provenance-token argument, or alternate Evaluation type.",
+    "Preserve the independently verified EVAL-POST-001 closure and all Evaluation __setstate__/__reduce__/__reduce_ex__ hardening, pickle-protocol rejection/safety, copy/deepcopy/replace defenses, blocked direct construction, absence of __dict__ and mutable restoration aliases, and canonical immutable output.",
+    "Preserve all 19 Error mappings: OBS-001, OBS-002, OBS-004, STR-001, STR-002, STR-006, STR-007, STR-003, STR-004, STR-005, REA-002, REA-003, REA-005, LOC-001, LOC-002, LOC-003, LOC-004, LOC-005, and LOC-006. Preserve S1/S2/S3 Stage ceilings, CORE plus learned-at-submission eligibility, later-learning isolation, and target/objective/observation-task relevance.",
+    "Preserve at most one primary error, zero through two unique contributors, primary/contributor separation, Error-ID prose protection, strict bool abstain, LOW confidence implies abstain, abstain implies no formal errors, non-abstaining correct/no-error support, internally derived skill_signal, mutable diagnostic-input copying, process-not-outcome judgment, and no future-market dependency.",
+    "This MVP protects ordinary/public Python APIs and standard-library reconstruction routes, including the EVAL-POST-002 route. Deliberate unrestricted interpreter-level memory tampering, direct object memory manipulation, or use of explicitly private module internals are outside this public-API threat model. Do not turn this work into a generalized security sandbox; ordinary/public same-submission lookalikes must still be rejected.",
+    "Provenance must come from the supported construction boundary, not caller-supplied markers. Introduce no database, persistence layer, durable attempt registry, in-memory global provenance registry, hidden persistent field, capability/token field, caller-supplied signature, fingerprint, nonce, secret, cryptographic identity system, generalized provenance/identity/validator framework, shared helpers/common/utils, serializer framework, or alternate record type.",
+    "The exact six owned business paths are the complete implementation scope. Do not mutate docs/CONTRACTS.md, either module __init__.py, Learning Map, Learning State, Review, Study Entry, or any governance file during business implementation. The existing TrainingAttempt field contract remains unchanged; only supported construction semantics change. If docs/CONTRACTS.md must change, HARD_STOP and return SCOPE_REPROPOSAL_REQUIRED.",
+    "Do not introduce S4-S8, scoring/ranking/rewards, screenshot/TradingView functionality, market data, predictions/signals, API/UI/plugin code, or any other unowned path. Preserve standard-library-only and no-persistence constraints across both modules.",
+    "Future business execution requires explicit user Work Unit approval, separate governed authorization/execution instruction, and a fresh independent PRE_EXECUTION PASS before any business mutation. PRE must confirm the concrete factory-only mechanism is sufficient without registry/token/persistence, the six-path scope is enough, shared contracts need no modification, Training public factory behavior remains compatible, Evaluation can consume hardened attempts without value-based provenance reconstruction, EVAL-POST-001 closure is preserved, and the regression plan is complete. No PRE PASS means no mutation.",
+    "Execute any future approved implementation only on the existing Evaluation candidate with initial HEAD, complete tree, and core/test/Training blobs exactly as bound in future_execution. Stop and revalidate authority on any mismatch; this proposal task must not mutate that candidate or start FIX round 2.",
+    "Future FIX completion requires a complete independent CROSS-MODULE hostile POST covering both Training and Evaluation because published Training construction behavior changes. It must independently attack direct TrainingAttempt construction, replace, copy/deepcopy, every pickle protocol, state restoration/reduction, same-ID reconstruction, same-Stage later-learning expansion, and future-Stage transplant, then rerun the full existing Evaluation hostile matrix. POST must not be limited to EVAL-POST-002; passing tests alone does not establish publication readiness.",
+    "Before future implementation completion, pass the Training regression suite, Evaluation regression suite, and full project test suite after replacing only constructor tests incompatible with the new approved factory-only contract. Preserve unrelated Training and Evaluation semantics and the prior hostile-review protections.",
+    "This artifact is a scope-escalation proposal only, not implementation, PRE approval, user approval, or Work Unit authorization. Keep EVAL-POST-002 OPEN, preserve EVAL-POST-001 CLOSED, keep Evaluation NOT COMPLETE / NOT PUBLISHED, and do not start Learning State. Stop after publishing the PROPOSED Work Unit and return to GPT for USER_WORK_UNIT_APPROVAL."
+  ],
+  "future_execution": {
+    "workspace": "D:\\价格行为学习\\evaluation-core-candidate",
+    "initial_head_sha": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "initial_complete_tree_sha": "e9695c0b9496e6d2dbf6f770b76886686662ba20",
+    "initial_blobs": {
+      "src/price_action_learning/evaluation/core.py": "919fa7343adc6b36398cc351bc4f7873bda651da",
+      "tests/evaluation/test_evaluation.py": "594828dd2634d4e62ea1cd592c70967a61739745",
+      "src/price_action_learning/training/core.py": "751fd8b84f332143616fbf018a7b4ef0c4b206d1",
+      "tests/training/test_training.py": "0102e37f34f30058941d173a43cf3364c1832d6b",
+      "spec/training/TRAINING_SPEC.md": "9c2ed5e2c275f71073f68a93de1178a565ae9a79"
+    },
+    "fresh_independent_pre_execution_required": true,
+    "pre_pass_required_before_mutation": true,
+    "complete_cross_module_hostile_post_required": true,
+    "post_modules": [
+      "training",
+      "evaluation"
+    ],
+    "shared_contract_change_gate": "SCOPE_REPROPOSAL_REQUIRED"
+  },
+  "selected_extensions": {
+    "skills": [
+      "verification",
+      "handoff",
+      "github-project-continuity"
+    ],
+    "guardrails": [
+      "universal-safety",
+      "cross-project-context-binding",
+      "github-repository-binding"
+    ],
+    "fitness": []
+  },
+  "permissions": {
+    "authorized_actions": [
+      "READ",
+      "TEST",
+      "VALIDATE",
+      "REPORT",
+      "MUTATE_APPROVED_SCOPE"
+    ],
+    "forbidden_actions": [
+      "COMMIT",
+      "PUSH",
+      "PUBLISH",
+      "AUTHORIZE",
+      "SCOPE_EXPANSION"
+    ]
+  },
+  "state": "PROPOSED",
+  "basis_state_revision": 13,
+  "implementation_authorized": false,
+  "implementation_start_allowed": false,
+  "next_gate": "USER_WORK_UNIT_APPROVAL",
+  "artifact_refs": {
+    "design": {
+      "path": "docs/DIRECTORY_POLICY.md",
+      "sha": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001"
+    },
+    "plan": {
+      "path": "docs/PROJECT_SCOPE.md",
+      "sha": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001"
+    }
+  }
+}
