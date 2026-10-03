@@ -1,0 +1,81 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-EVALUATION-CORE-POST-002-REMEDIATION-WORK-VERIFICATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-evaluation-core-post-002-remediation-registration-001",
+  "source": "TOOL_OBSERVED",
+  "subject": "EVALUATION_CORE_POST_002_REMEDIATION_CUMULATIVE_WORK_STATE_REMOTE_VERIFICATION",
+  "state_revision": 12,
+  "identity_binding": {
+    "type": "GIT_COMMIT",
+    "value": "a822bb38a50b357f446b288fcaaabbc455b05a17"
+  },
+  "result": "PASS",
+  "artifact_refs": [
+    ".gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json@a822bb38a50b357f446b288fcaaabbc455b05a17",
+    ".gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json@a822bb38a50b357f446b288fcaaabbc455b05a17",
+    ".gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json@a822bb38a50b357f446b288fcaaabbc455b05a17"
+  ],
+  "publication_observation": {
+    "repository_id": "1394745962",
+    "repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "remote_ref": "refs/heads/main",
+    "remote_head": "a822bb38a50b357f446b288fcaaabbc455b05a17",
+    "remote_state_revision": 12,
+    "work_blobs": {
+      ".gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json": "64cad2444ca1b3d4c51e040a3c758475bdc6be65",
+      ".gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json": "4c4ac97a9bd0ce3de983b675cbbed9346940e32a",
+      ".gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json": "b905b589f131ef80e832d8b12a24f29b7d6ddeaf"
+    },
+    "cumulative_changed_paths": {
+      ".gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json": "A",
+      ".gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json": "A",
+      ".gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json": "A"
+    }
+  },
+  "recovery_incident": {
+    "original_baseline_sha": "636bfc03650286c28890ca01402021a5c1621437",
+    "original_w_sha": "2c0ee06356dbe4e2a505f939d0cbaafc5b084ad1",
+    "original_w_verification": "FAIL",
+    "original_w_verification_code": "FAIL_SOURCE_RESULT_NEWLINE_NORMALIZATION",
+    "failure_reason": "source Result newline normalization",
+    "wrong_result_blob": "eb0f8f09bc0a6424930be5bbc95701e6c169d00e",
+    "recovery_commit_sha": "a822bb38a50b357f446b288fcaaabbc455b05a17",
+    "corrected_result_blob": "64cad2444ca1b3d4c51e040a3c758475bdc6be65",
+    "recovery_direct_delta": "EXACT_ONE_PATH",
+    "cumulative_baseline_to_recovery_delta": "EXACT_THREE_PATHS",
+    "cumulative_work_state_verification": "PASS",
+    "immutable_history_preserved": true
+  },
+  "basis_adjudication_unchanged_and_valid": true,
+  "candidate": {
+    "HEAD": "63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f",
+    "tree": "e9695c0b9496e6d2dbf6f770b76886686662ba20",
+    "core_blob": "919fa7343adc6b36398cc351bc4f7873bda651da",
+    "test_blob": "594828dd2634d4e62ea1cd592c70967a61739745",
+    "normal_index_sha256": "f85c556f2f0bb5145f9b345929dc88aa0b4f53691555d14aa268613069072857",
+    "unchanged": true,
+    "normal_index_unchanged": true
+  },
+  "Training_unchanged": true,
+  "FIX_round_2_started": false,
+  "EVAL_POST_001_review_conclusion": "CLOSED",
+  "EVAL_POST_002_status": "OPEN",
+  "Evaluation_complete": false,
+  "Evaluation_published": false,
+  "Learning_State_started": false,
+  "native_validation": {
+    "cumulative_work_state_and_blobs": [],
+    "Result_source_evidence_identity": [],
+    "validate_remediation_adjudication": [],
+    "source_Result_envelope": [],
+    "source_Result_protocol": [],
+    "source_Result_review": [],
+    "source_Result_authority": [],
+    "source_Result_completion": [],
+    "native_committed_cumulative_scope": [],
+    "governed_mutation_entry_corrected_cumulative": []
+  },
+  "observed_at": "2026-10-03"
+}

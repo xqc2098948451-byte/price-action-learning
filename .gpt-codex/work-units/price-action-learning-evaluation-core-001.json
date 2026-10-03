@@ -150,7 +150,7 @@
     ]
   },
   "state": "AUTHORIZED",
-  "basis_state_revision": 12,
+  "basis_state_revision": 13,
   "implementation_authorized": false,
   "implementation_start_allowed": false,
   "next_gate": "EVALUATION_CORE_PRE_EXECUTION",

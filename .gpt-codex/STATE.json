@@ -2,7 +2,7 @@
   "kernel_version": "2.0.0",
   "schema_version": 1,
   "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
-  "revision": 12,
+  "revision": 13,
   "state": "AUTHORIZED",
   "active_work_unit": null,
   "blockers": [],
@@ -44,14 +44,19 @@
     ".gpt-codex/evidence/evaluation-core-post-001-remediation-basis.json",
     ".gpt-codex/evidence/evaluation-core-post-001-remediation-adjudication.json",
     ".gpt-codex/evidence/evaluation-core-post-001-remediation-work-verification.json",
-    ".gpt-codex/evidence/results/evaluation-core-post-001-remediation-publication.json"
+    ".gpt-codex/evidence/results/evaluation-core-post-001-remediation-publication.json",
+    ".gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json",
+    ".gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json",
+    ".gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json",
+    ".gpt-codex/evidence/evaluation-core-post-002-remediation-work-verification.json",
+    ".gpt-codex/evidence/results/evaluation-core-post-002-remediation-publication.json"
   ],
   "continuity": {
     "current_remote_ref": "refs/heads/main",
-    "latest_verified_remote_sha": "42bbd89fd9a3dddf4089a6ae9d4b80fa1d8a47d4",
-    "latest_synced_state_revision": 12,
-    "last_verified_result_ref": ".gpt-codex/evidence/results/evaluation-core-post-001-remediation-publication.json",
+    "latest_verified_remote_sha": "a822bb38a50b357f446b288fcaaabbc455b05a17",
+    "latest_synced_state_revision": 13,
+    "last_verified_result_ref": ".gpt-codex/evidence/results/evaluation-core-post-002-remediation-publication.json",
     "sync_status": "SYNCED"
   },
-  "next_action": "Issue a governed FIX_INSTRUCTION with fix_round=1 tied to source Result 040c329e-33a9-4608-831e-1c47337e6e15 for exactly EVAL-POST-001. Use only the accepted minimum restoration/serialization hardening authority; obtain a fresh FIX PRE_EXECUTION review before any candidate mutation; apply the FIX only after PRE PASS; then perform a complete full hostile Evaluation POST re-review. EVAL-POST-001 remains OPEN until that review closes it. Evaluation is not COMPLETE or published, and Learning State MUST NOT start."
+  "next_action": "Resolve and freeze the concrete minimum provenance mechanism for EVAL-POST-002. Determine whether a sound correction fits the currently authorized Evaluation scope without Training mutation, shared-contract mutation, hidden or persistent provenance state, or caller-forgeable fingerprints/nonces. Only if it fits, issue a governed FIX_INSTRUCTION with fix_round=2 and finding exactly EVAL-POST-002, and obtain a fresh FIX PRE before any candidate mutation. Otherwise return SCOPE_ESCALATION_REQUIRED and obtain separate bounded Work Unit or explicit scope authority before any Training/shared-contract/integration change. Preserve the independently verified EVAL-POST-001 closure. EVAL-POST-002 remains OPEN; FIX round 2 has not started. Evaluation remains NOT COMPLETE / NOT PUBLISHED. Learning State MUST NOT start."
 }
