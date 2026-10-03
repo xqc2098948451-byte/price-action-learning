@@ -1,0 +1,250 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-LEARNING-STATE-CORE-PUBLICATION-VERIFICATION",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-learning-state-core-001",
+  "source": "TOOL_OBSERVED",
+  "subject": "LEARNING_STATE_CORE_WORK_COMMIT_REMOTE_VERIFICATION",
+  "state_revision": 15,
+  "identity_binding": {
+    "type": "GIT_COMMIT",
+    "value": "391c94497989938e4bb6eb686e805030803f23e6"
+  },
+  "result": "PASS",
+  "publication_observation": {
+    "repository_id": "1394745962",
+    "repository_full_name": "xqc2098948451-byte/price-action-learning",
+    "remote_ref": "refs/heads/main",
+    "remote_head": "391c94497989938e4bb6eb686e805030803f23e6",
+    "work_commit_parent": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+    "candidate_tree": "a681dc0d08c0775361e8eab0d587271043bb89f2",
+    "work_tree": "a681dc0d08c0775361e8eab0d587271043bb89f2",
+    "exact_work_delta": {
+      "spec/learning_state/.gitkeep": "D",
+      "spec/learning_state/LEARNING_STATE_SPEC.md": "A",
+      "src/price_action_learning/learning_state/__init__.py": "A",
+      "src/price_action_learning/learning_state/core.py": "A",
+      "tests/learning_state/test_learning_state.py": "A"
+    },
+    "remote_business_blobs": {
+      "spec/learning_state/.gitkeep": null,
+      "spec/learning_state/LEARNING_STATE_SPEC.md": "21cfaabb3d6362894ab07bc48d5d9b3f4c329432",
+      "src/price_action_learning/learning_state/__init__.py": "16b7ead4202c847d7a3a90d82a283bcc7e6bf51e",
+      "src/price_action_learning/learning_state/core.py": "d9d2eb7fee405530afd4f05f8cd49aee1546f864",
+      "tests/learning_state/test_learning_state.py": "2d2247d56bdea683206ef3a01a70aa27bd02b9ae"
+    },
+    "removed_gitkeep_status": "ABSENT",
+    "removed_gitkeep_baseline_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "no_sixth_business_path": true,
+    "governance_unchanged_in_W": true,
+    "staged_and_remote_bytes_exact": true,
+    "BOM": "ABSENT",
+    "unintended_CRLF_conversion": false
+  },
+  "clean_work_commit_tests": {
+    "learning_state": {
+      "tested_sha": "391c94497989938e4bb6eb686e805030803f23e6",
+      "checkout": "D:\\价格行为学习\\learning-state-core-publication",
+      "checkout_kind": "REAL_CLEAN_GIT_WORKTREE",
+      "command": [
+        "C:\\Python313\\python.exe",
+        "-B",
+        "C:\\Users\\xqc\\.codex\\reports\\learning-state-core-publication-20261003\\run_tests.py",
+        "learning_state"
+      ],
+      "complete_inventory": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/learning_state/test_learning_state.py",
+        "tests/training/test_training.py"
+      ],
+      "executed": {
+        "tests/learning_state/test_learning_state.py": 43
+      },
+      "tests": 43,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "duration_seconds": 0.09196130000054836,
+      "source_root": "D:\\价格行为学习\\learning-state-core-publication\\src",
+      "clean_checkout_after_tests": true
+    },
+    "training": {
+      "tested_sha": "391c94497989938e4bb6eb686e805030803f23e6",
+      "checkout": "D:\\价格行为学习\\learning-state-core-publication",
+      "checkout_kind": "REAL_CLEAN_GIT_WORKTREE",
+      "command": [
+        "C:\\Python313\\python.exe",
+        "-B",
+        "C:\\Users\\xqc\\.codex\\reports\\learning-state-core-publication-20261003\\run_tests.py",
+        "training"
+      ],
+      "complete_inventory": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/learning_state/test_learning_state.py",
+        "tests/training/test_training.py"
+      ],
+      "executed": {
+        "tests/training/test_training.py": 43
+      },
+      "tests": 43,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "duration_seconds": 0.006826600001659244,
+      "source_root": "D:\\价格行为学习\\learning-state-core-publication\\src",
+      "clean_checkout_after_tests": true
+    },
+    "evaluation": {
+      "tested_sha": "391c94497989938e4bb6eb686e805030803f23e6",
+      "checkout": "D:\\价格行为学习\\learning-state-core-publication",
+      "checkout_kind": "REAL_CLEAN_GIT_WORKTREE",
+      "command": [
+        "C:\\Python313\\python.exe",
+        "-B",
+        "C:\\Users\\xqc\\.codex\\reports\\learning-state-core-publication-20261003\\run_tests.py",
+        "evaluation"
+      ],
+      "complete_inventory": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/learning_state/test_learning_state.py",
+        "tests/training/test_training.py"
+      ],
+      "executed": {
+        "tests/evaluation/test_evaluation.py": 58
+      },
+      "tests": 58,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "duration_seconds": 0.12809520000155317,
+      "source_root": "D:\\价格行为学习\\learning-state-core-publication\\src",
+      "clean_checkout_after_tests": true
+    },
+    "full": {
+      "tested_sha": "391c94497989938e4bb6eb686e805030803f23e6",
+      "checkout": "D:\\价格行为学习\\learning-state-core-publication",
+      "checkout_kind": "REAL_CLEAN_GIT_WORKTREE",
+      "command": [
+        "C:\\Python313\\python.exe",
+        "-B",
+        "C:\\Users\\xqc\\.codex\\reports\\learning-state-core-publication-20261003\\run_tests.py",
+        "full"
+      ],
+      "complete_inventory": [
+        "tests/evaluation/test_evaluation.py",
+        "tests/learning_state/test_learning_state.py",
+        "tests/training/test_training.py"
+      ],
+      "executed": {
+        "tests/evaluation/test_evaluation.py": 58,
+        "tests/learning_state/test_learning_state.py": 43,
+        "tests/training/test_training.py": 43
+      },
+      "tests": 144,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "duration_seconds": 0.17439599999488564,
+      "source_root": "D:\\价格行为学习\\learning-state-core-publication\\src",
+      "clean_checkout_after_tests": true
+    }
+  },
+  "durable_pre": {
+    "repository": "xqc2098948451-byte/price-action-learning",
+    "commit_sha": "6d2f044769aa75cf04759035fa6eef9be0477565",
+    "path": ".gpt-codex/evidence/results/0e5bb7f2-1cf7-4b1c-b728-4b0ab56cf5d2.json",
+    "blob_sha": "db269976649c0e0df9ff17441da544151e3887e5"
+  },
+  "durable_post_pass": {
+    "repository": "xqc2098948451-byte/price-action-learning",
+    "commit_sha": "baf853f785c248e79d1d3f71f4d08e34aab52ba4",
+    "path": ".gpt-codex/evidence/results/e218dc21-7cf0-41de-9f44-1a4165fce01f.json",
+    "blob_sha": "0ed6ab2be5a34ae6e3b7c849900b3d4b2dabdaa5"
+  },
+  "durable_post_request": {
+    "repository": "xqc2098948451-byte/price-action-learning",
+    "commit_sha": "82ce0716b13a2395cac688fd057ea29cdc971c04",
+    "path": ".gpt-codex/evidence/instructions/a2cf7d43-6d69-4d8a-b349-472c8f649c58.json",
+    "blob_sha": "8366175c696a6ead0110843d6cde1772851a94ff"
+  },
+  "durable_post_verification": {
+    "source": "PINNED_DURABLE_POST_RESULT",
+    "locator": {
+      "repository": "xqc2098948451-byte/price-action-learning",
+      "commit_sha": "baf853f785c248e79d1d3f71f4d08e34aab52ba4",
+      "path": ".gpt-codex/evidence/results/e218dc21-7cf0-41de-9f44-1a4165fce01f.json",
+      "blob_sha": "0ed6ab2be5a34ae6e3b7c849900b3d4b2dabdaa5"
+    },
+    "independent_hostile_cases": {
+      "passed": 3974,
+      "total": 3974,
+      "result": "PASS"
+    },
+    "acceptance_items": {
+      "passed": 31,
+      "total": 31,
+      "result": "PASS"
+    },
+    "finding_ids": [],
+    "blockers": [],
+    "deviations": []
+  },
+  "candidate_preservation": {
+    "head": "49ea8aeaed1ad5e734732ec7217a216192b16dfa",
+    "isolated_tree": "a681dc0d08c0775361e8eab0d587271043bb89f2",
+    "normal_index_unchanged": true,
+    "normal_index_sha256": "fff5b7680f428be9723b46d8e0429265648200d97015b37ef7663ede504f5420",
+    "all_files_unchanged": true,
+    "candidate_committed": false
+  },
+  "Review": "NOT STARTED",
+  "Study Entry": "NOT STARTED",
+  "framework_validation": {
+    "version": "2.7.4",
+    "commit_sha": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c",
+    "access": "READ_ONLY",
+    "required_validators": [
+      "framework_pin",
+      "repository_identity",
+      "W_remote_head",
+      "W_parent",
+      "W_tree",
+      "W_exact_five_path_delta",
+      "W_remote_blobs",
+      "W_governance_unchanged",
+      "clean_W_learning_state_tests",
+      "clean_W_training_tests",
+      "clean_W_evaluation_tests",
+      "clean_W_full_test_inventory",
+      "durable_PRE_PASS",
+      "durable_POST_PASS",
+      "authorized_work_unit_source",
+      "work_unit_schema",
+      "work_unit_closure_semantic_diff",
+      "previous_work_units_unchanged",
+      "evidence_schema",
+      "evidence_project_binding",
+      "result_envelope_contract",
+      "result_authority",
+      "completion_evidence",
+      "result_return_context",
+      "state_schema",
+      "state_authority",
+      "state_semantic_diff",
+      "P_exact_four_path_delta",
+      "P_native_scope",
+      "business_blobs_preserved",
+      "candidate_preservation",
+      "Review_unstarted",
+      "Study_Entry_unstarted",
+      "diff_check",
+      "native_project_validation"
+    ]
+  },
+  "observed_at": "2026-10-03T20:39:20.471703+08:00"
+}

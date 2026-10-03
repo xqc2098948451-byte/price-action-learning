@@ -2,7 +2,7 @@
   "kernel_version": "2.0.0",
   "schema_version": 1,
   "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
-  "revision": 14,
+  "revision": 15,
   "state": "AUTHORIZED",
   "active_work_unit": null,
   "blockers": [],
@@ -51,14 +51,16 @@
     ".gpt-codex/evidence/evaluation-core-post-002-remediation-work-verification.json",
     ".gpt-codex/evidence/results/evaluation-core-post-002-remediation-publication.json",
     ".gpt-codex/evidence/submission-provenance-evaluation-publication-verification.json",
-    ".gpt-codex/evidence/results/submission-provenance-evaluation-publication.json"
+    ".gpt-codex/evidence/results/submission-provenance-evaluation-publication.json",
+    ".gpt-codex/evidence/learning-state-core-publication-verification.json",
+    ".gpt-codex/evidence/results/learning-state-core-publication.json"
   ],
   "continuity": {
     "current_remote_ref": "refs/heads/main",
-    "latest_verified_remote_sha": "99dc16f3a4d2efcb35e8a797e9672e4d32a9b1a3",
-    "latest_synced_state_revision": 14,
-    "last_verified_result_ref": ".gpt-codex/evidence/results/submission-provenance-evaluation-publication.json",
+    "latest_verified_remote_sha": "391c94497989938e4bb6eb686e805030803f23e6",
+    "latest_synced_state_revision": 15,
+    "last_verified_result_ref": ".gpt-codex/evidence/results/learning-state-core-publication.json",
     "sync_status": "SYNCED"
   },
-  "next_action": "Submission provenance hardening is COMPLETE and published. Training Core remains COMPLETE. Evaluation Core is COMPLETE and published. EVAL-POST-001 closure is preserved; EVAL-POST-002 is CLOSED. Learning State has not started. Propose and authorize the bounded Learning State Work Unit before any Learning State business mutation. Do not start Review or Study Entry before their governed sequence."
+  "next_action": "Learning Map S1-S3 is COMPLETE. Training Core is COMPLETE. Evaluation Core is COMPLETE. Submission provenance hardening is COMPLETE. Learning State Core is COMPLETE and published. Review has not started. Study Entry has not started. Propose and authorize a bounded Review Core Work Unit before any Review business mutation. Review must own ReviewRecord, scheduling, 3 / 7 / 30-day review intervals, hidden-old-answer independent review, and review-driven IMPROVING / RESOLVED evidence. Do not start Study Entry before Review's governed sequence. This next_action is descriptive authority only. No Review Work Unit is created or implemented by this publication task."
 }
