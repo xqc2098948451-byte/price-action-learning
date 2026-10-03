@@ -1,0 +1,445 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-review-core-001",
+  "extension": {
+    "kind": "SKILL",
+    "id": "verification",
+    "version": "1.0.0"
+  },
+  "status": "FAIL",
+  "result_message_type": "REVIEW_FINDING",
+  "result_id": "7a0b5cc4-b3f1-4a59-a5dc-8bd8f92a201a",
+  "response_to_instruction_id": "93a37d8b-5355-4490-99ec-27237c9ee117",
+  "responder_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "return_to_gpt_required": true,
+  "source_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "source_project_name": "Price Action Learning",
+  "source_github_repository_id": "1394745962",
+  "source_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "framework_version": "2.7.4",
+  "framework_commit": "935d6f3fcf5e54a478810a79a82a8695fcf4cf4c",
+  "framework_access": "READ_ONLY",
+  "state_revision": 15,
+  "review_target_revision": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+  "artifact_stage": "IMPLEMENTATION",
+  "artifact_path": ".gpt-codex/work-units/price-action-learning-review-core-001.json",
+  "current_remote_ref": "refs/heads/main",
+  "local_head_sha": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+  "remote_head_sha": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+  "remote_verification": "VERIFIED",
+  "push_status": "NOT_ATTEMPTED",
+  "publication_authority": null,
+  "sync_status": null,
+  "finding_ids": [
+    "REVIEW-CORE-PRE-001"
+  ],
+  "findings": [
+    {
+      "finding_id": "REVIEW-CORE-PRE-001",
+      "priority": "P1",
+      "category": "GOVERNED_CONTRACT_CONFLICT",
+      "title": "Incomplete 30-day predecessor chain has incompatible approved and issued outcomes",
+      "affected_artifacts": [
+        {
+          "repository": "xqc2098948451-byte/price-action-learning",
+          "commit_sha": "e4fc76efba31d347fda7fe24485a05db20c2f7df",
+          "path": ".gpt-codex/work-units/price-action-learning-review-core-001.json",
+          "blob_sha": "510c43ca270ba73403cf329f3b5297b5fd5619db",
+          "json_pointer": "/acceptance/17"
+        },
+        {
+          "repository": "xqc2098948451-byte/price-action-learning",
+          "commit_sha": "e4fc76efba31d347fda7fe24485a05db20c2f7df",
+          "path": ".gpt-codex/work-units/price-action-learning-review-core-001.json",
+          "blob_sha": "510c43ca270ba73403cf329f3b5297b5fd5619db",
+          "json_pointer": "/acceptance/18"
+        },
+        {
+          "repository": "xqc2098948451-byte/price-action-learning",
+          "commit_sha": "1e3fcad49c348ce2a5844d9c7500dc382c12705b",
+          "path": ".gpt-codex/evidence/instructions/4cb24f83-0c29-49b4-8ff5-1528a6cb07b9.json",
+          "blob_sha": "7769bd2b3843366844ce8a1bf9a39e5f95aa81f1",
+          "json_pointer": "/evidence_requirements/validation/7"
+        },
+        {
+          "repository": "xqc2098948451-byte/price-action-learning",
+          "commit_sha": "1e3fcad49c348ce2a5844d9c7500dc382c12705b",
+          "path": ".gpt-codex/evidence/instructions/93a37d8b-5355-4490-99ec-27237c9ee117.json",
+          "blob_sha": "4387c1db78f8a3a91868d27d1d6a3bbf21eedef4",
+          "json_pointer": "/evidence_requirements/validation/7"
+        }
+      ],
+      "approved_requirement_excerpts": [
+        "Derive the result conservatively in this order: (A) review_evaluation.abstain == true -> INCONCLUSIVE; (B) otherwise record.error_id appears in primary_error or contributors -> REPEATED; (C) otherwise a 3-day or 7-day record -> IMPROVING; (D) otherwise a 30-day record -> RESOLVED ONLY when canonical prior_reviews contains exactly the matching completed 3-day and 7-day ReviewRecords for the same source_attempt_id and error_id, both with result IMPROVING. All other valid 30-day target-absence cases yield IMPROVING, including missing/incomplete improving chains or chains containing REPEATED or INCONCLUSIVE.",
+        "prior_reviews uses the smallest immutable ordered tuple; Review Core retains no history. For use in 30-day resolution, validate every supplied predecessor: exact ReviewRecord type, same source_attempt_id and error_id, distinct IDs, completed record with completed_at non-None, an exact canonical source-anchored 3-day or 7-day slot, and completed_at <= the current supplied completed_at. A qualifying chain contains exactly one canonical record for each slot. Invalid or mismatched prior evidence rejects rather than silently qualifying RESOLVED. Missing qualifying evidence alone falls back to IMPROVING. No prior chain is required for 3-day or 7-day results."
+      ],
+      "issued_requirement_excerpt": "Result algorithm exactly: abstain->INCONCLUSIVE;else target in current primary_error/contributors->REPEATED;else day3/day7->IMPROVING;else day30 with ()->IMPROVING;else day30 canonical exact two completed predecessors in day3/day7 order,matching source/error,distinct IDs including current,source-anchored slots,completion <=current, both IMPROVING->RESOLVED;otherwise valid chain->IMPROVING. Reject all malformed,incomplete,mismatched,duplicate,noncanonical,wrong-slot,wrong-order or extra nonempty prior evidence. prior_reviews must be exact tuple; day3/day7 require exactly (). Validate supplied prior evidence even when current Evaluation repeats or abstains.",
+      "witness": "A canonical uncompleted day-30 record, fresh non-abstaining target-absent Evaluation, valid completed_at, and exact tuple containing only the canonical completed day-3 IMPROVING predecessor. The predecessor matches source/error, has a distinct UUID4, occupies the exact anchored slot, and completes no later than the current review. No malformed, duplicated, mismatched, out-of-order or uncompleted record is supplied; only the valid day-7 evidence is absent.",
+      "approved_outcome": "IMPROVING: a valid incomplete improving chain / missing qualifying evidence.",
+      "issued_outcome": "Reject: incomplete nonempty prior evidence, outside the exactly-two completed predecessor chain.",
+      "impact": "No Review implementation can simultaneously satisfy both requirements for the same supported input. PRE PASS would conceal an approved behavior change or violate the issued execution clause.",
+      "required_resolution": "GPT must reconcile the durable requirement before issuing a corrected governed instruction and fresh PRE. Retaining the approved fallback requires allowing otherwise valid partial predecessor tuples and returning IMPROVING; choosing strict rejection instead requires the existing Work Unit approval/authority path for that semantic change.",
+      "implementation_claim": "No business implementation exists; this is a source-level contract counterexample, not a runtime failure."
+    }
+  ],
+  "fix_round": 0,
+  "IMPLEMENTATION_READINESS": "NOT_READY",
+  "implementation_readiness": "NOT_READY",
+  "execution": "Completed independent read-only PRE against the exact base and durable authority. All baseline suites pass, but the approved/issued incomplete-predecessor semantics conflict.",
+  "changed": [],
+  "deviations": [],
+  "blockers": [
+    "REVIEW-CORE-PRE-001"
+  ],
+  "verify": {
+    "checks": [
+      {
+        "check_id": "C1",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C2",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C3",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C4",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C5",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C6",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C7",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C8",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C9",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C10",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C11",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C12",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C13",
+        "status": "FAIL"
+      },
+      {
+        "check_id": "C14",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C15",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C16",
+        "status": "PASS"
+      },
+      {
+        "check_id": "C17",
+        "status": "PASS"
+      }
+    ],
+    "training": "43/43 PASS",
+    "evaluation": "58/58 PASS",
+    "learning_state": "43/43 PASS",
+    "full_project": "144/144 PASS",
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "test_commands": [
+      {
+        "module": "training",
+        "command": "python -B C:/Users/xqc/.codex/reports/review-core-recovery-20261003/pre/run_tests.py",
+        "tested_sha": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+        "test_files": [
+          "tests/training/test_training.py"
+        ],
+        "test_count": 43,
+        "failure_count": 0,
+        "error_count": 0,
+        "skip_count": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "exit_code": 0
+      },
+      {
+        "module": "evaluation",
+        "command": "python -B C:/Users/xqc/.codex/reports/review-core-recovery-20261003/pre/run_tests.py",
+        "tested_sha": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+        "test_files": [
+          "tests/evaluation/test_evaluation.py"
+        ],
+        "test_count": 58,
+        "failure_count": 0,
+        "error_count": 0,
+        "skip_count": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "exit_code": 0
+      },
+      {
+        "module": "learning_state",
+        "command": "python -B C:/Users/xqc/.codex/reports/review-core-recovery-20261003/pre/run_tests.py",
+        "tested_sha": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+        "test_files": [
+          "tests/learning_state/test_learning_state.py"
+        ],
+        "test_count": 43,
+        "failure_count": 0,
+        "error_count": 0,
+        "skip_count": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "exit_code": 0
+      },
+      {
+        "module": "full",
+        "command": "python -B C:/Users/xqc/.codex/reports/review-core-recovery-20261003/pre/run_tests.py",
+        "tested_sha": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+        "test_files": [
+          "tests/evaluation/test_evaluation.py",
+          "tests/learning_state/test_learning_state.py",
+          "tests/training/test_training.py"
+        ],
+        "test_count": 144,
+        "failure_count": 0,
+        "error_count": 0,
+        "skip_count": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "exit_code": 0
+      }
+    ],
+    "artifact_count": 27,
+    "acceptance_count": 30,
+    "future_tests_assessed": 45,
+    "supplemental_cases_assessed": 9,
+    "all_requirements_satisfiable": false,
+    "validation_evidence": "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\validation-output.json"
+  },
+  "evidence_refs": [
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\review-report.md",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\findings.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\acceptance-matrix.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\future-test-feasibility.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\pre-checks.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\test-evidence.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\test-inventory.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\training-tests.log",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\evaluation-tests.log",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\learning_state-tests.log",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\full-tests.log",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\artifact-manifest.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\artifact-resolution.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\approval-binding.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\authority-command-log.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\remote-observation.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\resume.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\validation-output.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\validation-command-log.json",
+    "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\preservation.json"
+  ],
+  "role_observation": {
+    "role": "CODEX_REVIEWER",
+    "instruction_id": "93a37d8b-5355-4490-99ec-27237c9ee117",
+    "work_unit": "price-action-learning-review-core-001",
+    "reviewed_revision": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+    "executed_revision": null,
+    "files_read": [
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=.gpt-codex/STATE.json;blob=884bb60192339a0eebd61028345511119073ffeb",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=.gpt-codex/work-units/price-action-learning-learning-state-core-001.json;blob=bddccd1868b946a49c0bc96e4f847eea2781f7cf",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=.gpt-codex/evidence/results/learning-state-core-publication.json;blob=9381e82e559be8f5ae2592da238969f1d491f29f",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=.gpt-codex/work-units/price-action-learning-training-core-001.json;blob=846a12902e8c726886603a22408f8d05ebb624e6",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=.gpt-codex/work-units/price-action-learning-evaluation-core-001.json;blob=9247c2ba63bc62d711bdfd0491abfc1cd7c1e92c",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=.gpt-codex/work-units/price-action-learning-submission-provenance-hardening-001.json;blob=562e7c0eb2b2bf196fab5f4bd2b0b9bed859bdee",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=docs/CONTRACTS.md;blob=aea93c1b8fdecb3098cada74e3d58068d80826ff",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=docs/PROJECT_SCOPE.md;blob=bf6ef572ccca3c6cd041658fa86d22a65f626f11",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=docs/DIRECTORY_POLICY.md;blob=46f2da38b5189cb98f1c54e241e8eaa5ad01eb02",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=spec/learning_state/LEARNING_STATE_SPEC.md;blob=21cfaabb3d6362894ab07bc48d5d9b3f4c329432",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=src/price_action_learning/learning_state/core.py;blob=d9d2eb7fee405530afd4f05f8cd49aee1546f864",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=src/price_action_learning/learning_state/__init__.py;blob=16b7ead4202c847d7a3a90d82a283bcc7e6bf51e",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=tests/learning_state/test_learning_state.py;blob=2d2247d56bdea683206ef3a01a70aa27bd02b9ae",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=spec/training/TRAINING_SPEC.md;blob=265077d6bcddf165b4317dd0441d1c6f93f025eb",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=src/price_action_learning/training/core.py;blob=3fd2a8101b0b919ad487dec39dd80136f7dcce9b",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=spec/evaluation/EVALUATION_SPEC.md;blob=50e4fde7230b3f184b4dff9d180b0c1a5bb46911",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=src/price_action_learning/evaluation/core.py;blob=7203d9de2850abbe4633b5c08ab2644be176df7f",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=spec/review/.gitkeep;blob=e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=src/price_action_learning/training/__init__.py;blob=66af9fd135c08942aa3973144b2a1fa763f13e3a",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=tests/training/test_training.py;blob=2fe1099db77e37651d91f31502d5bfef6d41ac87",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=src/price_action_learning/evaluation/__init__.py;blob=657d7b1ba94ed543b63e64b681ab64e678d3aac4",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=tests/evaluation/test_evaluation.py;blob=3b66c3469808e6ff077dc65f48ecfc424ba5215a",
+      "repository=xqc2098948451-byte/price-action-learning;commit=e4fc76efba31d347fda7fe24485a05db20c2f7df;path=.gpt-codex/work-units/price-action-learning-review-core-001.json;blob=510c43ca270ba73403cf329f3b5297b5fd5619db",
+      "repository=xqc2098948451-byte/price-action-learning;commit=e4fc76efba31d347fda7fe24485a05db20c2f7df;path=.gpt-codex/evidence/review-core-001-user-approval.json;blob=d2ecedc3889ca5ae49ffb2afd567de8f20a74d13",
+      "repository=xqc2098948451-byte/price-action-learning;commit=4abeeb36a04987cf94534c87f9be76dc658edcac;path=spec/learning_map/LEARNING_MAP_SPEC.md;blob=726b35db8409ea03cbec33c916db7374e6724e03",
+      "repository=xqc2098948451-byte/price-action-learning;commit=1e3fcad49c348ce2a5844d9c7500dc382c12705b;path=.gpt-codex/evidence/instructions/4cb24f83-0c29-49b4-8ff5-1528a6cb07b9.json;blob=7769bd2b3843366844ce8a1bf9a39e5f95aa81f1",
+      "repository=xqc2098948451-byte/price-action-learning;commit=1e3fcad49c348ce2a5844d9c7500dc382c12705b;path=.gpt-codex/evidence/instructions/93a37d8b-5355-4490-99ec-27237c9ee117.json;blob=4387c1db78f8a3a91868d27d1d6a3bbf21eedef4",
+      "D:\\价格行为学习\\learning-state-core-publication\\AGENTS.md",
+      "D:\\价格行为学习\\learning-state-core-publication\\.gpt-codex\\CONTROL.json",
+      "D:\\价格行为学习\\learning-state-core-publication\\.gpt-codex\\navigation\\PROJECT_MAP.json",
+      "D:\\价格行为学习\\learning-state-core-publication\\.gpt-codex\\extensions\\skills\\verification\\SKILL.md",
+      "D:\\价格行为学习\\learning-state-core-publication\\.gpt-codex\\extensions\\skills\\handoff\\SKILL.md",
+      "D:\\价格行为学习\\learning-state-core-publication\\.gpt-codex\\extensions\\skills\\github-project-continuity\\SKILL.md",
+      "D:\\价格行为学习\\learning-state-core-publication\\.gpt-codex\\extensions\\guardrails\\universal-safety\\GUARDRAIL.md",
+      "D:\\价格行为学习\\learning-state-core-publication\\.gpt-codex\\extensions\\guardrails\\cross-project-context-binding\\GUARDRAIL.md",
+      "D:\\价格行为学习\\learning-state-core-publication\\.gpt-codex\\extensions\\guardrails\\github-repository-binding\\GUARDRAIL.md",
+      "D:\\w\\gpt-codex-framework\\framework-v2.7.4-publication-packaging-003\\AGENTS.md",
+      "D:\\w\\gpt-codex-framework\\framework-v2.7.4-publication-packaging-003\\VERSION",
+      "D:\\w\\gpt-codex-framework\\framework-v2.7.4-publication-packaging-003\\.gpt-codex\\schemas\\result-envelope.schema.json",
+      "D:\\w\\gpt-codex-framework\\framework-v2.7.4-publication-packaging-003\\.gpt-codex\\scripts\\validate_project.py",
+      "D:\\w\\gpt-codex-framework\\framework-v2.7.4-publication-packaging-003\\.gpt-codex\\scripts\\publication_contract.py",
+      "D:\\w\\gpt-codex-framework\\framework-v2.7.4-publication-packaging-003\\.gpt-codex\\scripts\\continuity_resume.py",
+      "D:\\w\\gpt-codex-framework\\framework-v2.7.4-publication-packaging-003\\.gpt-codex\\scripts\\context_binding.py",
+      "D:\\w\\gpt-codex-framework\\framework-v2.7.4-publication-packaging-003\\.gpt-codex\\scripts\\role_communication.py",
+      "D:\\w\\gpt-codex-framework\\framework-v2.7.4-publication-packaging-003\\.gpt-codex\\scripts\\result_return.py",
+      "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\governance-semantic-check.json"
+    ],
+    "files_changed": [],
+    "tests_run": [
+      {
+        "module": "training",
+        "command": "python -B C:/Users/xqc/.codex/reports/review-core-recovery-20261003/pre/run_tests.py",
+        "tested_sha": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+        "test_files": [
+          "tests/training/test_training.py"
+        ],
+        "test_count": 43,
+        "failure_count": 0,
+        "error_count": 0,
+        "skip_count": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "exit_code": 0
+      },
+      {
+        "module": "evaluation",
+        "command": "python -B C:/Users/xqc/.codex/reports/review-core-recovery-20261003/pre/run_tests.py",
+        "tested_sha": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+        "test_files": [
+          "tests/evaluation/test_evaluation.py"
+        ],
+        "test_count": 58,
+        "failure_count": 0,
+        "error_count": 0,
+        "skip_count": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "exit_code": 0
+      },
+      {
+        "module": "learning_state",
+        "command": "python -B C:/Users/xqc/.codex/reports/review-core-recovery-20261003/pre/run_tests.py",
+        "tested_sha": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+        "test_files": [
+          "tests/learning_state/test_learning_state.py"
+        ],
+        "test_count": 43,
+        "failure_count": 0,
+        "error_count": 0,
+        "skip_count": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "exit_code": 0
+      },
+      {
+        "module": "full",
+        "command": "python -B C:/Users/xqc/.codex/reports/review-core-recovery-20261003/pre/run_tests.py",
+        "tested_sha": "4abeeb36a04987cf94534c87f9be76dc658edcac",
+        "test_files": [
+          "tests/evaluation/test_evaluation.py",
+          "tests/learning_state/test_learning_state.py",
+          "tests/training/test_training.py"
+        ],
+        "test_count": 144,
+        "failure_count": 0,
+        "error_count": 0,
+        "skip_count": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "exit_code": 0
+      }
+    ],
+    "findings": [
+      "REVIEW-CORE-PRE-001"
+    ],
+    "fix_round": 0,
+    "agent_spawns": 0,
+    "result": "REVIEW_FINDING"
+  },
+  "completion_evidence": {
+    "execution_state": "COMPLETED",
+    "process_completed": true,
+    "exit_code": 0,
+    "intended_scope": [
+      "spec/review/REVIEW_SPEC.md",
+      "spec/review/.gitkeep",
+      "src/price_action_learning/review/__init__.py",
+      "src/price_action_learning/review/core.py",
+      "tests/review/test_review.py"
+    ],
+    "executed_scope": [
+      "spec/review/REVIEW_SPEC.md",
+      "spec/review/.gitkeep",
+      "src/price_action_learning/review/__init__.py",
+      "src/price_action_learning/review/core.py",
+      "tests/review/test_review.py"
+    ],
+    "test_files_expected": 3,
+    "test_files_executed": 3,
+    "test_count": 144,
+    "failure_count": 0,
+    "error_count": 0,
+    "validators_expected": [
+      "result_envelope_contract",
+      "review_result",
+      "result_authority",
+      "completion_evidence",
+      "result_protocol",
+      "pre_execution_review",
+      "governed_mutation_entry"
+    ],
+    "validators_completed": [
+      "result_envelope_contract",
+      "review_result",
+      "result_authority",
+      "completion_evidence",
+      "result_protocol",
+      "pre_execution_review",
+      "governed_mutation_entry"
+    ],
+    "blocker_evidence_refs": [
+      "C:\\Users\\xqc\\.codex\\reports\\review-core-recovery-20261003\\pre\\findings.json"
+    ]
+  },
+  "completion_gate": "GPT_DECISION",
+  "next_gpt_action": "HARD_STOP. Reconcile REVIEW-CORE-PRE-001 through existing governance, issue corrected durable requirements, and obtain a fresh independent PRE before candidate creation or business mutation.",
+  "hard_stop": true,
+  "candidate_creation_allowed": false,
+  "business_mutation_allowed": false,
+  "native_capability_fallback": "Exact Framework 2.7.4 has no resolve_plugin_instruction helper. Native resolve_immutable_artifact plus exact Git commit/path/blob resolution and Instruction validators were used; no later Framework substituted."
+}
