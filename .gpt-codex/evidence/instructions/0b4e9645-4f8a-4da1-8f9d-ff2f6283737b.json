@@ -1,0 +1,88 @@
+{
+  "instruction_id": "0b4e9645-4f8a-4da1-8f9d-ff2f6283737b",
+  "instruction_type": "REVIEW_REQUEST",
+  "target_project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "target_project_name": "Price Action Learning",
+  "expected_state_revision": 13,
+  "framework_version": "2.7.4",
+  "issuer_role": "GPT_ORCHESTRATOR",
+  "executor_role": "CODEX_REVIEWER",
+  "return_role": "GPT_ORCHESTRATOR",
+  "target_work_unit": "price-action-learning-submission-provenance-hardening-001",
+  "target_work_unit_ref": {
+    "path": ".gpt-codex/work-units/price-action-learning-submission-provenance-hardening-001.json",
+    "sha": "c5a702cbe937265d5f6b0541316e97d3500cc64e"
+  },
+  "scope_paths": [
+    "spec/training/TRAINING_SPEC.md",
+    "src/price_action_learning/training/core.py",
+    "tests/training/test_training.py",
+    "spec/evaluation/EVALUATION_SPEC.md",
+    "src/price_action_learning/evaluation/core.py",
+    "tests/evaluation/test_evaluation.py"
+  ],
+  "remediation_decision_ref": "DECISION-EVALUATION-CORE-POST-002-REMEDIATION",
+  "expected_base_sha": "e9695c0b9496e6d2dbf6f770b76886686662ba20",
+  "permission_scope": "SUBMISSION_PROVENANCE_HARDENING_FIX_ROUND_2_PRE_EXECUTION_ONLY",
+  "target_github_repository_id": "1394745962",
+  "target_github_repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "expected_remote_ref": "refs/heads/main",
+  "expected_remote_head_sha": "55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001",
+  "expected_remote_name": "origin",
+  "authorized_actions": [
+    "READ",
+    "TEST",
+    "VALIDATE",
+    "REPORT"
+  ],
+  "forbidden_actions": [
+    "MUTATE_APPROVED_SCOPE",
+    "COMMIT",
+    "PUSH",
+    "PUBLISH",
+    "AUTHORIZE",
+    "SCOPE_EXPANSION"
+  ],
+  "evidence_requirements": {
+    "files_read": [
+      "Framework 2.7.4@935d6f3fcf5e54a478810a79a82a8695fcf4cf4c; READ_ONLY; exact native schemas/builders/validators.",
+      "Current authority: repository=xqc2098948451-byte/price-action-learning; repository_id=1394745962; main=55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001; STATE blob=99562c723a3db73877f0aaf989b117523756c0af; revision=13; AUTHORIZED; active_work_unit=null; blockers=[]; reconciliation=null; active_execution_slots ABSENT; continuity SYNCED.",
+      "Authorized WU: commit=c5a702cbe937265d5f6b0541316e97d3500cc64e; path=.gpt-codex/work-units/price-action-learning-submission-provenance-hardening-001.json; blob=6fb05841afeb97ad587b8ffa44745d76cc5bf181. Repaired WU differs from approved proposal blob c0ee90ecb7be5791288ef3624265de5a971e133d only in state and next_gate. Approval evidence blob=7c1f9e515dd14a42da71991b802a105fe6a14c23.",
+      "Candidate: workspace=D:\\\u4ef7\u683c\u884c\u4e3a\u5b66\u4e60\\evaluation-core-candidate; HEAD=63c3c5a35a8ab1fbff8ba1a65adf7c2c96ad1f4f; complete tree=e9695c0b9496e6d2dbf6f770b76886686662ba20; exact initial blobs are bound in WU future_execution. Preserve normal index.",
+      "Source finding: commit=55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001; path=.gpt-codex/evidence/results/6c0c510b-6fd8-4117-97e4-375bea002803.json; blob=64cad2444ca1b3d4c51e040a3c758475bdc6be65; EVAL-POST-002 P1 OPEN; EVAL-POST-001 CLOSED must remain preserved.",
+      "Remediation authority: commit=55f59f6ae0abe3fc3dd06c91ac89cdc5662ae001; paths=.gpt-codex/evidence/evaluation-core-post-002-remediation-basis.json and .gpt-codex/evidence/evaluation-core-post-002-remediation-adjudication.json; decision=DECISION-EVALUATION-CORE-POST-002-REMEDIATION.",
+      "Read both complete Training/Evaluation runtime, specs, tests and exports; docs/CONTRACTS.md, docs/DIRECTORY_POLICY.md, docs/PROJECT_SCOPE.md; immutable Learning Map commit 65cd6969e8ccf890d6e51b07fd7436564bf70421, spec/learning_map/LEARNING_MAP_SPEC.md blob 726b35db8409ea03cbec33c916db7374e6724e03.",
+      "FIX_INSTRUCTION 53f1a0d5-1d1d-4a9c-a1a0-037d65e67881 is published together with this PRE Request; resolve its immutable governance locator."
+    ],
+    "files_changed": [],
+    "tests": [
+      "PRE baseline: Training 39 PASS; Evaluation 55 PASS; explicit tests/**/test_*.py inventory full project 94 PASS; 0 failures/errors/skips. Identity/diff checks use isolated index.",
+      "POST-002: original S1 learned only CON-S1-HIGH rejects OBS-002 in primary and contributors. Reject same-id/time/analysis public reconstruction adding CON-S1-FACT-VS-INTERPRETATION and S3 context transplant before LOC-001 eligibility in both channels. Original remains unchanged. New legitimate factory submissions get fresh identity and may use their own later historical boundary.",
+      "Complete hostile POST independently attacks all public/standard library Training reconstruction, duck/subclass inputs, full Evaluation contract and restoration matrix preserving EVAL-POST-001. Independent full regression execution; git diff --check and complete isolated-index checks."
+    ],
+    "validation": [
+      "HARD_STOP on authority drift, candidate mismatch, PRE FAIL/NOT_READY, validator failure, seventh business path, shared-contract changes, registry/persistence/token/fingerprint/nonce requirement, POST FAIL or new finding.",
+      "Fresh independent PRE PASS must be validated and durably persisted on governance before any business mutation. Implementer must never self-review PRE/POST.",
+      "Concrete design: factory-only ordinary/public TrainingAttempt creation; exactly nine existing fields; minimum module-private builder after validation; fresh UUID4 and UTC timestamp. Reject direct construction, replace, copy/deepcopy, every pickle protocol, reduce/reduce_ex/setstate without modifying original. No registry/persistent provenance/marker/token/fingerprint/nonce. Explicit object memory tampering/private internal abuse is outside this MVP threat model.",
+      "Evaluation requires type(attempt) is TrainingAttempt, validates observable business invariants directly on supplied record, uses original submission historical boundary, and never constructs a replacement TrainingAttempt from caller fields. ID/time/analysis equality is not proof of provenance.",
+      "Preserve complete WU acceptance, all Training and Evaluation contracts, all 19 mappings, Stage ceilings, learned-at-submission eligibility, immutable context/boundary and EVAL-POST-001 closure. No docs/CONTRACTS.md or __init__.py changes.",
+      "Require exact six-path delta from pre-fix tree; complete HEAD-to-fixed candidate exactly eight paths; normal index unchanged. Publish only governance evidence. No candidate commit/push, main/STATE mutation, business publication, or Learning State. Return GPT_DECISION after complete cross-module hostile POST.",
+      "Before PASS independently establish factory-only design suffices in exactly six paths without docs/CONTRACTS.md change or marker/registry/persistence. All native Instruction/Result/completion/PRE validators must return []."
+    ],
+    "findings": [
+      "EVAL-POST-002"
+    ],
+    "revision": true,
+    "result_references": [
+      "6c0c510b-6fd8-4117-97e4-375bea002803"
+    ]
+  },
+  "completion_gate": "GPT_DECISION",
+  "in_response_to_instruction_id": "53f1a0d5-1d1d-4a9c-a1a0-037d65e67881",
+  "review_target_revision": "e9695c0b9496e6d2dbf6f770b76886686662ba20",
+  "finding_ids": [
+    "EVAL-POST-002"
+  ],
+  "fix_round": 2,
+  "artifact_stage": "IMPLEMENTATION"
+}
