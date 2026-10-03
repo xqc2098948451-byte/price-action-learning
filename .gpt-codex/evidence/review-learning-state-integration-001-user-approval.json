@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-REVIEW-LEARNING-STATE-INTEGRATION-001-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "work_unit_id": "price-action-learning-review-learning-state-integration-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 16,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "e1e01901f2da00dead4c2e5e8285c8390c4ffeba"
+  },
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-review-learning-state-integration-001.json@7af16484e34b385a6369d8f6d6e0cffacad2b0ce"
+  ],
+  "observed_at": "2026-10-03",
+  "notes": "Exact proposal blob approved for approval persistence, Work Unit authorization, fresh independent PRE, four-path LearningState integration and full independent hostile POST. Business publication and Study Entry are outside this task."
+}
