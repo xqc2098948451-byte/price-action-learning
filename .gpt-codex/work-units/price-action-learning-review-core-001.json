@@ -274,11 +274,11 @@
       "SCOPE_EXPANSION"
     ]
   },
-  "state": "PROPOSED",
+  "state": "AUTHORIZED",
   "basis_state_revision": 15,
   "implementation_authorized": false,
   "implementation_start_allowed": false,
-  "next_gate": "USER_WORK_UNIT_APPROVAL",
+  "next_gate": "REVIEW_CORE_PRE_EXECUTION",
   "artifact_refs": {
     "design": {
       "path": "docs/DIRECTORY_POLICY.md",

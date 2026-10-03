@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-REVIEW-CORE-001-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "work_unit_id": "price-action-learning-review-core-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 15,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "18b41b123376b5b801b12957868f4db2d940cb26"
+  },
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-review-core-001.json@bb92af97a1744b77473713961654e57b9a300a52"
+  ],
+  "observed_at": "2026-10-03",
+  "notes": "Exact Work Unit blob explicitly approved for authorization governance, fresh independent PRE, Review-only implementation, and complete independent hostile POST. No Review business publication, LearningState mutation or integration, or Study Entry is authorized."
+}
