@@ -1,0 +1,23 @@
+{
+  "kernel_version": "2.0.0",
+  "schema_version": 1,
+  "evidence_id": "EVIDENCE-EVALUATION-CORE-POST-002-REMEDIATION-REGISTRATION-USER-APPROVAL",
+  "project_id": "PRJ-PRICE-ACTION-LEARNING-1394745962",
+  "work_unit_id": "price-action-learning-evaluation-core-post-002-remediation-registration-001",
+  "source": "USER_ASSERTED",
+  "subject": "WORK_UNIT_AUTHORIZATION",
+  "state_revision": 12,
+  "identity_binding": {
+    "type": "WORK_UNIT_BLOB",
+    "value": "936113f468ec057b5eef3f632e775448c1911b36"
+  },
+  "project_context_id": "e6fca1d5-b01a-44f8-8f8a-b1298cda4aa9",
+  "repository_id": "1394745962",
+  "repository_full_name": "xqc2098948451-byte/price-action-learning",
+  "result": "APPROVE",
+  "artifact_refs": [
+    ".gpt-codex/work-units/price-action-learning-evaluation-core-post-002-remediation-registration-001.json@99223bcff99158ca365d08e909a188f99f459b27"
+  ],
+  "observed_at": "2026-10-03",
+  "notes": "The user explicitly approved the exact proposed Work Unit blob 936113f468ec057b5eef3f632e775448c1911b36. Approval permits remaining governance gates for EVAL-POST-002 remediation registration; it does not authorize candidate/Training/shared-contract mutation, FIX round 2, scope expansion, provenance inventions, Evaluation publication, or Learning State/Review/Study Entry."
+}
